@@ -7,6 +7,19 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## CasIn.id
+
+CasIn.id is a web directory for electric vehicle charging stations. The app currently includes email and password registration/login, session logout, and Google sign-in.
+
+### Authentication setup
+
+1. Copy `.env.example` to `.env`, set `APP_URL` to the local app URL, then generate the Laravel app key.
+2. Create a Google OAuth 2.0 Web client in Google Cloud Console and add `<APP_URL>/auth/google/callback` as an authorized redirect URI.
+3. Set `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, and `GOOGLE_REDIRECT_URI` in `.env`. The redirect URI must exactly match the one registered with Google.
+4. Run the database migrations and start the Laravel/Vite development servers.
+
+Google sign-in is unavailable until those OAuth credentials are configured. Email registration and login continue to work without them.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
