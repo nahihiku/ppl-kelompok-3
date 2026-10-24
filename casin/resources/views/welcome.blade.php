@@ -35,6 +35,15 @@
             @guest
                 <a class="hero-cta" href="{{ route('register') }}">Mulai dengan akun gratis <span aria-hidden="true">→</span></a>
             @endguest
+
+            <div class="location-widget" id="location-widget" aria-live="polite">
+                <span class="location-dot" aria-hidden="true"></span>
+                <div class="location-copy">
+                    <p class="location-title">Lokasi perangkatmu</p>
+                    <p class="location-status" data-location-status>Belum aktif — aktifkan akses lokasi untuk mencari stasiun terdekat.</p>
+                </div>
+                <button class="location-button" type="button" data-location-button>Aktifkan lokasi</button>
+            </div>
         </section>
         <div class="map-art" aria-label="Ilustrasi peta stasiun pengisian daya">
             <span class="map-label one">SPKLU · 1,2 km</span>

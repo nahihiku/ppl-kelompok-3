@@ -93,5 +93,20 @@ h1 { margin: 0; color: #173e32; font: 800 27px/1.2 'Manrope', sans-serif; letter
 .map-label.one { top: 25%; left: 8%; }
 .map-label.two { right: 8%; bottom: 21%; }
 .welcome-user { color: #71817b; font-size: 12px; }
+
+.location-widget { display: flex; align-items: center; gap: 11px; width: fit-content; max-width: 100%; margin-top: 20px; padding: 11px 13px 11px 15px; border: 1px solid #e3e9e4; border-radius: 14px; background: #fff; box-shadow: 0 10px 28px rgba(27, 67, 53, .06); }
+.location-widget.is-error { border-color: #f0ceca; }
+.location-dot { position: relative; flex: none; width: 11px; height: 11px; border-radius: 50%; background: #b9c6bf; box-shadow: 0 0 0 4px #eef4ef; }
+.location-widget.is-active .location-dot { background: #147554; box-shadow: 0 0 0 4px #e2f2e8; }
+.location-widget.is-error .location-dot { background: #d96258; box-shadow: 0 0 0 4px #fdeeea; }
+.location-copy { min-width: 0; }
+.location-title { margin: 0; color: #173e32; font: 700 12px/1.3 'Manrope', sans-serif; }
+.location-status { margin: 3px 0 0; color: #71817b; font-size: 11px; line-height: 1.55; }
+.location-button { flex: none; padding: 10px 15px; border: 0; border-radius: 9px; background: #147554; color: #fff; font-size: 12px; font-weight: 700; cursor: pointer; transition: background .15s, transform .15s; white-space: nowrap; }
+.location-button:hover:not([disabled]) { background: #0d6346; transform: translateY(-1px); }
+.location-button[disabled] { background: #9dbcb0; cursor: progress; }
+.location-widget.is-error .location-button:not([disabled]) { background: #b53e38; }
+.location-widget.is-error .location-button:hover:not([disabled]) { background: #a33630; }
+@media (max-width: 500px) { .location-widget { width: 100%; flex-wrap: wrap; } }
 @media (max-width: 760px) { .hero { grid-template-columns: 1fr; gap: 38px; padding-top: 45px; } .map-art { min-height: 280px; } }
 @media (max-width: 500px) { .auth-shell { width: min(100% - 24px, 456px); padding-top: 25px; } .auth-card { padding: 28px 22px 25px; border-radius: 16px; } h1 { font-size: 24px; } .site-header, .hero { width: calc(100% - 36px); } .site-header { padding: 19px 0; } .nav-actions { gap: 2px; } .nav-actions a { padding: 9px 11px; font-size: 12px; } .hero h1 { font-size: 42px; } }
