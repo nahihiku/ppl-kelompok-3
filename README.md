@@ -1,4 +1,4 @@
-# ⚡ CasIn.id - Direktori Stasiun Pengisian Kendaraan Listrik Interaktif
+# CasIn.id - Direktori Stasiun Pengisian Kendaraan Listrik Interaktif
 
 [![Laravel](https://img.shields.io/badge/Laravel-12.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
 [![PHP](https://img.shields.io/badge/PHP-8.2+-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
@@ -6,11 +6,11 @@
 [![Sanctum](https://img.shields.io/badge/Laravel_Sanctum-Auth_API-blue?style=for-the-badge)](https://laravel.com/docs/sanctum)
 [![Socialite](https://img.shields.io/badge/Google_OAuth-Socialite-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://laravel.com/docs/socialite)
 
-**CasIn.id** adalah platform direktori interaktif berbasis web untuk memudahkan para pemilik dan pengendara kendaraan listrik (Electric Vehicle / EV) di Indonesia dalam menemukan titik Stasiun Pengisian Kendaraan Listrik Umum (SPKLU) dan Stasiun Penukaran Baterai Kendaraan Listrik Umum (SPBKLU) terdekat secara *real-time*, akurat, dan sesuai dengan spesifikasi soket/daya kendaraannya.
+**CasIn.id** adalah platform direktori interaktif berbasis web untuk memudahkan para pemilik dan pengendara kendaraan listrik (Electric Vehicle / EV) di Indonesia dalam menemukan titik Stasiun Pengisian Kendaraan Listrik Umum (SPKLU) dan Stasiun Penukaran Baterai Kendaraan Listrik Umum (SPBKLU) terdekat secara real-time, akurat, dan sesuai dengan spesifikasi soket/daya kendaraannya.
 
 ---
 
-## 👥 Tim Pengembang (Kelompok 3 - PPL)
+## Tim Pengembang (Kelompok 3 - PPL)
 
 | Nama | NIM | Peran |
 |---|---|---|
@@ -22,15 +22,15 @@
 
 ---
 
-## 🚀 Fitur Utama
+## Fitur Utama
 
 - **Autentikasi Multi-Metode**:
-  - Registrasi & Login email/kata sandi konvensional dengan *password hashing* yang aman (Bcrypt/Argon2).
-  - Login & Registrasi satu klik via **Google OAuth 2.0 (Laravel Socialite)**.
-  - RESTful API Authentication menggunakan **Laravel Sanctum Bearer Token** untuk integrasi mobile atau frontend SPA.
+  - Registrasi dan Login email/kata sandi konvensional dengan password hashing yang aman (Bcrypt/Argon2).
+  - Login dan Registrasi via Google OAuth 2.0 (Laravel Socialite).
+  - RESTful API Authentication menggunakan Laravel Sanctum Bearer Token untuk integrasi mobile atau frontend SPA.
 - **Peta Direktori SPKLU / SPBKLU Interaktif**:
-  - Pelacakan koordinat pengguna secara *real-time* dengan HTML5 Geolocation API.
-  - Visualisasi titik stasiun pengisian pada peta interaktif Leaflet.js & OpenStreetMap.
+  - Pelacakan koordinat pengguna secara real-time dengan HTML5 Geolocation API.
+  - Visualisasi titik stasiun pengisian pada peta interaktif Leaflet.js dan OpenStreetMap.
   - Penyaringan otomatis berdasarkan soket dan kategori daya yang kompatibel dengan kendaraan aktif pengguna.
 - **Manajemen Profil Kendaraan**:
   - Master data spesifikasi kendaraan listrik (mobil/motor, kapasitas baterai, jenis colokan).
@@ -38,23 +38,23 @@
 
 ---
 
-## 🛠️ Tech Stack & Dependensi
+## Tech Stack dan Dependensi
 
 - **Backend Framework**: [Laravel 12](https://laravel.com)
 - **Runtime**: PHP 8.2+
-- **API Security & Auth**: [Laravel Sanctum](https://laravel.com/docs/sanctum) & [Laravel Socialite](https://laravel.com/docs/socialite)
+- **API Security & Auth**: [Laravel Sanctum](https://laravel.com/docs/sanctum) dan [Laravel Socialite](https://laravel.com/docs/socialite)
 - **Database**: SQLite (default lokal/testing) / MySQL / MariaDB
-- **Frontend**: Blade Templating, Tailwind CSS, JavaScript (Leaflet.js & OpenStreetMap)
+- **Frontend**: Blade Templating, Tailwind CSS, JavaScript (Leaflet.js dan OpenStreetMap)
 - **Testing**: PHPUnit
 
 ---
 
-## ⚙️ Panduan Instalasi & Menjalankan Proyek
+## Panduan Instalasi dan Menjalankan Proyek
 
 ### 1. Prasyarat Sistem
 - PHP >= 8.2
 - Composer >= 2.x
-- Node.js & npm (opsional untuk asset compile)
+- Node.js dan npm (opsional untuk asset compile)
 - Ekstensi PHP: `pdo_sqlite` (atau `pdo_mysql`), `curl`, `mbstring`, `openssl`
 
 ### 2. Kloning Repository
@@ -66,11 +66,11 @@ cd ppl-kelompok-3/casin
 ### 3. Instal Dependensi
 ```bash
 composer install
-npm install # jika ingin build frontend
+npm install
 ```
 
-### 4. Konfigurasi Lingkungan (`.env`)
-Salin file konfigurasi contoh dan buat *Application Key*:
+### 4. Konfigurasi Lingkungan (.env)
+Salin file konfigurasi contoh dan buat Application Key:
 ```bash
 cp .env.example .env
 php artisan key:generate
@@ -98,14 +98,14 @@ Aplikasi dapat diakses melalui browser di `http://127.0.0.1:8000`.
 
 ---
 
-## 📡 Dokumentasi Endpoint REST API
+## Dokumentasi Endpoint REST API
 
 Semua respons API menggunakan format JSON standar:
 ```json
 {
   "success": true,
   "message": "Pesan deskriptif status",
-  "data": { ... }
+  "data": { }
 }
 ```
 
@@ -113,20 +113,20 @@ Semua respons API menggunakan format JSON standar:
 
 | Method | Endpoint | Proteksi | Deskripsi |
 |---|---|---|---|
-| `POST` | `/api/register` | Public | Registrasi akun baru & dapatkan Sanctum Bearer token |
-| `POST` | `/api/login` | Public | Login akun & dapatkan Sanctum Bearer token |
+| `POST` | `/api/register` | Public | Registrasi akun baru dan dapatkan Sanctum Bearer token |
+| `POST` | `/api/login` | Public | Login akun dan dapatkan Sanctum Bearer token |
 | `GET` | `/api/user` / `/api/me` | `Bearer Token` | Ambil data profil pengguna yang terautentikasi |
-| `POST` | `/api/logout` | `Bearer Token` | Cabut token aktif (*revoke current token*) |
+| `POST` | `/api/logout` | `Bearer Token` | Cabut token aktif (revoke current token) |
 | `GET` | `/api/auth/google/redirect` | Public | Dapatkan URL redirect Google OAuth2 |
-| `GET` | `/api/auth/google/callback` | Public | Callback Google OAuth2, buat/link user & return token |
-| `POST` | `/api/auth/google` | Public | Login Google via token (`id_token`, `access_token`, atau `code`) |
+| `GET` | `/api/auth/google/callback` | Public | Callback Google OAuth2, buat/link user dan return token |
+| `POST` | `/api/auth/google` | Public | Login Google via token (id_token, access_token, atau code) |
 
 ---
 
 ### Contoh Payload API
 
 #### 1. Registrasi Akun (`POST /api/register`)
-**Request Body**:
+Request Body:
 ```json
 {
   "name": "Budi Santoso",
@@ -136,7 +136,7 @@ Semua respons API menggunakan format JSON standar:
   "device_name": "mobile_app"
 }
 ```
-**Response (201 Created)**:
+Response (201 Created):
 ```json
 {
   "success": true,
@@ -156,7 +156,7 @@ Semua respons API menggunakan format JSON standar:
 ```
 
 #### 2. Login Akun (`POST /api/login`)
-**Request Body**:
+Request Body:
 ```json
 {
   "email": "budi@example.com",
@@ -164,7 +164,7 @@ Semua respons API menggunakan format JSON standar:
   "device_name": "mobile_app"
 }
 ```
-**Response (200 OK)**:
+Response (200 OK):
 ```json
 {
   "success": true,
@@ -189,7 +189,7 @@ Ideal untuk klien Flutter / React Native / SPA yang menggunakan Google Sign-In S
   "device_name": "android_phone"
 }
 ```
-**Response (200 OK)**:
+Response (200 OK):
 ```json
 {
   "success": true,
@@ -209,19 +209,19 @@ Ideal untuk klien Flutter / React Native / SPA yang menggunakan Google Sign-In S
 
 ---
 
-## 🧪 Menjalankan Pengujian Otomatis
+## Menjalankan Pengujian Otomatis
 
-Proyek ini telah dilengkapi dengan serangkaian unit & feature test yang mencakup autentikasi konvensional, token Sanctum, dan Google OAuth:
+Proyek ini telah dilengkapi dengan serangkaian unit dan feature test yang mencakup autentikasi konvensional, token Sanctum, dan Google OAuth:
 
 ```bash
 cd casin
 php artisan test
 ```
 
-Semua 16 unit & feature tests teruji **100% PASS** (77 assertions).
+Semua 16 unit dan feature tests teruji 100% PASS (77 assertions).
 
 ---
 
-## 📄 Lisensi
+## Lisensi
 
-Proyek ini dikembangkan untuk keperluan akademik mata kuliah **Praktikum Perangkat Lunak (PPL)** di bawah lisensi terbuka [MIT License](https://opensource.org/licenses/MIT).
+Proyek ini dikembangkan untuk keperluan akademik mata kuliah Praktikum Perangkat Lunak (PPL) di bawah lisensi terbuka [MIT License](https://opensource.org/licenses/MIT).

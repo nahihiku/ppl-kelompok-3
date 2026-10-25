@@ -1,4 +1,4 @@
-# ⚡ CasIn.id - Backend & Web Service
+# CasIn.id - Backend & Web Service
 
 Folder ini berisi *source code* aplikasi utama **CasIn.id** berbasis framework Laravel 12.
 
