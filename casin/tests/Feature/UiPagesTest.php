@@ -41,7 +41,8 @@ class UiPagesTest extends TestCase
         $registerResponse->assertStatus(200)
             ->assertSee('Daftar Akun CasIn.id')
             ->assertSee('Daftar dengan Google')
-            ->assertSee(route('google.redirect'), false);
+            ->assertSee(route('google.redirect'), false)
+            ->assertSee(route('register.store'), false);
     }
 
     public function test_stations_index_and_filter_work_properly(): void
