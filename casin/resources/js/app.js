@@ -67,6 +67,179 @@ function initPasswordToggles() {
     });
 }
 
+const AUTH_TOKEN_KEY = 'casin.auth_token';
+const AUTH_USER_KEY = 'casin.auth_user';
+
+function showAuthErrors(form, errors, fallbackMessage = 'Periksa kembali data yang kamu masukkan.') {
+    form.querySelectorAll('[data-client-error]').forEach((element) => element.remove());
+    const messages = errors && typeof errors === 'object' ? errors : {};
+    const fieldGroups = form.querySelectorAll('.field-group');
+
+    Object.entries(messages).forEach(([field, fieldMessages]) => {
+        const input = form.querySelector(`[name="${field}"]`);
+        const group = input?.closest('.field-group');
+        if (!group) return;
+        const message = Array.isArray(fieldMessages) ? fieldMessages[0] : fieldMessages;
+        const error = document.createElement('p');
+        error.className = 'field-error';
+        error.dataset.clientError = 'true';
+        error.textContent = message;
+        group.appendChild(error);
+        input.setAttribute('aria-invalid', 'true');
+    });
+
+    const general = form.closest('.auth-card')?.querySelector('[data-auth-api-error]');
+    if (general) {
+        const firstFieldMessage = Object.values(messages).flat()[0];
+        general.textContent = firstFieldMessage || fallbackMessage;
+        general.hidden = false;
+    }
+}
+
+function clearAuthErrors(form) {
+    form.querySelectorAll('[data-client-error]').forEach((element) => element.remove());
+    form.querySelectorAll('[aria-invalid="true"]').forEach((input) => input.removeAttribute('aria-invalid'));
+    const general = form.closest('.auth-card')?.querySelector('[data-auth-api-error]');
+    if (general) general.hidden = true;
+}
+
+async function postAuthForm(form) {
+    clearAuthErrors(form);
+    const button = form.querySelector('button[type="submit"]');
+    const originalLabel = button?.textContent;
+    if (button) {
+        button.disabled = true;
+        button.textContent = 'Memproses…';
+    }
+
+    try {
+        const payload = Object.fromEntries(new FormData(form).entries());
+        payload.device_name = 'casin_web';
+        const response = await fetch(form.dataset.apiEndpoint, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+        });
+        const result = await response.json();
+        if (!response.ok) {
+            showAuthErrors(form, result.errors, result.message);
+            return;
+        }
+
+        localStorage.setItem(AUTH_TOKEN_KEY, result.data.token);
+        localStorage.setItem(AUTH_USER_KEY, JSON.stringify(result.data.user));
+        window.location.assign(form.dataset.authForm === 'register' ? '/' : '/');
+    } catch {
+        showAuthErrors(form, null, 'Koneksi gagal. Periksa internetmu lalu coba lagi.');
+    } finally {
+        if (button) {
+            button.disabled = false;
+            button.textContent = originalLabel;
+        }
+    }
+}
+
+function initApiAuthForms() {
+    document.querySelectorAll('[data-auth-form]').forEach((form) => {
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            postAuthForm(form);
+        });
+    });
+}
+
+function initGoogleAuth() {
+    document.querySelectorAll('[data-google-auth]').forEach((button) => {
+        button.addEventListener('click', () => {
+            const clientId = button.dataset.googleClientId;
+            const authCard = button.closest('.auth-card');
+            const showError = (message) => {
+                const error = authCard?.querySelector('[data-auth-api-error]');
+                if (error) { error.textContent = message; error.hidden = false; }
+            };
+
+            if (!clientId) {
+                showError('Login Google belum dikonfigurasi. Silakan gunakan email dan kata sandi.');
+                return;
+            }
+
+            const start = () => {
+                if (!window.google?.accounts?.oauth2) {
+                    showError('Layanan Google belum siap. Coba lagi beberapa saat.');
+                    return;
+                }
+
+                button.disabled = true;
+                const tokenClient = window.google.accounts.oauth2.initTokenClient({
+                    client_id: clientId,
+                    scope: 'openid email profile',
+                    callback: async (tokenResponse) => {
+                        try {
+                            if (!tokenResponse.access_token) throw new Error('Token Google tidak diterima.');
+                            const response = await fetch(button.dataset.apiEndpoint, {
+                                method: 'POST',
+                                headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ access_token: tokenResponse.access_token, device_name: 'casin_web_google' }),
+                            });
+                            const result = await response.json();
+                            if (!response.ok) throw new Error(result.message || 'Autentikasi Google gagal.');
+                            localStorage.setItem(AUTH_TOKEN_KEY, result.data.token);
+                            localStorage.setItem(AUTH_USER_KEY, JSON.stringify(result.data.user));
+                            window.location.assign('/');
+                        } catch (error) {
+                            showError(error.message);
+                        } finally {
+                            button.disabled = false;
+                        }
+                    },
+                    error_callback: () => {
+                        button.disabled = false;
+                        showError('Login Google dibatalkan atau tidak berhasil.');
+                    },
+                });
+                tokenClient.requestAccessToken({ prompt: 'select_account' });
+            };
+
+            if (window.google?.accounts?.oauth2) {
+                start();
+                return;
+            }
+
+            window.setTimeout(start, 500);
+        });
+    });
+}
+
+function initClientAuthState() {
+    const token = localStorage.getItem(AUTH_TOKEN_KEY);
+    let user = null;
+    try {
+        user = JSON.parse(localStorage.getItem(AUTH_USER_KEY) || 'null');
+    } catch {
+        localStorage.removeItem(AUTH_USER_KEY);
+    }
+    const actions = document.querySelector('.landing-page .nav-actions');
+    if (!token || !user || !actions || !actions.querySelector('.nav-join')) return;
+
+    actions.innerHTML = `
+        <span class="welcome-user">Hai, ${user.name || user.email}</span>
+        <a class="nav-stations-link" href="/stasiun">Daftar Stasiun</a>
+        <button class="nav-login-pill" type="button" data-client-logout>Keluar</button>
+    `;
+    actions.querySelector('[data-client-logout]')?.addEventListener('click', async () => {
+        try {
+            await fetch('/api/logout', {
+                method: 'POST',
+                headers: { Accept: 'application/json', Authorization: `Bearer ${token}` },
+            });
+        } finally {
+            localStorage.removeItem(AUTH_TOKEN_KEY);
+            localStorage.removeItem(AUTH_USER_KEY);
+            window.location.reload();
+        }
+    });
+}
+
 function initFilterAndSearch() {
     const toggleBtn = document.querySelector('[data-filter-toggle]');
     const panel = document.querySelector('[data-filter-panel]');
@@ -333,6 +506,9 @@ function initDetailInteractions() {
 
 initLocationWidget();
 initPasswordToggles();
+initApiAuthForms();
+initGoogleAuth();
+initClientAuthState();
 initFilterAndSearch();
 initVehicleSelector();
 initMobileMenu();

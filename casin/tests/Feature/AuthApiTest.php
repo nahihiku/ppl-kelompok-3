@@ -16,6 +16,7 @@ class AuthApiTest extends TestCase
         $payload = [
             'name' => 'Budi Santoso',
             'email' => 'budi@example.com',
+            'phone' => '+628123456789',
             'password' => 'password123',
             'password_confirmation' => 'password123',
             'device_name' => 'flutter_app',
@@ -41,6 +42,7 @@ class AuthApiTest extends TestCase
         $this->assertDatabaseHas('users', [
             'name' => 'Budi Santoso',
             'email' => 'budi@example.com',
+            'phone' => '+628123456789',
         ]);
 
         $user = User::where('email', 'budi@example.com')->first();
