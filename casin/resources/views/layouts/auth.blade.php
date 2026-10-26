@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#ffffff">
     <title>{{ $title }} - CasIn.id</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body class="auth-page">
     <header class="auth-topbar">
