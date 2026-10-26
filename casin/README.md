@@ -39,5 +39,9 @@ Untuk dokumentasi lengkap proyek, spesifikasi RESTful API, dan identitas tim pen
 
 6. **Jalankan Server Lokal**:
    ```bash
-   php artisan serve
-   ```
+    php artisan serve
+    ```
+
+Autentikasi login dan registrasi pada halaman web dikirim melalui `fetch()` ke API Sanctum.
+Token disimpan pada `localStorage` browser dengan key `casin.auth_token`. Login Google memakai
+Google Identity Services untuk memperoleh access token dan mengirimkannya ke `/api/auth/google`.
