@@ -209,6 +209,22 @@ Response (200 OK):
 
 ---
 
+#### 4. Nomor HP saat Registrasi
+
+Field `phone` bersifat opsional untuk menjaga kompatibilitas client lama, dan digunakan oleh form registrasi web:
+
+```json
+{
+  "name": "Budi Santoso",
+  "email": "budi@example.com",
+  "phone": "+628123456789",
+  "password": "password123",
+  "password_confirmation": "password123"
+}
+```
+
+---
+
 ## Menjalankan Pengujian Otomatis
 
 Proyek ini telah dilengkapi dengan serangkaian unit dan feature test yang mencakup autentikasi konvensional, token Sanctum, dan Google OAuth:

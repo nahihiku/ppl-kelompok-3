@@ -3,20 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f7f8f5">
-    <title>{{ $title }} · CasIn.id</title>
+    <meta name="theme-color" content="#ffffff">
+    <title>{{ $title }} - CasIn.id</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body class="auth-page">
-    <main class="auth-shell">
-        <a class="brand auth-brand" href="{{ route('home') }}" aria-label="CasIn.id, halaman utama">
-            <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-            <span>CasIn<span class="brand-dot">.</span>id</span>
-        </a>
+    <header class="auth-topbar">
+        @include('partials.brand-logo', ['class' => 'auth-brand'])
+    </header>
 
+    <main class="auth-shell">
         <section class="auth-card" aria-labelledby="auth-title">
             <div class="auth-heading">
-                <p class="eyebrow">MOBILITAS LEBIH MUDAH</p>
                 <h1 id="auth-title">{{ $heading }}</h1>
                 <p class="auth-subtitle">{{ $subtitle }}</p>
             </div>
@@ -31,8 +30,6 @@
 
             @yield('content')
         </section>
-
-        <p class="auth-footer">Dengan melanjutkan, kamu menyetujui Syarat Penggunaan dan Kebijakan Privasi CasIn.id.</p>
     </main>
 </body>
 </html>

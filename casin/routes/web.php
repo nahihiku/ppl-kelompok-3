@@ -2,10 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\StationController;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', [StationController::class, 'home'])->name('home');
+Route::get('/stasiun', [StationController::class, 'index'])->name('stations.index');
+Route::get('/stasiun/{id}', [StationController::class, 'show'])->name('stations.show');
+Route::post('/stasiun/{id}/lapor', [StationController::class, 'report'])->name('stations.report');
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthenticatedSessionController::class, 'createLogin'])->name('login');
@@ -22,3 +24,4 @@ Route::middleware('guest')->group(function () {
 
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
     ->middleware('auth')->name('logout');
+
