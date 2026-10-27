@@ -56,6 +56,7 @@ class AuthenticatedSessionController extends Controller
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:users,email'],
+            'phone' => ['nullable', 'string', 'max:30', 'regex:/^[0-9+()\-\s]+$/'],
             'password' => ['required', 'confirmed', 'min:8'],
         ], [
             'name.required' => 'Nama wajib diisi.',
@@ -63,6 +64,7 @@ class AuthenticatedSessionController extends Controller
             'email.required' => 'Email wajib diisi.',
             'email.email' => 'Masukkan alamat email yang valid.',
             'email.unique' => 'Email ini sudah terdaftar. Silakan masuk atau gunakan email lain.',
+            'phone.regex' => 'Nomor HP hanya boleh berisi angka dan simbol telepon yang valid.',
             'email.lowercase' => 'Gunakan huruf kecil pada alamat email.',
             'email.max' => 'Email tidak boleh lebih dari 255 karakter.',
             'password.required' => 'Kata sandi wajib diisi.',
@@ -73,6 +75,7 @@ class AuthenticatedSessionController extends Controller
         $user = User::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
+            'phone' => $validated['phone'] ?? null,
             'password' => $validated['password'],
         ]);
 

@@ -308,7 +308,7 @@ class StationController extends Controller
 
         try {
             if (Schema::hasTable('stations') && Station::count() > 0) {
-                return Station::all()->map(function (Station $station, int $idx) {
+                return Station::with('connectors')->get()->map(function (Station $station, int $idx) {
                     $statusLabel = match ($station->current_status) {
                         'normal' => 'Tersedia',
                         'busy' => 'Antrean Padat',
@@ -317,10 +317,22 @@ class StationController extends Controller
                     };
                     $price = (int) ($station->price_per_kwh ?: 2000);
 
+                    $connectors = $station->connectors;
+                    $connector = $connectors->first();
+                    $connectorType = $connector?->connector_type ?? 'CCS2';
+                    $power = (float) ($connector?->power_kw ?? 50);
+                    $currentType = $connector?->current_type ?? 'DC';
+                    $available = (int) ($connectors->sum('available_connectors') ?: 3);
+                    $total = (int) ($connectors->sum('total_connectors') ?: 4);
+
                     return [
                         'id' => (string) $station->id_stations,
                         'name' => $station->name,
-                        'operator_badge' => $station->operator_type === 'government' ? 'PLN' : strtoupper($station->operator_type),
+                        'operator_badge' => match ($station->operator_type) {
+                            'government' => 'PLN',
+                            'private' => 'SWASTA',
+                            default => 'KOMERSIAL',
+                        },
                         'operator_type' => $station->operator_type,
                         'address' => $station->address,
                         'latitude' => (float) $station->latitude,
@@ -331,32 +343,33 @@ class StationController extends Controller
                         'require_app_name' => $station->require_app_name ?? 'PLN Mobile',
                         'current_status' => $station->current_status,
                         'status_label' => $statusLabel,
-                        'connector_type' => 'CCS2',
-                        'power_kw' => 50,
-                        'current_type' => 'DC',
-                        'available_chargers' => 3,
-                        'total_chargers' => 4,
+                        'connector_type' => $connectorType,
+                        'power_kw' => $power,
+                        'current_type' => $currentType,
+                        'available_chargers' => $available,
+                        'total_chargers' => $total,
                         'rating' => 4,
-                        'charging_boxes' => [
-                            [
-                                'name' => 'Mobi AC Stand',
-                                'connector_count' => '1 Konektor',
-                                'status_badge' => '1 Sedang digunakan',
-                                'status_tone' => 'used',
-                                'connector_spec' => 'AC TYPE 2 - 22kW',
+                        'charging_boxes' => $connectors->isNotEmpty()
+                            ? $connectors->map(fn ($item) => [
+                                'name' => $item->connector_type.' Charger',
+                                'connector_count' => $item->available_connectors.'/'.$item->total_connectors.' Konektor',
+                                'status_badge' => $item->available_connectors > 0 ? 'Tersedia' : 'Penuh',
+                                'status_tone' => $item->available_connectors > 0 ? 'available' : 'used',
+                                'connector_spec' => strtoupper($item->connector_type).' - '.$item->power_kw.'kW '.$item->current_type,
                                 'price_label' => "Rp {$price}/kWh",
-                                'estimation_label' => 'Est. 02 Jam 21 Menit',
+                                'estimation_label' => $item->charging_speed_category === 'ultra' ? 'Est. 45 Menit' : 'Est. 02 Jam 21 Menit',
+                            ])->values()->all()
+                            : [
+                                [
+                                    'name' => 'Mobi AC Stand',
+                                    'connector_count' => '1 Konektor',
+                                    'status_badge' => '1 Sedang digunakan',
+                                    'status_tone' => 'used',
+                                    'connector_spec' => 'AC TYPE 2 - 22kW',
+                                    'price_label' => "Rp {$price}/kWh",
+                                    'estimation_label' => 'Est. 02 Jam 21 Menit',
+                                ],
                             ],
-                            [
-                                'name' => 'Delta DC Ultra Fast',
-                                'connector_count' => '2 Konektor',
-                                'status_badge' => 'Tersedia',
-                                'status_tone' => 'available',
-                                'connector_spec' => 'CCS2 - 50kW DC',
-                                'price_label' => "Rp {$price}/kWh",
-                                'estimation_label' => 'Est. 45 Menit',
-                            ],
-                        ],
                         'reviews' => [
                             [
                                 'user' => 'Rizky Pratama',
