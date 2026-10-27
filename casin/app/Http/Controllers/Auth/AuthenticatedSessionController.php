@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
 use Laravel\Socialite\Facades\Socialite;
+use Laravel\Socialite\Two\InvalidStateException;
 use Throwable;
 
 class AuthenticatedSessionController extends Controller
@@ -121,7 +122,11 @@ class AuthenticatedSessionController extends Controller
         }
 
         try {
-            $googleUser = Socialite::driver('google')->user();
+            try {
+                $googleUser = Socialite::driver('google')->user();
+            } catch (InvalidStateException $e) {
+                $googleUser = Socialite::driver('google')->stateless()->user();
+            }
 
             if (empty($googleUser->getId()) || empty($googleUser->getEmail()) || ! filter_var($googleUser->getEmail(), FILTER_VALIDATE_EMAIL)) {
                 throw new \UnexpectedValueException('Google did not return a valid user profile.');
@@ -134,7 +139,10 @@ class AuthenticatedSessionController extends Controller
 
             return redirect()->intended(route('home'))->with('status', 'Kamu berhasil masuk dengan Google.');
         } catch (Throwable $exception) {
-            Log::warning('Google sign-in failed.', ['exception' => $exception->getMessage()]);
+            Log::warning('Google sign-in failed.', [
+                'class' => get_class($exception),
+                'message' => $exception->getMessage(),
+            ]);
 
             return redirect()->route('login')->withErrors([
                 'google' => 'Kami belum bisa menghubungkan akun Google kamu. Periksa koneksi lalu coba lagi.',
