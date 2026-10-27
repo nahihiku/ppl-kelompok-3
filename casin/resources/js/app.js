@@ -150,7 +150,7 @@ function initApiAuthForms() {
 
 function initGoogleAuth() {
     document.querySelectorAll('[data-google-auth]').forEach((button) => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (event) => {
             const clientId = button.dataset.googleClientId;
             const authCard = button.closest('.auth-card');
             const showError = (message) => {
@@ -159,13 +159,18 @@ function initGoogleAuth() {
             };
 
             if (!clientId) {
-                showError('Login Google belum dikonfigurasi. Silakan gunakan email dan kata sandi.');
                 return;
             }
 
+            if (!window.google?.accounts?.oauth2) {
+                return;
+            }
+
+            event.preventDefault();
+
             const start = () => {
                 if (!window.google?.accounts?.oauth2) {
-                    showError('Layanan Google belum siap. Coba lagi beberapa saat.');
+                    window.location.assign('/auth/google/redirect');
                     return;
                 }
 

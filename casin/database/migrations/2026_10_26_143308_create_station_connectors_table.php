@@ -10,19 +10,21 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-{
-    Schema::create('station_connectors', function (Blueprint $table) {
-        $table->id('id_station_connector');
-        $table->unsignedBigInteger('id_stations');
-        $table->string('connector_type', 50);
-        $table->float('power_kw');
-        $table->string('charging_speed_category', 50);
-        $table->timestamps();
+    {
+        if (! Schema::hasTable('station_connectors')) {
+            Schema::create('station_connectors', function (Blueprint $table) {
+                $table->id('id_station_connector');
+                $table->unsignedBigInteger('id_stations');
+                $table->string('connector_type', 50);
+                $table->float('power_kw');
+                $table->string('charging_speed_category', 50);
+                $table->timestamps();
 
-        // Foreign key ke tabel stations
-        $table->foreign('id_stations')->references('id_stations')->on('stations')->onDelete('cascade');
-    });
-}
+                // Foreign key ke tabel stations
+                $table->foreign('id_stations')->references('id_stations')->on('stations')->onDelete('cascade');
+            });
+        }
+    }
 
     /**
      * Reverse the migrations.

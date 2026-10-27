@@ -18,9 +18,6 @@ return new class extends Migration
             $table->string('license_plate')->nullable();
             $table->string('color')->nullable();
             $table->timestamps();
-
-            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('vehicle_id')->references('id_vehicle_masters')->on('vehicle_masters')->onDelete('cascade');
         });
     }
     /**
