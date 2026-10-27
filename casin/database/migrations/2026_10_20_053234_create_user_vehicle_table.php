@@ -14,13 +14,15 @@ return new class extends Migration
         Schema::create('user_vehicle', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('vehicle_id')->constrained('vehicle_master')->onDelete('cascade');
+            $table->foreignId('vehicle_id')->constrained('vehicle_masters', 'id_vehicle_masters')->onDelete('cascade');
             $table->string('license_plate')->nullable();
             $table->string('color')->nullable();
             $table->timestamps();
+
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('vehicle_id')->references('id_vehicle_masters')->on('vehicle_masters')->onDelete('cascade');
         });
     }
-
     /**
      * Reverse the migrations.
      */

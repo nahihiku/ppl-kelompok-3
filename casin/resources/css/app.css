@@ -1232,6 +1232,23 @@ textarea {
     color: #991b1b;
 }
 
+.auth-api-error {
+    margin: 18px 0 0;
+    padding: 11px 14px;
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+    background: #fef2f2;
+    color: #991b1b;
+    font-size: 12.5px;
+    line-height: 1.5;
+}
+
+.auth-form button:disabled,
+.google-button:disabled {
+    cursor: wait;
+    opacity: .65;
+}
+
 /* ==========================================================================
    Station Detail Page (Figma Screen 4)
    ========================================================================== */

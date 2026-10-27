@@ -42,4 +42,9 @@ class Station extends Model
             $this->longitude
         );
     }
+
+    public function connectors()
+    {
+        return $this->hasMany(StationConnector::class, 'station_id', 'id_stations');
+    }
 }
