@@ -113,10 +113,53 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: min(1040px, calc(100% - 36px));
+    width: min(1140px, calc(100% - 40px));
     margin: 0 auto;
-    padding: 16px 0;
+    padding: 18px 0;
     background: #ffffff;
+}
+
+.desktop-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.desktop-nav-link {
+    position: relative;
+    color: #475569;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 0;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.desktop-nav-link:hover,
+.desktop-nav-link.is-active {
+    color: #1e3278;
+    font-weight: 600;
+}
+
+.desktop-nav-link.is-active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2.5px;
+    background: linear-gradient(90deg, #1e3278 0%, #00b3c7 100%);
+    border-radius: 9999px;
+}
+
+.header-right-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .nav-actions {
@@ -134,7 +177,7 @@ textarea {
     align-items: center;
     justify-content: center;
     min-width: 88px;
-    height: 36px;
+    height: 38px;
     padding: 0 20px;
     border: 1.2px solid #0f172a;
     border-radius: 9999px;
@@ -155,12 +198,12 @@ textarea {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 36px;
-    padding: 0 18px;
+    height: 38px;
+    padding: 0 20px;
     border-radius: 9999px;
     background: var(--gradient-primary);
     color: #ffffff;
-    font-size: 13px;
+    font-size: 13.5px;
     font-weight: 600;
     transition: opacity 0.15s, transform 0.15s;
 }
@@ -185,12 +228,12 @@ textarea {
 
 .welcome-user {
     color: #475569;
-    font-size: 13px;
+    font-size: 13.5px;
     font-weight: 500;
 }
 
 .site-status-banner {
-    width: min(1040px, calc(100% - 36px));
+    width: min(1140px, calc(100% - 40px));
     margin: 0 auto 12px;
     padding: 12px 16px;
     border: 1px solid #bbf7d0;
@@ -266,17 +309,27 @@ textarea {
 }
 
 .figma-hero-section {
-    background: linear-gradient(180deg, #effcfd 0%, #c8f0f6 45%, #e3f8fb 78%, #ffffff 100%);
-    padding: 36px 0 28px;
+    background: linear-gradient(180deg, #effcfd 0%, #d8f5f9 45%, #eefbfd 80%, #ffffff 100%);
+    padding: 44px 0 36px;
+    overflow: hidden;
 }
 
 .figma-hero-inner {
-    width: min(1040px, calc(100% - 36px));
+    width: min(1140px, calc(100% - 40px));
     margin: 0 auto;
 }
 
+.figma-hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 36px;
+    margin-bottom: 28px;
+}
+
 .figma-hero-content {
-    max-width: 680px;
+    width: 100%;
+    max-width: 580px;
 }
 
 .verified-pill {
@@ -303,22 +356,62 @@ textarea {
     margin: 20px 0 14px;
     color: #0f172a;
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(24px, 3.8vw, 38px);
+    font-size: clamp(26px, 3.4vw, 42px);
     font-weight: 700;
-    line-height: 1.28;
+    line-height: 1.25;
     letter-spacing: -0.5px;
 }
 
 .figma-hero-copy {
-    max-width: 540px;
+    max-width: 520px;
     margin: 0 0 28px;
-    color: #1e293b;
-    font-size: 14px;
+    color: #334155;
+    font-size: 15px;
     line-height: 1.65;
 }
 
 .figma-hero-actions {
-    margin-bottom: 26px;
+    margin-bottom: 0;
+}
+
+.figma-hero-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 20px 32px rgba(0, 179, 199, 0.16));
+    transition: transform 0.3s ease;
+}
+
+.hero-image-container:hover {
+    transform: translateY(-4px) scale(1.02);
+}
+
+.hero-ev-image {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    border-radius: 16px;
+    display: block;
+}
+
+.figma-hero-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    margin-top: 10px;
 }
 
 /* Active Vehicle Card (Dark Royal Blue Widget) */
@@ -326,19 +419,21 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
-    max-width: 540px;
-    padding: 20px 22px;
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    padding: 22px 28px;
     border-radius: 18px;
-    background: var(--royal-card);
-    box-shadow: 0 14px 32px rgba(36, 52, 139, 0.22);
+    background: linear-gradient(135deg, #1b2c6e 0%, #233989 60%, #1e3278 100%);
+    box-shadow: 0 14px 34px rgba(27, 44, 110, 0.22);
     color: #ffffff;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .active-vehicle-left {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
     min-width: 0;
 }
 
@@ -347,15 +442,15 @@ textarea {
     align-items: center;
     justify-content: center;
     flex: none;
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
     background: #2d50a8;
 }
 
 .active-vehicle-icon svg {
-    width: 26px;
-    height: 26px;
+    width: 28px;
+    height: 28px;
 }
 
 .active-vehicle-info {
@@ -365,26 +460,26 @@ textarea {
 .active-vehicle-heading {
     margin: 0 0 3px;
     color: #ffffff;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
 }
 
 .active-vehicle-meta {
     margin: 2px 0 0;
     color: #dbeafe;
-    font-size: 12px;
+    font-size: 12.5px;
     line-height: 1.35;
 }
 
 .btn-choose-vehicle {
     flex: none;
-    height: 38px;
-    padding: 0 18px;
+    height: 40px;
+    padding: 0 22px;
     border: 1.4px solid rgba(255, 255, 255, 0.9);
     border-radius: 9999px;
     background: linear-gradient(90deg, #00b3c7 0%, #29459a 100%);
     color: #ffffff;
-    font-size: 12.5px;
+    font-size: 13px;
     font-weight: 600;
     cursor: pointer;
     white-space: nowrap;
@@ -400,14 +495,15 @@ textarea {
 .location-widget {
     display: flex;
     align-items: center;
-    gap: 12px;
-    max-width: 540px;
-    margin-top: 16px;
-    padding: 12px 15px;
+    gap: 14px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    padding: 14px 20px;
     border: 1px solid #dbeafe;
     border-radius: 14px;
     background: #ffffff;
-    box-shadow: 0 6px 20px rgba(30, 50, 120, 0.06);
+    box-shadow: 0 6px 20px rgba(30, 50, 120, 0.05);
 }
 
 .location-widget.is-error {
@@ -442,26 +538,26 @@ textarea {
 .location-title {
     margin: 0;
     color: #0f172a;
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 700;
 }
 
 .location-status {
     margin: 2px 0 0;
     color: #64748b;
-    font-size: 11px;
+    font-size: 11.5px;
     line-height: 1.45;
 }
 
 .location-button {
     flex: none;
-    height: 34px;
-    padding: 0 14px;
+    height: 36px;
+    padding: 0 16px;
     border: 0;
     border-radius: 9999px;
     background: var(--gradient-primary);
     color: #ffffff;
-    font-size: 11.5px;
+    font-size: 12px;
     font-weight: 600;
     cursor: pointer;
     white-space: nowrap;
@@ -477,31 +573,32 @@ textarea {
    ========================================================================== */
 .figma-catalog-section,
 .stations-main {
-    width: min(1040px, calc(100% - 36px));
+    width: min(1140px, calc(100% - 40px));
     margin: 0 auto;
-    padding: 20px 0 64px;
+    padding: 30px 0 64px;
 }
 
 .catalog-container {
-    max-width: 680px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .catalog-intro {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .catalog-intro-title {
     margin: 0 0 8px;
     color: #0f172a;
-    font-size: clamp(22px, 3vw, 28px);
+    font-size: clamp(24px, 2.6vw, 32px);
     font-weight: 700;
     letter-spacing: -0.4px;
 }
 
 .catalog-intro-subtitle {
     margin: 0;
-    color: #334155;
-    font-size: 13.5px;
+    color: #475569;
+    font-size: 14.5px;
     line-height: 1.6;
 }
 
@@ -509,38 +606,40 @@ textarea {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    width: 100%;
     flex-wrap: wrap;
-    margin: 18px 0 26px;
+    margin: 20px 0 30px;
 }
 
 .search-input-wrap {
     position: relative;
     flex: 1;
-    min-width: 220px;
+    min-width: 240px;
 }
 
 .search-icon {
     position: absolute;
     top: 50%;
-    left: 16px;
+    left: 18px;
     transform: translateY(-50%);
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     color: #94a3b8;
     pointer-events: none;
 }
 
 .search-input-wrap input {
     width: 100%;
-    height: 46px;
-    padding: 0 18px 0 44px;
-    border: 1px solid #cbd5e1;
+    height: 50px;
+    padding: 0 20px 0 48px;
+    border: 1.5px solid #e2e8f0;
     border-radius: 9999px;
     outline: none;
     background: #ffffff;
     color: #0f172a;
-    font-size: 13px;
+    font-size: 14px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
     transition: border-color 0.15s, box-shadow 0.15s;
 }
 
@@ -550,20 +649,21 @@ textarea {
 
 .search-input-wrap input:focus {
     border-color: #00b3c7;
-    box-shadow: 0 0 0 3px rgba(0, 179, 199, 0.12);
+    box-shadow: 0 0 0 4px rgba(0, 179, 199, 0.14);
 }
 
 .filter-toggle-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 46px;
-    height: 46px;
-    border: 1px solid #cbd5e1;
-    border-radius: 12px;
+    width: 50px;
+    height: 50px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 14px;
     background: #ffffff;
     color: #1e293b;
     cursor: pointer;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
     transition: border-color 0.15s, background 0.15s;
 }
 
@@ -574,14 +674,14 @@ textarea {
 }
 
 .filter-toggle-btn svg {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
 }
 
 .filter-panel {
     width: 100%;
     margin-top: 8px;
-    padding: 16px;
+    padding: 18px;
     border: 1px solid #e2e8f0;
     border-radius: 16px;
     background: #f8fafc;
@@ -589,8 +689,8 @@ textarea {
 
 .filter-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
 }
 
 .filter-field {
@@ -600,31 +700,31 @@ textarea {
 
 .filter-field label {
     color: #334155;
-    font-size: 11.5px;
+    font-size: 12px;
     font-weight: 600;
 }
 
 .filter-field select {
-    height: 38px;
-    padding: 0 10px;
+    height: 40px;
+    padding: 0 12px;
     border: 1px solid #cbd5e1;
     border-radius: 10px;
     background: #ffffff;
     color: #0f172a;
-    font-size: 12.5px;
+    font-size: 13px;
 }
 
 .filter-actions {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 12px;
-    margin-top: 14px;
+    gap: 14px;
+    margin-top: 16px;
 }
 
 .filter-reset-link {
     color: #64748b;
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 500;
 }
 
@@ -632,47 +732,55 @@ textarea {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 18px;
+    gap: 14px;
+    margin-bottom: 20px;
 }
 
 .nearest-title {
     margin: 0 0 4px;
     color: #0f172a;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
 }
 
 .nearest-subtitle {
     margin: 0;
-    color: #334155;
-    font-size: 12.5px;
+    color: #64748b;
+    font-size: 13px;
 }
 
 .found-badge {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 6px 14px;
+    padding: 7px 18px;
     border-radius: 9999px;
-    background: #d9dde8;
+    background: #e2e8f0;
     color: #21327c;
-    font-size: 11.5px;
+    font-size: 12px;
     font-weight: 600;
     white-space: nowrap;
 }
 
 .station-cards-list {
     display: grid;
-    gap: 18px;
+    gap: 20px;
 }
 
 .station-card {
-    padding: 20px;
-    border: 1px solid #f1f5f9;
+    width: 100%;
+    padding: 24px 26px;
+    border: 1px solid #e2e8f0;
     border-radius: 20px;
     background: #ffffff;
-    box-shadow: 0 6px 24px rgba(15, 23, 42, 0.05);
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.04);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.station-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 36px rgba(30, 50, 120, 0.08);
+    border-color: #cbd5e1;
 }
 
 .station-card-top {
@@ -881,7 +989,7 @@ textarea {
    Hamburger & Mobile Drawer (Figma Screen 3)
    ========================================================================== */
 .hamburger-btn {
-    display: inline-flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 40px;
@@ -899,7 +1007,7 @@ textarea {
 }
 
 .mobile-drawer {
-    width: min(1040px, calc(100% - 36px));
+    width: min(1140px, calc(100% - 40px));
     margin: 0 auto 12px;
     padding: 14px 18px;
     border: 1px solid #e2e8f0;
@@ -1846,20 +1954,116 @@ textarea {
     font-size: 11.5px;
 }
 
-@media (max-width: 520px) {
-    .site-header,
-    .figma-hero-inner,
-    .figma-catalog-section,
-    .stations-main {
-        width: calc(100% - 28px);
+@media (max-width: 992px) {
+    .figma-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .figma-hero-content {
+        max-width: 100%;
+    }
+
+    .hero-image-container {
+        max-width: 440px;
+        margin: 0 auto;
+    }
+
+    .desktop-nav-links {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .desktop-nav-links,
+    .site-header .nav-actions {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: inline-flex;
+    }
+
+    .site-header {
+        padding: 14px 0;
+    }
+
+    .figma-hero-section {
+        padding: 30px 0 24px;
+    }
+
+    .figma-hero-title {
+        font-size: 26px;
+        margin: 14px 0 12px;
+    }
+
+    .figma-hero-copy {
+        font-size: 14px;
+        margin-bottom: 22px;
     }
 
     .active-vehicle-card {
+        padding: 18px 20px;
+    }
+
+    .station-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 540px) {
+    .site-header,
+    .figma-hero-inner,
+    .figma-catalog-section,
+    .stations-main,
+    .site-status-banner,
+    .mobile-drawer {
+        width: calc(100% - 24px);
+    }
+
+    .figma-hero-title {
+        font-size: 23px;
+    }
+
+    .active-vehicle-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
         padding: 16px;
     }
 
+    .btn-choose-vehicle {
+        width: 100%;
+    }
+
     .location-widget {
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 14px 16px;
+    }
+
+    .location-button {
+        width: 100%;
+    }
+
+    .station-specs-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .spec-col-right {
+        text-align: left;
+    }
+
+    .station-card-footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+    }
+
+    .station-card-footer .btn-gradient-pill {
+        width: 100%;
     }
 
     .detail-sheet {

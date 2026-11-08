@@ -11,20 +11,56 @@
     <header class="site-header">
         @include('partials.brand-logo')
 
-        <nav class="nav-actions" aria-label="Navigasi akun">
+        <nav class="desktop-nav-links" aria-label="Navigasi utama">
+            <a href="{{ route('home') }}" class="desktop-nav-link is-active">Home</a>
+            <button type="button" class="desktop-nav-link desktop-nav-btn" data-vehicle-modal-open>Kendaraanku</button>
+            <a href="{{ route('stations.index') }}" class="desktop-nav-link">Daftar Stasiun</a>
+        </nav>
+
+        <div class="header-right-group">
+            <nav class="nav-actions" aria-label="Navigasi akun">
+                @auth
+                    <span class="welcome-user">Hai, {{ Auth::user()->name }}</span>
+                    <a class="nav-stations-link" href="{{ route('stations.index') }}">Daftar Stasiun</a>
+                    <form method="POST" action="{{ route('logout') }}" class="inline-logout-form">
+                        @csrf
+                        <button class="nav-login-pill" type="submit">Keluar</button>
+                    </form>
+                @else
+                    <a class="nav-login-pill nav-login" href="{{ route('login') }}">Sign In</a>
+                    <a class="nav-join" href="{{ route('register') }}">Sign Up</a>
+                @endauth
+            </nav>
+
+            <button type="button" class="hamburger-btn" aria-label="Buka menu navigasi" aria-expanded="false" data-menu-toggle>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <line x1="4" y1="18" x2="20" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <nav class="mobile-drawer" hidden data-mobile-drawer aria-label="Menu navigasi mobile">
+        <div class="mobile-drawer-inner">
+            <a href="{{ route('home') }}" class="drawer-link is-active">Home</a>
+            <button type="button" class="drawer-link drawer-btn" data-vehicle-modal-open>
+                Kendaraanku (<span data-active-vehicle-brand>Pilih Kendaraan</span>)
+            </button>
+            <a href="{{ route('stations.index') }}" class="drawer-link">Daftar Stasiun</a>
             @auth
-                <span class="welcome-user">Hai, {{ Auth::user()->name }}</span>
-                <a class="nav-stations-link" href="{{ route('stations.index') }}">Daftar Stasiun</a>
-                <form method="POST" action="{{ route('logout') }}" class="inline-logout-form">
+                <span class="drawer-user">Masuk sebagai {{ Auth::user()->name }}</span>
+                <form method="POST" action="{{ route('logout') }}">
                     @csrf
-                    <button class="nav-login-pill" type="submit">Keluar</button>
+                    <button type="submit" class="drawer-link drawer-logout">Keluar</button>
                 </form>
             @else
-                <a class="nav-login-pill nav-login" href="{{ route('login') }}">Login</a>
-                <a class="nav-join" href="{{ route('register') }}">Daftar</a>
+                <a href="{{ route('login') }}" class="drawer-link">Sign In</a>
+                <a href="{{ route('register') }}" class="drawer-link">Sign Up</a>
             @endauth
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     @if (session('status'))
         <div class="site-status-banner" role="status">
@@ -35,29 +71,44 @@
     <main class="landing-main">
         <section class="figma-hero-section">
             <div class="figma-hero-inner">
-                <div class="figma-hero-content">
-                    <div class="verified-pill">
-                        <span class="verified-dot" aria-hidden="true"></span>
-                        <span>1.000+ Stasiun Pengisian Daya Terverifikasi</span>
+                <div class="figma-hero-grid">
+                    <div class="figma-hero-content">
+                        <div class="verified-pill">
+                            <span class="verified-dot" aria-hidden="true"></span>
+                            <span>1.000+ Stasiun Pengisian Daya Terverifikasi</span>
+                        </div>
+
+                        <h1 class="figma-hero-title">
+                            Temukan Stasiun Pengisian Daya Terdekat &amp; Sesuai Kendaraanmu
+                        </h1>
+
+                        <p class="figma-hero-copy hero-copy">
+                            Informasi stasiun pengisian daya kendaraan listrik yang akurat, real-time, dan kompatibel dengan mobilmu.
+                        </p>
+
+                        <div class="figma-hero-actions">
+                            <a class="btn-gradient-cta hero-cta" href="#cari-stasiun">
+                                <span>Cari Stasiun Sekarang</span>
+                                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                                    <path d="M7.5 4.5L13 10L7.5 15.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
 
-                    <h1 class="figma-hero-title">
-                        Temukan Stasiun Pengisian Daya Terdekat &amp; Sesuai Kendaraanmu
-                    </h1>
-
-                    <p class="figma-hero-copy hero-copy">
-                        Informasi stasiun pengisian daya kendaraan listrik yang akurat, real-time, dan kompatibel dengan mobilmu.
-                    </p>
-
-                    <div class="figma-hero-actions">
-                        <a class="btn-gradient-cta hero-cta" href="#cari-stasiun">
-                            <span>Cari Stasiun Sekarang</span>
-                            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
-                                <path d="M7.5 4.5L13 10L7.5 15.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
+                    <div class="figma-hero-visual" aria-hidden="true">
+                        <div class="hero-image-container">
+                            <img
+                                src="{{ asset('images/hero-ev-car.jpg') }}"
+                                alt="Mobil Listrik CasIn.id"
+                                class="hero-ev-image"
+                                loading="eager"
+                            >
+                        </div>
                     </div>
+                </div>
 
+                <div class="figma-hero-bottom">
                     <div class="active-vehicle-card" id="active-vehicle-widget">
                         <div class="active-vehicle-left">
                             <div class="active-vehicle-icon" aria-hidden="true">
