@@ -13,12 +13,9 @@ return new class extends Migration
     {
         Schema::create('user_favorites', function (Blueprint $table) {
             $table->id('id_user_favorites');
-            $table->unsignedBigInteger('id_user');
-            $table->unsignedBigInteger('id_stations');
+            $table->foreignId('id_user')->constrained('users', 'id_user')->onDelete('cascade');
+            $table->foreignId('id_stations')->constrained('stations', 'id_stations')->onDelete('cascade');
             $table->timestamps();
-
-            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('id_stations')->references('id_stations')->on('stations')->onDelete('cascade');
         });
     }
 

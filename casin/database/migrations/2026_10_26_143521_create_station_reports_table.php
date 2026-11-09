@@ -12,18 +12,12 @@ return new class extends Migration
     public function up(): void
 {
     Schema::create('station_reports', function (Blueprint $table) {
-        $table->id('id_station_report');
-        $table->unsignedBigInteger('id_stations');
-        $table->string('connector_type', 50);
-        $table->float('power_kw');
-        $table->string('charging_speed_category', 50);
-        $table->enum('status', ['normal', 'rusak', 'antre']);
-        $table->text('notes')->nullable();
-        $table->timestamp('reported_at')->useCurrent();
+      $table->id('id_station_report');
+        $table->foreignId('id_stations')->constrained('stations', 'id_stations')->onDelete('cascade');
+        $table->string('connector_type');
+        $table->decimal('power_kw', 8, 2);
+        $table->string('charging_speed_category');
         $table->timestamps();
-
-        // Foreign key ke tabel stations
-        $table->foreign('id_stations')->references('id_stations')->on('stations')->onDelete('cascade');
     });
 }
 
