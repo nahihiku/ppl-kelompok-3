@@ -13,14 +13,11 @@ return new class extends Migration
     {
         Schema::create('station_reviews', function (Blueprint $table) {
             $table->id('id_station_review');
-            $table->unsignedBigInteger('id_stations');
-            $table->unsignedBigInteger('id_user');
-            $table->integer('rating');
-            $table->text('comment')->nullable();
+            $table->foreignId('id_stations')->constrained('stations', 'id_stations')->onDelete('cascade');
+            $table->foreignId('id_user')->constrained('users', 'id_user')->onDelete('cascade');
+            $table->unsignedTinyInteger('rating');
+            $table->text('comment');
             $table->timestamps();
-
-            $table->foreign('id_stations')->references('id_stations')->on('stations')->onDelete('cascade');
-            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

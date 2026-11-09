@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('stations', function (Blueprint $table) {
             $table->id('id_stations');
             $table->string('name');
-            $table->string('operator_type'); // government (PLN/BUMN) | private | commercial
+            $table->string('operator_type'); 
             $table->string('address');
             $table->decimal('latitude', 10, 7);
             $table->decimal('longitude', 10, 7);
