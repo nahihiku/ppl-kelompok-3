@@ -1,0 +1,1969 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-10T05:04:32Z",
+    "timestamp_areas_base": "2026-11-10T02:26:05Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 2057801007,
+  "lat": -5.1875196,
+  "lon": 119.4410589,
+  "tags": {
+    "amenity": "charging_station"
+  }
+},
+{
+  "type": "node",
+  "id": 4464428890,
+  "lat": -6.8107567,
+  "lon": 111.9966021,
+  "tags": {
+    "amenity": "charging_station",
+    "operator": "pltu tj.awar-awar"
+  }
+},
+{
+  "type": "node",
+  "id": 4550079690,
+  "lat": -1.5659275,
+  "lon": 99.1932805,
+  "tags": {
+    "amenity": "charging_station",
+    "operator": "PLN Maileppet"
+  }
+},
+{
+  "type": "node",
+  "id": 6222913188,
+  "lat": -6.1842630,
+  "lon": 106.8217903,
+  "tags": {
+    "amenity": "charging_station",
+    "operator": "BPPT"
+  }
+},
+{
+  "type": "node",
+  "id": 9770975033,
+  "lat": -7.9746147,
+  "lon": 112.6299402,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "SPKLU PLN UP3 Malang"
+  }
+},
+{
+  "type": "node",
+  "id": 10061967265,
+  "lat": -7.5489020,
+  "lon": 111.7571978,
+  "tags": {
+    "amenity": "charging_station",
+    "capacity": "5",
+    "fee": "no",
+    "motorcar": "yes",
+    "name": "SPKLU PLN",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 10278757981,
+  "lat": -6.9203980,
+  "lon": 107.6088493,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "SPLU",
+    "opening_hours": "24/7",
+    "ref": "SPLU PLN Cikapundung"
+  }
+},
+{
+  "type": "node",
+  "id": 10278757982,
+  "lat": -6.8790549,
+  "lon": 107.5972977,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "SPKLU",
+    "operator": "Perusahaan Listrik Negara",
+    "ref": "SPKLU PLN Sukaasih"
+  }
+},
+{
+  "type": "node",
+  "id": 10278757983,
+  "lat": -6.9488350,
+  "lon": 107.6117933,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "SPKLU PLN UP3 Bandung",
+    "fee": "yes",
+    "name": "SPKLU PLN UP3 Bandung",
+    "opening_hours": "24/7",
+    "operator": "Perusahaan Listrik Negara",
+    "ref": "SPKLU PLN UP3 Bandung"
+  }
+},
+{
+  "type": "node",
+  "id": 10278818868,
+  "lat": -6.8992806,
+  "lon": 107.6412038,
+  "tags": {
+    "amenity": "charging_station",
+    "authentication:short_message": "yes",
+    "bicycle": "yes",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "SPKLU",
+    "operator": "Perusahaan Listrik Negara",
+    "ref": "SPLU PLN Cikutra",
+    "scooter": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 10278818869,
+  "lat": -6.9132524,
+  "lon": 107.6949227,
+  "tags": {
+    "amenity": "charging_station",
+    "authentication:nfc": "yes",
+    "authentication:short_message": "yes",
+    "bicycle": "yes",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "SPKLU",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636",
+    "ref": "SPLU PLN Ujungberung",
+    "scooter": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 10628103491,
+  "lat": -6.3310084,
+  "lon": 107.1300399,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "SPKLU PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 11097015685,
+  "lat": -6.9382721,
+  "lon": 107.6278989,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "SPKLU PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 11313858414,
+  "lat": -6.8667659,
+  "lon": 107.4670227,
+  "tags": {
+    "addr:place": "IKEA Kota Baru Parahyangan",
+    "amenity": "charging_station",
+    "authentication:app": "yes",
+    "authentication:nfc": "yes",
+    "bicycle": "no",
+    "brand": "Voltron",
+    "capacity": "2",
+    "fee": "yes",
+    "level": "2",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "Voltron",
+    "opening_hours": "Mo-Su 09:00-22:00",
+    "ref": "IKEA Kota Baru Parahyangan",
+    "socket:type2_combo": "2",
+    "socket:type2_combo:output": "22",
+    "truck": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11420559071,
+  "lat": -0.3708022,
+  "lon": 117.2570014,
+  "tags": {
+    "access": "permit",
+    "amenity": "charging_station",
+    "permit": "boarding_pass;travel_document",
+    "security_area": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11420559073,
+  "lat": -0.3711187,
+  "lon": 117.2566742,
+  "tags": {
+    "access": "permit",
+    "amenity": "charging_station",
+    "permit": "boarding_pass;travel_document",
+    "security_area": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11501962348,
+  "lat": -6.9554353,
+  "lon": 107.6935217,
+  "tags": {
+    "amenity": "charging_station",
+    "fee": "yes",
+    "name": "Voltron",
+    "opening_hours": "24/7",
+    "operator": "Voltron"
+  }
+},
+{
+  "type": "node",
+  "id": 11554666945,
+  "lat": -6.9541414,
+  "lon": 107.6993112,
+  "tags": {
+    "amenity": "charging_station",
+    "authentication:app": "yes",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "Voltron",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 11823325316,
+  "lat": -6.9473868,
+  "lon": 107.5987915,
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "brand": "SKLU Hyundai Leuwipanjang (Khusus Kendaraan Hyundai)",
+    "fee": "yes",
+    "name": "SPKLU Hyundai Leuwipanjang (Khusus Kendaraan Hyundai)",
+    "not:operator:wikidata": "Q55931",
+    "operator": "Hyundai"
+  }
+},
+{
+  "type": "node",
+  "id": 11842955097,
+  "lat": -6.9338536,
+  "lon": 107.5714170,
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "brand": "SPKLU PLN ULP Kopo",
+    "fee": "yes",
+    "operator": "Perusahaan Listrik Negara",
+    "ref": "SPKLU PLN ULP Kopo"
+  }
+},
+{
+  "type": "node",
+  "id": 11842964069,
+  "lat": -6.9959483,
+  "lon": 107.5311784,
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "brand": "SPKLU Pendopo Sri Agung Jaya Marga Asih",
+    "fee": "yes",
+    "opening_hours": "24/7",
+    "operator": "Perusahaan Listrik Negara",
+    "ref": "SPKLU Pendopo Sri Agung Jaya Marga Asih"
+  }
+},
+{
+  "type": "node",
+  "id": 11872805012,
+  "lat": -6.9540155,
+  "lon": 107.6405768,
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "brand": "SPKLU PLN ULP Cijawura",
+    "check_date": "2026-06-26",
+    "fee": "yes",
+    "operator": "Perusahaan Listrik Negara",
+    "ref": "SPKLU PLN ULP Cijawura",
+    "socket:type2_cable": "1"
+  }
+},
+{
+  "type": "node",
+  "id": 11872819863,
+  "lat": -6.9151951,
+  "lon": 107.5944815,
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "brand": "(Voltron) 23 Paskal Mall",
+    "fee": "yes",
+    "operator": "Voltron",
+    "ref": "(Voltron) 23 Paskal Mall"
+  }
+},
+{
+  "type": "node",
+  "id": 11872991854,
+  "lat": -6.8985965,
+  "lon": 107.5541442,
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "brand": "SPKLU PLN ULP Cimahi Selatan",
+    "fee": "yes",
+    "operator": "Perusahaan Listrik Negara",
+    "ref": "SPKLU PLN ULP Cimahi Selatan"
+  }
+},
+{
+  "type": "node",
+  "id": 11872997750,
+  "lat": -6.9070715,
+  "lon": 107.5787876,
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "brand": "SPKLU PLN ULP Bandung Barat",
+    "fee": "yes",
+    "operator": "Perusahaan Listrik Negara",
+    "ref": "SPKLU PLN ULP Bandung Barat"
+  }
+},
+{
+  "type": "node",
+  "id": 11873004069,
+  "lat": -7.0207921,
+  "lon": 107.5296121,
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "brand": "SPKLU Gedung Budaya Sabilulungan",
+    "fee": "yes",
+    "operator": "Perusahaan Listrik Negara",
+    "ref": "SPKLU Gedung Budaya Sabilulungan"
+  }
+},
+{
+  "type": "node",
+  "id": 11873033960,
+  "lat": -7.0354172,
+  "lon": 107.5933164,
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "brand": "SPKLU PLN ULP Banjaran",
+    "fee": "yes",
+    "operator": "Perusahaan Listrik Negara",
+    "ref": "SPKLU PLN ULP Banjaran"
+  }
+},
+{
+  "type": "node",
+  "id": 12077015474,
+  "lat": -6.2712661,
+  "lon": 107.0394824,
+  "tags": {
+    "amenity": "charging_station",
+    "authentication:app": "yes",
+    "covered": "yes",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "no",
+    "name": "SPKLU Rest Area KM 19B"
+  }
+},
+{
+  "type": "node",
+  "id": 12077015475,
+  "lat": -6.2591456,
+  "lon": 106.9284437,
+  "tags": {
+    "amenity": "charging_station",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "no",
+    "name": "SPKLU Rest Area KM 6"
+  }
+},
+{
+  "type": "node",
+  "id": 12473165429,
+  "lat": -6.8908152,
+  "lon": 107.6095898,
+  "tags": {
+    "amenity": "charging_station",
+    "capacity": "2"
+  }
+},
+{
+  "type": "node",
+  "id": 12526770958,
+  "lat": -2.5771620,
+  "lon": 115.3894482,
+  "tags": {
+    "amenity": "charging_station",
+    "authentication:app": "no",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "SPKLU Barabai"
+  }
+},
+{
+  "type": "node",
+  "id": 12557877196,
+  "lat": -6.2482161,
+  "lon": 106.9904479,
+  "tags": {
+    "amenity": "charging_station"
+  }
+},
+{
+  "type": "node",
+  "id": 12570542935,
+  "lat": -8.5462968,
+  "lon": 115.4871854,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "Charging Station Yeh Malet"
+  }
+},
+{
+  "type": "node",
+  "id": 12621583669,
+  "lat": -6.1818787,
+  "lon": 106.8246653,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "SPKLU PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 12650943353,
+  "lat": -6.1803171,
+  "lon": 106.8328145,
+  "tags": {
+    "amenity": "charging_station"
+  }
+},
+{
+  "type": "node",
+  "id": 12679475713,
+  "lat": -3.4359801,
+  "lon": 114.7593246,
+  "tags": {
+    "amenity": "charging_station",
+    "authentication:app": "yes",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "SPKLU PLN Syamsudin Noor",
+    "operator": "PLN",
+    "operator:wikidata": "Q4201636",
+    "payment:cash": "no",
+    "start_date": "2025-02-28"
+  }
+},
+{
+  "type": "node",
+  "id": 12679476427,
+  "lat": -3.3325223,
+  "lon": 114.5845900,
+  "tags": {
+    "amenity": "charging_station",
+    "authentication:app": "yes",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "SPKLU PLN Sultan Suriansyah",
+    "operator": "PLN",
+    "operator:wikidata": "Q4201636",
+    "payment:cash": "no",
+    "socket:type2": "1",
+    "socket:type2:output": "22 kW",
+    "start_date": "2024-11-18"
+  }
+},
+{
+  "type": "node",
+  "id": 12679484836,
+  "lat": -3.3216094,
+  "lon": 114.5920198,
+  "tags": {
+    "amenity": "charging_station",
+    "authentication:app": "yes",
+    "brand": "Autel",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "SPKLU PLN UP3 Banjarmasin",
+    "operator": "PLN",
+    "operator:wikidata": "Q4201636",
+    "payment:cash": "no",
+    "socket:type2": "1",
+    "socket:type2:output": "22 kW",
+    "start_date": "2025-03-12"
+  }
+},
+{
+  "type": "node",
+  "id": 12679532481,
+  "lat": -3.4385993,
+  "lon": 114.8259875,
+  "tags": {
+    "amenity": "charging_station",
+    "authentication:app": "yes",
+    "brand": "Delta",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "SPKLU PLN UID KSKT",
+    "operator": "PLN",
+    "operator:wikidata": "Q4201636",
+    "payment:cash": "no",
+    "socket:type2": "1",
+    "socket:type2:output": "22 kW",
+    "start_date": "~2024"
+  }
+},
+{
+  "type": "node",
+  "id": 12679579527,
+  "lat": -3.4451615,
+  "lon": 114.8136909,
+  "tags": {
+    "amenity": "charging_station",
+    "authentication:app": "yes",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "SPKLU PLN UPDL Banjarbaru",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636",
+    "payment:cash": "no",
+    "socket:type2": "1",
+    "socket:type2:output": "22 kW",
+    "start_date": "2025-01"
+  }
+},
+{
+  "type": "node",
+  "id": 12679579528,
+  "lat": -3.3377090,
+  "lon": 114.6179062,
+  "tags": {
+    "amenity": "charging_station",
+    "authentication:app": "yes",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "SPKLU PLN ULP Ahmad Yani",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636",
+    "payment:cash": "no",
+    "socket:type2": "1",
+    "socket:type2:output": "22 kW",
+    "start_date": "~2024"
+  }
+},
+{
+  "type": "node",
+  "id": 12679604801,
+  "lat": -3.4628274,
+  "lon": 115.9970003,
+  "tags": {
+    "amenity": "charging_station",
+    "authentication:app": "yes",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "SPKLU PLN ULP Batulicin",
+    "operator": "PLN",
+    "operator:wikidata": "Q4201636",
+    "payment:cash": "no",
+    "socket:type2": "1",
+    "socket:type2:output": "22 kW",
+    "start_date": "~2025"
+  }
+},
+{
+  "type": "node",
+  "id": 12729410836,
+  "lat": -3.3378482,
+  "lon": 114.6179708,
+  "tags": {
+    "amenity": "charging_station",
+    "authentication:app": "yes",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "SPKLU PLN ULP Ahmad Yani",
+    "note": "This is not a duplicate, it is a new charging spot",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636",
+    "payment:cash": "no",
+    "socket:type2": "1",
+    "socket:type2:output": "22 kW",
+    "start_date": "2025"
+  }
+},
+{
+  "type": "node",
+  "id": 12732885545,
+  "lat": -6.3512854,
+  "lon": 107.1930777,
+  "tags": {
+    "access": "customers",
+    "amenity": "charging_station",
+    "brand": "Utomo Charge+",
+    "capacity": "8",
+    "covered": "yes",
+    "website": "https://utomochargeplus.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 12738952699,
+  "lat": -7.9652364,
+  "lon": 112.6343964,
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "brand": "Voltron",
+    "capacity": "1",
+    "fee": "yes",
+    "wikidata": "Q137299047"
+  }
+},
+{
+  "type": "node",
+  "id": 12860423796,
+  "lat": -6.7590770,
+  "lon": 108.4802840,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "PLN",
+    "capacity": "1",
+    "charging_station:output": "22 kW",
+    "fee": "yes",
+    "motorcar": "yes",
+    "name": "SPKLU PLN ULP Sumber",
+    "opening_hours": "24/7",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636",
+    "socket:type2_cable": "1",
+    "socket:type2_cable:output": "22 kW",
+    "source": "PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 12860423797,
+  "lat": -6.7591930,
+  "lon": 108.4828550,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "PLN",
+    "capacity": "1",
+    "charging_station:output": "22 kW",
+    "covered": "no",
+    "fee": "yes",
+    "motorcar": "yes",
+    "name": "SPKLU PLN Dishub Kab. Cirebon",
+    "opening_hours": "24/7",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636",
+    "socket:type2_cable": "1",
+    "socket:type2_cable:output": "22 kW",
+    "source": "PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 12860423798,
+  "lat": -6.7638320,
+  "lon": 108.5261610,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "PLN",
+    "capacity": "1",
+    "charging_station:output": "22 kW",
+    "fee": "yes",
+    "motorcar": "yes",
+    "name": "SPKLU PLN Verona Hills",
+    "opening_hours": "24/7",
+    "operator": "PLN",
+    "socket:type2_cable": "1",
+    "socket:type2_cable:output": "22 kW",
+    "source": "PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 12860465391,
+  "lat": -6.7211780,
+  "lon": 108.5720697,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "PLN",
+    "capacity": "1",
+    "charging_station:output": "22 kW",
+    "covered": "no",
+    "fee": "yes",
+    "motorcar": "yes",
+    "name": "SPKLU PLN ULP Cirebon Kota",
+    "opening_hours": "24/7",
+    "operator": "PLN",
+    "socket:type2_cable": "1",
+    "socket:type2_cable:output": "22 kW",
+    "source": "PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 12860465392,
+  "lat": -6.7206618,
+  "lon": 108.5503331,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "PLN",
+    "charging_station:output": "44 kW",
+    "motorcar": "yes",
+    "motorcycle": "no",
+    "name": "SPKLU PLN",
+    "socket:type2": "2",
+    "source": "PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 12860465393,
+  "lat": -6.7229879,
+  "lon": 108.5379858,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "Hyundai",
+    "brand:wikidata": "Q55931",
+    "capacity": "2",
+    "charging_station:output": "14.8 kW",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "no",
+    "name": "Hyundai EV Charging Station",
+    "opening_hours": "24/7",
+    "operator": "Hyundai",
+    "socket:type2_cable": "2",
+    "socket:type2_cable:output": "7.4 kW"
+  }
+},
+{
+  "type": "node",
+  "id": 12860465394,
+  "lat": -6.7219370,
+  "lon": 108.5392470,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "PLN",
+    "capacity": "2",
+    "charging_station:output": "44 kW",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "no",
+    "name": "SPKLU PLN",
+    "opening_hours": "24/7",
+    "operator": "PLN",
+    "socket:type2_cable": "2",
+    "socket:type2_cable:output": "22",
+    "source": "PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 12860465395,
+  "lat": -6.7219607,
+  "lon": 108.5400330,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "Hyundai",
+    "brand:wikidata": "Q55931",
+    "capacity": "1",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "no",
+    "name": "Hyundai EV Charging Station",
+    "operator": "Hyundai",
+    "socket:type2_cable": "1",
+    "socket:type2_cable:output": "7 kW",
+    "source": "https://www.astonhotelsinternational.com/id/hotel/view/10/aston-cirebon-hotel---convention-center"
+  }
+},
+{
+  "type": "node",
+  "id": 12860465396,
+  "lat": -6.7102285,
+  "lon": 108.5340509,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "PLN",
+    "capacity": "1",
+    "charging_station:output": "22 kW",
+    "covered": "no",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "no",
+    "name": "SPKLU PLN",
+    "opening_hours": "24/7",
+    "operator": "PLN",
+    "parking:fee": "yes",
+    "socket:type2_cable": "1",
+    "socket:type2_cable:output": "22 kW",
+    "source": "PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 12860465397,
+  "lat": -6.7111389,
+  "lon": 108.5401540,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "PLN",
+    "capacity": "3",
+    "charging_station:output": "244 kW",
+    "covered": "no",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "SPKLU PLN UP3 Cirebon",
+    "opening_hours": "24/7",
+    "operator": "PLN",
+    "socket:type2_cable": "2",
+    "socket:type2_cable:output": "22 kW",
+    "socket:type2_combo": "2",
+    "socket:type2_combo:output": "100 kW",
+    "source": "PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 12960379004,
+  "lat": -6.2208636,
+  "lon": 106.6538105,
+  "tags": {
+    "amenity": "charging_station",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "no",
+    "name": "Carzo"
+  }
+},
+{
+  "type": "node",
+  "id": 12965631816,
+  "lat": -7.3260877,
+  "lon": 108.3485865,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "PLN",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636"
+  }
+},
+{
+  "type": "node",
+  "id": 13081235461,
+  "lat": -6.2529461,
+  "lon": 107.0107039,
+  "tags": {
+    "amenity": "charging_station"
+  }
+},
+{
+  "type": "node",
+  "id": 13185499347,
+  "lat": -6.2660720,
+  "lon": 107.0085191,
+  "tags": {
+    "amenity": "charging_station"
+  }
+},
+{
+  "type": "node",
+  "id": 13293910280,
+  "lat": -6.6183463,
+  "lon": 106.8146093,
+  "tags": {
+    "access": "customers",
+    "amenity": "charging_station",
+    "brand": "Polytron",
+    "capacity": "2",
+    "fee": "no",
+    "operator": "Polytron"
+  }
+},
+{
+  "type": "node",
+  "id": 13363428303,
+  "lat": -6.9461869,
+  "lon": 107.6403961,
+  "tags": {
+    "amenity": "charging_station",
+    "capacity:motorcar": "2"
+  }
+},
+{
+  "type": "node",
+  "id": 13404199501,
+  "lat": -6.9331623,
+  "lon": 109.2154829,
+  "tags": {
+    "amenity": "charging_station",
+    "socket:chademo": "1",
+    "socket:type2_cable": "1",
+    "socket:type2_combo": "1"
+  }
+},
+{
+  "type": "node",
+  "id": 13406926538,
+  "lat": -6.2775335,
+  "lon": 106.8001927,
+  "tags": {
+    "amenity": "charging_station",
+    "bicycle": "no",
+    "capacity:motorcar": "1"
+  }
+},
+{
+  "type": "node",
+  "id": 13407994001,
+  "lat": -6.9575979,
+  "lon": 110.0148368,
+  "tags": {
+    "amenity": "charging_station",
+    "socket:type2_cable": "2",
+    "socket:type2_combo": "6",
+    "socket:unknown": "2"
+  }
+},
+{
+  "type": "node",
+  "id": 13426464029,
+  "lat": 0.5254423,
+  "lon": 115.2371306,
+  "tags": {
+    "amenity": "charging_station",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636"
+  }
+},
+{
+  "type": "node",
+  "id": 13426795398,
+  "lat": -7.3556477,
+  "lon": 112.6909531,
+  "tags": {
+    "amenity": "charging_station"
+  }
+},
+{
+  "type": "node",
+  "id": 13426795399,
+  "lat": -7.3545024,
+  "lon": 112.6950283,
+  "tags": {
+    "amenity": "charging_station"
+  }
+},
+{
+  "type": "node",
+  "id": 13481009823,
+  "lat": -6.8673570,
+  "lon": 107.4648722,
+  "tags": {
+    "amenity": "charging_station",
+    "bicycle": "no",
+    "capacity:motorcar": "2",
+    "operator": "PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 13481469558,
+  "lat": -6.8902045,
+  "lon": 107.6127579,
+  "tags": {
+    "amenity": "charging_station",
+    "bicycle": "no",
+    "capacity:motorcar": "2",
+    "operator": "Pertamina"
+  }
+},
+{
+  "type": "node",
+  "id": 13513898929,
+  "lat": -6.2588693,
+  "lon": 106.9809590,
+  "tags": {
+    "amenity": "charging_station"
+  }
+},
+{
+  "type": "node",
+  "id": 13541041183,
+  "lat": 0.4111161,
+  "lon": 101.0469233,
+  "tags": {
+    "amenity": "charging_station",
+    "authentication:app": "yes",
+    "capacity": "1",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "no",
+    "name": "SPKLU PLN",
+    "network": "PLN",
+    "opening_hours": "24/7",
+    "operator": "PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 13541041184,
+  "lat": 0.4110126,
+  "lon": 101.0496898,
+  "tags": {
+    "amenity": "charging_station",
+    "authentication:app": "yes",
+    "capacity": "1",
+    "fee": "yes",
+    "motorcar": "yes",
+    "motorcycle": "no",
+    "name": "SPKLU PLN",
+    "network": "PLN",
+    "opening_hours": "24/7",
+    "operator": "PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 13564127003,
+  "lat": -0.5198648,
+  "lon": 117.1171914,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "SPLU Voltron"
+  }
+},
+{
+  "type": "node",
+  "id": 13564127004,
+  "lat": -0.5010478,
+  "lon": 117.1374307,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "SPKLU PLN",
+    "fee": "yes",
+    "operator": "Perusahaan Listrik Negara"
+  }
+},
+{
+  "type": "node",
+  "id": 13564127005,
+  "lat": -0.4798665,
+  "lon": 117.1531732,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "SPKLU PLN",
+    "operator": "Perusahaan Listrik Negara"
+  }
+},
+{
+  "type": "node",
+  "id": 13592127827,
+  "lat": -6.9022231,
+  "lon": 107.6118761,
+  "tags": {
+    "amenity": "charging_station",
+    "bicycle": "no",
+    "capacity:motorcar": "2",
+    "operator": "Voltron"
+  }
+},
+{
+  "type": "node",
+  "id": 13604493028,
+  "lat": 3.1710112,
+  "lon": 99.4195760,
+  "tags": {
+    "amenity": "charging_station",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636"
+  }
+},
+{
+  "type": "node",
+  "id": 13668164974,
+  "lat": -6.1333807,
+  "lon": 106.2053472,
+  "tags": {
+    "amenity": "charging_station"
+  }
+},
+{
+  "type": "node",
+  "id": 13680911602,
+  "lat": -7.2762095,
+  "lon": 112.7945036,
+  "tags": {
+    "amenity": "charging_station",
+    "check_date": "2026-03-25",
+    "socket:type2_combo": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13783836631,
+  "lat": -6.9367809,
+  "lon": 107.6223621,
+  "tags": {
+    "amenity": "charging_station",
+    "bicycle": "no",
+    "capacity:motorcar": "1",
+    "operator": "Vinfast"
+  }
+},
+{
+  "type": "node",
+  "id": 13872408261,
+  "lat": -6.2285343,
+  "lon": 106.6515823,
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "brand": "SPKLU PLN",
+    "capacity": "8",
+    "fee": "yes",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636"
+  }
+},
+{
+  "type": "node",
+  "id": 13898363040,
+  "lat": -6.2834890,
+  "lon": 106.9302220,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "SPKLU PLN Pondokgede"
+  }
+},
+{
+  "type": "node",
+  "id": 13964383203,
+  "lat": -6.1741662,
+  "lon": 106.8970015,
+  "tags": {
+    "amenity": "charging_station",
+    "check_date": "2026-06-25",
+    "operator": "Wuling Arista Kelapa Gading",
+    "socket:type2_cable": "2"
+  }
+},
+{
+  "type": "node",
+  "id": 13964386201,
+  "lat": -6.1789721,
+  "lon": 106.8869559,
+  "tags": {
+    "amenity": "charging_station",
+    "check_date": "2026-06-25",
+    "socket:unknown": "2",
+    "socket:unknown:output": "80"
+  }
+},
+{
+  "type": "node",
+  "id": 13968078003,
+  "lat": -6.6753016,
+  "lon": 107.4391815,
+  "tags": {
+    "amenity": "charging_station",
+    "check_date": "2026-06-26",
+    "operator": "SPKLU PLN",
+    "socket:type2_combo": "2"
+  }
+},
+{
+  "type": "node",
+  "id": 13968078004,
+  "lat": -6.5091205,
+  "lon": 107.7187943,
+  "tags": {
+    "amenity": "charging_station",
+    "check_date": "2026-06-26",
+    "operator": "SPKLU PLN",
+    "socket:type2_cable": "1",
+    "socket:type2_cable:output": "20",
+    "socket:type2_combo": "2"
+  }
+},
+{
+  "type": "node",
+  "id": 13968078201,
+  "lat": -6.4683157,
+  "lon": 107.4447145,
+  "tags": {
+    "amenity": "charging_station",
+    "check_date": "2026-06-26",
+    "operator": "SPKLU PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 13970164601,
+  "lat": -7.6892915,
+  "lon": 110.6227900,
+  "tags": {
+    "addr:housenumber": "3A",
+    "addr:postcode": "57435",
+    "addr:street": "Jalan Jogja - Solo",
+    "amenity": "charging_station",
+    "name": "SPKLU UP3 Klaten",
+    "operator": "PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 13991958353,
+  "lat": -6.7094794,
+  "lon": 108.5282270,
+  "tags": {
+    "amenity": "charging_station",
+    "check_date": "2026-07-06",
+    "motorcar": "yes",
+    "name": "Vinfast"
+  }
+},
+{
+  "type": "node",
+  "id": 13999905202,
+  "lat": -2.1151254,
+  "lon": 106.1118047,
+  "tags": {
+    "amenity": "charging_station",
+    "check_date": "2026-07-09",
+    "socket:type2_cable": "2"
+  }
+},
+{
+  "type": "node",
+  "id": 14044947701,
+  "lat": -6.9206474,
+  "lon": 106.9320040,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "SPKLU PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 14047960301,
+  "lat": -7.3786922,
+  "lon": 112.5446417,
+  "tags": {
+    "amenity": "charging_station",
+    "level": "1",
+    "operator": "Voltron"
+  }
+},
+{
+  "type": "node",
+  "id": 14077859405,
+  "lat": -2.7425001,
+  "lon": 107.6368162,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "Charging Station"
+  }
+},
+{
+  "type": "node",
+  "id": 14101900159,
+  "lat": -6.1934997,
+  "lon": 106.4253500,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "SPKLU PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 14103520402,
+  "lat": -5.1326813,
+  "lon": 119.4107679,
+  "tags": {
+    "addr:street": "Jalan Jenderal Ahmad Yani",
+    "amenity": "charging_station",
+    "name": "SPKLU PLN ULP Karebosi",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 14111780101,
+  "lat": -6.2395667,
+  "lon": 106.7981265,
+  "tags": {
+    "amenity": "charging_station"
+  }
+},
+{
+  "type": "node",
+  "id": 14143540001,
+  "lat": -6.1473612,
+  "lon": 106.8917711,
+  "tags": {
+    "amenity": "charging_station"
+  }
+},
+{
+  "type": "node",
+  "id": 14175788396,
+  "lat": -7.2125873,
+  "lon": 110.4498649,
+  "tags": {
+    "amenity": "charging_station",
+    "authentication:app": "yes",
+    "building": "yes",
+    "capacity": "12",
+    "covered": "yes",
+    "fee": "yes",
+    "motorcar": "yes",
+    "name": "SPKLU PLN",
+    "network": "PLN",
+    "opening_hours": "24/7",
+    "operator": "PLN"
+  }
+},
+{
+  "type": "node",
+  "id": 14177255201,
+  "lat": -6.1749177,
+  "lon": 106.8120618,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "Alva Boost Charge Station"
+  }
+},
+{
+  "type": "node",
+  "id": 14177255301,
+  "lat": -6.1756093,
+  "lon": 106.8124509,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "Kymco ionex Battery Swap Station"
+  }
+},
+{
+  "type": "node",
+  "id": 14179678786,
+  "lat": -6.5529264,
+  "lon": 107.4463742,
+  "tags": {
+    "amenity": "charging_station",
+    "bicycle": "no",
+    "capacity:motorcar": "2",
+    "operator": "Vinfast"
+  }
+},
+{
+  "type": "node",
+  "id": 14200863401,
+  "lat": -6.1656649,
+  "lon": 106.8121788,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "Vinfast"
+  }
+},
+{
+  "type": "node",
+  "id": 14206178911,
+  "lat": -7.6343236,
+  "lon": 111.5326514,
+  "tags": {
+    "amenity": "charging_station",
+    "capacity": "10",
+    "check_date": "2026-09-22",
+    "covered": "yes",
+    "level": "0",
+    "operator": "Perusahaan Listrik Negara"
+  }
+},
+{
+  "type": "node",
+  "id": 14239272498,
+  "lat": -7.3331796,
+  "lon": 111.0719011,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "Langit Biru",
+    "capacity": "1",
+    "covered": "yes",
+    "fee": "no",
+    "indoor": "yes",
+    "motorcycle": "yes",
+    "opening_hours": "24/7",
+    "scooter": "yes",
+    "socket:schuko": "1"
+  }
+},
+{
+  "type": "node",
+  "id": 14239591671,
+  "lat": -6.3294226,
+  "lon": 106.7093318,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "Vinfast",
+    "charging_station:battery_swapping": "only",
+    "name": "VinFast Swap Battery",
+    "operator": "VinFast"
+  }
+},
+{
+  "type": "node",
+  "id": 14241642101,
+  "lat": -6.1899541,
+  "lon": 106.8473945,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "Vinfast"
+  }
+},
+{
+  "type": "node",
+  "id": 14241642201,
+  "lat": -6.1898949,
+  "lon": 106.8473456,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "S Swap"
+  }
+},
+{
+  "type": "node",
+  "id": 14242488201,
+  "lat": -6.1641042,
+  "lon": 106.8127970,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "Wuling"
+  }
+},
+{
+  "type": "node",
+  "id": 14251473002,
+  "lat": -6.1844446,
+  "lon": 106.6001060,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "Vinfast"
+  }
+},
+{
+  "type": "node",
+  "id": 14271982279,
+  "lat": -7.3738314,
+  "lon": 108.5425965,
+  "tags": {
+    "amenity": "charging_station"
+  }
+},
+{
+  "type": "node",
+  "id": 14278644201,
+  "lat": -6.9193512,
+  "lon": 106.9276024,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "Vinfast"
+  }
+},
+{
+  "type": "node",
+  "id": 14286977711,
+  "lat": -6.8351370,
+  "lon": 107.5948307,
+  "tags": {
+    "amenity": "charging_station",
+    "bicycle": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 14287676752,
+  "lat": -8.3644056,
+  "lon": 114.1463369,
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "Vinfast"
+  }
+},
+{
+  "type": "node",
+  "id": 14320283401,
+  "lat": -6.1417980,
+  "lon": 106.8162472,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "SPKLU PLN 180kW"
+  }
+},
+{
+  "type": "node",
+  "id": 14323106601,
+  "lat": -6.1761577,
+  "lon": 106.8152396,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "Dayagreen 22 kW"
+  }
+},
+{
+  "type": "node",
+  "id": 14332864301,
+  "lat": -6.1755771,
+  "lon": 106.8124398,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "Swap Black 72V"
+  }
+},
+{
+  "type": "node",
+  "id": 14354508801,
+  "lat": -6.1574311,
+  "lon": 106.8187997,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "Vinfast"
+  }
+},
+{
+  "type": "node",
+  "id": 14354509401,
+  "lat": -6.1708641,
+  "lon": 106.8129803,
+  "tags": {
+    "amenity": "charging_station",
+    "name": "Swap Black 72V",
+    "phone": "+6281943583388"
+  }
+},
+{
+  "type": "node",
+  "id": 14355854110,
+  "lat": -6.3031027,
+  "lon": 106.6546702,
+  "tags": {
+    "amenity": "charging_station",
+    "check_date:socket": "2026-11-07",
+    "operator": "Terra Charge",
+    "socket:type2_combo": "4"
+  }
+},
+{
+  "type": "way",
+  "id": 575986392,
+  "center": {
+    "lat": 0.1363980,
+    "lon": 117.4820000
+  },
+  "tags": {
+    "amenity": "charging_station",
+    "name": "kantor pln",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636"
+  }
+},
+{
+  "type": "way",
+  "id": 833192758,
+  "center": {
+    "lat": -7.3714095,
+    "lon": 108.5357166
+  },
+  "tags": {
+    "amenity": "charging_station"
+  }
+},
+{
+  "type": "way",
+  "id": 1013660106,
+  "center": {
+    "lat": 0.1376996,
+    "lon": 117.4538414
+  },
+  "tags": {
+    "amenity": "charging_station",
+    "name": "PLTMG Bontang",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636"
+  }
+},
+{
+  "type": "way",
+  "id": 1013980421,
+  "center": {
+    "lat": 0.1371008,
+    "lon": 117.4542894
+  },
+  "tags": {
+    "amenity": "charging_station",
+    "name": "PT. PLN (Persero) PLTD-MG Bontang",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636"
+  }
+},
+{
+  "type": "way",
+  "id": 1292542239,
+  "center": {
+    "lat": -6.5758669,
+    "lon": 107.9604097
+  },
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "capacity": "25, 50, 200",
+    "fee": "yes",
+    "operator": "Perusahaan Listrik Negara"
+  }
+},
+{
+  "type": "way",
+  "id": 1301916161,
+  "center": {
+    "lat": -8.4594089,
+    "lon": 118.7411032
+  },
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "capacity": "25 kW DC",
+    "operator": "PLN"
+  }
+},
+{
+  "type": "way",
+  "id": 1319811044,
+  "center": {
+    "lat": -7.9375960,
+    "lon": 112.6816610
+  },
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "SPKLU PLN",
+    "fee": "yes",
+    "name": "SPKLU Stasiun Pengisian",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636"
+  }
+},
+{
+  "type": "way",
+  "id": 1328536518,
+  "center": {
+    "lat": 1.4863360,
+    "lon": 124.8339743
+  },
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "brand": "SPKLU",
+    "capacity": "2",
+    "fee": "yes",
+    "operator": "PT PLN (Persero)",
+    "payment:nfc": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1389262733,
+  "center": {
+    "lat": -6.7321333,
+    "lon": 108.5408307
+  },
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "authentication:app": "yes",
+    "authentication:none": "no",
+    "brand": "Voltron",
+    "capacity": "2",
+    "charge": "2467 IDR/kWh",
+    "fee": "yes",
+    "motorcar": "yes",
+    "network": "Voltron",
+    "opening_hours": "24/7",
+    "payment:cash": "no",
+    "payment:dana": "yes",
+    "payment:gopay_id": "yes",
+    "payment:jcb": "yes",
+    "payment:mastercard": "yes",
+    "payment:ovo": "yes",
+    "payment:shopeepay": "yes",
+    "payment:visa": "yes",
+    "socket:type2": "2",
+    "source": "Voltron"
+  }
+},
+{
+  "type": "way",
+  "id": 1425484641,
+  "center": {
+    "lat": -7.3236853,
+    "lon": 110.5026727
+  },
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "PLN",
+    "name": "SPKLU R4 R2 PLN Salatiga",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636"
+  }
+},
+{
+  "type": "way",
+  "id": 1425484642,
+  "center": {
+    "lat": -7.3251332,
+    "lon": 110.5029405
+  },
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "Vinfast",
+    "operator": "Vinfast"
+  }
+},
+{
+  "type": "way",
+  "id": 1425484643,
+  "center": {
+    "lat": -7.3414346,
+    "lon": 110.5096611
+  },
+  "tags": {
+    "amenity": "charging_station"
+  }
+},
+{
+  "type": "way",
+  "id": 1425484647,
+  "center": {
+    "lat": -7.3495096,
+    "lon": 110.5119493
+  },
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "Wuling"
+  }
+},
+{
+  "type": "way",
+  "id": 1432183823,
+  "center": {
+    "lat": -8.5379597,
+    "lon": 118.4630869
+  },
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "capacity": "25",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636",
+    "payment:app": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1456282353,
+  "center": {
+    "lat": -7.9537523,
+    "lon": 112.6578924
+  },
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "brand": "PLN",
+    "fee": "yes",
+    "name": "Stasiun Pengisian Kendaraan Listrik Umum",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636"
+  }
+},
+{
+  "type": "way",
+  "id": 1473565511,
+  "center": {
+    "lat": 1.1106168,
+    "lon": 104.0781438
+  },
+  "tags": {
+    "amenity": "charging_station",
+    "bicycle": "no",
+    "capacity:motorcar": "2",
+    "operator": "Hyundai",
+    "operator:wikidata": "Q55931"
+  }
+},
+{
+  "type": "way",
+  "id": 1473748312,
+  "center": {
+    "lat": -6.7406834,
+    "lon": 108.5833064
+  },
+  "tags": {
+    "access": "customers",
+    "amenity": "charging_station",
+    "brand": "Hyundai",
+    "capacity": "2"
+  }
+},
+{
+  "type": "way",
+  "id": 1489338664,
+  "center": {
+    "lat": -7.9871571,
+    "lon": 112.6246242
+  },
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "SPKLU PLN"
+  }
+},
+{
+  "type": "way",
+  "id": 1525045150,
+  "center": {
+    "lat": -2.2075825,
+    "lon": 113.9225382
+  },
+  "tags": {
+    "access": "yes",
+    "amenity": "charging_station",
+    "name": "SPKLU Charging Station",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636"
+  }
+},
+{
+  "type": "way",
+  "id": 1527890914,
+  "center": {
+    "lat": -6.1936204,
+    "lon": 106.6344831
+  },
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "PLN",
+    "name": "SPKLU EV TANGCITY",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636"
+  }
+},
+{
+  "type": "way",
+  "id": 1528373938,
+  "center": {
+    "lat": -6.9704425,
+    "lon": 107.6409380
+  },
+  "tags": {
+    "amenity": "charging_station",
+    "authentication:app": "yes",
+    "authentication:nfc": "yes",
+    "brand": "Vinfast",
+    "capacity": "1",
+    "fee": "yes",
+    "level": "0",
+    "motorcar": "yes",
+    "opening_hours": "Mo-Su 07:00-23:00 open \"Ikut jam buka Alfamidi\""
+  }
+},
+{
+  "type": "way",
+  "id": 1540723045,
+  "center": {
+    "lat": -7.6312561,
+    "lon": 111.5233875
+  },
+  "tags": {
+    "amenity": "charging_station",
+    "brand": "Voltron",
+    "capacity": "2",
+    "check_date": "2026-07-29",
+    "covered": "no",
+    "fee": "yes",
+    "level": "0",
+    "operator": "PT Exelly Elektrik Indonesia",
+    "payment:app": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1546022366,
+  "center": {
+    "lat": -8.7049641,
+    "lon": 115.2600372
+  },
+  "tags": {
+    "amenity": "charging_station",
+    "building": "yes",
+    "name": "PLN"
+  }
+}
+
+  ]
+}

@@ -1,0 +1,2025 @@
+station_id,box_index,chargerbox_name,esdm_id,connector_type,power_kw,current_type,port_count,match_method
+1,0,"CS AC Charger",01.POSO.00.3171.017,"AC Type 2",22,AC,1,exact_name_coord
+3,1,"Delta DC Wallbox",01.POSO.00.3603.005+01.POSO.00.3603.004,CCS2,25,DC,1,exact_name_coord
+3,1,"Delta DC Wallbox",01.POSO.00.3603.005+01.POSO.00.3603.004,CHAdeMO,25,DC,1,exact_name_coord
+4,0,"Chargecore DC-25",01.POSO.00.3671.026,CCS2,25,DC,1,exact_name_coord
+4,1,"Proteksindo AC-22",01.POSO.00.3671.011,"AC Type 2",22,AC,1,exact_name_coord
+5,0,"CS Energy DC 180 kW",01.POSO.00.1671.002,CCS2,180,DC,1,exact_name_coord
+5,0,"CS Energy DC 180 kW",01.POSO.00.1671.002,CHAdeMO,180,DC,1,exact_name_coord
+5,1,"Free Standing DC Fast Charger",01.POSO.00.1671.012,CCS2,30,DC,1,exact_name_coord
+6,0,"Delta AC Max",01.POSO.00.1271.012,"AC Type 2",22,AC,1,exact_name_coord
+6,1,"AC Mini Plus",01.POSO.00.1271.013,"AC Type 2",7,AC,1,exact_name_coord
+6,2,"Delta DC Wallbox",01.POSO.00.1271.014,CCS2,25,DC,1,exact_name_coord
+6,2,"Delta DC Wallbox",01.POSO.00.1271.014,CHAdeMO,25,DC,1,exact_name_coord
+6,3,"PHIHONG DC Wall Mount",01.POSO.00.1271.015,CCS2,30,DC,1,exact_name_coord
+6,3,"PHIHONG DC Wall Mount",01.POSO.00.1271.015,CHAdeMO,30,DC,1,exact_name_coord
+7,0,"Delta DC Wallbox",01.POSO.00.1801.015,CCS2,25,DC,1,exact_name_coord
+7,0,"Delta DC Wallbox",01.POSO.00.1801.015,CHAdeMO,25,DC,1,exact_name_coord
+7,1,"Wall Mount AC Charger",01.POSO.00.1801.016,"AC Type 2",7,AC,1,exact_name_coord
+7,2,"Signet DC Fast Charger - 100 kW",01.POSO.00.1801.017,CCS2,100,DC,2,exact_name_coord
+8,0,"ABB Terra 50",01.POSO.00.3209.002,CCS2,50,DC,1,core_name_geo
+8,0,"ABB Terra 50",01.POSO.00.3209.002,CHAdeMO,50,DC,1,core_name_geo
+8,1,"Delta DC City Charger",01.POSO.00.3209.003,CCS2,50,DC,2,core_name_geo
+8,2,"Delta DC Wallbox",01.POSO.00.3209.001,CCS2,25,DC,1,core_name_geo
+9,0,"Delta AC Max",01.POSO.00.5171.020,"AC Type 2",22,AC,1,exact_name_coord
+9,1,"1. Delta DC Wallbox",01.POSO.00.5171.022,CCS2,25,DC,1,exact_name_coord
+9,1,"1. Delta DC Wallbox",01.POSO.00.5171.022,CHAdeMO,25,DC,1,exact_name_coord
+9,2,"2. Delta DC Wallbox",01.POSO.00.5171.021,CCS2,25,DC,1,exact_name_coord
+9,2,"2. Delta DC Wallbox",01.POSO.00.5171.021,CHAdeMO,25,DC,1,exact_name_coord
+9,3,"PHIHONG DC Wall Mount",01.POSO.00.5171.023,CCS2,30,DC,1,exact_name_coord
+9,3,"PHIHONG DC Wall Mount",01.POSO.00.5171.023,CHAdeMO,30,DC,1,exact_name_coord
+10,0,"CS DC Charger",01.PPOO.00.3314.001,CCS2,50,DC,1,core_name_geo
+10,0,"CS DC Charger",01.PPOO.00.3314.001,CHAdeMO,50,DC,1,core_name_geo
+10,1,"Delta DC City Charger",01.PPOO.00.3314.002,CCS2,50,DC,2,core_name_geo
+12,0,"AC Mini Plus",01.PPOO.00.3325.004,"AC Type 2",7,AC,1,core_name_geo
+12,1,"AC Mini Plus",01.PPOO.00.3325.003,"AC Type 2",7,AC,1,core_name_geo
+12,3,"Proteksindo DC EVDX-180",01.POSO.00.3325.002,CCS2,180,DC,2,core_name_geo
+12,4,"Titan V5 Hyperion 180kW",01.POSO.00.3325.001,CCS2,180,DC,2,core_name_geo
+13,0,"Delta DC Wallbox",01.POSO.00.3578.012,CCS2,25,DC,1,exact_name_coord
+13,0,"Delta DC Wallbox",01.POSO.00.3578.012,CHAdeMO,25,DC,1,exact_name_coord
+14,6,"Delta DC City Charger",01.POSO.00.3273.021,"AC Type 2",22,AC,1,exact_name_coord
+14,6,"Delta DC City Charger",01.POSO.00.3273.021,CCS2,50,DC,1,exact_name_coord
+14,6,"Delta DC City Charger",01.POSO.00.3273.021,CHAdeMO,50,DC,1,exact_name_coord
+15,0,"ABB Terra 50",01.PPOO.00.3324.001,CCS2,50,DC,1,core_name_geo
+15,0,"ABB Terra 50",01.PPOO.00.3324.001,CHAdeMO,50,DC,1,core_name_geo
+15,1,"Delta AC Max",01.PPOO.00.3324.002,"AC Type 2",22,AC,1,core_name_geo
+15,2,"AC Mini Plus",01.PPOO.00.3324.004,"AC Type 2",7,AC,1,core_name_geo
+15,3,"AC Mini Plus",01.PPOO.00.3324.003,"AC Type 2",7,AC,1,core_name_geo
+17,0,"AC Mini Plus",01.POSO.00.7371.008,"AC Type 2",7,AC,1,exact_name_coord
+17,1,"AC Mini Plus (3)",01.POSO.00.7371.007,"AC Type 2",7,AC,1,exact_name_coord
+17,2,"AC Mini Plus (4)",01.POSO.00.7371.009,"AC Type 2",7,AC,1,exact_name_coord
+17,3,"Delta DC 200 kW City Charger",01.POSO.00.7371.010,CCS2,200,DC,1,exact_name_coord
+17,3,"Delta DC 200 kW City Charger",01.POSO.00.7371.010,CHAdeMO,200,DC,1,exact_name_coord
+17,4,"Proteksindo DC EVDX-60",01.POSO.00.7371.014,"AC Type 2",22,AC,1,exact_name_coord
+17,4,"Proteksindo DC EVDX-60",01.POSO.00.7371.014,CCS2,60,DC,1,exact_name_coord
+17,4,"Proteksindo DC EVDX-60",01.POSO.00.7371.014,CHAdeMO,60,DC,1,exact_name_coord
+18,0,"CS AC Charger",01.POSO.00.3175.007,"AC Type 2",22,AC,1,exact_name_coord
+19,0,"Chargecore AC-22",01.POSO.00.3172.023,"AC Type 2",22,AC,1,exact_name_coord
+19,1,"1. Teison 22 KW",01.POSO.00.3172.026,"AC Type 2",22,AC,1,exact_name_coord
+19,2,"2. Teison 22 KW",01.POSO.00.3172.027,"AC Type 2",22,AC,1,exact_name_coord
+20,0,"AC Mini Plus",01.POSO.00.3512.002,"AC Type 2",7,AC,1,exact_name_coord
+20,1,"AC Mini Plus",01.POSO.00.3512.001,"AC Type 2",7,AC,1,exact_name_coord
+20,2,"CS Energy DC 180 kW",01.POSO.00.3512.003,CCS2,180,DC,2,exact_name_coord
+22,0,"Fastroom AC",01.POSO.00.3374.015,"AC Type 2",22,AC,2,exact_name_coord
+22,1,"Titan V5 Hyperion 180kW",01.POSO.00.3374.016,CCS2,180,DC,2,exact_name_coord
+23,0,"AC Mini Plus",01.PPOO.00.3175.029,"AC Type 2",7,AC,1,exact_name_coord
+23,1,"Delta DC Wallbox",01.PPOO.00.3175.030,CCS2,25,DC,2,exact_name_coord
+24,0,"AC Mini Plus",01.POSO.00.6471.010,"AC Type 2",7,AC,1,exact_name_coord
+24,1,"Delta DC 200 kW City Charger",01.POSO.00.6471.016,CCS2,200,DC,2,exact_name_coord
+25,0,"Delta DC Wallbox",01.POSO.00.3174.052,CCS2,25,DC,2,exact_name_coord
+26,0,"1. CS Energy DC 100 kW",01.POSO.00.3519.005,CCS2,100,DC,1,exact_name_coord
+26,0,"1. CS Energy DC 100 kW",01.POSO.00.3519.005,CHAdeMO,100,DC,1,exact_name_coord
+26,1,"2. CS Energy DC 180 kW",01.POSO.00.3519.006,CCS2,180,DC,2,exact_name_coord
+26,2,"Zerova 22 KW",01.POSO.00.3519.003,"AC Type 2",22,AC,1,exact_name_coord
+27,0,"Delta AC Max",01.POSO.00.3372.003,"AC Type 2",22,AC,1,exact_name_coord
+27,1,"Delta DC Wallbox",01.POSO.00.3372.004,CCS2,25,DC,1,exact_name_coord
+27,1,"Delta DC Wallbox",01.POSO.00.3372.004,CHAdeMO,25,DC,1,exact_name_coord
+27,2,"Signet DC Fast Charger - 100 kW",01.POSO.00.3372.005,CCS2,100,DC,2,exact_name_coord
+28,0,"Delta AC Max",01.POSO.00.1871.003,"AC Type 2",22,AC,1,exact_name_coord
+28,1,"Delta DC Wallbox",01.POSO.00.1871.004,CCS2,25,DC,1,exact_name_coord
+28,1,"Delta DC Wallbox",01.POSO.00.1871.004,CHAdeMO,25,DC,1,exact_name_coord
+28,2,"Signet DC Fast Charger - 100 kW",01.POSO.00.1871.005,CCS2,100,DC,2,exact_name_coord
+29,0,"Delta AC Max",01.POSO.00.3273.024,"AC Type 2",22,AC,1,exact_name_prov
+29,2,"Delta DC Wallbox",01.POSO.00.3273.025,CCS2,25,DC,1,exact_name_prov
+29,2,"Delta DC Wallbox",01.POSO.00.3273.025,CHAdeMO,25,DC,1,exact_name_prov
+29,3,"PHIHONG DC Wall Mount",01.POSO.00.3273.026,CCS2,30,DC,1,exact_name_prov
+29,3,"PHIHONG DC Wall Mount",01.POSO.00.3273.026,CHAdeMO,30,DC,1,exact_name_prov
+31,0,"Delta DC City Charger",01.POSO.00.5315.008,"AC Type 2",22,AC,1,exact_name_coord
+31,0,"Delta DC City Charger",01.POSO.00.5315.008,CCS2,50,DC,1,exact_name_coord
+31,0,"Delta DC City Charger",01.POSO.00.5315.008,CHAdeMO,50,DC,1,exact_name_coord
+33,0,"AC Mini Plus",01.POSO.00.7171.005,"AC Type 2",7,AC,1,exact_name_coord
+33,1,"Delta DC Wallbox",01.POSO.00.7171.006,CCS2,25,DC,1,exact_name_coord
+33,1,"Delta DC Wallbox",01.POSO.00.7171.006,CHAdeMO,25,DC,1,exact_name_coord
+34,0,"Delta AC Max",01.POSO.00.7471.002,"AC Type 2",22,AC,1,exact_name_coord
+34,1,"Delta DC Wallbox",01.POSO.00.7471.003,CCS2,25,DC,1,exact_name_coord
+34,1,"Delta DC Wallbox",01.POSO.00.7471.003,CHAdeMO,25,DC,1,exact_name_coord
+34,2,"PHIHONG DC Wall Mount",01.POSO.00.7471.004,CCS2,30,DC,1,exact_name_coord
+34,2,"PHIHONG DC Wall Mount",01.POSO.00.7471.004,CHAdeMO,30,DC,1,exact_name_coord
+35,0,"Internal - (Akses Terbatas)",01.POSO.00.3174.054,CCS2,200,DC,2,exact_name_coord
+35,1,"Teison 22 KW",01.POSO.00.3174.031,"AC Type 2",22,AC,1,exact_name_coord
+35,2,"Proteksindo DC-200",01.POSO.00.3174.053,CCS2,200,DC,2,exact_name_coord
+35,3,"Schneider DC Fast Charger",01.POSO.00.3174.055,CCS2,120,DC,2,exact_name_coord
+36,0,"Delta AC Max",01.POSO.00.3174.056,"AC Type 2",22,AC,1,exact_name_coord
+36,1,"Delta DC Wallbox",01.POSO.00.3174.057,CCS2,25,DC,2,exact_name_coord
+36,2,"PHIHONG DC Wall Mount",01.POSO.00.3174.058,CCS2,30,DC,2,exact_name_coord
+37,0,"Delta DC City Charger",01.POSO.00.1471.013,"AC Type 2",22,AC,1,exact_name_coord
+37,0,"Delta DC City Charger",01.POSO.00.1471.013,CCS2,50,DC,1,exact_name_coord
+37,0,"Delta DC City Charger",01.POSO.00.1471.013,CHAdeMO,50,DC,1,exact_name_coord
+38,0,"CS AC Charger",01.POSO.00.3275.017,"AC Type 2",22,AC,1,exact_name_coord
+39,0,"AC Mini Plus",01.POSO.00.7371.011,"AC Type 2",7,AC,1,exact_name_coord
+39,1,"Chargecore DC-120",01.POSO.00.7371.012,"AC Type 2",22,AC,1,exact_name_coord
+39,1,"Chargecore DC-120",01.POSO.00.7371.012,CCS2,120,DC,1,exact_name_coord
+39,1,"Chargecore DC-120",01.POSO.00.7371.012,CHAdeMO,120,DC,1,exact_name_coord
+40,0,"Proteksindo DC EVDX-60",01.POSO.00.5171.024,"AC Type 2",22,AC,1,exact_name_coord
+40,0,"Proteksindo DC EVDX-60",01.POSO.00.5171.024,CCS2,60,DC,1,exact_name_coord
+40,0,"Proteksindo DC EVDX-60",01.POSO.00.5171.024,CHAdeMO,60,DC,1,exact_name_coord
+41,0,"1. CS AC Charger",01.POSO.00.6372.006,"AC Type 2",22,AC,1,exact_name_coord
+41,4,"1. Delta DC City Charger",01.POSO.00.6372.004,"AC Type 2",22,AC,1,exact_name_coord
+41,4,"1. Delta DC City Charger",01.POSO.00.6372.004,CCS2,50,DC,1,exact_name_coord
+41,4,"1. Delta DC City Charger",01.POSO.00.6372.004,CHAdeMO,50,DC,1,exact_name_coord
+42,0,"Proteksindo DC EVDX-60",01.POSO.00.8171.005,"AC Type 2",22,AC,1,exact_name_coord
+42,0,"Proteksindo DC EVDX-60",01.POSO.00.8171.005,CCS2,60,DC,1,exact_name_coord
+42,0,"Proteksindo DC EVDX-60",01.POSO.00.8171.005,CHAdeMO,60,DC,1,exact_name_coord
+43,0,"Free Standing DC Fast Charger",01.POSO.00.1671.013,CCS2,30,DC,1,exact_name_coord
+43,2,"Proteksindo DC EVDX-60",01.POSO.00.1671.011,"AC Type 2",22,AC,1,exact_name_coord
+43,2,"Proteksindo DC EVDX-60",01.POSO.00.1671.011,CCS2,60,DC,1,exact_name_coord
+43,2,"Proteksindo DC EVDX-60",01.POSO.00.1671.011,CHAdeMO,60,DC,1,exact_name_coord
+44,0,"Proteksindo DC EVDX-60",01.POSO.00.1371.006,"AC Type 2",22,AC,1,exact_name_coord
+44,0,"Proteksindo DC EVDX-60",01.POSO.00.1371.006,CCS2,60,DC,1,exact_name_coord
+44,0,"Proteksindo DC EVDX-60",01.POSO.00.1371.006,CHAdeMO,60,DC,1,exact_name_coord
+45,0,"Proteksindo DC EVDX-60",01.POSO.00.5171.025,"AC Type 2",22,AC,1,exact_name_coord
+45,0,"Proteksindo DC EVDX-60",01.POSO.00.5171.025,CCS2,60,DC,1,exact_name_coord
+45,0,"Proteksindo DC EVDX-60",01.POSO.00.5171.025,CHAdeMO,60,DC,1,exact_name_coord
+46,0,"Proteksindo DC EVDX-60",01.POSO.00.6112.005,"AC Type 2",22,AC,1,exact_name_coord
+46,0,"Proteksindo DC EVDX-60",01.POSO.00.6112.005,CCS2,60,DC,1,exact_name_coord
+46,0,"Proteksindo DC EVDX-60",01.POSO.00.6112.005,CHAdeMO,60,DC,1,exact_name_coord
+47,0,"CS DC Charger",01.POSO.00.6472.007,"AC Type 2",22,AC,1,exact_name_prov
+47,0,"CS DC Charger",01.POSO.00.6472.007,CCS2,100,DC,1,exact_name_prov
+47,0,"CS DC Charger",01.POSO.00.6472.007,CHAdeMO,100,DC,1,exact_name_prov
+48,0,"Delta AC Max",01.POSO.00.5102.004,"AC Type 2",22,AC,1,exact_name_coord
+48,1,"Delta DC Wallbox",01.POSO.00.5102.005,CCS2,25,DC,1,exact_name_coord
+48,1,"Delta DC Wallbox",01.POSO.00.5102.005,CHAdeMO,25,DC,1,exact_name_coord
+48,2,"PHIHONG DC Wall Mount",01.POSO.00.5102.006,CCS2,30,DC,1,exact_name_coord
+48,2,"PHIHONG DC Wall Mount",01.POSO.00.5102.006,CHAdeMO,30,DC,1,exact_name_coord
+49,0,"Proteksindo DC EVDX-60",01.POSO.00.5108.007,"AC Type 2",22,AC,1,exact_name_coord
+49,0,"Proteksindo DC EVDX-60",01.POSO.00.5108.007,CCS2,60,DC,1,exact_name_coord
+49,0,"Proteksindo DC EVDX-60",01.POSO.00.5108.007,CHAdeMO,60,DC,1,exact_name_coord
+50,0,"Proteksindo DC EVDX-60",01.POSO.00.7271.003,"AC Type 2",22,AC,1,exact_name_coord
+50,0,"Proteksindo DC EVDX-60",01.POSO.00.7271.003,CCS2,60,DC,1,exact_name_coord
+50,0,"Proteksindo DC EVDX-60",01.POSO.00.7271.003,CHAdeMO,60,DC,1,exact_name_coord
+51,0,"Delta AC Max",01.PPOO.00.3174.059,"AC Type 2",22,AC,1,exact_name_coord
+51,1,"Delta DC Wallbox",01.PPOO.00.3174.060,CCS2,25,DC,2,exact_name_coord
+52,0,"1. Autel MaxiCharger AC Wallbox",01.POSO.00.3171.021,"AC Type 2",22,AC,1,exact_name_coord
+53,0,"Teison 22 KW",01.POSO.00.3175.008,"AC Type 2",22,AC,1,exact_name_coord
+54,0,"Delta DC City Charger",01.POSO.00.3174.061,CCS2,50,DC,3,exact_name_coord
+55,0,"Delta DC City Charger",01.POSO.00.1801.018,"AC Type 2",22,AC,1,exact_name_coord
+55,0,"Delta DC City Charger",01.POSO.00.1801.018,CCS2,50,DC,1,exact_name_coord
+55,0,"Delta DC City Charger",01.POSO.00.1801.018,CHAdeMO,50,DC,1,exact_name_coord
+55,1,"Signet DC Fast Charger - 100 kW",01.POSO.00.1801.019,CCS2,100,DC,2,exact_name_coord
+56,0,"Teison 22 KW",01.POSO.00.3172.024,"AC Type 2",22,AC,1,exact_name_coord
+57,0,"Delta DC City Charger",01.POSO.00.1904.003,"AC Type 2",22,AC,1,exact_name_coord
+57,0,"Delta DC City Charger",01.POSO.00.1904.003,CCS2,50,DC,1,exact_name_coord
+57,0,"Delta DC City Charger",01.POSO.00.1904.003,CHAdeMO,50,DC,1,exact_name_coord
+58,0,"Proteksindo DC EVDX-60",01.POSO.00.3175.031,"AC Type 2",22,AC,1,exact_name_coord
+58,0,"Proteksindo DC EVDX-60",01.POSO.00.3175.031,CCS2,60,DC,1,exact_name_coord
+58,0,"Proteksindo DC EVDX-60",01.POSO.00.3175.031,CHAdeMO,60,DC,1,exact_name_coord
+59,0,"Delta DC City Charger",01.POSO.00.1271.016,"AC Type 2",22,AC,1,exact_name_coord
+59,0,"Delta DC City Charger",01.POSO.00.1271.016,CCS2,50,DC,1,exact_name_coord
+59,0,"Delta DC City Charger",01.POSO.00.1271.016,CHAdeMO,50,DC,1,exact_name_coord
+60,0,"Proteksindo DC EVDX-60",01.POSO.00.3578.019,"AC Type 2",22,AC,1,exact_name_coord
+60,0,"Proteksindo DC EVDX-60",01.POSO.00.3578.019,CCS2,60,DC,1,exact_name_coord
+60,0,"Proteksindo DC EVDX-60",01.POSO.00.3578.019,CHAdeMO,60,DC,1,exact_name_coord
+61,4,"Proteksindo DC EVDX-60",01.POSO.00.3573.007,"AC Type 2",22,AC,1,core_name_geo
+61,4,"Proteksindo DC EVDX-60",01.POSO.00.3573.007,CCS2,60,DC,1,core_name_geo
+61,4,"Proteksindo DC EVDX-60",01.POSO.00.3573.007,CHAdeMO,60,DC,1,core_name_geo
+63,0,"1. CS AC Charger",01.POSO.00.5171.027,"AC Type 2",22,AC,1,exact_name_coord
+63,1,"CS DC Charger",01.POSO.00.5171.029,CCS2,25,DC,2,exact_name_coord
+63,2,"02. Wall Mount AC Charger",01.POSO.00.5171.026,"AC Type 2",7,AC,1,exact_name_coord
+63,3,"PHIHONG DC Wall Mount",01.POSO.00.5171.028,CCS2,30,DC,1,exact_name_coord
+63,3,"PHIHONG DC Wall Mount",01.POSO.00.5171.028,CHAdeMO,30,DC,1,exact_name_coord
+64,0,"Proteksindo DC EVDX-60",01.POSO.00.5103.037,"AC Type 2",22,AC,1,exact_name_coord
+64,0,"Proteksindo DC EVDX-60",01.POSO.00.5103.037,CCS2,60,DC,1,exact_name_coord
+64,0,"Proteksindo DC EVDX-60",01.POSO.00.5103.037,CHAdeMO,60,DC,1,exact_name_coord
+65,0,"Proteksindo DC EVDX-60",01.POSO.00.5102.007,"AC Type 2",22,AC,1,exact_name_coord
+65,0,"Proteksindo DC EVDX-60",01.POSO.00.5102.007,CCS2,60,DC,1,exact_name_coord
+65,0,"Proteksindo DC EVDX-60",01.POSO.00.5102.007,CHAdeMO,60,DC,1,exact_name_coord
+66,0,"Delta AC Max",01.POSO.00.5106.006,"AC Type 2",22,AC,1,exact_name_coord
+66,1,"Delta DC Wallbox",01.POSO.00.5106.007,CCS2,25,DC,1,exact_name_coord
+66,1,"Delta DC Wallbox",01.POSO.00.5106.007,CHAdeMO,25,DC,1,exact_name_coord
+66,2,"PHIHONG DC Wall Mount",01.POSO.00.5106.008,CCS2,30,DC,1,exact_name_coord
+66,2,"PHIHONG DC Wall Mount",01.POSO.00.5106.008,CHAdeMO,30,DC,1,exact_name_coord
+67,0,"Delta AC Max",01.POSO.00.7372.003,"AC Type 2",22,AC,1,exact_name_coord
+67,1,"Delta DC City Charger",01.POSO.00.7372.005,CCS2,50,DC,1,exact_name_coord
+67,1,"Delta DC City Charger",01.POSO.00.7372.005,CHAdeMO,50,DC,1,exact_name_coord
+67,1,"Delta DC City Charger",01.POSO.00.7372.005,"DC Connector",50,DC,1,exact_name_coord
+67,2,"Delta DC Wallbox",01.POSO.00.7372.004,CCS2,25,DC,1,exact_name_coord
+67,2,"Delta DC Wallbox",01.POSO.00.7372.004,CHAdeMO,25,DC,1,exact_name_coord
+68,0,"Proteksindo DC EVDX-60",01.POSO.00.5104.002,"AC Type 2",22,AC,1,exact_name_coord
+68,0,"Proteksindo DC EVDX-60",01.POSO.00.5104.002,CCS2,60,DC,1,exact_name_coord
+68,0,"Proteksindo DC EVDX-60",01.POSO.00.5104.002,CHAdeMO,60,DC,1,exact_name_coord
+68,1,"01. Wall Mount AC Charger",01.POSO.00.5104.003,"AC Type 2",7,AC,1,exact_name_coord
+69,0,"Delta AC Max",01.POSO.00.5101.004,"AC Type 2",22,AC,1,exact_name_coord
+69,1,"Delta DC Wallbox",01.POSO.00.5101.005,CCS2,25,DC,1,exact_name_coord
+69,1,"Delta DC Wallbox",01.POSO.00.5101.005,CHAdeMO,25,DC,1,exact_name_coord
+69,2,"PHIHONG DC Wall Mount",01.POSO.00.5101.006,CCS2,30,DC,1,exact_name_coord
+69,2,"PHIHONG DC Wall Mount",01.POSO.00.5101.006,CHAdeMO,30,DC,1,exact_name_coord
+70,0,"Delta DC City Charger",01.POSO.00.5107.005,"AC Type 2",22,AC,1,exact_name_coord
+70,0,"Delta DC City Charger",01.POSO.00.5107.005,CCS2,50,DC,1,exact_name_coord
+70,0,"Delta DC City Charger",01.POSO.00.5107.005,CHAdeMO,50,DC,1,exact_name_coord
+70,1,"01. Wall Mount AC Charger",01.POSO.00.5107.008,"AC Type 2",7,AC,1,exact_name_coord
+71,0,"Delta DC City Charger",01.POSO.00.5105.003,"AC Type 2",22,AC,1,exact_name_coord
+71,0,"Delta DC City Charger",01.POSO.00.5105.003,CCS2,50,DC,1,exact_name_coord
+71,0,"Delta DC City Charger",01.POSO.00.5105.003,CHAdeMO,50,DC,1,exact_name_coord
+71,1,"Wall Mount AC Charger",01.POSO.00.5105.004,"AC Type 2",7,AC,1,exact_name_coord
+72,0,"PHIHONG DC Wall Mount",01.POSO.00.5171.030,CCS2,30,DC,1,exact_name_coord
+72,0,"PHIHONG DC Wall Mount",01.POSO.00.5171.030,CHAdeMO,30,DC,1,exact_name_coord
+72,1,"Signet DC Fast Charger - 100 kW",01.POSO.00.5171.031,CCS2,100,DC,2,exact_name_coord
+73,0,"Delta AC Max",01.POSO.00.3276.011,"AC Type 2",22,AC,1,exact_name_coord
+73,1,"Delta DC Wallbox",01.POSO.00.3276.012,CCS2,25,DC,2,exact_name_coord
+73,2,"PHIHONG DC Wall Mount",01.POSO.00.3276.013,CCS2,30,DC,2,exact_name_coord
+74,0,"Mobi AC Stand",01.PPOO.00.3578.013,"AC Type 2",22,AC,1,exact_name_coord
+74,1,"PHIHONG DC Free Standing",01.PPOO.00.3578.014,CCS2,60,DC,1,exact_name_coord
+74,1,"PHIHONG DC Free Standing",01.PPOO.00.3578.014,CHAdeMO,60,DC,1,exact_name_coord
+75,0,"PHIHONG DC Wall Mount",01.POSO.00.5271.013,CCS2,30,DC,1,exact_name_coord
+75,0,"PHIHONG DC Wall Mount",01.POSO.00.5271.013,CHAdeMO,30,DC,1,exact_name_coord
+76,0,"AC Mini Plus",01.POSO.00.9171.003,"AC Type 2",7,AC,1,exact_name_prov
+76,1,"Delta DC City Charger",01.POSO.00.9171.004,CCS2,50,DC,3,exact_name_prov
+77,0,"Delta AC Max",01.POSO.00.6471.012,"AC Type 2",22,AC,1,exact_name_prov
+77,1,"Delta DC Wallbox",01.POSO.00.6471.013,CCS2,25,DC,1,exact_name_prov
+77,1,"Delta DC Wallbox",01.POSO.00.6471.013,CHAdeMO,25,DC,1,exact_name_prov
+78,0,"Delta AC Max",01.PPOO.00.3172.021,"AC Type 2",22,AC,1,exact_name_coord
+78,1,"Delta DC Wallbox",01.PPOO.00.3172.022,CCS2,25,DC,2,exact_name_coord
+79,1,"CS DC Charger",01.POSO.00.3471.004,CCS2,100,DC,2,exact_name_coord
+79,2,"Proteksindo DC EVDX-60",01.POSO.00.3402.004,"AC Type 2",22,AC,1,exact_name_coord
+79,2,"Proteksindo DC EVDX-60",01.POSO.00.3402.004,CCS2,60,DC,1,exact_name_coord
+79,2,"Proteksindo DC EVDX-60",01.POSO.00.3402.004,CHAdeMO,60,DC,1,exact_name_coord
+80,0,"UFC 01",01.POSO.00.5103.008,CCS2,200,DC,2,exact_name_coord
+80,1,"UFC 02",01.POSO.00.5103.007,CCS2,200,DC,2,exact_name_coord
+80,2,"UFC 03",01.POSO.00.5103.009,CCS2,200,DC,2,exact_name_coord
+80,3,"UFC 04",01.POSO.00.5103.010,CCS2,200,DC,2,exact_name_coord
+80,4,"SC 01",01.POSO.00.5103.011,"AC Type 2",7,AC,1,exact_name_coord
+81,1,"Proteksindo DC EVDX-60",01.POSO.00.1171.001,"AC Type 2",22,AC,1,exact_name_coord
+81,1,"Proteksindo DC EVDX-60",01.POSO.00.1171.001,CCS2,60,DC,1,exact_name_coord
+81,1,"Proteksindo DC EVDX-60",01.POSO.00.1171.001,CHAdeMO,60,DC,1,exact_name_coord
+82,0,"Chargecore AC-22",01.POSO.00.3374.022,"AC Type 2",22,AC,1,exact_name_coord
+82,1,"Proteksindo DC EVDX-60",01.POSO.00.3374.019,"AC Type 2",22,AC,1,exact_name_coord
+82,1,"Proteksindo DC EVDX-60",01.POSO.00.3374.019,CCS2,60,DC,1,exact_name_coord
+82,1,"Proteksindo DC EVDX-60",01.POSO.00.3374.019,CHAdeMO,60,DC,1,exact_name_coord
+83,0,"Delta AC Max",01.POSO.00.1208.003,"AC Type 2",22,AC,1,exact_name_coord
+83,1,"Delta DC Wallbox",01.POSO.00.1208.004,CCS2,25,DC,1,exact_name_coord
+83,1,"Delta DC Wallbox",01.POSO.00.1208.004,CHAdeMO,25,DC,1,exact_name_coord
+84,0,"1. Delta AC Max",01.POSO.00.3671.013,"AC Type 2",22,AC,1,exact_name_coord
+84,1,"1. Delta DC Wallbox",01.POSO.00.3671.014,CCS2,25,DC,1,exact_name_coord
+84,1,"1. Delta DC Wallbox",01.POSO.00.3671.014,CHAdeMO,25,DC,1,exact_name_coord
+84,2,"Teison 22 KW",01.POSO.00.3671.027,"AC Type 2",22,AC,1,exact_name_coord
+85,1,"PHIHONG DC Wall Mount",01.POSO.00.1206.004,CCS2,30,DC,1,exact_name_coord
+85,1,"PHIHONG DC Wall Mount",01.POSO.00.1206.004,CHAdeMO,30,DC,1,exact_name_coord
+86,0,"Delta AC Max",01.POSO.00.1276.001,"AC Type 2",22,AC,1,exact_name_coord
+86,1,"Free Standing DC Fast Charger",01.POSO.00.1276.002,CCS2,50,DC,1,exact_name_coord
+86,1,"Free Standing DC Fast Charger",01.POSO.00.1276.002,CHAdeMO,50,DC,1,exact_name_coord
+87,0,"Proteksindo DC EVDX-60",01.POSO.00.3308.007,"AC Type 2",22,AC,1,exact_name_prov
+87,0,"Proteksindo DC EVDX-60",01.POSO.00.3308.007,CCS2,60,DC,1,exact_name_prov
+87,0,"Proteksindo DC EVDX-60",01.POSO.00.3308.007,CHAdeMO,60,DC,1,exact_name_prov
+88,2,"Proteksindo DC EVDX-60",01.PPOO.00.3404.001,"AC Type 2",22,AC,1,exact_name_coord
+88,2,"Proteksindo DC EVDX-60",01.PPOO.00.3404.001,CCS2,60,DC,1,exact_name_coord
+88,2,"Proteksindo DC EVDX-60",01.PPOO.00.3404.001,CHAdeMO,60,DC,1,exact_name_coord
+89,0,"Delta AC Max",01.POSO.00.5371.003,"AC Type 2",22,AC,1,exact_name_coord
+89,1,"Delta DC Wallbox",01.POSO.00.5371.004,CCS2,25,DC,1,exact_name_coord
+89,1,"Delta DC Wallbox",01.POSO.00.5371.004,CHAdeMO,25,DC,1,exact_name_coord
+90,0,"Delta AC Max",01.PPOO.00.3171.037,"AC Type 2",22,AC,1,exact_name_coord
+90,1,"Delta DC Wallbox",01.PPOO.00.3171.038,CCS2,25,DC,2,exact_name_coord
+91,0,"Delta AC Max",01.PPOO.00.3171.039,"AC Type 2",22,AC,1,exact_name_coord
+91,1,"Delta DC Wallbox",01.PPOO.00.3171.040,CCS2,25,DC,2,exact_name_coord
+92,1,"1. Teison DC 200 kW",01.PPOO.00.3175.010,CCS2,200,DC,2,core_name_geo
+93,0,"Delta AC Max",01.POSO.00.1372.002,"AC Type 2",22,AC,1,exact_name_coord
+93,1,"Delta DC Wallbox",01.POSO.00.1372.003,CCS2,25,DC,1,exact_name_coord
+93,1,"Delta DC Wallbox",01.POSO.00.1372.003,CHAdeMO,25,DC,1,exact_name_coord
+94,0,"Proteksindo DC EVDX-60",01.POSO.00.6172.002,"AC Type 2",22,AC,1,exact_name_coord
+94,0,"Proteksindo DC EVDX-60",01.POSO.00.6172.002,CCS2,60,DC,1,exact_name_coord
+94,0,"Proteksindo DC EVDX-60",01.POSO.00.6172.002,CHAdeMO,60,DC,1,exact_name_coord
+95,0,"2. Autel MaxiCharger AC Wallbox",01.POSO.00.6271.003,"AC Type 2",22,AC,1,exact_name_coord
+95,1,"3. Autel MaxiCharger AC Wallbox",01.POSO.00.6271.006,"AC Type 2",22,AC,1,exact_name_coord
+95,2,"1. Delta DC City Charger",01.POSO.00.6271.001,"AC Type 2",22,AC,1,exact_name_coord
+95,2,"1. Delta DC City Charger",01.POSO.00.6271.001,CCS2,50,DC,1,exact_name_coord
+95,2,"1. Delta DC City Charger",01.POSO.00.6271.001,CHAdeMO,50,DC,1,exact_name_coord
+96,0,"Delta AC Max",01.PPOO.00.3173.012,"AC Type 2",22,AC,1,exact_name_coord
+97,0,"Delta DC City Charger",01.POSO.00.1902.003,"AC Type 2",22,AC,1,exact_name_coord
+97,0,"Delta DC City Charger",01.POSO.00.1902.003,CCS2,50,DC,1,exact_name_coord
+97,0,"Delta DC City Charger",01.POSO.00.1902.003,CHAdeMO,50,DC,1,exact_name_coord
+98,0,"Proteksindo DC EVDX-60",01.POSO.00.6474.002,"AC Type 2",22,AC,1,exact_name_prov
+98,0,"Proteksindo DC EVDX-60",01.POSO.00.6474.002,CCS2,60,DC,1,exact_name_prov
+98,0,"Proteksindo DC EVDX-60",01.POSO.00.6474.002,CHAdeMO,60,DC,1,exact_name_prov
+99,0,"UFC 01",01.POSO.00.5103.013,CCS2,200,DC,2,exact_name_coord
+99,1,"UFC 02",01.POSO.00.5103.012,CCS2,200,DC,2,exact_name_coord
+100,0,"Delta AC Max",01.PPOO.00.3171.041,"AC Type 2",22,AC,1,exact_name_coord
+100,1,"Delta DC Wallbox",01.PPOO.00.3171.042,CCS2,25,DC,2,exact_name_coord
+101,0,"Proteksindo DC EVDX-60",01.POSO.00.5271.002,"AC Type 2",22,AC,1,exact_name_coord
+101,0,"Proteksindo DC EVDX-60",01.POSO.00.5271.002,CCS2,60,DC,1,exact_name_coord
+101,0,"Proteksindo DC EVDX-60",01.POSO.00.5271.002,CHAdeMO,60,DC,1,exact_name_coord
+102,0,"Delta DC City Charger",01.PPOO.00.3174.032,"AC Type 2",22,AC,1,exact_name_coord
+102,0,"Delta DC City Charger",01.PPOO.00.3174.032,CCS2,50,DC,1,exact_name_coord
+102,0,"Delta DC City Charger",01.PPOO.00.3174.032,CHAdeMO,50,DC,1,exact_name_coord
+103,0,"Delta DC City Charger",01.POSO.00.3174.033,"AC Type 2",22,AC,1,exact_name_coord
+103,0,"Delta DC City Charger",01.POSO.00.3174.033,CCS2,50,DC,1,exact_name_coord
+103,0,"Delta DC City Charger",01.POSO.00.3174.033,CHAdeMO,50,DC,1,exact_name_coord
+104,0,"Delta DC City Charger",01.PPOO.00.3171.025,CCS2,180,DC,2,exact_name_coord
+105,0,"BNDCC 02",01.POSO.00.5103.021,"AC Type 2",7,AC,1,exact_name_coord
+106,0,"Proteksindo DC EVDX-60",01.POSO.00.1673.001,"AC Type 2",22,AC,1,exact_name_coord
+106,0,"Proteksindo DC EVDX-60",01.POSO.00.1673.001,CCS2,60,DC,1,exact_name_coord
+106,0,"Proteksindo DC EVDX-60",01.POSO.00.1673.001,CHAdeMO,60,DC,1,exact_name_coord
+107,0,"Delta AC Max",01.POSO.00.3273.014,"AC Type 2",22,AC,1,exact_name_coord
+108,0,"CS Energy DC 180 kW",01.POSO.00.1571.001,"AC Type 2",22,AC,1,exact_name_coord
+108,0,"CS Energy DC 180 kW",01.POSO.00.1571.001,CCS2,180,DC,1,exact_name_coord
+108,0,"CS Energy DC 180 kW",01.POSO.00.1571.001,CHAdeMO,180,DC,1,exact_name_coord
+108,1,"Teison 22 KW",01.POSO.00.1571.007,"AC Type 2",22,AC,1,exact_name_coord
+110,0,"Delta AC Max",01.POSO.00.3273.019,"AC Type 2",22,AC,1,exact_name_coord
+111,0,"Delta AC Max",01.POSO.00.3273.018,"AC Type 2",22,AC,1,exact_name_coord
+112,0,"Delta AC Max",01.POSO.00.3273.017,"AC Type 2",22,AC,1,exact_name_coord
+112,1,"CS AC Charger",01.POSO.00.3273.038,"AC Type 2",22,AC,1,exact_name_coord
+112,2,"CS DC Charger",01.POSO.00.3273.037,CCS2,60,DC,2,exact_name_coord
+113,0,"Delta AC Max",01.POSO.00.3273.020,"AC Type 2",22,AC,1,exact_name_coord
+114,0,"Delta AC Max",01.POSO.00.3275.013,"AC Type 2",22,AC,1,exact_name_coord
+114,1,"PHIHONG DC Wall Mount",01.POSO.00.3275.014,CCS2,30,DC,1,exact_name_coord
+114,1,"PHIHONG DC Wall Mount",01.POSO.00.3275.014,CHAdeMO,30,DC,1,exact_name_coord
+115,0,"Delta AC Max",01.POSO.00.1602.001,"AC Type 2",22,AC,1,exact_name_coord
+115,1,"Proteksindo DC EVDX-60",01.POSO.00.1602.002,"AC Type 2",22,AC,1,exact_name_coord
+115,1,"Proteksindo DC EVDX-60",01.POSO.00.1602.002,CCS2,60,DC,1,exact_name_coord
+115,1,"Proteksindo DC EVDX-60",01.POSO.00.1602.002,CHAdeMO,60,DC,1,exact_name_coord
+116,0,"Delta AC Max",01.POSO.00.1602.003,"AC Type 2",22,AC,1,exact_name_coord
+116,1,"Proteksindo DC EVDX-60",01.POSO.00.1602.004,"AC Type 2",22,AC,1,exact_name_coord
+116,1,"Proteksindo DC EVDX-60",01.POSO.00.1602.004,CCS2,60,DC,1,exact_name_coord
+116,1,"Proteksindo DC EVDX-60",01.POSO.00.1602.004,CHAdeMO,60,DC,1,exact_name_coord
+117,0,"Delta DC Wallbox",01.POSO.00.7371.013,"AC Type 2",22,AC,1,exact_name_coord
+117,0,"Delta DC Wallbox",01.POSO.00.7371.013,CCS2,25,DC,1,exact_name_coord
+117,0,"Delta DC Wallbox",01.POSO.00.7371.013,CHAdeMO,25,DC,1,exact_name_coord
+118,0,"Delta AC Max",01.POSO.00.3272.003,"AC Type 2",22,AC,1,exact_name_coord
+118,1,"Proteksindo AC-22",01.POSO.00.3272.004,"AC Type 2",22,AC,1,exact_name_coord
+120,0,"PHIHONG DC Wall Mount",01.POSO.00.5103.023,CCS2,30,DC,1,exact_name_coord
+120,0,"PHIHONG DC Wall Mount",01.POSO.00.5103.023,CHAdeMO,30,DC,1,exact_name_coord
+120,1,"PHIHONG AC Wall Mount",01.POSO.00.5103.024,"AC Type 2",22,AC,1,exact_name_coord
+121,0,"PHIHONG DC Wall Mount",01.PPOO.00.5103.038,CCS2,30,DC,1,exact_name_coord
+121,0,"PHIHONG DC Wall Mount",01.PPOO.00.5103.038,CHAdeMO,30,DC,1,exact_name_coord
+121,1,"PHIHONG AC Wall Mount",01.PPOO.00.5103.039,"AC Type 2",22,AC,1,exact_name_coord
+122,0,"Delta AC Max",01.POSO.00.3212.004,"AC Type 2",22,AC,1,exact_name_coord
+122,1,"Teison 22 KW",01.POSO.00.3212.012,"AC Type 2",22,AC,1,exact_name_coord
+123,0,"1. Delta AC Max",01.POSO.00.3276.009,"AC Type 2",22,AC,1,exact_name_coord
+123,1,"2. Delta AC Max",01.POSO.00.3276.008,"AC Type 2",22,AC,1,exact_name_coord
+123,3,"Delta DC Wallbox",01.POSO.00.3276.010,CCS2,25,DC,1,exact_name_coord
+123,3,"Delta DC Wallbox",01.POSO.00.3276.010,CHAdeMO,25,DC,1,exact_name_coord
+124,0,"Delta AC Max",01.POSO.00.3276.006,"AC Type 2",22,AC,1,exact_name_coord
+125,0,"Delta AC Max",01.POSO.00.3202.002,"AC Type 2",22,AC,1,exact_name_coord
+126,0,"Delta AC Max",01.POSO.00.3202.003,"AC Type 2",22,AC,1,exact_name_coord
+127,0,"Delta AC Max",01.POSO.00.3275.010,"AC Type 2",22,AC,1,exact_name_coord
+128,0,"Delta AC Max",01.POSO.00.1802.001,"AC Type 2",22,AC,1,exact_name_coord
+128,1,"Proteksindo DC EVDX-60",01.POSO.00.1802.002,"AC Type 2",22,AC,1,exact_name_coord
+128,1,"Proteksindo DC EVDX-60",01.POSO.00.1802.002,CCS2,60,DC,1,exact_name_coord
+128,1,"Proteksindo DC EVDX-60",01.POSO.00.1802.002,CHAdeMO,60,DC,1,exact_name_coord
+130,0,"Delta AC Max",01.POSO.00.3275.011,"AC Type 2",22,AC,1,exact_name_coord
+131,0,"Delta AC Max",01.POSO.00.3271.007,"AC Type 2",22,AC,1,exact_name_coord
+132,1,"Teison 22 KW",01.POSO.00.3271.003,"AC Type 2",22,AC,1,exact_name_coord
+133,0,"Delta AC Max",01.POSO.00.3203.011,"AC Type 2",22,AC,1,exact_name_coord
+133,1,"CS DC Charger",01.POSO.00.3203.018,CCS2,50,DC,2,exact_name_coord
+134,0,"Delta AC Max",01.POSO.00.3203.006,"AC Type 2",22,AC,1,exact_name_coord
+135,0,"Delta AC Max",01.POSO.00.3216.009,"AC Type 2",22,AC,1,exact_name_coord
+136,0,"Delta AC Max",01.POSO.00.3209.017,"AC Type 2",22,AC,1,exact_name_prov
+137,0,"Delta AC Max",01.POSO.00.3208.002,"AC Type 2",22,AC,1,exact_name_prov
+138,0,"Delta AC Max",01.POSO.00.3215.004,"AC Type 2",22,AC,1,exact_name_coord
+139,0,"Delta AC Max",01.POSO.00.3209.008,"AC Type 2",22,AC,1,core_name_geo
+139,1,"Chargecore AC-22",01.POSO.00.3274.005,"AC Type 2",22,AC,1,core_name_geo
+139,2,"Chargecore DC-120",01.POSO.00.3274.004,CCS2,120,DC,2,core_name_geo
+140,0,"Delta AC Max",01.POSO.00.3274.001,"AC Type 2",22,AC,1,exact_name_coord
+142,0,"Delta AC Max",01.POSO.00.3209.007,"AC Type 2",22,AC,1,exact_name_coord
+143,0,"Delta AC Max",01.POSO.00.3278.005,"AC Type 2",22,AC,1,exact_name_coord
+143,1,"AC Mini Plus",01.POSO.00.3278.006,"AC Type 2",7,AC,1,exact_name_coord
+144,0,"1. Delta AC Max",01.POSO.00.3278.002,"AC Type 2",22,AC,1,exact_name_coord
+144,1,"2. Delta AC Max",01.POSO.00.3278.003,"AC Type 2",22,AC,1,exact_name_coord
+144,3,"Delta DC Wallbox",01.POSO.00.3278.004,CCS2,25,DC,1,exact_name_coord
+145,0,"Delta AC Max",01.POSO.00.3216.008,"AC Type 2",22,AC,1,exact_name_coord
+146,0,"Delta AC Max",01.POSO.00.3277.003,"AC Type 2",22,AC,1,exact_name_coord
+146,1,"Free Standing DC Fast Charger",01.POSO.00.3277.007,CCS2,30,DC,1,exact_name_coord
+147,0,"Delta AC Max",01.POSO.00.3277.001,"AC Type 2",22,AC,1,exact_name_coord
+148,0,"Delta AC Max",01.POSO.00.3201.018,"AC Type 2",22,AC,1,exact_name_coord
+150,0,"Delta AC Max",01.POSO.00.3212.003,"AC Type 2",22,AC,1,exact_name_coord
+151,0,"Delta AC Max",01.POSO.00.3212.002,"AC Type 2",22,AC,1,exact_name_coord
+152,0,"Delta AC Max",01.POSO.00.3204.008,"AC Type 2",22,AC,1,exact_name_coord
+153,0,"Delta AC Max",01.POSO.00.3204.007,"AC Type 2",22,AC,1,exact_name_coord
+154,0,"Delta AC Max",01.POSO.00.3214.002,"AC Type 2",22,AC,1,exact_name_coord
+155,1,"Chargecore AC-22",01.POSO.00.3213.008,"AC Type 2",22,AC,1,exact_name_coord
+156,0,"Delta AC Max",01.POSO.00.3215.001,"AC Type 2",22,AC,1,exact_name_coord
+157,0,"Delta AC Max",01.POSO.00.3208.001,"AC Type 2",22,AC,1,exact_name_coord
+158,0,"Delta AC Max",01.POSO.00.3275.012,"AC Type 2",22,AC,1,exact_name_coord
+159,0,"Delta AC Max",01.POSO.00.3201.008,"AC Type 2",22,AC,1,exact_name_coord
+160,0,"Delta AC Max",01.POSO.00.3201.017,"AC Type 2",22,AC,1,exact_name_coord
+161,0,"Delta AC Max",01.POSO.00.3203.009,"AC Type 2",22,AC,1,exact_name_coord
+163,0,"Delta AC Max",01.POSO.00.3216.005,"AC Type 2",22,AC,1,exact_name_coord
+164,0,"Delta AC Max",01.POSO.00.3216.006,"AC Type 2",22,AC,1,exact_name_coord
+165,0,"Delta AC Max",01.POSO.00.3216.007,"AC Type 2",22,AC,1,exact_name_coord
+166,0,"Delta AC Max",01.POSO.00.3217.003,"AC Type 2",22,AC,1,exact_name_coord
+167,0,"Delta AC Max",01.POSO.00.3277.002,"AC Type 2",22,AC,1,exact_name_coord
+168,0,"Delta AC Max",01.POSO.00.3201.010,"AC Type 2",22,AC,1,exact_name_coord
+169,0,"Delta AC Max",01.POSO.00.3276.007,"AC Type 2",22,AC,1,exact_name_coord
+170,0,"Delta AC Max",01.POSO.00.3201.014,"AC Type 2",22,AC,1,exact_name_coord
+171,0,"Delta AC Max",01.POSO.00.3201.016,"AC Type 2",22,AC,1,exact_name_coord
+172,0,"Delta AC Max",01.POSO.00.3212.001,"AC Type 2",22,AC,1,exact_name_coord
+173,2,"1. Chargecore AC-22",01.POSO.00.3215.030,"AC Type 2",22,AC,1,exact_name_coord
+173,3,"2. Chargecore AC-22",01.POSO.00.3215.029,"AC Type 2",22,AC,1,exact_name_coord
+174,0,"1. CS AC Charger",01.POSO.00.3215.027,"AC Type 2",22,AC,1,exact_name_coord
+174,1,"2. CS AC Charger",01.POSO.00.3215.028,"AC Type 2",22,AC,1,exact_name_coord
+175,0,"Delta AC Max",01.POSO.00.3204.001,"AC Type 2",22,AC,1,exact_name_coord
+176,0,"Delta AC Max",01.POSO.00.3204.004,"AC Type 2",22,AC,1,exact_name_coord
+176,1,"Altro AC Charger",01.POSO.00.3204.016,"AC Type 2",7,AC,1,exact_name_coord
+176,2,"2. Teison 22 KW",01.POSO.00.3204.015,"AC Type 2",22,AC,1,exact_name_coord
+178,0,"Delta AC Max",01.POSO.00.3213.001,"AC Type 2",22,AC,1,exact_name_coord
+178,2,"Chargecore AC-22",01.POSO.00.3213.010,"AC Type 2",22,AC,1,exact_name_coord
+179,1,"Chargecore AC-22",01.POSO.00.3213.009,"AC Type 2",22,AC,1,exact_name_coord
+180,0,"Delta AC Max",01.POSO.00.3202.004,"AC Type 2",22,AC,1,exact_name_coord
+181,0,"Delta AC Max",01.POSO.00.3202.005,"AC Type 2",22,AC,1,exact_name_coord
+182,0,"Delta AC Max",01.POSO.00.3207.001,"AC Type 2",22,AC,1,exact_name_coord
+183,0,"Delta AC Max",01.POSO.00.3206.003,"AC Type 2",22,AC,1,exact_name_coord
+184,0,"Delta AC Max",01.POSO.00.3206.001,"AC Type 2",22,AC,1,exact_name_coord
+185,0,"Delta AC Max",01.POSO.00.3218.001,"AC Type 2",22,AC,1,exact_name_coord
+185,2,"Delta DC Wallbox",01.POSO.00.3218.002,CCS2,25,DC,1,exact_name_coord
+185,2,"Delta DC Wallbox",01.POSO.00.3218.002,CHAdeMO,25,DC,1,exact_name_coord
+186,0,"Delta AC Max",01.POSO.00.3201.015,"AC Type 2",22,AC,1,exact_name_coord
+187,0,"Delta AC Max",01.POSO.00.3201.019,"AC Type 2",22,AC,1,exact_name_coord
+187,1,"AC Mini Plus",01.POSO.00.3201.013,"AC Type 2",7,AC,1,exact_name_coord
+188,0,"Delta AC Max",01.POSO.00.3203.002,"AC Type 2",22,AC,1,exact_name_coord
+189,0,"Delta AC Max",01.POSO.00.3217.004,"AC Type 2",22,AC,1,exact_name_coord
+190,0,"Delta AC Max",01.POSO.00.3206.002,"AC Type 2",22,AC,1,exact_name_coord
+191,0,"Proteksindo DC EVDX-60",01.POSO.00.1771.001,"AC Type 2",22,AC,1,exact_name_coord
+191,0,"Proteksindo DC EVDX-60",01.POSO.00.1771.001,CCS2,60,DC,1,exact_name_coord
+191,0,"Proteksindo DC EVDX-60",01.POSO.00.1771.001,CHAdeMO,60,DC,1,exact_name_coord
+192,0,"Delta AC Max",01.POSO.00.3203.007,"AC Type 2",22,AC,1,exact_name_coord
+193,0,"Delta AC Max",01.POSO.00.3217.005,"AC Type 2",22,AC,1,exact_name_coord
+194,0,"Delta AC Max",01.POSO.00.3217.006,"AC Type 2",22,AC,1,exact_name_coord
+195,0,"Delta AC Max",01.POSO.00.3276.005,"AC Type 2",22,AC,1,exact_name_coord
+196,0,"Delta AC Max",01.POSO.00.3201.009,"AC Type 2",22,AC,1,exact_name_coord
+198,0,"Delta AC Max",01.POSO.00.3204.006,"AC Type 2",22,AC,1,exact_name_coord
+199,0,"Delta AC Max",01.POSO.00.3204.003,"AC Type 2",22,AC,1,exact_name_coord
+200,0,"Delta AC Max",01.POSO.00.3204.005,"AC Type 2",22,AC,1,exact_name_coord
+201,0,"Delta DC Wallbox",01.POSO.00.3211.004,CCS2,25,DC,1,exact_name_coord
+201,0,"Delta DC Wallbox",01.POSO.00.3211.004,CHAdeMO,25,DC,1,exact_name_coord
+201,1,"Proteksindo AC EVAX-22",01.POSO.00.3211.003,"AC Type 2",22,AC,1,exact_name_coord
+202,0,"Proteksindo AC EVAX-22",01.POSO.00.3210.003,"AC Type 2",22,AC,1,exact_name_coord
+203,0,"Proteksindo AC EVAX-22",01.POSO.00.3210.002,"AC Type 2",22,AC,1,exact_name_coord
+204,1,"Delta DC City Charger",01.POSO.00.3279.001,"AC Type 2",22,AC,1,exact_name_coord
+204,1,"Delta DC City Charger",01.POSO.00.3279.001,CCS2,50,DC,1,exact_name_coord
+204,1,"Delta DC City Charger",01.POSO.00.3279.001,CHAdeMO,50,DC,1,exact_name_coord
+205,0,"PHIHONG AC Wall Mount",01.POSO.00.3205.003,"AC Type 2",22,AC,1,exact_name_coord
+206,0,"Delta AC Max",01.POSO.00.3205.005,"AC Type 2",22,AC,1,exact_name_coord
+206,1,"Altro AC Charger",01.POSO.00.3205.009,"AC Type 2",7,AC,1,exact_name_coord
+206,2,"CS DC Charger",01.POSO.00.3205.018,CCS2,50,DC,2,exact_name_coord
+207,0,"Altro AC Charger",01.POSO.00.3205.019,"AC Type 2",7,AC,1,exact_name_coord
+207,1,"PHIHONG AC Wall Mount",01.POSO.00.3205.007,"AC Type 2",22,AC,1,exact_name_coord
+208,1,"PHIHONG AC Wall Mount",01.POSO.00.3205.004,"AC Type 2",22,AC,1,exact_name_coord
+209,1,"PHIHONG AC Wall Mount",01.POSO.00.3205.008,"AC Type 2",22,AC,1,exact_name_coord
+210,0,"Proteksindo DC EVDX-60",01.POSO.00.6103.003,"AC Type 2",22,AC,1,exact_name_coord
+210,0,"Proteksindo DC EVDX-60",01.POSO.00.6103.003,CCS2,60,DC,1,exact_name_coord
+210,0,"Proteksindo DC EVDX-60",01.POSO.00.6103.003,CHAdeMO,60,DC,1,exact_name_coord
+211,0,"Proteksindo AC EVAX-22",01.POSO.00.3271.006,"AC Type 2",22,AC,1,exact_name_coord
+212,0,"AC Mini Plus",01.POSO.00.3273.022,"AC Type 2",7,AC,1,exact_name_coord
+213,0,"Proteksindo DC EVDX-60",01.POSO.00.8271.001,"AC Type 2",22,AC,1,exact_name_coord
+213,0,"Proteksindo DC EVDX-60",01.POSO.00.8271.001,CCS2,60,DC,1,exact_name_coord
+213,0,"Proteksindo DC EVDX-60",01.POSO.00.8271.001,CHAdeMO,60,DC,1,exact_name_coord
+214,0,"Delta DC City Charger",01.POSO.00.1472.002,"AC Type 2",22,AC,1,exact_name_coord
+214,0,"Delta DC City Charger",01.POSO.00.1472.002,CCS2,50,DC,1,exact_name_coord
+214,0,"Delta DC City Charger",01.POSO.00.1472.002,CHAdeMO,50,DC,1,exact_name_coord
+215,0,"Chargecore AC-22",01.POSO.00.3603.006,"AC Type 2",22,AC,1,exact_name_coord
+215,1,"Teison 22 KW",01.POSO.00.3603.037,"AC Type 2",22,AC,1,exact_name_coord
+216,0,"Proteksindo DC EVDX-60",01.POSO.00.1223.001,"AC Type 2",22,AC,1,exact_name_coord
+216,0,"Proteksindo DC EVDX-60",01.POSO.00.1223.001,CCS2,60,DC,1,exact_name_coord
+216,0,"Proteksindo DC EVDX-60",01.POSO.00.1223.001,CHAdeMO,60,DC,1,exact_name_coord
+217,0,"AC Mini Plus",01.POSO.00.3509.001,"AC Type 2",7,AC,1,exact_name_coord
+217,1,"CS DC Charger",01.POSO.00.3509.002,CCS2,50,DC,2,exact_name_coord
+217,2,"1. Teison 22 KW",01.POSO.00.3509.003,"AC Type 2",22,AC,1,exact_name_coord
+217,3,"2. Teison 22 KW",01.POSO.00.3509.004,"AC Type 2",22,AC,1,exact_name_coord
+218,0,"Proteksindo DC EVDX-60",01.POSO.00.1212.001,"AC Type 2",22,AC,1,exact_name_coord
+218,0,"Proteksindo DC EVDX-60",01.POSO.00.1212.001,CCS2,60,DC,1,exact_name_coord
+218,0,"Proteksindo DC EVDX-60",01.POSO.00.1212.001,CHAdeMO,60,DC,1,exact_name_coord
+219,0,"Proteksindo DC EVDX-60",01.POSO.00.1217.001,"AC Type 2",22,AC,1,exact_name_coord
+219,0,"Proteksindo DC EVDX-60",01.POSO.00.1217.001,CCS2,60,DC,1,exact_name_coord
+219,0,"Proteksindo DC EVDX-60",01.POSO.00.1217.001,CHAdeMO,60,DC,1,exact_name_coord
+220,0,"Delta AC Max",01.POSO.00.1812.001,"AC Type 2",22,AC,1,exact_name_coord
+220,2,"Delta DC City Charger",01.POSO.00.1812.002,"AC Type 2",22,AC,1,exact_name_coord
+220,2,"Delta DC City Charger",01.POSO.00.1812.002,CCS2,50,DC,1,exact_name_coord
+220,2,"Delta DC City Charger",01.POSO.00.1812.002,CHAdeMO,50,DC,1,exact_name_coord
+221,0,"Proteksindo DC EVDX-60",01.POSO.00.3673.001,"AC Type 2",22,AC,1,exact_name_coord
+221,0,"Proteksindo DC EVDX-60",01.POSO.00.3673.001,CCS2,60,DC,1,exact_name_coord
+221,0,"Proteksindo DC EVDX-60",01.POSO.00.3673.001,CHAdeMO,60,DC,1,exact_name_coord
+222,0,"Delta DC City Charger",01.POSO.00.7373.001,"AC Type 2",22,AC,1,exact_name_coord
+222,0,"Delta DC City Charger",01.POSO.00.7373.001,CCS2,50,DC,1,exact_name_coord
+222,0,"Delta DC City Charger",01.POSO.00.7373.001,CHAdeMO,50,DC,1,exact_name_coord
+223,0,"Free Standing DC Fast Charger",01.PPOO.00.1271.005,CCS2,60,DC,2,exact_name_coord
+224,0,"Proteksindo DC EVDX-60",01.POSO.00.5311.001,"AC Type 2",22,AC,1,exact_name_prov
+224,0,"Proteksindo DC EVDX-60",01.POSO.00.5311.001,CCS2,60,DC,1,exact_name_prov
+224,0,"Proteksindo DC EVDX-60",01.POSO.00.5311.001,CHAdeMO,60,DC,1,exact_name_prov
+225,0,"Delta AC Max",01.POSO.00.5271.018,"AC Type 2",22,AC,1,exact_name_coord
+226,0,"Proteksindo DC EVDX-60",01.POSO.00.9271.002,"AC Type 2",22,AC,1,exact_name_coord
+226,0,"Proteksindo DC EVDX-60",01.POSO.00.9271.002,CCS2,60,DC,1,exact_name_coord
+226,0,"Proteksindo DC EVDX-60",01.POSO.00.9271.002,CHAdeMO,60,DC,1,exact_name_coord
+228,0,"Delta DC City Charger",01.POSO.00.5271.004,"AC Type 2",22,AC,1,exact_name_coord
+228,0,"Delta DC City Charger",01.POSO.00.5271.004,CCS2,50,DC,1,exact_name_coord
+228,0,"Delta DC City Charger",01.POSO.00.5271.004,CHAdeMO,50,DC,1,exact_name_coord
+229,0,"AC Mini Plus",01.POSO.00.3575.001,"AC Type 2",7,AC,1,exact_name_coord
+229,2,"PHIHONG DC Wall Mount",01.POSO.00.3575.002,CCS2,30,DC,1,exact_name_coord
+229,2,"PHIHONG DC Wall Mount",01.POSO.00.3575.002,CHAdeMO,30,DC,1,exact_name_coord
+230,0,"Delta DC City Charger",01.POSO.00.6372.002,"AC Type 2",22,AC,1,exact_name_coord
+230,0,"Delta DC City Charger",01.POSO.00.6372.002,CCS2,50,DC,1,exact_name_coord
+230,0,"Delta DC City Charger",01.POSO.00.6372.002,CHAdeMO,50,DC,1,exact_name_coord
+231,0,"AC Mini Plus",01.POSO.00.3603.007,"AC Type 2",7,AC,1,exact_name_coord
+232,0,"Delta DC City Charger",01.POSO.00.5304.001,"AC Type 2",22,AC,1,exact_name_coord
+232,0,"Delta DC City Charger",01.POSO.00.5304.001,CCS2,50,DC,1,exact_name_coord
+232,0,"Delta DC City Charger",01.POSO.00.5304.001,CHAdeMO,50,DC,1,exact_name_coord
+233,0,"Free Standing DC Fast Charger",01.PPOO.00.3671.015,CCS2,60,DC,2,exact_name_coord
+234,1,"Proteksindo DC EVDX-60",01.POSO.00.3603.008,"AC Type 2",22,AC,1,exact_name_coord
+234,1,"Proteksindo DC EVDX-60",01.POSO.00.3603.008,CCS2,60,DC,1,exact_name_coord
+234,1,"Proteksindo DC EVDX-60",01.POSO.00.3603.008,CHAdeMO,60,DC,1,exact_name_coord
+235,0,"Proteksindo DC EVDX-60",01.POSO.00.3175.011,"AC Type 2",22,AC,1,exact_name_coord
+235,0,"Proteksindo DC EVDX-60",01.POSO.00.3175.011,CCS2,60,DC,1,exact_name_coord
+235,0,"Proteksindo DC EVDX-60",01.POSO.00.3175.011,CHAdeMO,60,DC,1,exact_name_coord
+236,0,"Delta DC City Charger",01.POSO.00.7401.001,"AC Type 2",22,AC,1,exact_name_coord
+236,0,"Delta DC City Charger",01.POSO.00.7401.001,CCS2,50,DC,1,exact_name_coord
+236,0,"Delta DC City Charger",01.POSO.00.7401.001,CHAdeMO,50,DC,1,exact_name_coord
+237,0,"AC Mini Plus",01.POSO.00.3673.002,"AC Type 2",7,AC,1,exact_name_coord
+237,1,"1. Chargecore AC-22",01.POSO.00.3673.008,"AC Type 2",22,AC,1,exact_name_coord
+237,2,"2. Chargecore AC-22",01.POSO.00.3673.009,"AC Type 2",22,AC,1,exact_name_coord
+238,0,"Proteksindo DC EVDX-60",01.POSO.00.7208.003,CCS2,60,DC,1,exact_name_coord
+238,0,"Proteksindo DC EVDX-60",01.POSO.00.7208.003,CHAdeMO,60,DC,1,exact_name_coord
+238,0,"Proteksindo DC EVDX-60",01.POSO.00.7208.003,"DC Connector",60,DC,1,exact_name_coord
+239,0,"Proteksindo DC EVDX-60",01.POSO.00.7571.001,"AC Type 2",22,AC,1,exact_name_coord
+239,0,"Proteksindo DC EVDX-60",01.POSO.00.7571.001,CCS2,60,DC,1,exact_name_coord
+239,0,"Proteksindo DC EVDX-60",01.POSO.00.7571.001,CHAdeMO,60,DC,1,exact_name_coord
+240,0,"CS DC Charger",01.POSO.00.3672.004,CCS2,100,DC,2,exact_name_coord
+240,1,"Proteksindo DC EVDX-60",01.POSO.00.3672.002,"AC Type 2",22,AC,1,exact_name_coord
+240,1,"Proteksindo DC EVDX-60",01.POSO.00.3672.002,CCS2,60,DC,1,exact_name_coord
+240,1,"Proteksindo DC EVDX-60",01.POSO.00.3672.002,CHAdeMO,60,DC,1,exact_name_coord
+241,0,"Delta DC City Charger",01.POSO.00.1376.001,"AC Type 2",22,AC,1,exact_name_coord
+241,0,"Delta DC City Charger",01.POSO.00.1376.001,CCS2,50,DC,1,exact_name_coord
+241,0,"Delta DC City Charger",01.POSO.00.1376.001,CHAdeMO,50,DC,1,exact_name_coord
+242,0,"Delta AC Max",01.POSO.00.3329.003,"AC Type 2",22,AC,1,exact_name_coord
+242,1,"Delta DC Wallbox",01.POSO.00.3329.004,CCS2,25,DC,1,exact_name_coord
+242,1,"Delta DC Wallbox",01.POSO.00.3329.004,CHAdeMO,25,DC,1,exact_name_coord
+243,0,"Autel MaxiCharger DC Compact",01.POSO.00.3319.002,CCS2,47,DC,1,exact_name_coord
+243,0,"Autel MaxiCharger DC Compact",01.POSO.00.3319.002,CHAdeMO,47,DC,1,exact_name_coord
+243,1,"Wall Mount AC Charger",01.POSO.00.3319.001,"AC Type 2",7,AC,1,exact_name_coord
+244,0,"AC Mini Plus",01.POSO.00.1671.003,"AC Type 2",7,AC,1,exact_name_coord
+245,0,"AC Mini Plus",01.POSO.00.1671.004,"AC Type 2",7,AC,1,exact_name_coord
+246,0,"AC Mini Plus",01.POSO.00.1671.005,"AC Type 2",7,AC,1,exact_name_coord
+247,0,"AC Mini Plus",01.POSO.00.1671.006,"AC Type 2",7,AC,1,exact_name_coord
+249,1,"PHIHONG DC Wall Mount",01.POSO.00.7101.002,"AC Type 2",22,AC,1,exact_name_coord
+249,1,"PHIHONG DC Wall Mount",01.POSO.00.7101.002,CCS2,30,DC,1,exact_name_coord
+249,1,"PHIHONG DC Wall Mount",01.POSO.00.7101.002,CHAdeMO,30,DC,1,exact_name_coord
+250,0,"Delta DC City Charger",01.POSO.00.3171.026,"AC Type 2",22,AC,1,exact_name_coord
+250,0,"Delta DC City Charger",01.POSO.00.3171.026,CCS2,50,DC,1,exact_name_coord
+250,0,"Delta DC City Charger",01.POSO.00.3171.026,CHAdeMO,50,DC,1,exact_name_coord
+251,0,"Delta DC City Charger",01.POSO.00.3174.034,"AC Type 2",22,AC,1,core_name_geo
+251,0,"Delta DC City Charger",01.POSO.00.3174.034,CCS2,50,DC,1,core_name_geo
+251,0,"Delta DC City Charger",01.POSO.00.3174.034,CHAdeMO,50,DC,1,core_name_geo
+252,0,"Delta AC Max",01.PPOO.00.3171.027,"AC Type 2",22,AC,1,exact_name_coord
+252,1,"Delta DC Wallbox",01.PPOO.00.3171.028,CCS2,25,DC,2,exact_name_coord
+253,0,"Delta AC Max",01.POSO.00.5202.002,"AC Type 2",22,AC,1,exact_name_coord
+253,1,"Delta DC Wallbox",01.POSO.00.5202.001,CHAdeMO,25,DC,1,exact_name_coord
+253,1,"Delta DC Wallbox",01.POSO.00.5202.001,"DC Connector",25,DC,1,exact_name_coord
+254,0,"Delta AC Max",01.POSO.00.5271.007,"AC Type 2",22,AC,1,exact_name_coord
+254,6,"Delta DC Wallbox",01.POSO.00.5271.006,"AC Type 2",22,AC,1,exact_name_coord
+254,6,"Delta DC Wallbox",01.POSO.00.5271.006,CCS2,25,DC,1,exact_name_coord
+254,6,"Delta DC Wallbox",01.POSO.00.5271.006,CHAdeMO,25,DC,1,exact_name_coord
+255,0,"Delta AC Max",01.POSO.00.5204.002,"AC Type 2",22,AC,1,exact_name_coord
+255,1,"Delta DC Wallbox",01.POSO.00.5204.001,"AC Type 2",22,AC,1,exact_name_coord
+255,1,"Delta DC Wallbox",01.POSO.00.5204.001,CCS2,25,DC,1,exact_name_coord
+255,1,"Delta DC Wallbox",01.POSO.00.5204.001,CHAdeMO,25,DC,1,exact_name_coord
+256,0,"Delta DC Wallbox",01.POSO.00.5272.001,CCS2,25,DC,1,exact_name_coord
+256,0,"Delta DC Wallbox",01.POSO.00.5272.001,"DC Connector",25,DC,1,exact_name_coord
+258,0,"Proteksindo DC EVDX-60",01.POSO.00.7208.002,"AC Type 2",22,AC,1,exact_name_coord
+258,0,"Proteksindo DC EVDX-60",01.POSO.00.7208.002,CCS2,60,DC,1,exact_name_coord
+258,0,"Proteksindo DC EVDX-60",01.POSO.00.7208.002,CHAdeMO,60,DC,1,exact_name_coord
+259,0,"Delta DC City Charger",01.POSO.00.1671.008,"AC Type 2",22,AC,1,exact_name_coord
+259,0,"Delta DC City Charger",01.POSO.00.1671.008,CCS2,50,DC,1,exact_name_coord
+259,0,"Delta DC City Charger",01.POSO.00.1671.008,CHAdeMO,50,DC,1,exact_name_coord
+260,1,"PHIHONG DC Wall Mount",01.POSO.00.1275.002,CCS2,30,DC,1,exact_name_coord
+260,1,"PHIHONG DC Wall Mount",01.POSO.00.1275.002,CHAdeMO,30,DC,1,exact_name_coord
+261,0,"Wall Mount AC Charger",01.POSO.00.7502.001,"AC Type 2",7,AC,1,exact_name_coord
+262,0,"Delta AC Max",01.POSO.00.3215.015,"AC Type 2",22,AC,1,exact_name_coord
+262,1,"Delta DC 200 kW City Charger",01.POSO.00.3215.016,CCS2,200,DC,2,exact_name_coord
+262,2,"SINEXCEL DC CHARGER 180kW",01.POSO.00.3215.010,CCS2,180,DC,1,exact_name_coord
+262,2,"SINEXCEL DC CHARGER 180kW",01.POSO.00.3215.010,CHAdeMO,180,DC,1,exact_name_coord
+263,0,"ABB Terra 50",01.POSO.00.3215.014,CCS2,50,DC,1,exact_name_coord
+263,0,"ABB Terra 50",01.POSO.00.3215.014,CHAdeMO,50,DC,1,exact_name_coord
+263,1,"Delta AC Max",01.POSO.00.3215.012,"AC Type 2",22,AC,1,exact_name_coord
+263,2,"CS AC Charger",01.POSO.00.3215.032,"AC Type 2",22,AC,1,exact_name_coord
+263,3,"Delta DC 200 kW City Charger",01.POSO.00.3215.011,CCS2,200,DC,2,exact_name_coord
+264,0,"Delta AC Max",01.POSO.00.3212.006,"AC Type 2",22,AC,1,exact_name_coord
+264,1,"2. Delta DC 80 kW City Charger",01.POSO.00.3212.008,CCS2,80,DC,1,exact_name_coord
+264,1,"2. Delta DC 80 kW City Charger",01.POSO.00.3212.008,CHAdeMO,80,DC,1,exact_name_coord
+264,2,"1. Delta DC 200 kW City Charger",01.POSO.00.3212.005,CCS2,200,DC,2,exact_name_coord
+264,3,"Delta DC Wallbox",01.POSO.00.3212.007,CCS2,25,DC,1,exact_name_coord
+266,0,"Delta DC 200 kW City Charger",01.POSO.00.3213.003,CCS2,200,DC,2,exact_name_coord
+267,0,"ABB Terra 50",01.POSO.00.3209.013,CCS2,50,DC,1,spatial_restarea_km
+267,0,"ABB Terra 50",01.POSO.00.3209.013,CHAdeMO,50,DC,1,spatial_restarea_km
+267,1,"Delta AC Max",01.POSO.00.3209.011,"AC Type 2",22,AC,1,spatial_restarea_km
+267,2,"Delta DC 200 kW City Charger",01.POSO.00.3209.010,CCS2,200,DC,2,spatial_restarea_km
+267,3,"Delta DC Wallbox",01.POSO.00.3209.012,CCS2,25,DC,1,spatial_restarea_km
+267,4,"1. Teison 22 KW",01.POSO.00.3209.020,"AC Type 2",22,AC,1,spatial_restarea_km
+267,5,"2. Teison 22 KW",01.POSO.00.3209.019,"AC Type 2",22,AC,1,spatial_restarea_km
+269,0,"2. Delta AC Max",01.POSO.00.3214.011,"AC Type 2",22,AC,1,core_name_geo
+269,1,"2. Delta DC 200 kW City Charger",01.POSO.00.3214.009,CCS2,200,DC,2,core_name_geo
+271,0,"1. Delta DC 200 kW City Charger",01.POSO.00.5103.026,CCS2,200,DC,2,exact_name_coord
+271,1,"2. Delta DC 200 kW City Charger",01.POSO.00.5103.025,CCS2,200,DC,2,exact_name_coord
+272,0,"Delta DC Wallbox",01.POSO.00.3205.010,CCS2,25,DC,1,exact_name_coord
+272,0,"Delta DC Wallbox",01.POSO.00.3205.010,CHAdeMO,25,DC,1,exact_name_coord
+272,1,"Phihong AC Wall Mount",01.POSO.00.3205.001,"AC Type 2",22,AC,1,exact_name_coord
+274,0,"Delta AC Max",01.POSO.00.5103.027,"AC Type 2",22,AC,1,exact_name_coord
+274,1,"Delta DC Wallbox",01.POSO.00.5103.028,CCS2,25,DC,1,exact_name_coord
+274,1,"Delta DC Wallbox",01.POSO.00.5103.028,CHAdeMO,25,DC,1,exact_name_coord
+275,0,"Delta DC City Charger",01.POSO.00.5101.001,"AC Type 2",22,AC,1,exact_name_coord
+275,0,"Delta DC City Charger",01.POSO.00.5101.001,CCS2,50,DC,1,exact_name_coord
+275,0,"Delta DC City Charger",01.POSO.00.5101.001,CHAdeMO,50,DC,1,exact_name_coord
+276,0,"Delta AC Max",01.POSO.00.5108.001,"AC Type 2",22,AC,1,exact_name_coord
+276,1,"PHIHONG DC Wall Mount",01.POSO.00.5108.002,CCS2,25,DC,1,exact_name_coord
+276,1,"PHIHONG DC Wall Mount",01.POSO.00.5108.002,CHAdeMO,25,DC,1,exact_name_coord
+277,0,"AC Mini Plus",01.POSO.00.3326.001,"AC Type 2",7,AC,1,exact_name_coord
+278,0,"AC Mini Plus",01.POSO.00.3328.001,"AC Type 2",7,AC,1,exact_name_coord
+278,1,"CS DC Charger",01.POSO.00.3328.011,CCS2,25,DC,1,exact_name_coord
+279,0,"AC Mini Plus",01.POSO.00.3320.001,"AC Type 2",7,AC,1,exact_name_coord
+280,0,"AC Mini Plus",01.POSO.00.3313.001,"AC Type 2",7,AC,1,exact_name_coord
+280,1,"CS AC Charger",01.POSO.00.3313.002,"AC Type 2",22,AC,1,exact_name_coord
+281,0,"AC Mini Plus",01.POSO.00.3309.001,"AC Type 2",7,AC,1,exact_name_coord
+281,1,"Chargecore AC-22",01.POSO.00.3309.006,"AC Type 2",22,AC,1,exact_name_coord
+282,0,"AC Mini Plus",01.POSO.00.3310.001,"AC Type 2",7,AC,1,exact_name_coord
+283,0,"AC Mini Plus",01.POSO.00.3403.001,"AC Type 2",7,AC,1,exact_name_coord
+284,0,"AC Mini Plus",01.POSO.00.3303.001,"AC Type 2",7,AC,1,exact_name_coord
+285,0,"AC Mini Plus",01.POSO.00.3307.001,"AC Type 2",7,AC,1,exact_name_coord
+285,1,"CS DC Charger",01.POSO.00.3307.002,CCS2,25,DC,1,exact_name_coord
+286,0,"AC Mini Plus",01.POSO.00.3305.001,"AC Type 2",7,AC,1,exact_name_coord
+286,1,"CS DC Charger",01.POSO.00.3305.002,CCS2,25,DC,1,exact_name_coord
+287,0,"Delta AC Max",01.POSO.00.3322.001,"AC Type 2",22,AC,1,exact_name_coord
+287,1,"Delta DC Wallbox",01.POSO.00.3322.002,CCS2,25,DC,1,exact_name_coord
+287,1,"Delta DC Wallbox",01.POSO.00.3322.002,CHAdeMO,25,DC,1,exact_name_coord
+288,0,"AC Mini Plus",01.POSO.00.3306.001,"AC Type 2",7,AC,1,exact_name_coord
+288,1,"CS DC Charger",01.POSO.00.3306.002,CCS2,25,DC,1,exact_name_coord
+289,0,"1. Proteksindo DC EVDX-60",01.PPOO.00.3578.015,"AC Type 2",22,AC,1,exact_name_coord
+289,0,"1. Proteksindo DC EVDX-60",01.PPOO.00.3578.015,CCS2,60,DC,1,exact_name_coord
+289,0,"1. Proteksindo DC EVDX-60",01.PPOO.00.3578.015,CHAdeMO,60,DC,1,exact_name_coord
+290,0,"01. Wall Mount AC Charger",01.POSO.00.5171.044,"AC Type 2",7,AC,1,exact_name_coord
+290,1,"02. Wall Mount AC Charger",01.POSO.00.5171.043,"AC Type 2",7,AC,1,exact_name_coord
+290,2,"03. Wall Mount AC Charger",01.POSO.00.5171.045,"AC Type 2",7,AC,1,exact_name_coord
+290,3,"04. Wall Mount AC Charger",01.POSO.00.5171.042,"AC Type 2",7,AC,1,exact_name_coord
+291,0,"Signet DC Fast Charger - 100 kW",01.PPOO.00.3404.002,CCS2,100,DC,2,exact_name_coord
+292,0,"Delta AC Max",01.POSO.00.3401.001,"AC Type 2",22,AC,1,exact_name_coord
+292,1,"Signet DC Fast Charger - 100 kW",01.POSO.00.3401.002,CCS2,100,DC,2,exact_name_coord
+293,0,"Chargecore DC-25",01.POSO.00.3604.001,CCS2,25,DC,1,exact_name_coord
+293,1,"Teison 22 KW",01.POSO.00.3604.002,"AC Type 2",22,AC,1,exact_name_coord
+294,0,"AC Mini Plus",01.POSO.00.3510.002,"AC Type 2",7,AC,1,exact_name_coord
+294,1,"PHIHONG DC Wall Mount",01.POSO.00.3510.003,CCS2,30,DC,1,exact_name_coord
+294,1,"PHIHONG DC Wall Mount",01.POSO.00.3510.003,CHAdeMO,30,DC,1,exact_name_coord
+295,0,"AC Mini Plus",01.POSO.00.3525.001,"AC Type 2",7,AC,1,exact_name_coord
+295,1,"Proteksindo DC EVDX-40",01.POSO.00.3525.002,CCS2,40,DC,1,exact_name_coord
+295,1,"Proteksindo DC EVDX-40",01.POSO.00.3525.002,CHAdeMO,40,DC,1,exact_name_coord
+296,0,"AC Mini Plus",01.POSO.00.3571.001,"AC Type 2",7,AC,1,exact_name_coord
+296,1,"Autel MaxiCharger DC Compact",01.POSO.00.3571.002,CCS2,47,DC,2,exact_name_coord
+297,0,"AC Mini Plus",01.POSO.00.3577.001,"AC Type 2",7,AC,1,exact_name_coord
+297,1,"Autel MaxiCharger DC Compact",01.POSO.00.3577.002,CCS2,47,DC,2,exact_name_coord
+297,3,"Teison 22 KW",01.POSO.00.3577.003,"AC Type 2",22,AC,1,exact_name_coord
+298,0,"ABB Terra 50",01.POSO.00.3302.001,CCS2,50,DC,1,exact_name_coord
+298,0,"ABB Terra 50",01.POSO.00.3302.001,CHAdeMO,50,DC,1,exact_name_coord
+298,1,"Delta AC Max",01.POSO.00.3302.002,"AC Type 2",22,AC,1,exact_name_coord
+299,0,"Delta AC Max",01.PPOO.00.3171.029,"AC Type 2",22,AC,1,exact_name_coord
+299,1,"Delta DC Wallbox",01.PPOO.00.3171.030,CCS2,25,DC,2,exact_name_coord
+300,0,"AC Mini Plus",01.POSO.00.3573.002,"AC Type 2",7,AC,1,exact_name_coord
+300,1,"Teison 22 KW",01.POSO.00.3573.008,"AC Type 2",22,AC,1,exact_name_coord
+301,0,"AC Mini Plus",01.POSO.00.3579.001,"AC Type 2",7,AC,1,exact_name_coord
+301,1,"CS DC Charger",01.POSO.00.3579.002,CCS2,50,DC,2,exact_name_coord
+302,0,"AC Mini Plus",01.POSO.00.3507.001,"AC Type 2",7,AC,1,exact_name_coord
+302,1,"Chargecore DC-25",01.POSO.00.3507.004,CCS2,25,DC,2,exact_name_coord
+303,0,"01. Wall Mount AC Charger",01.POSO.00.5171.032,"AC Type 2",7,AC,1,exact_name_coord
+304,0,"AC Mini Plus",01.POSO.00.3574.001,"AC Type 2",7,AC,1,exact_name_coord
+304,1,"CS Energy DC 180 kW",01.POSO.00.3574.002,CCS2,180,DC,2,exact_name_coord
+305,0,"AC Mini Plus",01.POSO.00.3515.001,"AC Type 2",7,AC,1,exact_name_coord
+306,0,"PHIHONG DC Wall Mount",01.POSO.00.3371.002,CCS2,30,DC,1,exact_name_coord
+306,0,"PHIHONG DC Wall Mount",01.POSO.00.3371.002,CHAdeMO,30,DC,1,exact_name_coord
+307,0,"Wall Mount AC Charger",01.POSO.00.1801.004,"AC Type 2",7,AC,1,exact_name_coord
+307,1,"Signet DC Fast Charger - 100 kW",01.POSO.00.1801.005,CCS2,100,DC,2,exact_name_coord
+308,0,"ABB Terra 50",01.POSO.00.3512.005,CCS2,50,DC,1,exact_name_coord
+308,0,"ABB Terra 50",01.POSO.00.3512.005,CHAdeMO,50,DC,1,exact_name_coord
+308,1,"Delta AC Max",01.POSO.00.3512.006,"AC Type 2",22,AC,1,exact_name_coord
+308,2,"AC Mini Plus",01.POSO.00.3512.004,"AC Type 2",7,AC,1,exact_name_coord
+309,0,"1. Delta AC Max",01.PPOO.00.3172.013,"AC Type 2",22,AC,1,exact_name_coord
+309,1,"2. Delta AC Max",01.PPOO.00.3172.012,"AC Type 2",22,AC,1,exact_name_coord
+309,2,"Delta DC Wallbox",01.PPOO.00.3172.014,CCS2,25,DC,2,exact_name_coord
+310,0,"AC Mini Plus",01.POSO.00.1174.001,"AC Type 2",7,AC,1,exact_name_coord
+311,0,"AC Mini Plus",01.POSO.00.1107.001,"AC Type 2",7,AC,1,exact_name_coord
+312,0,"AC Mini Plus",01.POSO.00.3516.001,"AC Type 2",7,AC,1,exact_name_coord
+312,1,"Proteksindo AC-22",01.POSO.00.3576.001,"AC Type 2",22,AC,1,exact_name_coord
+312,2,"Proteksindo DC EVDX-40",01.POSO.00.3576.002,CCS2,40,DC,1,exact_name_coord
+312,2,"Proteksindo DC EVDX-40",01.POSO.00.3576.002,CHAdeMO,40,DC,1,exact_name_coord
+313,0,"2. AC Mini Plus",01.POSO.00.9202.001,"AC Type 2",7,AC,1,exact_name_coord
+314,0,"Proteksindo AC-20",01.POSO.00.3528.001,"AC Type 2",20,AC,1,exact_name_coord
+314,1,"Proteksindo DC EVDX-40",01.POSO.00.3528.002,CCS2,40,DC,1,exact_name_coord
+314,1,"Proteksindo DC EVDX-40",01.POSO.00.3528.002,CHAdeMO,40,DC,1,exact_name_coord
+315,0,"AC Mini Plus",01.POSO.00.8106.001,"AC Type 2",7,AC,1,exact_name_coord
+316,0,"IoCharge AC Wallbox",01.PPOO.00.3573.004,"AC Type 2",22,AC,1,exact_name_coord
+316,1,"PHIHONG DC Wall Mount",01.PPOO.00.3573.005,CCS2,30,DC,1,exact_name_coord
+316,1,"PHIHONG DC Wall Mount",01.PPOO.00.3573.005,CHAdeMO,30,DC,1,exact_name_coord
+318,0,"CS DC Charger",01.POSO.00.6307.003,CCS2,30,DC,1,exact_name_coord
+318,1,"Proteksindo AC-22",01.POSO.00.6307.001,"AC Type 2",22,AC,2,exact_name_coord
+319,0,"CS AC Charger",01.POSO.00.6203.004,"AC Type 2",22,AC,1,exact_name_coord
+319,1,"CS AC Charger",01.POSO.00.6203.002,"AC Type 2",22,AC,1,exact_name_coord
+319,2,"Proteksindo AC-22",01.POSO.00.6203.001,"AC Type 2",22,AC,2,exact_name_coord
+320,0,"AC Mini Plus",01.POSO.00.7326.001,"AC Type 2",7,AC,1,exact_name_coord
+321,0,"Proteksindo AC-22",01.POSO.00.3523.001,"AC Type 2",22,AC,1,exact_name_coord
+321,1,"Proteksindo DC EVDX-40",01.POSO.00.3523.002,CCS2,40,DC,1,exact_name_coord
+321,1,"Proteksindo DC EVDX-40",01.POSO.00.3523.002,CHAdeMO,40,DC,1,exact_name_coord
+322,0,"Delta AC Max",01.POSO.00.3218.003,"AC Type 2",22,AC,1,exact_name_coord
+323,0,"Proteksindo DC EVDX-60",01.PPOO.00.6471.004,"AC Type 2",22,AC,1,exact_name_coord
+323,0,"Proteksindo DC EVDX-60",01.PPOO.00.6471.004,CCS2,60,DC,1,exact_name_coord
+323,0,"Proteksindo DC EVDX-60",01.PPOO.00.6471.004,CHAdeMO,60,DC,1,exact_name_coord
+324,0,"Autel MaxiCharger AC Wallbox",01.POSO.00.3172.016,"AC Type 2",22,AC,1,exact_name_coord
+325,0,"Schneider DC Fast Charger",01.POSO.00.3175.014,"AC Type 2",22,AC,1,exact_name_coord
+325,0,"Schneider DC Fast Charger",01.POSO.00.3175.014,CCS2,24,DC,1,exact_name_coord
+325,0,"Schneider DC Fast Charger",01.POSO.00.3175.014,CHAdeMO,24,DC,1,exact_name_coord
+327,0,"PHIHONG DC Wall Mount",01.PPOO.00.3374.008,CCS2,30,DC,1,exact_name_coord
+327,0,"PHIHONG DC Wall Mount",01.PPOO.00.3374.008,CHAdeMO,30,DC,1,exact_name_coord
+328,0,"Delta AC Max",01.POSO.00.3273.015,"AC Type 2",22,AC,1,exact_name_coord
+328,1,"Delta DC Wallbox",01.POSO.00.3273.016,CCS2,25,DC,1,exact_name_coord
+328,1,"Delta DC Wallbox",01.POSO.00.3273.016,CHAdeMO,25,DC,1,exact_name_coord
+329,0,"Proteksindo AC-22",01.POSO.00.3211.002,"AC Type 2",22,AC,1,exact_name_coord
+330,0,"Proteksindo AC-22",01.POSO.00.8171.001,"AC Type 2",7,AC,1,exact_name_coord
+331,0,"Delta AC Max",01.POSO.00.3210.001,"AC Type 2",22,AC,1,exact_name_coord
+332,0,"AC Mini Plus",01.POSO.00.6171.005,"AC Type 2",7,AC,1,exact_name_coord
+333,0,"Signet DC Fast Charger - 100 kW",01.POSO.00.1471.009,CCS2,100,DC,2,exact_name_coord
+334,0,"AC Mini Plus",01.POSO.00.1905.001,"AC Type 2",7,AC,1,exact_name_coord
+334,1,"Free Standing DC Fast Charger",01.POSO.00.1905.003,CCS2,100,DC,2,exact_name_coord
+336,0,"4. Delta AC Max",01.POSO.00.3175.017,"AC Type 2",22,AC,1,exact_name_coord
+337,0,"Proteksindo AC-22",01.POSO.00.3529.001,"AC Type 2",22,AC,1,exact_name_coord
+337,1,"Proteksindo DC EVDX-40",01.POSO.00.3529.002,CCS2,40,DC,1,exact_name_coord
+337,1,"Proteksindo DC EVDX-40",01.POSO.00.3529.002,CHAdeMO,40,DC,1,exact_name_coord
+338,0,"Proteksindo AC-22",01.POSO.00.3504.001,"AC Type 2",22,AC,1,exact_name_coord
+338,1,"Proteksindo DC EVDX-40",01.POSO.00.3504.002,CCS2,40,DC,1,exact_name_coord
+338,1,"Proteksindo DC EVDX-40",01.POSO.00.3504.002,CHAdeMO,40,DC,1,exact_name_coord
+339,0,"Delta AC Max",01.POSO.00.3217.001,"AC Type 2",22,AC,1,exact_name_coord
+339,1,"Delta DC Wallbox",01.POSO.00.3217.002,CCS2,25,DC,1,exact_name_coord
+339,1,"Delta DC Wallbox",01.POSO.00.3217.002,CHAdeMO,25,DC,1,exact_name_coord
+340,0,"Proteksindo AC-22",01.POSO.00.3502.001,"AC Type 2",22,AC,1,exact_name_coord
+340,1,"Proteksindo DC EVDX-40",01.POSO.00.3502.002,CCS2,40,DC,1,exact_name_coord
+340,1,"Proteksindo DC EVDX-40",01.POSO.00.3502.002,CHAdeMO,40,DC,1,exact_name_coord
+341,0,"01. Wall Mount AC Charger",01.POSO.00.5103.047,"AC Type 2",7,AC,1,exact_name_coord
+341,1,"02. Wall Mount AC Charger",01.POSO.00.5103.030,"AC Type 2",7,AC,1,exact_name_coord
+341,2,"03. Wall Mount AC Charger",01.POSO.00.5103.031,"AC Type 2",7,AC,1,exact_name_coord
+342,0,"Proteksindo AC-22",01.POSO.00.3511.001,"AC Type 2",22,AC,1,exact_name_coord
+342,1,"Proteksindo DC EVDX-40",01.POSO.00.3511.002,CCS2,40,DC,1,exact_name_coord
+342,1,"Proteksindo DC EVDX-40",01.POSO.00.3511.002,CHAdeMO,40,DC,1,exact_name_coord
+343,0,"Wall Mount AC Charger",01.POSO.00.5103.032,"AC Type 2",7,AC,1,exact_name_coord
+344,0,"Autel MaxiCharger AC Wallbox",01.POSO.00.3518.001,"AC Type 2",22,AC,1,exact_name_coord
+344,1,"Autel MaxiCharger DC Compact",01.POSO.00.3518.002,CCS2,47,DC,2,exact_name_coord
+345,0,"AC Mini Plus",01.POSO.00.3602.001,"AC Type 2",7,AC,1,exact_name_coord
+346,0,"Autel MaxiCharger AC Wallbox",01.POSO.00.3522.001,"AC Type 2",22,AC,1,exact_name_coord
+346,1,"Autel MaxiCharger DC Compact",01.POSO.00.3522.002,CCS2,47,DC,2,exact_name_coord
+347,0,"3. Delta AC Max",01.POSO.00.6409.001,"AC Type 2",22,AC,1,exact_name_coord
+347,1,"2. Delta AC Max",01.POSO.00.6409.002,"AC Type 2",22,AC,1,exact_name_coord
+347,2,"1. Delta DC Wallbox",01.POSO.00.6409.003,CCS2,25,DC,1,exact_name_coord
+347,2,"1. Delta DC Wallbox",01.POSO.00.6409.003,CHAdeMO,25,DC,1,exact_name_coord
+350,0,"AC Mini Plus",01.POSO.00.3672.003,"AC Type 2",7,AC,1,exact_name_coord
+351,0,"1. AC Mini Plus",01.POSO.00.5315.004,"AC Type 2",7,AC,1,exact_name_coord
+351,1,"2. AC Mini Plus",01.POSO.00.5315.005,"AC Type 2",7,AC,1,exact_name_coord
+351,2,"3. AC Mini Plus",01.POSO.00.5315.006,"AC Type 2",7,AC,1,exact_name_coord
+351,3,"4. AC Mini Plus",01.POSO.00.5315.007,"AC Type 2",7,AC,1,exact_name_coord
+351,4,"5. AC Mini Plus",01.POSO.00.5315.002,"AC Type 2",7,AC,1,exact_name_coord
+351,5,"6. AC Mini Plus",01.POSO.00.5315.003,"AC Type 2",7,AC,1,exact_name_coord
+352,0,"Proteksindo AC-22",01.POSO.00.6471.005,"AC Type 2",22,AC,2,exact_name_coord
+353,0,"IoCharge AC Wallbox",01.POSO.00.5171.015,"AC Type 2",22,AC,1,exact_name_coord
+353,1,"PHIHONG DC Wall Mount",01.POSO.00.5171.014,CCS2,30,DC,1,exact_name_coord
+353,1,"PHIHONG DC Wall Mount",01.POSO.00.5171.014,CHAdeMO,30,DC,1,exact_name_coord
+354,0,"1. Delta AC Max",01.PPOO.00.3174.036,"AC Type 2",22,AC,1,exact_name_coord
+354,1,"2. Delta AC Max",01.PPOO.00.3174.035,"AC Type 2",22,AC,1,exact_name_coord
+355,0,"Delta AC Max",01.POSO.00.6408.001,"AC Type 2",22,AC,1,exact_name_coord
+356,0,"Autel MaxiCharger AC Wallbox",01.POSO.00.3674.017,"AC Type 2",22,AC,1,exact_name_coord
+358,0,"Delta AC Max",01.POSO.00.3203.005,"AC Type 2",22,AC,1,exact_name_coord
+359,0,"Delta AC Max",01.POSO.00.3201.006,"AC Type 2",22,AC,1,exact_name_coord
+360,0,"Delta AC Max",01.POSO.00.3201.007,"AC Type 2",22,AC,1,exact_name_coord
+362,0,"AC Mini Plus",01.POSO.00.3673.004,"AC Type 2",7,AC,1,exact_name_coord
+362,2,"PHIHONG DC Wall Mount",01.POSO.00.3673.005,CCS2,30,DC,1,exact_name_coord
+362,2,"PHIHONG DC Wall Mount",01.POSO.00.3673.005,CHAdeMO,30,DC,1,exact_name_coord
+362,3,"Signet DC Fast Charger - 100 kW",01.POSO.00.3673.006,CCS2,100,DC,2,exact_name_coord
+363,0,"ABB Terra 50",01.POSO.00.3603.010,CCS2,50,DC,1,exact_name_coord
+363,0,"ABB Terra 50",01.POSO.00.3603.010,CHAdeMO,50,DC,1,exact_name_coord
+363,1,"Chargecore AC-22",01.POSO.00.3603.011,"AC Type 2",22,AC,1,exact_name_coord
+363,2,"CS DC Charger",01.POSO.00.3603.013,CCS2,100,DC,2,exact_name_coord
+363,3,"Delta DC City Charger",01.POSO.00.3603.012,CCS2,50,DC,1,exact_name_coord
+363,3,"Delta DC City Charger",01.POSO.00.3603.012,CHAdeMO,50,DC,1,exact_name_coord
+363,3,"Delta DC City Charger",01.POSO.00.3603.012,"DC Connector",50,DC,1,exact_name_coord
+364,0,"Free Standing DC Fast Charger",01.POSO.00.3674.018,"AC Type 2",22,AC,1,exact_name_coord
+364,0,"Free Standing DC Fast Charger",01.POSO.00.3674.018,CCS2,60,DC,2,exact_name_coord
+366,0,"CS AC Charger",01.POSO.00.1603.001,"AC Type 2",22,AC,1,exact_name_coord
+366,1,"Teison DC 100 KW",01.POSO.00.1603.002,CCS2,100,DC,2,exact_name_coord
+367,0,"Delta DC 200 kW City Charger",01.POSO.00.3175.019,CCS2,200,DC,2,exact_name_coord
+368,0,"CS DC Charger",01.POSO.00.1871.011,CCS2,100,DC,2,exact_name_coord
+368,1,"Teison 22 KW",01.POSO.00.1871.010,"AC Type 2",22,AC,1,exact_name_coord
+370,0,"Chargecore AC-22",01.POSO.00.3202.007,"AC Type 2",22,AC,1,exact_name_coord
+370,1,"Chargecore DC-50",01.POSO.00.3202.008,CCS2,50,DC,2,exact_name_coord
+370,2,"Proteksindo AC-22",01.POSO.00.3202.001,"AC Type 2",22,AC,1,exact_name_coord
+371,0,"Delta AC Max",01.POSO.00.1602.005,"AC Type 2",22,AC,1,exact_name_coord
+371,1,"Signet DC Fast Charger - 100 kW",01.POSO.00.1602.006,CCS2,100,DC,2,exact_name_coord
+372,0,"Delta AC Max",01.POSO.00.1602.007,"AC Type 2",22,AC,1,exact_name_coord
+372,1,"Teison DC 30 kW",01.POSO.00.1602.008,CCS2,30,DC,2,exact_name_coord
+373,0,"AC Mini Plus",01.POSO.00.3573.005,"AC Type 2",7,AC,1,exact_name_coord
+374,0,"AC Mini Plus",01.POSO.00.6271.002,"AC Type 2",7,AC,1,exact_name_coord
+375,0,"Delta AC Max",01.POSO.00.6202.001,"AC Type 2",22,AC,1,exact_name_coord
+376,0,"Delta AC Max",01.POSO.00.6201.001,"AC Type 2",22,AC,1,exact_name_coord
+377,0,"Delta AC Max",01.POSO.00.6371.001,"AC Type 2",22,AC,1,exact_name_coord
+377,1,"AC Mini Plus",01.POSO.00.6371.002,"AC Type 2",7,AC,1,exact_name_coord
+377,2,"CS DC Charger",01.POSO.00.6371.007,CCS2,30,DC,1,exact_name_coord
+378,0,"Signet DC Fast Charger - 100 kW",01.POSO.00.1402.003,CCS2,100,DC,2,exact_name_coord
+379,0,"Delta AC Max",01.POSO.00.6301.001,"AC Type 2",22,AC,1,exact_name_coord
+380,0,"01. Wall Mount AC Charger",01.POSO.00.5106.012,"AC Type 2",7,AC,1,exact_name_coord
+381,0,"Free Standing DC Fast Charger",01.PPOO.00.3214.001,CCS2,60,DC,2,exact_name_coord
+382,0,"AC Mini Plus",01.POSO.00.3671.016,"AC Type 2",7,AC,1,exact_name_coord
+382,1,"Teison 22 KW",01.POSO.00.3671.017,"AC Type 2",22,AC,1,exact_name_coord
+383,0,"Proteksindo AC-22",01.POSO.00.3215.005,"AC Type 2",22,AC,1,exact_name_coord
+384,0,"AC Mini Plus",01.POSO.00.3202.006,"AC Type 2",7,AC,1,exact_name_coord
+385,0,"AC Mini Plus",01.POSO.00.3204.002,"AC Type 2",7,AC,1,exact_name_coord
+386,0,"1. Teison 22 KW",01.POSO.00.3674.020,"AC Type 2",22,AC,1,exact_name_coord
+386,1,"2. Teison 22 KW",01.POSO.00.3674.019,"AC Type 2",22,AC,1,exact_name_coord
+387,0,"AC Mini Plus",01.POSO.00.6409.004,"AC Type 2",7,AC,1,exact_name_coord
+388,0,"Free Standing DC Fast Charger",01.PPOO.00.3201.003,CCS2,60,DC,2,exact_name_coord
+389,0,"AC Mini Plus",01.POSO.00.3301.001,"AC Type 2",7,AC,1,exact_name_coord
+389,1,"Chargecore DC-100",01.POSO.00.3301.002,CCS2,100,DC,1,exact_name_coord
+389,1,"Chargecore DC-100",01.POSO.00.3301.002,CHAdeMO,100,DC,1,exact_name_coord
+390,0,"Delta DC Wallbox",01.POSO.00.3175.023,CCS2,50,DC,2,exact_name_coord
+391,0,"AC Mini Plus",01.POSO.00.6101.001,"AC Type 2",7,AC,1,exact_name_coord
+393,0,"AC Mini Plus",01.POSO.00.6171.004,"AC Type 2",7,AC,1,exact_name_coord
+394,0,"Delta AC Max",01.POSO.00.3216.015,"AC Type 2",22,AC,1,exact_name_coord
+396,0,"AC Mini Plus",01.POSO.00.8101.001,"AC Type 2",7,AC,1,exact_name_coord
+397,0,"AC Mini Plus",01.POSO.00.6301.002,"AC Type 2",7,AC,1,exact_name_coord
+398,0,"Autel MaxiCharger AC Wallbox",01.POSO.00.3508.001,"AC Type 2",22,AC,1,exact_name_coord
+398,1,"Autel MaxiCharger DC Compact",01.POSO.00.3508.002,CCS2,47,DC,2,exact_name_coord
+399,0,"Delta AC Max",01.POSO.00.6571.001,"AC Type 2",22,AC,1,exact_name_coord
+400,0,"CS AC Charger",01.POSO.00.6302.001,"AC Type 2",22,AC,1,exact_name_coord
+401,1,"01. Wall Mount AC Charger",01.POSO.00.1871.002,"AC Type 2",7,AC,1,exact_name_coord
+403,0,"Titan V5 Hyperion 180kW",01.POSO.00.3373.002,CCS2,180,DC,1,exact_name_coord
+403,0,"Titan V5 Hyperion 180kW",01.POSO.00.3373.002,CHAdeMO,180,DC,1,exact_name_coord
+404,0,"Wall Mount AC Charger",01.POSO.00.3315.001,"AC Type 2",7,AC,1,exact_name_coord
+405,1,"Teison 22 KW",01.POSO.00.1271.027,"AC Type 2",22,AC,1,exact_name_coord
+406,0,"AC Mini Plus",01.POSO.00.7324.001,"AC Type 2",7,AC,1,exact_name_coord
+407,0,"AC Mini Plus",01.POSO.00.7371.005,"AC Type 2",7,AC,1,exact_name_coord
+408,0,"Altro AC Charger",01.POSO.00.1371.001,"AC Type 2",7,AC,1,exact_name_coord
+409,0,"Teison DC 30 KW",01.POSO.00.1273.003,CCS2,30,DC,2,exact_name_coord
+409,1,"Teison 22 KW",01.POSO.00.1273.002,"AC Type 2",22,AC,1,exact_name_coord
+411,0,"Teison DC 50 KW",01.POSO.00.1111.001,"AC Type 2",22,AC,1,exact_name_coord
+411,0,"Teison DC 50 KW",01.POSO.00.1111.001,CCS2,50,DC,1,exact_name_coord
+411,0,"Teison DC 50 KW",01.POSO.00.1111.001,CHAdeMO,50,DC,1,exact_name_coord
+412,0,"1. Chargecore AC-22",01.POSO.00.9106.002,"AC Type 2",22,AC,1,exact_name_coord
+413,0,"AC Mini Plus",01.POSO.00.9109.002,"AC Type 2",7,AC,1,exact_name_coord
+414,0,"1. Delta AC Max",01.PPOO.00.3671.029,"AC Type 2",22,AC,1,exact_name_coord
+414,1,"2. Delta AC Max",01.PPOO.00.3671.028,"AC Type 2",22,AC,1,exact_name_coord
+415,0,"AC Mini Plus",01.POSO.00.3603.014,"AC Type 2",7,AC,1,exact_name_coord
+415,1,"Chargecore AC-22",01.POSO.00.3603.038,"AC Type 2",22,AC,1,exact_name_coord
+416,0,"AC Mini Plus",01.POSO.00.3216.004,"AC Type 2",7,AC,1,exact_name_coord
+417,0,"Delta AC Max",01.POSO.00.3174.038,"AC Type 2",22,AC,1,exact_name_coord
+419,0,"AC Mini Plus",01.POSO.00.3203.010,"AC Type 2",7,AC,1,exact_name_coord
+420,0,"AC Mini Plus",01.POSO.00.3310.002,"AC Type 2",7,AC,1,exact_name_coord
+420,1,"Chargecore AC-22",01.POSO.00.3310.003,"AC Type 2",22,AC,1,exact_name_coord
+421,0,"AC Mini Plus",01.POSO.00.3603.015,"AC Type 2",7,AC,1,exact_name_coord
+421,1,"Proteksindo DC EVDX-60",01.POSO.00.3603.016,"AC Type 2",22,AC,1,exact_name_coord
+421,1,"Proteksindo DC EVDX-60",01.POSO.00.3603.016,CCS2,60,DC,1,exact_name_coord
+421,1,"Proteksindo DC EVDX-60",01.POSO.00.3603.016,CHAdeMO,60,DC,1,exact_name_coord
+422,0,"AC Mini Plus",01.POSO.00.3402.002,"AC Type 2",7,AC,1,exact_name_coord
+423,0,"Wall Mount AC Charger",01.POSO.00.3404.003,"AC Type 2",7,AC,1,exact_name_coord
+424,0,"AC Mini Plus",01.POSO.00.3404.004,"AC Type 2",7,AC,1,exact_name_coord
+425,0,"Wall Mount AC Charger",01.PPOO.00.3321.001,"AC Type 2",7,AC,1,exact_name_coord
+426,0,"01. Wall Mount AC Charger",01.POSO.00.1375.001,"AC Type 2",7,AC,1,exact_name_coord
+427,0,"Signet DC Fast Charger - 100 kW",01.PPOO.00.3404.005,CCS2,100,DC,2,exact_name_coord
+428,0,"Proteksindo AC EVAX-22",01.POSO.00.3328.012,"AC Type 2",22,AC,1,exact_name_coord
+429,0,"01. Proteksindo AC-22",01.PPOO.00.3471.003,"AC Type 2",22,AC,1,exact_name_coord
+429,1,"02. Proteksindo AC-22",01.PPOO.00.3471.002,"AC Type 2",22,AC,1,exact_name_coord
+431,0,"01. Wall Mount AC Charger",01.POSO.00.5107.001,"AC Type 2",7,AC,1,exact_name_coord
+431,1,"02. Wall Mount AC Charger",01.POSO.00.5107.002,"AC Type 2",7,AC,1,exact_name_coord
+432,2,"Wall Mount AC Charger",01.POSO.00.3603.017,"AC Type 2",7,AC,1,exact_name_coord
+433,0,"Teison 22 KW",01.POSO.00.3603.039,"AC Type 2",22,AC,1,exact_name_coord
+433,1,"Wall Mount AC Charger",01.POSO.00.3603.018,"AC Type 2",7,AC,1,exact_name_coord
+434,0,"ABB Terra 50",01.POSO.00.1802.003,CCS2,50,DC,1,exact_name_coord
+434,0,"ABB Terra 50",01.POSO.00.1802.003,CHAdeMO,50,DC,1,exact_name_coord
+434,1,"Delta AC Max",01.POSO.00.1802.004,"AC Type 2",22,AC,1,exact_name_coord
+435,0,"ABB Terra 50",01.POSO.00.1610.001,CCS2,50,DC,1,exact_name_prov
+435,0,"ABB Terra 50",01.POSO.00.1610.001,CHAdeMO,50,DC,1,exact_name_prov
+435,1,"Delta AC Max",01.POSO.00.1610.002,"AC Type 2",22,AC,1,exact_name_prov
+436,0,"PLN EYE PLNE 22 kW AC",01.POSO.00.3173.016,"AC Type 2",22,AC,1,exact_name_coord
+436,1,"Altro - PLNE 50 kW DC",01.POSO.00.3173.027,CCS2,50,DC,2,exact_name_coord
+438,0,"ABB Terra 50",01.PPOO.00.3374.009,CCS2,50,DC,1,exact_name_coord
+438,0,"ABB Terra 50",01.PPOO.00.3374.009,CHAdeMO,50,DC,1,exact_name_coord
+439,0,"Delta DC Wallbox",01.POSO.00.3603.020,CCS2,25,DC,1,exact_name_coord
+440,0,"1. Delta AC Max",01.POSO.00.3214.003,"AC Type 2",22,AC,1,exact_name_coord
+440,2,"4. Delta DC Wallbox 50",01.POSO.00.3214.006,CCS2,50,DC,1,exact_name_coord
+440,2,"4. Delta DC Wallbox 50",01.POSO.00.3214.006,CHAdeMO,50,DC,1,exact_name_coord
+440,3,"2. Delta DC Wallbox",01.POSO.00.3214.005,CCS2,25,DC,1,exact_name_coord
+440,4,"3. Delta DC Wallbox",01.POSO.00.3214.004,CCS2,25,DC,1,exact_name_coord
+441,0,"ABB Terra 50",01.PPOO.00.3325.005,CCS2,50,DC,1,core_name_geo
+441,0,"ABB Terra 50",01.PPOO.00.3325.005,CHAdeMO,50,DC,1,core_name_geo
+442,0,"Delta AC Max",01.PPOO.00.3324.006,"AC Type 2",22,AC,1,core_name_geo
+442,1,"Titan V5 Hyperion 120kW",01.PPOO.00.3324.005,CCS2,120,DC,1,core_name_geo
+442,1,"Titan V5 Hyperion 120kW",01.PPOO.00.3324.005,CHAdeMO,120,DC,1,core_name_geo
+443,0,"Delta AC Max",01.POSO.00.3515.002,"AC Type 2",22,AC,1,exact_name_coord
+443,1,"Autel MaxiCharger DC Compact",01.POSO.00.3515.003,CCS2,47,DC,2,exact_name_coord
+445,0,"Delta AC Max",01.PPOO.00.3329.006,"AC Type 2",22,AC,1,core_name_geo
+446,0,"ABB Terra 50",01.PPOO.00.3328.003,CCS2,50,DC,1,spatial_restarea_km
+446,0,"ABB Terra 50",01.PPOO.00.3328.003,CHAdeMO,50,DC,1,spatial_restarea_km
+447,0,"ABB Terra 50",01.PPOO.00.3328.005,CCS2,50,DC,1,exact_name_coord
+447,0,"ABB Terra 50",01.PPOO.00.3328.005,CHAdeMO,50,DC,1,exact_name_coord
+447,1,"Delta AC Max",01.PPOO.00.3328.006,"AC Type 2",22,AC,1,exact_name_coord
+448,0,"ABB Terra 50",01.POSO.00.3216.011,CCS2,50,DC,1,exact_name_coord
+448,0,"ABB Terra 50",01.POSO.00.3216.011,CHAdeMO,50,DC,1,exact_name_coord
+448,1,"Chargecore AC-22",01.POSO.00.3216.021,"AC Type 2",22,AC,1,exact_name_coord
+448,2,"Delta DC Wallbox",01.POSO.00.3216.010,CCS2,25,DC,1,exact_name_coord
+449,0,"ABB Terra 50",01.POSO.00.3216.014,CCS2,50,DC,1,exact_name_coord
+449,0,"ABB Terra 50",01.POSO.00.3216.014,CHAdeMO,50,DC,1,exact_name_coord
+449,1,"1. Delta AC Max",01.POSO.00.3216.012,"AC Type 2",22,AC,1,exact_name_coord
+449,2,"2. Delta AC Max",01.POSO.00.3216.013,"AC Type 2",22,AC,1,exact_name_coord
+450,0,"Delta DC Wallbox",01.POSO.00.3273.023,CCS2,50,DC,2,exact_name_coord
+451,0,"Teison 22 KW",01.POSO.00.3674.023,"AC Type 2",22,AC,1,exact_name_coord
+451,1,"2. Wall Mount AC Charger",01.POSO.00.3674.024,"AC Type 2",7,AC,1,exact_name_coord
+452,0,"ABB Terra 50",01.PPOO.00.3328.007,CCS2,50,DC,1,core_name_geo
+452,0,"ABB Terra 50",01.PPOO.00.3328.007,CHAdeMO,50,DC,1,core_name_geo
+454,0,"Delta DC 200 kW City Charger",01.POSO.00.3275.015,CCS2,200,DC,1,exact_name_coord
+454,0,"Delta DC 200 kW City Charger",01.POSO.00.3275.015,CHAdeMO,200,DC,1,exact_name_coord
+455,0,"Delta AC Max",01.POSO.00.3520.001,"AC Type 2",22,AC,1,core_name_geo
+455,1,"CS Energy DC 180 kW",01.POSO.00.3520.002,CCS2,180,DC,2,core_name_geo
+457,0,"ABB Terra",01.POSO.00.3215.007,CCS2,50,DC,1,exact_name_coord
+457,0,"ABB Terra",01.POSO.00.3215.007,CHAdeMO,50,DC,1,exact_name_coord
+457,0,"ABB Terra",01.POSO.00.3215.007,"DC Connector",50,DC,1,exact_name_coord
+457,1,"Proteksindo DC EVDX-60",01.POSO.00.3215.008,"AC Type 2",22,AC,1,exact_name_coord
+457,1,"Proteksindo DC EVDX-60",01.POSO.00.3215.008,CCS2,60,DC,1,exact_name_coord
+457,1,"Proteksindo DC EVDX-60",01.POSO.00.3215.008,CHAdeMO,60,DC,1,exact_name_coord
+459,0,"ABB Terra 50",01.POSO.00.3204.011,CCS2,50,DC,1,exact_name_coord
+459,0,"ABB Terra 50",01.POSO.00.3204.011,CHAdeMO,50,DC,1,exact_name_coord
+459,1,"Delta AC Max",01.POSO.00.3204.009,"AC Type 2",22,AC,1,exact_name_coord
+459,2,"Delta DC Wallbox",01.POSO.00.3204.010,CCS2,25,DC,1,exact_name_coord
+460,0,"Delta AC Max",01.POSO.00.3213.006,"AC Type 2",22,AC,1,exact_name_coord
+460,1,"Delta DC Wallbox",01.POSO.00.3213.007,CCS2,50,DC,1,exact_name_coord
+460,1,"Delta DC Wallbox",01.POSO.00.3213.007,CHAdeMO,50,DC,1,exact_name_coord
+461,0,"1. Atess Novo EVC-DC160",01.PPOO.00.3322.010,CCS2,160,DC,1,exact_name_prov
+461,0,"1. Atess Novo EVC-DC160",01.PPOO.00.3322.010,CHAdeMO,160,DC,1,exact_name_prov
+461,1,"2. Atess Novo EVC-DC160",01.PPOO.00.3322.011,CCS2,160,DC,1,exact_name_prov
+461,1,"2. Atess Novo EVC-DC160",01.PPOO.00.3322.011,CHAdeMO,160,DC,1,exact_name_prov
+461,2,"1. Atess Novo EVC-DC60",01.PPOO.00.3322.012,"AC Type 2",22,AC,1,exact_name_prov
+461,2,"1. Atess Novo EVC-DC60",01.PPOO.00.3322.012,CCS2,60,DC,1,exact_name_prov
+461,2,"1. Atess Novo EVC-DC60",01.PPOO.00.3322.012,CHAdeMO,60,DC,1,exact_name_prov
+461,3,"2. Atess Novo EVC-DC60",01.PPOO.00.3322.013,"AC Type 2",22,AC,1,exact_name_prov
+461,3,"2. Atess Novo EVC-DC60",01.PPOO.00.3322.013,CCS2,60,DC,1,exact_name_prov
+461,3,"2. Atess Novo EVC-DC60",01.PPOO.00.3322.013,CHAdeMO,60,DC,1,exact_name_prov
+462,0,"ABB Terra 50",01.POSO.00.1801.006,CCS2,50,DC,1,exact_name_coord
+462,0,"ABB Terra 50",01.POSO.00.1801.006,CHAdeMO,50,DC,1,exact_name_coord
+462,1,"Delta AC Max",01.POSO.00.1801.007,"AC Type 2",22,AC,1,exact_name_coord
+463,0,"ABB Terra 50",01.PPOO.00.3322.005,CCS2,50,DC,1,exact_name_coord
+463,0,"ABB Terra 50",01.PPOO.00.3322.005,CHAdeMO,50,DC,1,exact_name_coord
+463,1,"Delta AC Max",01.PPOO.00.3322.006,"AC Type 2",22,AC,1,exact_name_coord
+465,1,"Delta DC Wallbox",01.POSO.00.3210.004,CCS2,25,DC,1,exact_name_coord
+465,2,"Proteksindo DC EVDX-60",01.POSO.00.3210.005,"AC Type 2",22,AC,1,exact_name_coord
+465,2,"Proteksindo DC EVDX-60",01.POSO.00.3210.005,CCS2,60,DC,1,exact_name_coord
+465,2,"Proteksindo DC EVDX-60",01.POSO.00.3210.005,CHAdeMO,60,DC,1,exact_name_coord
+466,0,"ABB Terra 50",01.POSO.00.3210.007,CCS2,50,DC,1,exact_name_coord
+466,0,"ABB Terra 50",01.POSO.00.3210.007,CHAdeMO,50,DC,1,exact_name_coord
+466,1,"Chargecore DC-120",01.POSO.00.3210.008,CCS2,120,DC,2,exact_name_coord
+466,3,"Delta DC Wallbox",01.POSO.00.3210.006,CCS2,25,DC,1,exact_name_coord
+466,4,"Teison 22 KW",01.POSO.00.3210.009,"AC Type 2",22,AC,1,exact_name_coord
+467,0,"Delta AC Max",01.PPOO.00.3328.010,"AC Type 2",22,AC,1,exact_name_coord
+468,0,"ABB Terra 50",01.PPOO.00.3314.009,CCS2,50,DC,1,core_name_geo
+468,0,"ABB Terra 50",01.PPOO.00.3314.009,CHAdeMO,50,DC,1,core_name_geo
+468,1,"Delta AC Max",01.PPOO.00.3314.010,"AC Type 2",22,AC,1,core_name_geo
+470,0,"Delta AC Max",01.PPOO.00.3309.003,"AC Type 2",22,AC,1,exact_name_coord
+470,1,"Titan V5 Hyperion 180kW",01.PPOO.00.3309.002,CCS2,180,DC,1,exact_name_coord
+470,1,"Titan V5 Hyperion 180kW",01.PPOO.00.3309.002,CHAdeMO,180,DC,1,exact_name_coord
+474,0,"Delta AC Max",01.POSO.00.3521.001,"AC Type 2",22,AC,1,core_name_geo
+474,1,"Autel MaxiCharger DC Compact",01.POSO.00.3521.002,CCS2,47,DC,2,core_name_geo
+476,0,"Delta AC Max",01.POSO.00.1805.001,"AC Type 2",22,AC,1,exact_name_coord
+477,0,"Delta AC Max",01.POSO.00.1812.003,"AC Type 2",22,AC,1,exact_name_coord
+478,0,"ABB Terra 50",01.POSO.00.1811.001,CCS2,50,DC,1,exact_name_coord
+478,0,"ABB Terra 50",01.POSO.00.1811.001,CHAdeMO,50,DC,1,exact_name_coord
+478,1,"Delta AC Max",01.POSO.00.1811.002,"AC Type 2",22,AC,1,exact_name_coord
+480,0,"Delta AC Max",01.POSO.00.1801.008,"AC Type 2",22,AC,1,exact_name_coord
+482,0,"3. ABB Terra 50",01.POSO.00.3525.003,CCS2,50,DC,1,core_name_geo
+482,0,"3. ABB Terra 50",01.POSO.00.3525.003,CHAdeMO,50,DC,1,core_name_geo
+482,1,"1. Delta AC Max",01.POSO.00.3525.005,"AC Type 2",22,AC,1,core_name_geo
+482,2,"2. Delta AC Max",01.POSO.00.3525.006,"AC Type 2",22,AC,1,core_name_geo
+482,3,"CS DC Charger",01.POSO.00.3525.009,CCS2,100,DC,2,core_name_geo
+484,0,"1. Delta AC Max",01.POSO.00.3514.001,"AC Type 2",22,AC,1,core_name_geo
+484,1,"2. Delta AC Max",01.POSO.00.3514.002,"AC Type 2",22,AC,1,core_name_geo
+484,3,"1. EV Power 60",01.POSO.00.3514.004,CCS2,60,DC,2,core_name_geo
+484,4,"2. EV Power 60",01.POSO.00.3514.003,CCS2,60,DC,2,core_name_geo
+486,0,"Delta AC Max",01.POSO.00.3507.002,"AC Type 2",22,AC,1,core_name_geo
+486,1,"EV Power 60",01.POSO.00.3507.003,CCS2,60,DC,2,core_name_geo
+487,0,"1. ABB Terra 50",01.POSO.00.3514.009,CCS2,50,DC,1,core_name_geo
+487,0,"1. ABB Terra 50",01.POSO.00.3514.009,CHAdeMO,50,DC,1,core_name_geo
+487,1,"2. ABB Terra 50",01.POSO.00.3514.010,CCS2,50,DC,1,core_name_geo
+487,1,"2. ABB Terra 50",01.POSO.00.3514.010,CHAdeMO,50,DC,1,core_name_geo
+487,2,"1. Delta AC Max",01.POSO.00.3514.011,"AC Type 2",22,AC,1,core_name_geo
+487,3,"2. Delta AC Max",01.POSO.00.3514.012,"AC Type 2",22,AC,1,core_name_geo
+489,0,"ABB Terra 50",01.POSO.00.3513.001,CCS2,50,DC,1,exact_name_coord
+489,0,"ABB Terra 50",01.POSO.00.3513.001,CHAdeMO,50,DC,1,exact_name_coord
+489,1,"Delta AC Max",01.POSO.00.3513.002,"AC Type 2",22,AC,1,exact_name_coord
+491,0,"ABB Terra 50",01.POSO.00.3513.005,CCS2,50,DC,1,exact_name_coord
+491,0,"ABB Terra 50",01.POSO.00.3513.005,CHAdeMO,50,DC,1,exact_name_coord
+491,1,"Delta AC Max",01.POSO.00.3513.006,"AC Type 2",22,AC,1,exact_name_coord
+494,0,"Delta AC Max",01.POSO.00.1801.012,"AC Type 2",22,AC,1,exact_name_coord
+496,0,"ABB Terra 50",01.PPOO.00.3327.003,CCS2,50,DC,1,spatial_restarea_km
+496,0,"ABB Terra 50",01.PPOO.00.3327.003,CHAdeMO,50,DC,1,spatial_restarea_km
+496,1,"Delta AC Max",01.PPOO.00.3327.004,"AC Type 2",22,AC,1,spatial_restarea_km
+497,0,"Altro DC 120 kW",01.PPOO.00.3322.007,"AC Type 2",22,AC,1,exact_name_coord
+497,0,"Altro DC 120 kW",01.PPOO.00.3322.007,CCS2,120,DC,1,exact_name_coord
+497,0,"Altro DC 120 kW",01.PPOO.00.3322.007,CHAdeMO,120,DC,1,exact_name_coord
+498,1,"Wall Mount AC Charger",01.POSO.00.2172.004,"AC Type 2",7,AC,1,exact_name_coord
+499,0,"Delta AC Max",01.POSO.00.3604.004,"AC Type 2",22,AC,1,exact_name_coord
+499,1,"Delta DC Wallbox",01.POSO.00.3604.003,CCS2,25,DC,1,exact_name_coord
+500,0,"Teison DC 120 kW",01.POSO.00.3603.021,"AC Type 2",22,AC,1,core_name_geo
+500,0,"Teison DC 120 kW",01.POSO.00.3603.021,CCS2,120,DC,1,core_name_geo
+500,0,"Teison DC 120 kW",01.POSO.00.3603.021,CHAdeMO,120,DC,1,core_name_geo
+501,0,"Delta DC 50 kW City Charger",01.POSO.00.1409.002,"AC Type 2",22,AC,1,exact_name_coord
+501,0,"Delta DC 50 kW City Charger",01.POSO.00.1409.002,CCS2,50,DC,1,exact_name_coord
+501,0,"Delta DC 50 kW City Charger",01.POSO.00.1409.002,CHAdeMO,50,DC,1,exact_name_coord
+502,1,"Wall Mount AC Charger",01.POSO.00.2172.003,"AC Type 2",7,AC,1,exact_name_coord
+503,0,"Delta AC Max",01.PPOO.00.3374.010,"AC Type 2",22,AC,1,exact_name_coord
+504,0,"Delta AC Max",01.PPOO.00.3374.011,"AC Type 2",22,AC,1,exact_name_coord
+504,1,"Delta AC Max",01.PPOO.00.3374.012,"AC Type 2",22,AC,1,exact_name_coord
+504,2,"Delta AC Max",01.PPOO.00.3374.013,"AC Type 2",22,AC,1,exact_name_coord
+505,0,"1. EV Power 60",01.PPOO.00.3603.023,CCS2,60,DC,2,exact_name_coord
+505,1,"2. EV Power 60",01.PPOO.00.3603.022,CCS2,60,DC,2,exact_name_coord
+506,0,"Delta DC City Charger",01.POSO.00.1401.003,"AC Type 2",22,AC,1,exact_name_coord
+506,0,"Delta DC City Charger",01.POSO.00.1401.003,CCS2,50,DC,1,exact_name_coord
+506,0,"Delta DC City Charger",01.POSO.00.1401.003,CHAdeMO,50,DC,1,exact_name_coord
+508,0,"Delta DC City Charger",01.POSO.00.1408.002,"AC Type 2",22,AC,1,exact_name_coord
+508,0,"Delta DC City Charger",01.POSO.00.1408.002,CCS2,50,DC,1,exact_name_coord
+508,0,"Delta DC City Charger",01.POSO.00.1408.002,CHAdeMO,50,DC,1,exact_name_coord
+509,0,"Delta DC City Charger",01.POSO.00.1403.002,"AC Type 2",22,AC,1,exact_name_coord
+509,0,"Delta DC City Charger",01.POSO.00.1403.002,CCS2,50,DC,1,exact_name_coord
+509,0,"Delta DC City Charger",01.POSO.00.1403.002,CHAdeMO,50,DC,1,exact_name_coord
+510,0,"Proteksindo DC EVDX-60",01.POSO.00.3515.004,"AC Type 2",22,AC,1,exact_name_coord
+510,0,"Proteksindo DC EVDX-60",01.POSO.00.3515.004,CCS2,60,DC,1,exact_name_coord
+510,0,"Proteksindo DC EVDX-60",01.POSO.00.3515.004,CHAdeMO,60,DC,1,exact_name_coord
+511,0,"Wall Mount AC Charger",01.POSO.00.3301.003,"AC Type 2",7,AC,1,exact_name_coord
+512,0,"EV Power 120",01.POSO.00.3277.004,CCS2,120,DC,2,exact_name_coord
+513,0,"AC Mini Plus",01.POSO.00.1508.001,"AC Type 2",7,AC,1,exact_name_coord
+513,1,"Teison DC 120 kW",01.POSO.00.1502.002,CCS2,120,DC,1,exact_name_coord
+513,1,"Teison DC 120 kW",01.POSO.00.1502.002,"DC Connector",120,DC,1,exact_name_coord
+514,0,"AC Mini Plus",01.POSO.00.3323.001,"AC Type 2",7,AC,1,exact_name_coord
+514,1,"CS DC Charger",01.POSO.00.3323.002,CCS2,25,DC,1,exact_name_coord
+515,0,"Proteksindo DC EVDX-60",01.POSO.00.3402.003,"AC Type 2",22,AC,1,exact_name_coord
+515,0,"Proteksindo DC EVDX-60",01.POSO.00.3402.003,CCS2,60,DC,1,exact_name_coord
+515,0,"Proteksindo DC EVDX-60",01.POSO.00.3402.003,CHAdeMO,60,DC,1,exact_name_coord
+516,0,"Delta AC Max",01.POSO.00.3318.001,"AC Type 2",22,AC,1,exact_name_coord
+517,0,"EV Power 60",01.PPOO.00.3174.039,CCS2,60,DC,2,exact_name_coord
+519,0,"EV Power 60",01.PPOO.00.3172.017,CCS2,60,DC,2,exact_name_coord
+520,0,"EV Power 60",01.PPOO.00.3175.025,CCS2,60,DC,2,exact_name_coord
+521,0,"1. EV Power 60",01.PPOO.00.3216.016,CCS2,60,DC,2,exact_name_prov
+522,0,"EV Power 60",01.PPOO.00.3276.002,CCS2,60,DC,2,exact_name_coord
+523,0,"EV Power 60",01.PPOO.00.3273.007,CCS2,60,DC,2,exact_name_coord
+524,0,"Proteksindo AC-22",01.POSO.00.3311.002,"AC Type 2",22,AC,1,exact_name_coord
+525,0,"Proteksindo AC-22",01.POSO.00.3371.003,"AC Type 2",22,AC,1,exact_name_coord
+526,0,"AC Mini Plus",01.POSO.00.5371.002,"AC Type 2",7,AC,1,exact_name_coord
+527,0,"AC Mini Plus",01.POSO.00.6303.001,"AC Type 2",7,AC,1,exact_name_coord
+528,0,"CS AC Charger",01.POSO.00.3175.026,"AC Type 2",22,AC,1,exact_name_coord
+529,0,"Proteksindo AC-22",01.POSO.00.3302.003,"AC Type 2",22,AC,1,exact_name_coord
+530,0,"CS DC Charger",01.POSO.00.3376.002,CCS2,50,DC,2,exact_name_coord
+530,1,"Proteksindo AC-22",01.POSO.00.3376.001,"AC Type 2",22,AC,1,exact_name_coord
+531,0,"AC Mini Plus",01.POSO.00.7173.001,"AC Type 2",7,AC,1,exact_name_coord
+532,0,"Circontrol DC 50 kW",01.PPOO.00.3172.018,"AC Type 2",22,AC,1,exact_name_coord
+532,0,"Circontrol DC 50 kW",01.PPOO.00.3172.018,CCS2,50,DC,1,exact_name_coord
+532,0,"Circontrol DC 50 kW",01.PPOO.00.3172.018,CHAdeMO,50,DC,1,exact_name_coord
+534,0,"Delta AC Max",01.POSO.00.3602.004,"AC Type 2",22,AC,1,exact_name_coord
+534,1,"Teison 22 KW",01.POSO.00.3602.005,"AC Type 2",22,AC,1,exact_name_coord
+535,0,"Delta DC 200 kW City Charger",01.POSO.00.3171.033,CCS2,200,DC,2,exact_name_coord
+536,0,"Delta AC Max",01.POSO.00.6211.001,"AC Type 2",22,AC,1,exact_name_coord
+537,0,"Autel MaxiCharger DC Compact",01.POSO.00.3171.035,CCS2,47,DC,2,core_name_geo
+538,0,"Altro AC Charger",01.POSO.00.1376.002,"AC Type 2",7,AC,1,exact_name_coord
+539,0,"Delta AC Max",01.POSO.00.1307.001,"AC Type 2",22,AC,1,exact_name_coord
+541,0,"AC Mini Plus",01.POSO.00.6112.003,"AC Type 2",7.4,AC,1,exact_name_coord
+542,0,"Delta AC Max",01.POSO.00.1374.001,"AC Type 2",22,AC,1,exact_name_coord
+543,0,"AC Mini Plus",01.POSO.00.7172.001,"AC Type 2",7,AC,1,exact_name_coord
+544,0,"Delta AC Max",01.POSO.00.1305.002,"AC Type 2",22,AC,1,exact_name_coord
+545,0,"Altro AC Charger",01.POSO.00.1371.002,"AC Type 2",7,AC,1,exact_name_coord
+546,0,"Delta AC Max",01.POSO.00.1371.003,"AC Type 2",22,AC,1,exact_name_coord
+548,0,"AC Mini Plus",01.POSO.00.3671.018,"AC Type 2",7.4,AC,1,exact_name_coord
+549,0,"Delta AC Max",01.POSO.00.6305.001,"AC Type 2",22,AC,1,exact_name_coord
+550,0,"AC Mini Plus",01.POSO.00.6112.002,"AC Type 2",7.4,AC,1,exact_name_coord
+551,0,"Proteksindo AC-7",01.POSO.00.7208.001,"AC Type 2",7,AC,1,exact_name_coord
+552,0,"AC Mini Plus",01.POSO.00.5302.001,"AC Type 2",7,AC,1,exact_name_coord
+553,0,"Delta AC Max",01.POSO.00.1906.001,"AC Type 2",22,AC,1,exact_name_coord
+554,0,"Delta AC Max",01.POSO.00.1902.002,"AC Type 2",22,AC,1,exact_name_coord
+555,0,"1. Delta AC Max",01.POSO.00.3173.018,"AC Type 2",22,AC,1,exact_name_coord
+555,1,"2. Delta AC Max",01.POSO.00.3173.019,"AC Type 2",22,AC,1,exact_name_coord
+555,2,"3. Delta AC Max",01.POSO.00.3173.017,"AC Type 2",22,AC,1,exact_name_coord
+556,0,"Delta AC Max",01.POSO.00.6305.002,"AC Type 2",22,AC,1,exact_name_coord
+557,0,"Proteksindo AC-7",01.POSO.00.7202.001,"AC Type 2",7,AC,1,exact_name_coord
+558,0,"Proteksindo AC-22",01.POSO.00.6307.002,"AC Type 2",22,AC,1,exact_name_coord
+559,0,"AC Mini Plus",01.POSO.00.6107.001,"AC Type 2",7,AC,1,exact_name_coord
+560,0,"Delta AC Max",01.POSO.00.3203.003,"AC Type 2",22,AC,1,exact_name_coord
+561,0,"AC Mini Plus",01.POSO.00.6104.001,"AC Type 2",7,AC,1,exact_name_coord
+562,0,"Delta AC Max",01.POSO.00.6403.001,"AC Type 2",22,AC,1,exact_name_coord
+563,0,"Delta AC Max",01.POSO.00.6403.002,"AC Type 2",22,AC,1,exact_name_coord
+564,0,"Altro AC Charger",01.POSO.00.1310.001,"AC Type 2",7,AC,1,exact_name_coord
+565,0,"Delta AC Max",01.POSO.00.6309.001,"AC Type 2",22,AC,1,exact_name_coord
+566,0,"Delta AC Max",01.POSO.00.1207.001,"AC Type 2",22,AC,1,exact_name_coord
+566,1,"Free Standing DC Fast Charger",01.POSO.00.1207.009,CCS2,25,DC,1,exact_name_coord
+567,0,"Delta AC Max",01.POSO.00.1302.001,"AC Type 2",22,AC,1,exact_name_coord
+568,0,"Delta AC Max",01.POSO.00.5108.003,"AC Type 2",22,AC,1,exact_name_coord
+569,0,"Proteksindo AC-22",01.POSO.00.6311.001,"AC Type 2",22,AC,1,exact_name_coord
+570,0,"AC Mini Plus",01.POSO.00.6171.002,"AC Type 2",7,AC,1,exact_name_coord
+571,0,"AC Mini Plus",01.POSO.00.5312.001,"AC Type 2",7,AC,1,exact_name_coord
+572,0,"1. Delta AC Max",01.POSO.00.5103.034,"AC Type 2",22,AC,1,exact_name_coord
+572,1,"2. Delta AC Max",01.POSO.00.5103.033,"AC Type 2",22,AC,1,exact_name_coord
+573,0,"AC Mini Plus",01.POSO.00.5318.001,"AC Type 2",7,AC,1,exact_name_coord
+574,0,"Delta AC Max",01.POSO.00.1901.001,"AC Type 2",22,AC,1,exact_name_coord
+575,0,"AC Mini Plus",01.POSO.00.5307.001,"AC Type 2",7,AC,1,exact_name_coord
+576,0,"AC Mini Plus",01.POSO.00.5308.001,"AC Type 2",7,AC,1,exact_name_coord
+577,0,"AC Mini Plus",01.POSO.00.9171.001,"AC Type 2",7,AC,1,exact_name_coord
+577,1,"Chargecore AC-22",01.POSO.00.9171.005,"AC Type 2",22,AC,1,exact_name_coord
+578,0,"Circontrol DC 50 kW",01.PPOO.00.3174.042,"AC Type 2",22,AC,1,exact_name_coord
+578,0,"Circontrol DC 50 kW",01.PPOO.00.3174.042,CCS2,50,DC,1,exact_name_coord
+578,0,"Circontrol DC 50 kW",01.PPOO.00.3174.042,CHAdeMO,50,DC,1,exact_name_coord
+579,0,"Delta AC Max",01.POSO.00.1904.001,"AC Type 2",22,AC,1,exact_name_coord
+580,0,"AC Mini Plus",01.POSO.00.9104.001,"AC Type 2",7,AC,1,exact_name_coord
+581,0,"AC Mini Plus",01.POSO.00.3321.002,"AC Type 2",7,AC,1,exact_name_coord
+582,0,"Delta AC Max",01.POSO.00.1218.002,"AC Type 2",22,AC,1,exact_name_coord
+583,0,"1. Delta AC Max",01.POSO.00.3174.044,"AC Type 2",22,AC,1,exact_name_coord
+583,1,"2. Delta AC Max",01.POSO.00.3174.043,"AC Type 2",22,AC,1,exact_name_coord
+584,0,"Proteksindo DC EVDX-40",01.POSO.00.3273.010,CCS2,40,DC,2,exact_name_coord
+585,0,"Delta AC Max",01.POSO.00.3674.022,"AC Type 2",22,AC,1,exact_name_coord
+586,0,"1. AC Mini Plus",01.POSO.00.3671.019,"AC Type 2",7,AC,1,exact_name_coord
+586,1,"2. AC Mini Plus",01.POSO.00.3671.020,"AC Type 2",7,AC,1,exact_name_coord
+586,2,"3. Proteksindo AC-22",01.POSO.00.3671.021,"AC Type 2",22,AC,1,exact_name_coord
+587,0,"Delta AC Max",01.POSO.00.1901.002,"AC Type 2",22,AC,1,exact_name_coord
+588,0,"Delta AC Max",01.POSO.00.1271.007,"AC Type 2",22,AC,2,exact_name_coord
+589,0,"AC Mini Plus",01.POSO.00.9101.001,"AC Type 2",7,AC,1,exact_name_coord
+590,0,"Delta AC Max",01.POSO.00.6310.001,"AC Type 2",22,AC,1,exact_name_coord
+590,1,"AC Mini Plus",01.POSO.00.6310.004,"AC Type 2",7,AC,1,exact_name_coord
+590,2,"CS DC Charger",01.POSO.00.6310.003,CCS2,30,DC,1,exact_name_coord
+591,0,"1. Delta AC Max",01.POSO.00.1271.008,"AC Type 2",22,AC,1,exact_name_coord
+591,1,"2. Delta AC Max",01.POSO.00.1271.009,"AC Type 2",22,AC,1,exact_name_coord
+592,0,"Delta AC Max",01.POSO.00.1205.001,"AC Type 2",22,AC,1,exact_name_coord
+593,0,"Proteksindo AC-22",01.POSO.00.6310.002,"AC Type 2",22,AC,1,exact_name_coord
+594,0,"Delta AC Max",01.POSO.00.1905.002,"AC Type 2",22,AC,1,exact_name_coord
+597,0,"Delta AC Max",01.POSO.00.3171.036,"AC Type 2",22,AC,1,exact_name_coord
+598,0,"1. Autel MaxiCharger AC Wallbox",01.PPOO.00.3276.004,"AC Type 2",22,AC,1,exact_name_coord
+598,1,"2. Autel MaxiCharger AC Wallbox",01.PPOO.00.3276.003,"AC Type 2",22,AC,1,exact_name_coord
+600,0,"AC Mini Plus",01.POSO.00.9271.001,"AC Type 2",7,AC,1,exact_name_coord
+601,0,"Delta AC Max",01.POSO.00.1207.002,"AC Type 2",22,AC,1,exact_name_coord
+602,0,"AC Mini Plus",01.POSO.00.9109.001,"AC Type 2",7,AC,1,exact_name_coord
+603,0,"Proteksindo AC-22",01.POSO.00.8171.002,"AC Type 2",22,AC,1,exact_name_coord
+604,0,"Proteksindo AC-22",01.POSO.00.8271.002,"AC Type 2",22,AC,1,exact_name_coord
+605,0,"Proteksindo AC-22",01.POSO.00.8272.001,"AC Type 2",22,AC,1,exact_name_coord
+606,0,"Proteksindo AC-7",01.POSO.00.8171.003,"AC Type 2",7.7,AC,2,exact_name_coord
+607,0,"Delta AC Max",01.POSO.00.7602.001,"AC Type 2",22,AC,1,exact_name_coord
+608,0,"Proteksindo AC-22",01.POSO.00.8106.002,"AC Type 2",22,AC,1,exact_name_coord
+609,0,"Delta AC Max",01.POSO.00.1209.001,"AC Type 2",22,AC,1,exact_name_coord
+611,0,"Autel MaxiCharger AC Wallbox",01.POSO.00.3174.045,"AC Type 2",22,AC,1,exact_name_coord
+612,0,"1. CS AC Charger",01.POSO.00.3275.004,"AC Type 2",22,AC,1,exact_name_coord
+612,3,"PHIHONG DC Wall Mount",01.POSO.00.3275.005,CCS2,30,DC,2,exact_name_coord
+613,0,"1. Delta AC Max",01.POSO.00.6372.005,"AC Type 2",22,AC,1,exact_name_coord
+613,1,"2. Delta AC Max",01.POSO.00.6372.003,"AC Type 2",22,AC,1,exact_name_coord
+614,0,"Delta AC Max",01.POSO.00.7308.001,"AC Type 2",22,AC,1,exact_name_coord
+615,0,"Proteksindo AC-7",01.POSO.00.8203.001,"AC Type 2",7.7,AC,1,exact_name_coord
+616,0,"Delta AC Max",01.POSO.00.1206.002,"AC Type 2",22,AC,1,exact_name_coord
+617,0,"Proteksindo AC-7",01.POSO.00.8272.002,"AC Type 2",7.7,AC,1,exact_name_coord
+618,0,"Delta AC Max",01.POSO.00.3671.010,"AC Type 2",22,AC,1,exact_name_coord
+620,0,"Autel MaxiCharger AC Wallbox",01.POSO.00.3173.020,"AC Type 2",22,AC,1,exact_name_coord
+622,0,"Delta AC Max",01.POSO.00.1206.003,"AC Type 2",22,AC,1,exact_name_coord
+623,0,"Delta AC Max",01.POSO.00.7322.001,"AC Type 2",22,AC,1,exact_name_coord
+624,0,"AC Mini Plus",01.POSO.00.6472.004,"AC Type 2",7,AC,1,exact_name_coord
+624,1,"CS AC Charger",01.POSO.00.6472.012,"AC Type 2",22,AC,1,exact_name_coord
+625,0,"CS AC Charger",01.POSO.00.1505.001,"AC Type 2",22,AC,1,exact_name_coord
+626,0,"1. Delta AC Max",01.POSO.00.5108.004,"AC Type 2",22,AC,1,exact_name_coord
+626,1,"2. Delta AC Max",01.POSO.00.5108.005,"AC Type 2",22,AC,1,exact_name_coord
+627,0,"Delta AC Max",01.POSO.00.7312.001,"AC Type 2",22,AC,1,exact_name_coord
+628,0,"CS AC Charger",01.POSO.00.1612.001,"AC Type 2",22,AC,1,exact_name_coord
+629,0,"Proteksindo AC-22",01.POSO.00.5206.003,"AC Type 2",22,AC,1,exact_name_coord
+630,0,"Delta AC Max",01.POSO.00.7371.006,"AC Type 2",22,AC,1,exact_name_coord
+632,0,"Delta AC Max",01.POSO.00.7402.001,"AC Type 2",22,AC,1,exact_name_coord
+633,0,"Proteksindo AC-22",01.POSO.00.5205.001,"AC Type 2",22,AC,2,exact_name_coord
+634,0,"CS AC Charger",01.POSO.00.1704.001,"AC Type 2",22,AC,1,exact_name_coord
+635,0,"CS AC Charger",01.POSO.00.1502.001,"AC Type 2",22,AC,1,exact_name_coord
+636,0,"Autel MaxiCharger AC Wallbox",01.POSO.00.3275.006,"AC Type 2",22,AC,1,exact_name_coord
+638,0,"AC Mini Plus",01.POSO.00.3671.022,"AC Type 2",7,AC,1,exact_name_coord
+638,1,"Proteksindo AC-22",01.POSO.00.3671.023,"AC Type 2",22,AC,1,exact_name_coord
+639,0,"Delta AC Max",01.POSO.00.1205.002,"AC Type 2",22,AC,1,exact_name_coord
+640,0,"AC Mini Plus",01.POSO.00.7106.001,"AC Type 2",7,AC,1,exact_name_coord
+641,0,"AC Mini Plus",01.POSO.00.6471.007,"AC Type 2",7,AC,1,exact_name_coord
+642,0,"Proteksindo AC-7",01.POSO.00.7204.001,"AC Type 2",7,AC,1,exact_name_coord
+643,0,"2. AC Mini Plus",01.POSO.00.6402.001,"AC Type 2",7,AC,1,exact_name_coord
+645,0,"Delta AC Max",01.POSO.00.5271.009,"AC Type 2",22,AC,1,exact_name_coord
+646,0,"Delta AC Max",01.POSO.00.1111.003,"AC Type 2",22,AC,1,exact_name_coord
+647,0,"Delta AC Max",01.POSO.00.6109.001,"AC Type 2",22,AC,1,exact_name_coord
+648,0,"Delta AC Max",01.POSO.00.6110.001,"AC Type 2",22,AC,1,exact_name_coord
+649,0,"Delta AC Max",01.POSO.00.6103.002,"AC Type 2",22,AC,1,exact_name_coord
+650,0,"AC Mini Plus",01.POSO.00.7171.003,"AC Type 2",7,AC,1,exact_name_coord
+651,0,"Delta AC Max",01.POSO.00.7315.001,"AC Type 2",22,AC,1,exact_name_coord
+651,1,"Chargecore AC-22",01.POSO.00.7315.002,"AC Type 2",22,AC,1,exact_name_coord
+652,0,"Delta AC Max",01.POSO.00.6103.001,"AC Type 2",22,AC,1,exact_name_coord
+654,0,"Proteksindo AC-7",01.POSO.00.7111.001,"AC Type 2",7,AC,1,exact_name_coord
+655,0,"AC Mini Plus",01.POSO.00.5105.001,"AC Type 2",7,AC,1,exact_name_coord
+656,0,"Proteksindo AC-7",01.POSO.00.7101.001,"AC Type 2",7,AC,1,exact_name_coord
+657,0,"Delta AC Max",01.POSO.00.5271.010,"AC Type 2",22,AC,1,exact_name_coord
+658,0,"AC Mini Plus",01.POSO.00.6409.005,"AC Type 2",7,AC,1,exact_name_coord
+659,0,"Delta AC Max",01.POSO.00.1108.001,"AC Type 2",22,AC,1,exact_name_coord
+660,0,"CS AC Charger",01.POSO.00.1610.005,"AC Type 2",22,AC,1,exact_name_coord
+662,0,"Proteksindo AC-7",01.POSO.00.7174.001,"AC Type 2",7,AC,1,exact_name_coord
+663,0,"Delta DC City Charger",01.POSO.00.5271.014,"AC Type 2",22,AC,1,exact_name_coord
+663,0,"Delta DC City Charger",01.POSO.00.5271.014,CCS2,50,DC,1,exact_name_coord
+663,0,"Delta DC City Charger",01.POSO.00.5271.014,CHAdeMO,50,DC,1,exact_name_coord
+664,0,"Delta AC Max",01.POSO.00.1114.001,"AC Type 2",22,AC,1,exact_name_coord
+665,0,"Delta AC Max",01.POSO.00.1115.001,"AC Type 2",22,AC,1,exact_name_coord
+666,0,"Delta AC Max",01.POSO.00.1115.002,"AC Type 2",22,AC,1,exact_name_coord
+667,0,"Delta AC Max",01.POSO.00.1114.002,"AC Type 2",22,AC,1,exact_name_coord
+668,0,"Delta AC Max",01.POSO.00.1114.003,"AC Type 2",22,AC,1,exact_name_coord
+669,0,"1. Autel MaxiCharger AC Wallbox",01.POSO.00.5171.019,"AC Type 2",22,AC,1,exact_name_coord
+669,1,"2. Autel MaxiCharger AC Wallbox",01.POSO.00.5171.018,"AC Type 2",22,AC,1,exact_name_coord
+670,0,"AC Mini Plus",01.POSO.00.6471.008,"AC Type 2",7,AC,1,exact_name_coord
+671,0,"Delta AC Max",01.POSO.00.1105.001,"AC Type 2",22,AC,1,exact_name_coord
+672,0,"Delta AC Max",01.POSO.00.1105.002,"AC Type 2",22,AC,1,exact_name_coord
+674,0,"Delta AC Max",01.POSO.00.6102.001,"AC Type 2",22,AC,1,exact_name_coord
+675,0,"CS AC Charger",01.POSO.00.1604.001,"AC Type 2",22,AC,1,exact_name_coord
+676,0,"AC Mini Plus",01.POSO.00.6401.001,"AC Type 2",7,AC,1,exact_name_coord
+677,0,"1. Delta AC Max",01.POSO.00.5103.036,"AC Type 2",22,AC,1,exact_name_coord
+677,1,"2. Delta AC Max",01.POSO.00.5103.035,"AC Type 2",22,AC,1,exact_name_coord
+679,0,"Delta AC Max",01.POSO.00.7472.001,"AC Type 2",22,AC,1,exact_name_coord
+681,0,"AC Mini Plus",01.POSO.00.5301.001,"AC Type 2",7,AC,1,exact_name_coord
+682,0,"AC Mini Plus",01.POSO.00.5204.006,"AC Type 2",7,AC,1,exact_name_coord
+682,1,"Autel MaxiCharger AC Wallbox",01.POSO.00.5204.005,"AC Type 2",22,AC,1,exact_name_coord
+683,1,"Proteksindo AC-22",01.POSO.00.1175.001,"AC Type 2",22,AC,1,exact_name_coord
+684,0,"Proteksindo AC-22",01.POSO.00.1112.001,"AC Type 2",22,AC,1,exact_name_coord
+687,0,"AC Mini Plus",01.POSO.00.6171.001,"AC Type 2",7,AC,1,exact_name_prov
+687,1,"CS AC Charger",01.POSO.00.6171.009,"AC Type 2",22,AC,1,exact_name_prov
+688,0,"AC Mini Plus",01.POSO.00.6409.008,"AC Type 2",7,AC,1,exact_name_prov
+689,0,"AC Mini Plus",01.POSO.00.7105.001,"AC Type 2",7,AC,1,exact_name_coord
+690,0,"Autel MaxiCharger AC Wallbox",01.POSO.00.3172.019,"AC Type 2",22,AC,1,exact_name_coord
+691,0,"Autel MaxiCharger AC Wallbox",01.POSO.00.3174.046,"AC Type 2",22,AC,1,exact_name_coord
+693,0,"AC Mini Plus",01.POSO.00.5107.003,"AC Type 2",7,AC,1,exact_name_coord
+693,1,"Wall Mount AC Charger",01.POSO.00.5107.009,"AC Type 2",7,AC,1,exact_name_coord
+695,0,"Delta AC Max",01.POSO.00.1471.006,"AC Type 2",22,AC,1,exact_name_coord
+696,0,"Delta AC Max",01.POSO.00.1471.011,"AC Type 2",22,AC,1,exact_name_coord
+697,0,"Delta AC Max",01.POSO.00.1402.004,"AC Type 2",22,AC,1,exact_name_coord
+698,0,"Delta AC Max",01.POSO.00.1471.012,"AC Type 2",22,AC,1,exact_name_coord
+699,0,"Delta AC Max",01.POSO.00.1405.002,"AC Type 2",22,AC,1,exact_name_coord
+700,0,"Delta AC Max",01.POSO.00.3601.001,"AC Type 2",22,AC,1,exact_name_coord
+701,0,"Proteksindo AC-22",01.POSO.00.3315.002,"AC Type 2",22,AC,1,exact_name_coord
+702,0,"Proteksindo AC-22",01.POSO.00.3372.002,"AC Type 2",22,AC,1,exact_name_coord
+703,0,"Delta AC Max",01.POSO.00.3603.027,"AC Type 2",22,AC,1,exact_name_coord
+703,1,"Delta DC Wallbox",01.POSO.00.3603.028,CCS2,25,DC,1,exact_name_coord
+703,1,"Delta DC Wallbox",01.POSO.00.3603.028,CHAdeMO,25,DC,1,exact_name_coord
+705,0,"Delta AC Max",01.POSO.00.3201.004,"AC Type 2",22,AC,1,exact_name_coord
+705,1,"Delta AC Max",01.POSO.00.3201.005,"AC Type 2",22,AC,1,exact_name_coord
+706,0,"Autel MaxiCharger DC Compact",01.POSO.00.3275.007,CCS2,47,DC,2,exact_name_coord
+707,0,"Autel MaxiCharger DC Compact",01.POSO.00.3275.008,CCS2,47,DC,2,exact_name_coord
+708,0,"Delta AC Max",01.POSO.00.3173.021,"AC Type 2",22,AC,1,exact_name_coord
+709,0,"Delta DC Wallbox",01.POSO.00.3173.022,CCS2,25,DC,2,exact_name_coord
+711,0,"Autel MaxiCharger AC Wallbox",01.POSO.00.6371.003,"AC Type 2",22,AC,1,exact_name_coord
+711,1,"Autel MaxiCharger DC Compact",01.POSO.00.6371.004,CCS2,47,DC,2,exact_name_coord
+713,0,"Delta AC Max",01.POSO.00.3273.008,"AC Type 2",22,AC,1,exact_name_coord
+713,1,"Delta DC Wallbox",01.POSO.00.3273.009,CCS2,25,DC,1,exact_name_coord
+714,0,"AC Mini Plus",01.POSO.00.9106.001,"AC Type 2",7,AC,1,exact_name_coord
+715,0,"Chargecore AC-22",01.POSO.00.3211.005,"AC Type 2",22,AC,1,exact_name_coord
+715,1,"Proteksindo AC-22",01.POSO.00.3211.001,"AC Type 2",22,AC,1,exact_name_coord
+716,0,"CS AC Charger",01.POSO.00.1571.003,"AC Type 2",22,AC,1,exact_name_coord
+717,0,"1. Delta AC Max",01.POSO.00.3173.024,"AC Type 2",22,AC,1,exact_name_coord
+717,1,"2. Delta AC Max",01.POSO.00.3173.025,"AC Type 2",22,AC,1,exact_name_coord
+718,0,"CS AC Charger",01.POSO.00.1671.009,"AC Type 2",22,AC,1,exact_name_coord
+719,0,"CS AC Charger",01.POSO.00.1606.001,"AC Type 2",22,AC,1,exact_name_coord
+720,0,"CS AC Charger",01.POSO.00.1503.001,"AC Type 2",22,AC,1,exact_name_coord
+721,0,"AC Mini Plus",01.POSO.00.9102.001,"AC Type 2",7,AC,1,exact_name_coord
+722,0,"Delta AC Max",01.POSO.00.1305.001,"AC Type 2",22,AC,1,exact_name_coord
+724,0,"1. STARCHARGE AC Charger",01.PPOO.00.3603.032,"AC Type 2",22,AC,1,exact_name_coord
+724,1,"2. STARCHARGE AC Charger",01.PPOO.00.3603.030,"AC Type 2",22,AC,1,exact_name_coord
+724,2,"3. STARCHARGE AC Charger",01.PPOO.00.3603.029,"AC Type 2",22,AC,1,exact_name_coord
+724,3,"4. STARCHARGE AC Charger",01.PPOO.00.3603.031,"AC Type 2",22,AC,1,exact_name_coord
+725,0,"1. STARCHARGE AC Charger",01.PPOO.00.3603.033,"AC Type 2",22,AC,1,exact_name_coord
+725,1,"2. STARCHARGE AC Charger",01.PPOO.00.3603.035,"AC Type 2",22,AC,1,exact_name_coord
+725,2,"3. STARCHARGE AC Charger",01.PPOO.00.3603.034,"AC Type 2",22,AC,1,exact_name_coord
+725,3,"4. STARCHARGE AC Charger",01.PPOO.00.3603.036,"AC Type 2",22,AC,1,exact_name_coord
+726,0,"EV Power 60",01.PPOO.00.3174.048,CCS2,60,DC,2,spatial_100m_token
+727,0,"AC Mini Plus",01.POSO.00.6471.009,"AC Type 2",7,AC,1,exact_name_coord
+728,1,"Teison 22 KW",01.POSO.00.1271.026,"AC Type 2",22,AC,1,exact_name_coord
+728,2,"Signet DC Fast Charger - 100 kW",01.POSO.00.1271.017,CCS2,100,DC,2,exact_name_coord
+729,0,"Delta AC Max",01.POSO.00.1308.001,"AC Type 2",22,AC,1,exact_name_coord
+730,0,"AC Mini Plus",01.POSO.00.5101.007,"AC Type 2",7,AC,1,exact_name_coord
+731,0,"CS AC Charger",01.PPOO.00.5171.033,"AC Type 2",22,AC,1,exact_name_coord
+732,0,"Delta AC Max",01.POSO.00.1312.001,"AC Type 2",22,AC,1,exact_name_coord
+733,0,"CS AC Charger",01.POSO.00.1507.001,"AC Type 2",22,AC,1,exact_name_coord
+734,0,"CS AC Charger",01.POSO.00.1504.001,"AC Type 2",22,AC,1,exact_name_coord
+735,0,"CS AC Charger",01.POSO.00.1571.004,"AC Type 2",22,AC,1,exact_name_coord
+736,0,"CS AC Charger",01.POSO.00.1506.001,"AC Type 2",22,AC,1,exact_name_coord
+737,0,"CS AC Charger",01.POSO.00.1571.005,"AC Type 2",22,AC,1,core_name_geo
+738,0,"CS AC Charger",01.POSO.00.6171.006,"AC Type 2",22,AC,1,exact_name_coord
+739,0,"CS AC Charger",01.POSO.00.6107.002,"AC Type 2",22,AC,1,exact_name_coord
+740,0,"2. Delta AC Max",01.POSO.00.5102.008,"AC Type 2",22,AC,1,exact_name_coord
+740,1,"1. Autel MaxiCharger AC Wallbox",01.POSO.00.5102.009,"AC Type 2",22,AC,1,exact_name_coord
+741,0,"AC Mini Plus",01.POSO.00.3525.008,"AC Type 2",7,AC,1,exact_name_coord
+742,0,"CS AC Charger",01.POSO.00.1605.001,"AC Type 2",22,AC,1,exact_name_coord
+743,0,"CS AC Charger",01.POSO.00.6102.002,"AC Type 2",22,AC,1,exact_name_coord
+744,0,"CS AC Charger",01.POSO.00.6104.003,"AC Type 2",22,AC,1,exact_name_coord
+746,0,"AC Mini Plus",01.POSO.00.6402.003,"AC Type 2",7,AC,1,exact_name_coord
+747,0,"AC Mini Plus",01.POSO.00.6408.003,"AC Type 2",7,AC,1,exact_name_coord
+748,0,"1. Autel MaxiCharger AC Wallbox",01.POSO.00.5171.034,"AC Type 2",22,AC,1,exact_name_coord
+748,1,"2. Autel MaxiCharger AC Wallbox",01.POSO.00.5171.035,"AC Type 2",22,AC,1,exact_name_coord
+749,0,"CS AC Charger",01.POSO.00.6171.008,"AC Type 2",22,AC,1,spatial_100m_token
+751,0,"1. AC Mini Plus",01.POSO.00.6502.002,"AC Type 2",7,AC,1,exact_name_coord
+752,0,"CS AC Charger",01.POSO.00.1902.004,"AC Type 2",22,AC,1,exact_name_coord
+753,0,"CS AC Charger",01.POSO.00.1902.005,"AC Type 2",22,AC,1,exact_name_coord
+754,0,"Autel MaxiCharger AC Wallbox",01.POSO.00.6371.006,"AC Type 2",22,AC,1,exact_name_coord
+755,0,"CS AC Charger",01.POSO.00.1903.001,"AC Type 2",22,AC,1,exact_name_coord
+756,0,"CS AC Charger",01.POSO.00.1903.002,"AC Type 2",22,AC,1,exact_name_coord
+758,0,"EV Power 120",01.POSO.00.3175.032,CCS2,60,DC,2,exact_name_coord
+759,0,"Delta AC Max",01.POSO.00.1301.001,"AC Type 2",22,AC,1,exact_name_coord
+760,0,"Delta AC Max",01.POSO.00.1301.002,"AC Type 2",22,AC,1,exact_name_coord
+761,0,"Delta AC Max",01.POSO.00.3208.003,"AC Type 2",22,AC,1,exact_name_prov
+762,0,"Delta AC Max",01.POSO.00.3208.004,"AC Type 2",22,AC,1,exact_name_prov
+763,0,"Delta AC Max",01.POSO.00.3201.020,"AC Type 2",22,AC,1,exact_name_prov
+764,0,"Delta AC Max",01.POSO.00.3208.005,"AC Type 2",22,AC,1,exact_name_coord
+764,1,"Chargecore AC-22",01.POSO.00.3208.006,"AC Type 2",22,AC,1,exact_name_coord
+765,0,"AC Mini Plus",01.POSO.00.5303.001,"AC Type 2",7,AC,1,exact_name_coord
+766,0,"Delta AC Max",01.POSO.00.1308.002,"AC Type 2",22,AC,1,exact_name_coord
+767,0,"Delta AC Max",01.POSO.00.1308.003,"AC Type 2",22,AC,1,exact_name_coord
+768,0,"Delta AC Max",01.POSO.00.1308.004,"AC Type 2",22,AC,1,exact_name_coord
+769,0,"AC Mini Plus",01.POSO.00.5306.001,"AC Type 2",7,AC,1,exact_name_coord
+770,0,"AC Mini Plus",01.POSO.00.5309.001,"AC Type 2",7.4,AC,1,exact_name_coord
+771,0,"Delta AC Max",01.POSO.00.1306.001,"AC Type 2",22,AC,1,exact_name_coord
+772,0,"CS AC Charger",01.POSO.00.1971.001,"AC Type 2",22,AC,1,exact_name_coord
+773,0,"AC Mini Plus",01.POSO.00.5303.002,"AC Type 2",7,AC,1,exact_name_prov
+775,0,"AC Mini Plus",01.POSO.00.5310.001,"AC Type 2",7,AC,1,exact_name_prov
+776,0,"Delta DC Wallbox",01.POSO.00.1207.004,CCS2,25,DC,1,exact_name_coord
+777,0,"CS AC Charger",01.POSO.00.1207.005,"AC Type 2",22,AC,1,exact_name_coord
+777,1,"2. EV Power 60 DC",01.POSO.00.1207.007,CCS2,60,DC,2,exact_name_coord
+777,2,"3. EV Power 60 DC",01.POSO.00.1207.006,CCS2,60,DC,2,exact_name_coord
+778,0,"Delta AC Max",01.POSO.00.1304.002,"AC Type 2",22,AC,1,exact_name_coord
+779,0,"Delta AC Max",01.POSO.00.1304.001,"AC Type 2",22,AC,1,exact_name_coord
+780,0,"Delta DC City Charger",01.POSO.00.1371.008,"AC Type 2",22,AC,1,exact_name_coord
+780,0,"Delta DC City Charger",01.POSO.00.1371.008,CCS2,50,DC,1,exact_name_coord
+780,0,"Delta DC City Charger",01.POSO.00.1371.008,CHAdeMO,50,DC,1,exact_name_coord
+782,0,"AC Mini Plus",01.POSO.00.1872.001,"AC Type 2",7,AC,1,exact_name_coord
+783,0,"Atess Novo EVC-DC60",01.PPOO.00.3603.040,"AC Type 2",22,AC,1,exact_name_coord
+783,0,"Atess Novo EVC-DC60",01.PPOO.00.3603.040,CCS2,60,DC,1,exact_name_coord
+783,0,"Atess Novo EVC-DC60",01.PPOO.00.3603.040,CHAdeMO,60,DC,1,exact_name_coord
+785,0,"CS AC Charger",01.POSO.00.1608.001,"AC Type 2",22,AC,1,exact_name_coord
+786,0,"CS AC Charger",01.POSO.00.1771.002,"AC Type 2",22,AC,1,exact_name_coord
+787,0,"Delta AC Max",01.POSO.00.1307.002,"AC Type 2",22,AC,1,exact_name_coord
+788,0,"Delta AC Max",01.POSO.00.3601.002,"AC Type 2",22,AC,1,exact_name_coord
+789,0,"CS AC Charger",01.POSO.00.1705.001,"AC Type 2",22,AC,1,exact_name_coord
+790,0,"Delta AC Max",01.POSO.00.6306.001,"AC Type 2",22,AC,1,exact_name_coord
+791,0,"CS AC Charger",01.POSO.00.6213.001,"AC Type 2",22,AC,1,exact_name_coord
+792,0,"Delta AC Max",01.POSO.00.1307.003,"AC Type 2",22,AC,1,exact_name_coord
+793,0,"CS AC Charger",01.POSO.00.1702.001,"AC Type 2",22,AC,1,exact_name_coord
+795,0,"EV Power 22 AC",01.POSO.00.1271.019,"AC Type 2",22,AC,1,exact_name_coord
+796,0,"CS AC Charger",01.POSO.00.1601.001,"AC Type 2",22,AC,1,exact_name_coord
+797,0,"ABB Terra 50",01.POSO.00.3603.041,CCS2,50,DC,1,exact_name_coord
+797,0,"ABB Terra 50",01.POSO.00.3603.041,CHAdeMO,50,DC,1,exact_name_coord
+798,0,"CS AC Charger",01.POSO.00.1609.001,"AC Type 2",22,AC,1,exact_name_coord
+799,0,"Delta AC Max",01.POSO.00.1310.003,"AC Type 2",22,AC,1,exact_name_coord
+800,0,"CS AC Charger",01.POSO.00.6204.001,"AC Type 2",22,AC,1,exact_name_coord
+801,0,"1. AC Mini Plus",01.POSO.00.3525.011,"AC Type 2",7,AC,1,exact_name_coord
+801,1,"2. AC Mini Plus",01.POSO.00.3525.012,"AC Type 2",7,AC,1,exact_name_coord
+803,0,"Delta AC Max",01.POSO.00.3602.006,"AC Type 2",22,AC,1,exact_name_coord
+804,0,"Wall Mount AC Charger",01.POSO.00.3203.017,"AC Type 2",22,AC,1,exact_name_coord
+805,0,"Autel MaxiCharger AC Wallbox",01.POSO.00.5204.007,"AC Type 2",22,AC,1,exact_name_coord
+807,0,"CS AC Charger",01.POSO.00.6112.007,"AC Type 2",22,AC,1,exact_name_coord
+808,0,"CS AC Charger",01.POSO.00.6210.001,"AC Type 2",22,AC,1,exact_name_coord
+809,0,"Delta AC Max",01.POSO.00.1303.002,"AC Type 2",22,AC,1,exact_name_coord
+810,0,"EV Power 60",01.POSO.00.3374.023,CCS2,60,DC,2,exact_name_prov
+811,0,"Delta AC Max",01.POSO.00.3671.031,"AC Type 2",22,AC,1,exact_name_coord
+811,1,"Proteksindo AC-7",01.POSO.00.3671.032,"AC Type 2",7.7,AC,2,exact_name_coord
+812,0,"AC Mini Plus",01.POSO.00.5311.003,"AC Type 2",7,AC,1,exact_name_prov
+813,0,"CS AC Charger",01.POSO.00.6208.001,"AC Type 2",22,AC,1,exact_name_coord
+814,0,"Delta AC Max",01.POSO.00.1302.002,"AC Type 2",22,AC,1,exact_name_coord
+815,0,"AC Mini Plus",01.POSO.00.6501.002,"AC Type 2",7,AC,1,exact_name_coord
+816,0,"CS AC Charger",01.POSO.00.6209.001,"AC Type 2",22,AC,1,exact_name_coord
+817,0,"AC Mini Plus",01.POSO.00.6501.003,"AC Type 2",7,AC,1,exact_name_coord
+818,0,"AC Mini Plus",01.POSO.00.6474.004,"AC Type 2",7,AC,1,exact_name_coord
+819,0,"AC Mini Plus",01.POSO.00.6503.001,"AC Type 2",7,AC,1,exact_name_coord
+820,0,"Delta AC Max",01.POSO.00.3206.004,"AC Type 2",22,AC,1,exact_name_coord
+821,0,"AC Mini Plus",01.POSO.00.6474.003,"AC Type 2",7,AC,1,exact_name_coord
+822,0,"Delta DC Wallbox",01.PPOO.00.3525.013,CCS2,50,DC,2,exact_name_coord
+822,0,"Delta DC Wallbox",01.PPOO.00.3525.013,"DC Connector",50,DC,1,exact_name_coord
+823,0,"CS AC Charger",01.POSO.00.6207.001,"AC Type 2",22,AC,1,exact_name_coord
+824,0,"Proteksindo DC EVDX-160",01.POSO.00.3573.009,CCS2,160,DC,2,exact_name_coord
+824,0,"Proteksindo DC EVDX-160",01.POSO.00.3573.009,"DC Connector",160,DC,1,exact_name_coord
+825,0,"AC EV Charger",01.POSO.00.1103.001,"AC Type 2",22,AC,1,exact_name_prov
+827,0,"Delta AC Max",01.POSO.00.5271.017,"AC Type 2",22,AC,1,exact_name_coord
+831,0,"Delta AC Max",01.POSO.00.1377.001,"AC Type 2",22,AC,1,exact_name_coord
+832,0,"Delta AC Max",01.POSO.00.1373.001,"AC Type 2",22,AC,1,exact_name_coord
+833,1,"CS AC Charger",01.POSO.00.7308.002,"AC Type 2",22,AC,1,exact_name_coord
+834,0,"ABB Terra 50",01.POSO.00.3371.004,CCS2,50,DC,1,exact_name_prov
+834,0,"ABB Terra 50",01.POSO.00.3371.004,CHAdeMO,50,DC,1,exact_name_prov
+834,1,"Delta AC Max",01.POSO.00.3371.005,"AC Type 2",22,AC,1,exact_name_prov
+834,2,"EXICOM DC 60 kW",01.POSO.00.3371.006,CCS2,60,DC,2,exact_name_prov
+835,0,"CS AC Charger",01.POSO.00.7324.002,"AC Type 2",22,AC,1,exact_name_coord
+836,0,"EV Power 60",01.PPOO.00.3578.022,CCS2,60,DC,2,exact_name_coord
+839,0,"CS AC Charger",01.POSO.00.7310.001,"AC Type 2",22,AC,1,exact_name_coord
+840,0,"Delta AC Max",01.POSO.00.1311.001,"AC Type 2",22,AC,1,exact_name_coord
+841,0,"1. CS AC Charger",01.POSO.00.5106.010,"AC Type 2",22,AC,1,exact_name_coord
+841,1,"2. CS AC Charger",01.POSO.00.5106.011,"AC Type 2",22,AC,1,exact_name_coord
+842,0,"Delta AC Max",01.POSO.00.1310.002,"AC Type 2",22,AC,1,exact_name_coord
+843,0,"CS AC Charger",01.POSO.00.7605.001,"AC Type 2",22,AC,1,exact_name_coord
+844,0,"CS AC Charger",01.POSO.00.7304.001,"AC Type 2",22,AC,1,exact_name_coord
+845,0,"CS AC Charger",01.POSO.00.7316.001,"AC Type 2",22,AC,1,exact_name_coord
+846,0,"Delta AC Max",01.PPOO.00.3203.013,"AC Type 2",22,AC,1,exact_name_coord
+847,0,"EV Power 60",01.POSO.00.1271.018,CCS2,60,DC,2,exact_name_coord
+849,0,"CS AC Charger",01.POSO.00.7311.001,"AC Type 2",22,AC,1,exact_name_coord
+850,0,"Delta AC Max",01.POSO.00.3203.012,"AC Type 2",22,AC,1,exact_name_coord
+851,0,"Teison 22 KW",01.POSO.00.1216.001,"AC Type 2",22,AC,1,exact_name_coord
+852,0,"Teison 22 KW",01.POSO.00.1222.001,"AC Type 2",22,AC,1,exact_name_coord
+853,0,"Teison 22 KW",01.POSO.00.1223.002,"AC Type 2",22,AC,1,exact_name_coord
+854,0,"Teison 22 KW",01.POSO.00.1202.001,"AC Type 2",22,AC,1,exact_name_coord
+855,0,"CS AC Charger",01.POSO.00.7371.023,"AC Type 2",22,AC,1,exact_name_coord
+856,0,"Teison 22 KW",01.POSO.00.1274.001,"AC Type 2",22,AC,1,exact_name_coord
+857,0,"CS AC Charger",01.POSO.00.1971.005,"AC Type 2",22,AC,1,exact_name_coord
+858,0,"Teison 22 KW",01.POSO.00.3318.002,"AC Type 2",22,AC,1,exact_name_prov
+859,0,"Chargecore AC-22",01.POSO.00.3317.003,"AC Type 2",22,AC,1,exact_name_prov
+859,1,"CS DC Charger",01.POSO.00.3317.002,CCS2,25,DC,1,exact_name_prov
+859,2,"Teison 22 KW",01.POSO.00.3317.001,"AC Type 2",22,AC,1,exact_name_prov
+860,0,"1. Chargecore AC-22",01.POSO.00.3578.023,"AC Type 2",22,AC,1,exact_name_coord
+860,1,"2. Chargecore AC-22",01.POSO.00.3578.024,"AC Type 2",22,AC,1,exact_name_coord
+861,0,"CS AC Charger",01.POSO.00.3215.020,"AC Type 2",22,AC,1,exact_name_coord
+861,1,"PHIHONG DC Wall Mount",01.POSO.00.3215.019,CCS2,30,DC,1,exact_name_coord
+861,1,"PHIHONG DC Wall Mount",01.POSO.00.3215.019,CHAdeMO,30,DC,1,exact_name_coord
+862,0,"Teison 22 KW",01.POSO.00.1277.001,"AC Type 2",22,AC,1,exact_name_coord
+862,1,"Free Standing DC Fast Charger",01.POSO.00.1277.002,CCS2,30,DC,1,exact_name_coord
+863,0,"CS AC Charger",01.POSO.00.1902.007,"AC Type 2",22,AC,1,exact_name_coord
+864,0,"Teison 22 KW",01.POSO.00.3504.003,"AC Type 2",22,AC,1,exact_name_coord
+865,0,"Teison 22 KW",01.POSO.00.3506.001,"AC Type 2",22,AC,1,exact_name_coord
+866,0,"Teison 22 KW",01.POSO.00.3174.068,"AC Type 2",22,AC,1,exact_name_coord
+867,0,"1. CS AC Charger",01.POSO.00.5171.041,"AC Type 2",22,AC,1,exact_name_coord
+867,1,"2. CS AC Charger",01.POSO.00.5171.040,"AC Type 2",22,AC,1,exact_name_coord
+867,2,"3. CS AC Charger",01.POSO.00.5171.039,"AC Type 2",22,AC,1,exact_name_coord
+868,0,"Teison 22 KW",01.POSO.00.3316.001,"AC Type 2",22,AC,1,exact_name_prov
+869,0,"CS AC Charger",01.POSO.00.1572.001,"AC Type 2",22,AC,1,exact_name_coord
+870,0,"Teison 22 KW",01.POSO.00.1213.001,"AC Type 2",22,AC,1,exact_name_coord
+871,0,"Chargecore AC-22",01.POSO.00.3316.003,"AC Type 2",22,AC,1,exact_name_prov
+871,1,"Teison 22 KW",01.POSO.00.3316.002,"AC Type 2",22,AC,1,exact_name_prov
+872,0,"CS DC Charger",01.POSO.00.3572.001,CCS2,50,DC,2,exact_name_coord
+872,1,"Zerova 22 KW",01.POSO.00.3572.002,"AC Type 2",22,AC,1,exact_name_coord
+873,0,"Teison 22 KW",01.POSO.00.1106.001,"AC Type 2",22,AC,1,exact_name_coord
+874,0,"Teison 22 KW",01.POSO.00.1172.001,"AC Type 2",22,AC,1,exact_name_coord
+875,0,"Chargecore DC-120",01.POSO.00.3273.028,CCS2,120,DC,2,exact_name_coord
+875,1,"1. CS AC Charger",01.POSO.00.3273.031,"AC Type 2",22,AC,1,exact_name_coord
+875,2,"4. CS AC Charger",01.POSO.00.3273.030,"AC Type 2",22,AC,1,exact_name_coord
+875,3,"Proteksindo DC EVDX-60",01.POSO.00.3273.029,"AC Type 2",22,AC,1,exact_name_coord
+875,3,"Proteksindo DC EVDX-60",01.POSO.00.3273.029,CCS2,60,DC,1,exact_name_coord
+875,3,"Proteksindo DC EVDX-60",01.POSO.00.3273.029,CHAdeMO,60,DC,1,exact_name_coord
+876,0,"Teison 22 KW",01.POSO.00.3320.002,"AC Type 2",22,AC,1,exact_name_prov
+877,0,"CS DC Charger",01.POSO.00.3514.017,CCS2,25,DC,1,exact_name_coord
+877,1,"Zerova 22 KW",01.POSO.00.3514.018,"AC Type 2",22,AC,1,exact_name_coord
+878,0,"CS AC Charger",01.POSO.00.1509.001,"AC Type 2",22,AC,1,exact_name_coord
+879,0,"Teison 22 KW",01.POSO.00.1102.001,"AC Type 2",22,AC,1,exact_name_coord
+880,0,"1. Teison 22 KW",01.POSO.00.3174.070,"AC Type 2",22,AC,1,exact_name_coord
+880,1,"2. Teison 22 KW",01.POSO.00.3174.071,"AC Type 2",22,AC,1,exact_name_coord
+880,2,"3. Teison 22 KW",01.POSO.00.3174.069,"AC Type 2",22,AC,1,exact_name_coord
+880,3,"4. Teison 22 KW",01.POSO.00.3174.072,"AC Type 2",22,AC,1,exact_name_coord
+881,0,"Proteksindo AC-22",01.POSO.00.3173.028,"AC Type 2",22,AC,1,exact_name_coord
+882,0,"1. Teison 22 KW",01.POSO.00.3374.025,"AC Type 2",22,AC,1,exact_name_prov
+882,1,"2. Teison 22 KW",01.POSO.00.3374.024,"AC Type 2",22,AC,1,exact_name_prov
+883,0,"Zerova 22 KW",01.POSO.00.3512.007,"AC Type 2",22,AC,1,exact_name_coord
+884,0,"CS AC Charger",01.POSO.00.3174.073,"AC Type 2",22,AC,1,exact_name_coord
+885,0,"Zerova 22 KW",01.POSO.00.3511.003,"AC Type 2",22,AC,1,exact_name_coord
+886,0,"Teison 22 KW",01.POSO.00.3671.039,"AC Type 2",22,AC,1,exact_name_coord
+887,0,"1. Teison 22 KW",01.POSO.00.3174.075,"AC Type 2",22,AC,1,exact_name_coord
+887,1,"2. Teison 22 KW",01.POSO.00.3174.076,"AC Type 2",22,AC,1,exact_name_coord
+887,2,"3. Teison 22 KW",01.POSO.00.3174.074,"AC Type 2",22,AC,1,exact_name_coord
+889,0,"Teison 22 KW",01.POSO.00.3510.004,"AC Type 2",22,AC,1,exact_name_coord
+890,0,"Teison 22 KW",01.POSO.00.3374.026,"AC Type 2",22,AC,1,exact_name_prov
+891,0,"Teison 22 KW",01.POSO.00.3174.077,"AC Type 2",22,AC,1,exact_name_coord
+892,0,"Teison 22 KW",01.POSO.00.3510.005,"AC Type 2",22,AC,1,exact_name_coord
+893,0,"Teison 22 KW",01.POSO.00.3510.006,"AC Type 2",22,AC,1,exact_name_coord
+894,0,"Teison 22 KW",01.POSO.00.3671.041,"AC Type 2",22,AC,1,exact_name_coord
+895,0,"1. Teison 22 KW",01.POSO.00.3376.004,"AC Type 2",22,AC,1,exact_name_prov
+895,1,"2. Teison 22 KW",01.POSO.00.3376.003,"AC Type 2",22,AC,1,exact_name_prov
+896,0,"Proteksindo AC-22",01.POSO.00.3374.027,"AC Type 2",22,AC,1,exact_name_prov
+897,0,"Teison 22 KW",01.POSO.00.3674.027,"AC Type 2",22,AC,1,exact_name_coord
+898,0,"Proteksindo AC-22",01.POSO.00.3173.029,"AC Type 2",22,AC,1,exact_name_coord
+898,1,"Proteksindo AC-22",01.POSO.00.3173.030,"AC Type 2",22,AC,1,exact_name_coord
+899,1,"Zerova 22 KW",01.POSO.00.3525.014,"AC Type 2",22,AC,1,exact_name_coord
+901,0,"Zerova 22 KW",01.POSO.00.3578.025,"AC Type 2",22,AC,1,exact_name_coord
+903,0,"1. Teison 22 KW",01.POSO.00.3171.059,"AC Type 2",22,AC,1,exact_name_coord
+903,1,"2. Teison 22 KW",01.POSO.00.3171.058,"AC Type 2",22,AC,1,exact_name_coord
+905,0,"1. Teison 22 KW",01.POSO.00.3671.034,"AC Type 2",22,AC,1,exact_name_coord
+905,1,"2. Teison 22 KW",01.POSO.00.3671.033,"AC Type 2",22,AC,1,exact_name_coord
+906,0,"Delta AC Max",01.POSO.00.3602.007,"AC Type 2",22,AC,1,exact_name_coord
+907,0,"Teison 22 KW",01.POSO.00.3374.028,"AC Type 2",22,AC,1,exact_name_prov
+908,0,"1. Teison 22 KW",01.POSO.00.3275.024,"AC Type 2",22,AC,1,exact_name_coord
+908,1,"2. Teison 22 KW",01.POSO.00.3275.025,"AC Type 2",22,AC,1,exact_name_coord
+908,2,"3. Teison 22 KW",01.POSO.00.3275.026,"AC Type 2",22,AC,1,exact_name_coord
+908,3,"4. Teison 22 KW",01.POSO.00.3275.027,"AC Type 2",22,AC,1,exact_name_coord
+909,0,"Teison 22 KW",01.POSO.00.3328.013,"AC Type 2",22,AC,1,exact_name_prov
+910,0,"CS DC Charger",01.POSO.00.3674.028,CCS2,50,DC,2,exact_name_coord
+911,0,"Zerova 22 KW",01.POSO.00.3520.007,"AC Type 2",22,AC,1,exact_name_coord
+912,0,"Zerova 22 KW",01.POSO.00.3519.011,"AC Type 2",22,AC,1,exact_name_coord
+913,0,"Zerova 22 KW",01.POSO.00.3520.008,"AC Type 2",22,AC,1,exact_name_coord
+914,0,"Proteksindo AC EVAX-22",01.POSO.00.3374.029,"AC Type 2",22,AC,1,exact_name_prov
+915,0,"1. Teison 22 KW",01.POSO.00.3374.031,"AC Type 2",22,AC,1,exact_name_prov
+915,1,"2. Teison 22 KW",01.POSO.00.3374.030,"AC Type 2",22,AC,1,exact_name_prov
+916,0,"CS AC Charger",01.POSO.00.1971.004,"AC Type 2",22,AC,1,exact_name_coord
+917,0,"1. Teison 22 KW",01.POSO.00.3173.031,"AC Type 2",22,AC,1,exact_name_coord
+917,1,"2. Teison 22 KW",01.POSO.00.3173.032,"AC Type 2",22,AC,1,exact_name_coord
+918,0,"Proteksindo AC EVAX-22",01.POSO.00.3374.032,"AC Type 2",22,AC,1,exact_name_prov
+919,0,"CS AC Charger",01.POSO.00.6171.010,"AC Type 2",22,AC,1,exact_name_coord
+920,0,"Zerova 22 KW",01.POSO.00.3578.026,"AC Type 2",22,AC,1,exact_name_coord
+921,0,"Delta AC Max",01.POSO.00.3206.005,"AC Type 2",22,AC,1,exact_name_coord
+924,0,"CS AC Charger",01.POSO.00.1905.004,"AC Type 2",22,AC,1,exact_name_coord
+925,1,"Zerova 22 KW",01.POSO.00.3517.005,"AC Type 2",22,AC,1,exact_name_coord
+926,0,"Teison 22 KW",01.POSO.00.3518.004,"AC Type 2",22,AC,1,exact_name_coord
+926,1,"Zerova 22 KW",01.POSO.00.3518.003,"AC Type 2",22,AC,1,exact_name_coord
+927,1,"Zerova 22 KW",01.POSO.00.3578.027,"AC Type 2",22,AC,1,exact_name_coord
+929,1,"CS AC Charger",01.POSO.00.3510.007,"AC Type 2",22,AC,1,exact_name_coord
+930,0,"CS DC Charger",01.POSO.00.3175.035,CCS2,100,DC,2,exact_name_coord
+930,1,"1. Teison 22 KW",01.POSO.00.3175.036,"AC Type 2",22,AC,1,exact_name_coord
+930,2,"2. Teison 22 KW",01.POSO.00.3175.037,"AC Type 2",22,AC,1,exact_name_coord
+932,0,"CS AC Charger",01.POSO.00.6171.011,"AC Type 2",22,AC,1,exact_name_coord
+933,0,"Zerova 22 KW",01.POSO.00.3578.030,"AC Type 2",22,AC,1,exact_name_coord
+934,0,"CS AC Charger",01.POSO.00.6371.008,"AC Type 2",22,AC,1,exact_name_coord
+934,1,"CS AC Charger",01.POSO.00.6371.011,"AC Type 2",22,AC,1,exact_name_coord
+934,2,"CS AC Charger",01.POSO.00.6371.009,"AC Type 2",22,AC,1,exact_name_coord
+935,0,"CS AC Charger",01.POSO.00.6304.001,"AC Type 2",22,AC,1,exact_name_coord
+936,0,"CS AC Charger",01.POSO.00.6112.006,"AC Type 2",22,AC,1,exact_name_coord
+937,0,"Proteksindo AC EVAX-22",01.POSO.00.3322.014,"AC Type 2",22,AC,1,exact_name_prov
+938,0,"CS AC Charger",01.POSO.00.6212.001,"AC Type 2",22,AC,1,exact_name_coord
+939,0,"CS AC Charger",01.POSO.00.6201.004,"AC Type 2",22,AC,1,exact_name_coord
+940,0,"Chargecore AC-22",01.POSO.00.3314.013,"AC Type 2",22,AC,1,exact_name_prov
+941,0,"Free Standing DC Fast Charger",01.POSO.00.3171.060,CCS2,60,DC,2,exact_name_coord
+943,0,"1. CS AC Charger",01.POSO.00.3175.042,"AC Type 2",22,AC,1,exact_name_coord
+943,1,"2. CS AC Charger",01.POSO.00.3175.043,"AC Type 2",22,AC,1,exact_name_coord
+944,0,"Teison 22 KW",01.POSO.00.1806.001,"AC Type 2",22,AC,1,exact_name_coord
+945,0,"1. CS AC Charger",01.POSO.00.3171.062,"AC Type 2",22,AC,1,exact_name_coord
+945,1,"2. CS AC Charger",01.POSO.00.3171.061,"AC Type 2",22,AC,1,exact_name_coord
+945,2,"CS DC Charger",01.POSO.00.3171.063,CCS2,100,DC,2,exact_name_coord
+947,0,"CS AC Charger",01.POSO.00.3175.044,"AC Type 2",22,AC,1,exact_name_coord
+948,0,"Chargecore AC-22",01.POSO.00.3373.003,"AC Type 2",22,AC,1,exact_name_prov
+949,0,"Chargecore DC-25",01.POSO.00.3603.042,CCS2,25,DC,1,exact_name_coord
+949,1,"Teison 22 KW",01.POSO.00.3603.043,"AC Type 2",22,AC,1,exact_name_coord
+951,0,"1. Teison 22 KW",01.POSO.00.3674.030,"AC Type 2",22,AC,1,exact_name_coord
+951,1,"2. Teison 22 KW",01.POSO.00.3674.029,"AC Type 2",22,AC,1,exact_name_coord
+952,0,"1. CS AC Charger",01.POSO.00.6371.010,"AC Type 2",22,AC,1,exact_name_coord
+952,1,"2. CS AC Charger",01.POSO.00.6371.012,"AC Type 2",22,AC,1,exact_name_coord
+953,0,"CS DC Charger",01.POSO.00.6106.001,CCS2,25,DC,1,exact_name_coord
+954,0,"CS AC Charger",01.POSO.00.6103.004,"AC Type 2",22,AC,1,exact_name_coord
+955,0,"Chargecore AC-22",01.POSO.00.3374.033,"AC Type 2",22,AC,1,exact_name_prov
+956,0,"CS AC Charger",01.POSO.00.6106.002,"AC Type 2",22,AC,1,exact_name_coord
+957,0,"Teison 22 KW",01.POSO.00.1813.001,"AC Type 2",22,AC,1,exact_name_coord
+958,0,"Chargecore AC-22",01.POSO.00.3302.004,"AC Type 2",22,AC,1,exact_name_prov
+960,0,"2. EV City DC 120 kW",01.PPOO.00.3174.078,CCS2,120,DC,2,core_name_geo
+961,0,"Chargecore AC-22",01.POSO.00.3321.003,"AC Type 2",22,AC,1,exact_name_prov
+963,0,"CS AC Charger",01.POSO.00.6107.003,"AC Type 2",22,AC,1,exact_name_coord
+964,0,"CS AC Charger",01.POSO.00.6101.002,"AC Type 2",22,AC,1,exact_name_coord
+966,0,"Teison 22 KW",01.POSO.00.3673.011,"AC Type 2",22,AC,1,exact_name_coord
+966,1,"Teison 22 KW",01.POSO.00.3673.010,"AC Type 2",22,AC,1,exact_name_coord
+967,0,"CS AC Charger",01.POSO.00.3301.004,"AC Type 2",22,AC,1,exact_name_prov
+970,0,"CS AC Charger",01.POSO.00.6372.008,"AC Type 2",22,AC,1,exact_name_coord
+971,0,"Chargecore AC-22",01.POSO.00.3302.005,"AC Type 2",22,AC,1,exact_name_prov
+972,0,"CS AC Charger",01.POSO.00.6172.004,"AC Type 2",22,AC,1,exact_name_coord
+973,0,"Teison 22 KW",01.POSO.00.3671.043,"AC Type 2",22,AC,1,exact_name_coord
+974,0,"CS AC Charger",01.POSO.00.3404.006,"AC Type 2",22,AC,1,exact_name_prov
+975,0,"Teison 22 KW",01.POSO.00.1271.028,"AC Type 2",22,AC,1,exact_name_coord
+977,0,"Free Standing DC Fast Charger",01.POSO.00.1271.022,CCS2,25,DC,1,exact_name_coord
+978,0,"CS AC Charger",01.POSO.00.6172.003,"AC Type 2",22,AC,1,exact_name_coord
+979,0,"CS AC Charger",01.POSO.00.3471.005,"AC Type 2",22,AC,1,exact_name_prov
+980,0,"Teison 22 KW",01.POSO.00.1807.001,"AC Type 2",22,AC,1,exact_name_coord
+981,0,"Teison 22 KW",01.POSO.00.1271.020,"AC Type 2",22,AC,1,exact_name_coord
+982,0,"Zerova 22 KW",01.POSO.00.3514.019,"AC Type 2",22,AC,1,exact_name_coord
+983,0,"Zerova 22 KW",01.POSO.00.3514.020,"AC Type 2",22,AC,1,exact_name_coord
+984,0,"CS AC Charger",01.POSO.00.3301.006,"AC Type 2",22,AC,1,exact_name_prov
+985,0,"Proteksindo AC-22",01.POSO.00.3205.014,"AC Type 2",22,AC,1,exact_name_coord
+985,1,"Proteksindo AC-22",01.POSO.00.3205.015,"AC Type 2",22,AC,1,exact_name_coord
+986,0,"Teison 22 KW",01.POSO.00.3326.002,"AC Type 2",22,AC,1,exact_name_prov
+987,0,"Chargecore AC-22",01.POSO.00.3373.005,"AC Type 2",22,AC,1,exact_name_prov
+987,1,"Chargecore AC-22",01.POSO.00.3373.004,"AC Type 2",22,AC,1,exact_name_prov
+988,0,"1. Teison 22 KW",01.POSO.00.3375.001,"AC Type 2",22,AC,1,exact_name_prov
+988,1,"2. Teison 22 KW",01.POSO.00.3375.002,"AC Type 2",22,AC,1,exact_name_prov
+989,0,"Teison 22 KW",01.POSO.00.3275.035,"AC Type 2",22,AC,1,exact_name_coord
+990,0,"CS AC Charger",01.POSO.00.6171.013,"AC Type 2",22,AC,1,exact_name_coord
+991,0,"Teison 22 KW",01.POSO.00.1271.025,"AC Type 2",22,AC,1,exact_name_coord
+992,0,"Teison 22 KW",01.POSO.00.1271.023,"AC Type 2",22,AC,1,exact_name_coord
+993,0,"Delta AC Max",01.POSO.00.3273.036,"AC Type 2",22,AC,1,exact_name_coord
+993,1,"Delta DC Wallbox",01.POSO.00.3273.035,CCS2,25,DC,1,exact_name_coord
+993,1,"Delta DC Wallbox",01.POSO.00.3273.035,CHAdeMO,25,DC,1,exact_name_coord
+994,0,"Teison 22 KW",01.POSO.00.3525.015,"AC Type 2",22,AC,1,exact_name_coord
+996,0,"Teison 22 KW",01.POSO.00.1808.001,"AC Type 2",22,AC,1,exact_name_coord
+997,0,"1. CS AC Charger",01.POSO.00.3175.046,"AC Type 2",22,AC,1,exact_name_coord
+997,1,"2. CS AC Charger",01.POSO.00.3175.045,"AC Type 2",22,AC,1,exact_name_coord
+998,0,"Teison 22 KW",01.POSO.00.3671.045,"AC Type 2",22,AC,1,exact_name_coord
+999,0,"Autel MaxiCharger DC Compact",01.PPOO.00.3174.079,CCS2,47,DC,2,exact_name_coord
+1000,0,"CS AC Charger",01.POSO.00.3305.003,"AC Type 2",22,AC,1,exact_name_prov
+1001,0,"Delta AC Max",01.POSO.00.9104.002,"AC Type 2",22,AC,1,exact_name_coord
+1001,1,"Delta DC Wallbox",01.POSO.00.9104.003,CCS2,25,DC,1,exact_name_coord
+1002,0,"Teison 22 KW",01.POSO.00.1571.008,"AC Type 2",22,AC,1,exact_name_coord
+1003,0,"1. CS AC Charger",01.POSO.00.1471.016,"AC Type 2",22,AC,1,exact_name_coord
+1004,0,"1. Chargecore AC-22",01.POSO.00.3311.003,"AC Type 2",22,AC,1,exact_name_prov
+1004,1,"2. Chargecore AC-22",01.POSO.00.3311.004,"AC Type 2",22,AC,1,exact_name_prov
+1005,0,"Chargecore AC-22",01.POSO.00.3304.001,"AC Type 2",22,AC,1,exact_name_prov
+1006,0,"1. Chargecore AC-22",01.POSO.00.3311.005,"AC Type 2",22,AC,1,exact_name_prov
+1007,0,"Chargecore AC-22",01.POSO.00.3372.007,"AC Type 2",22,AC,1,exact_name_prov
+1008,0,"CS AC Charger",01.POSO.00.3305.004,"AC Type 2",22,AC,1,exact_name_prov
+1010,0,"Chargecore AC-22",01.POSO.00.3374.035,"AC Type 2",22,AC,1,exact_name_prov
+1010,1,"CS DC Charger",01.POSO.00.3374.034,CCS2,50,DC,2,exact_name_prov
+1011,0,"Delta AC Max",01.POSO.00.9202.003,"AC Type 2",22,AC,1,exact_name_coord
+1011,1,"Delta DC Wallbox",01.POSO.00.9202.004,CCS2,25,DC,1,exact_name_coord
+1012,0,"CS DC Charger",01.POSO.00.6111.001,CCS2,30,DC,1,exact_name_coord
+1013,0,"CS AC Charger",01.POSO.00.6104.005,"AC Type 2",22,AC,1,exact_name_coord
+1014,0,"CS AC Charger",01.POSO.00.1401.007,"AC Type 2",22,AC,1,exact_name_coord
+1015,0,"1. Chargecore AC-22",01.POSO.00.3173.034,"AC Type 2",22,AC,1,exact_name_coord
+1015,1,"2. Chargecore AC-22",01.POSO.00.3173.033,"AC Type 2",22,AC,1,exact_name_coord
+1016,0,"Free Standing DC Fast Charger",01.POSO.00.3174.080,CCS2,50,DC,2,exact_name_coord
+1017,0,"1. Proteksindo AC-22",01.POSO.00.3174.081,"AC Type 2",22,AC,1,exact_name_coord
+1017,1,"2. Proteksindo AC-22",01.POSO.00.3174.082,"AC Type 2",22,AC,1,exact_name_coord
+1018,0,"Teison 22 KW",01.POSO.00.1706.001,"AC Type 2",22,AC,1,exact_name_coord
+1019,0,"CS AC Charger",01.POSO.00.1471.018,"AC Type 2",22,AC,1,exact_name_coord
+1020,0,"CS AC Charger",01.POSO.00.1471.015,"AC Type 2",22,AC,1,exact_name_coord
+1021,0,"CS AC Charger",01.POSO.00.1471.019,"AC Type 2",22,AC,1,exact_name_coord
+1022,0,"Chargecore AC-22",01.POSO.00.3314.014,"AC Type 2",22,AC,1,exact_name_prov
+1023,0,"CS AC Charger",01.POSO.00.6111.002,"AC Type 2",22,AC,1,exact_name_coord
+1024,0,"CS AC Charger",01.POSO.00.3312.001,"AC Type 2",22,AC,1,exact_name_prov
+1025,0,"Chargecore AC-22",01.POSO.00.3311.007,"AC Type 2",22,AC,1,exact_name_prov
+1025,1,"CS DC Charger",01.POSO.00.3311.006,CCS2,50,DC,2,exact_name_prov
+1026,0,"CS DC Charger",01.POSO.00.3171.065,CCS2,50,DC,2,exact_name_coord
+1027,0,"1. CS AC Charger",01.POSO.00.3275.029,"AC Type 2",22,AC,1,exact_name_coord
+1027,1,"2. CS AC Charger",01.POSO.00.3275.028,"AC Type 2",22,AC,1,exact_name_coord
+1028,0,"CS DC Charger",01.POSO.00.1401.006,CCS2,30,DC,1,exact_name_coord
+1030,0,"Chargecore AC-22",01.POSO.00.3305.005,"AC Type 2",22,AC,1,exact_name_prov
+1031,0,"Free Standing DC Fast Charger",01.POSO.00.3175.048,CCS2,100,DC,2,exact_name_coord
+1032,0,"Chargecore AC-22",01.POSO.00.7371.016,"AC Type 2",22,AC,1,exact_name_coord
+1034,0,"CS AC Charger",01.POSO.00.3313.003,"AC Type 2",22,AC,1,exact_name_prov
+1035,0,"CS AC Charger",01.POSO.00.5171.037,"AC Type 2",22,AC,1,exact_name_coord
+1036,0,"Chargecore AC-22",01.POSO.00.8104.001,"AC Type 2",22,AC,1,exact_name_coord
+1037,0,"CS DC Charger",01.POSO.00.1407.002,CCS2,30,DC,1,exact_name_coord
+1038,0,"CS DC Charger",01.POSO.00.1407.001,CCS2,30,DC,1,exact_name_coord
+1039,0,"CS AC Charger",01.POSO.00.3304.002,"AC Type 2",22,AC,1,exact_name_prov
+1040,0,"Chargecore AC-22",01.POSO.00.3324.007,"AC Type 2",22,AC,1,exact_name_prov
+1041,0,"1. Proteksindo AC-22",01.POSO.00.3175.049,"AC Type 2",22,AC,1,exact_name_coord
+1041,1,"2. Proteksindo AC-22",01.POSO.00.3175.050,"AC Type 2",22,AC,1,exact_name_coord
+1042,0,"Chargecore AC-22",01.POSO.00.3306.003,"AC Type 2",22,AC,1,exact_name_prov
+1043,0,"EV Power 60",01.PPOO.00.3673.012,CCS2,60,DC,2,exact_name_coord
+1045,0,"Teison 22 KW",01.POSO.00.1607.001,"AC Type 2",22,AC,1,exact_name_coord
+1046,0,"Teison 22 KW",01.POSO.00.1602.009,"AC Type 2",22,AC,1,exact_name_coord
+1047,0,"Teison 22 KW",01.POSO.00.1205.003,"AC Type 2",22,AC,1,exact_name_coord
+1048,0,"Teison 22 KW",01.POSO.00.3502.003,"AC Type 2",22,AC,1,exact_name_coord
+1050,0,"Chargecore AC-22",01.POSO.00.3312.003,"AC Type 2",22,AC,1,exact_name_prov
+1050,1,"CS AC Charger",01.POSO.00.3312.002,"AC Type 2",22,AC,1,exact_name_prov
+1051,0,"CS AC Charger",01.POSO.00.5102.010,"AC Type 2",22,AC,1,exact_name_coord
+1052,0,"CS AC Charger",01.POSO.00.1406.001,"AC Type 2",22,AC,1,exact_name_coord
+1053,0,"CS DC Charger",01.POSO.00.1406.002,CCS2,30,DC,1,exact_name_coord
+1054,0,"CS AC Charger",01.POSO.00.5271.016,"AC Type 2",22,AC,1,exact_name_coord
+1055,0,"Teison 22 KW",01.POSO.00.1509.002,"AC Type 2",22,AC,1,exact_name_coord
+1056,0,"CS DC Charger",01.POSO.00.3175.052,CCS2,100,DC,2,exact_name_coord
+1056,1,"CS AC Charger",01.POSO.00.3175.053,"AC Type 2",22,AC,1,exact_name_coord
+1057,0,"Teison 22 KW",01.POSO.00.1571.006,"AC Type 2",22,AC,1,exact_name_coord
+1058,0,"Teison 22 KW",01.POSO.00.1703.001,"AC Type 2",22,AC,1,exact_name_coord
+1059,0,"1. Chargecore AC-22",01.POSO.00.3173.037,"AC Type 2",22,AC,1,exact_name_coord
+1059,1,"2. Chargecore AC-22",01.POSO.00.3173.036,"AC Type 2",22,AC,1,exact_name_coord
+1060,0,"CS AC Charger",01.POSO.00.5108.008,"AC Type 2",22,AC,1,exact_name_coord
+1061,0,"CS AC Charger",01.POSO.00.5103.044,"AC Type 2",22,AC,1,exact_name_coord
+1063,0,"Zerova 22 KW",01.POSO.00.3503.001,"AC Type 2",22,AC,1,exact_name_coord
+1064,0,"CS AC Charger",01.POSO.00.6402.007,"AC Type 2",22,AC,1,exact_name_coord
+1065,0,"Chargecore AC-22",01.POSO.00.3323.003,"AC Type 2",22,AC,1,exact_name_prov
+1066,0,"Chargecore DC-100",01.POSO.00.3174.083,CCS2,100,DC,2,exact_name_coord
+1067,0,"Chargecore AC-22",01.POSO.00.8105.002,"AC Type 2",22,AC,1,exact_name_coord
+1068,0,"1. Teison 22 KW",01.POSO.00.3174.084,"AC Type 2",22,AC,1,exact_name_coord
+1068,1,"2. Teison 22 KW",01.POSO.00.3174.085,"AC Type 2",22,AC,1,exact_name_coord
+1069,0,"Chargecore AC-22",01.POSO.00.5206.004,"AC Type 2",22,AC,1,exact_name_coord
+1070,0,"Chargecore AC-22",01.POSO.00.5202.003,"AC Type 2",22,AC,1,exact_name_coord
+1071,0,"Chargecore DC-25",01.POSO.00.8108.001,CCS2,25,DC,1,exact_name_coord
+1072,0,"Chargecore AC-22",01.POSO.00.5206.005,"AC Type 2",22,AC,1,exact_name_coord
+1073,0,"Teison 22 KW",01.POSO.00.1610.006,"AC Type 2",22,AC,1,exact_name_coord
+1074,0,"Teison 22 KW",01.POSO.00.1674.001,"AC Type 2",22,AC,1,exact_name_coord
+1075,0,"Teison 22 KW",01.POSO.00.1902.006,"AC Type 2",22,AC,1,exact_name_coord
+1076,0,"Teison 22 KW",01.POSO.00.1208.005,"AC Type 2",22,AC,1,exact_name_coord
+1077,0,"Teison 22 KW",01.POSO.00.1219.001,"AC Type 2",22,AC,1,exact_name_coord
+1078,0,"Teison 22 KW",01.POSO.00.1207.010,"AC Type 2",22,AC,1,exact_name_coord
+1079,0,"CS DC Charger",01.POSO.00.5102.011,CCS2,100,DC,1,exact_name_coord
+1079,0,"CS DC Charger",01.POSO.00.5102.011,"DC Connector",100,DC,1,exact_name_coord
+1080,0,"CS AC Charger",01.POSO.00.5101.009,"AC Type 2",22,AC,1,exact_name_coord
+1081,0,"Teison 22 KW",01.POSO.00.5101.008,"AC Type 2",22,AC,1,exact_name_coord
+1082,0,"CS AC Charger",01.POSO.00.3302.006,"AC Type 2",22,AC,1,exact_name_prov
+1083,0,"CS AC Charger",01.POSO.00.3303.003,"AC Type 2",22,AC,1,exact_name_prov
+1084,0,"CS AC Charger",01.POSO.00.6409.010,"AC Type 2",22,AC,1,exact_name_coord
+1085,0,"Teison 22 KW",01.POSO.00.1707.001,"AC Type 2",22,AC,1,exact_name_coord
+1087,0,"Chargecore AC-22",01.POSO.00.3603.047,"AC Type 2",22,AC,1,exact_name_coord
+1087,1,"Chargecore DC-25",01.POSO.00.3603.046,CCS2,25,DC,1,exact_name_coord
+1088,0,"CS AC Charger",01.POSO.00.3205.013,"AC Type 2",22,AC,1,exact_name_coord
+1089,0,"Teison 22 KW",01.POSO.00.1701.001,"AC Type 2",22,AC,1,exact_name_prov
+1090,0,"CS AC Charger",01.POSO.00.6472.011,"AC Type 2",22,AC,1,exact_name_coord
+1091,0,"CS AC Charger",01.POSO.00.6409.009,"AC Type 2",22,AC,1,exact_name_coord
+1092,0,"CS AC Charger",01.POSO.00.6474.008,"AC Type 2",22,AC,1,exact_name_coord
+1093,0,"CS DC Charger",01.POSO.00.1403.003,CCS2,30,DC,1,exact_name_coord
+1094,1,"CS DC Charger",01.POSO.00.3205.012,CCS2,100,DC,2,exact_name_coord
+1094,2,"CS AC Charger",01.POSO.00.3205.011,"AC Type 2",22,AC,1,exact_name_coord
+1095,0,"Teison 22 KW",01.POSO.00.1871.013,"AC Type 2",22,AC,1,exact_name_coord
+1096,0,"Chargecore AC-22",01.POSO.00.5206.006,"AC Type 2",22,AC,1,exact_name_coord
+1098,0,"CS AC Charger",01.POSO.00.6401.002,"AC Type 2",22,AC,1,exact_name_coord
+1099,0,"CS AC Charger",01.POSO.00.6402.004,"AC Type 2",22,AC,1,exact_name_coord
+1100,0,"CS AC Charger",01.POSO.00.6402.005,"AC Type 2",22,AC,1,exact_name_coord
+1101,0,"CS AC Charger",01.POSO.00.6409.012,"AC Type 2",22,AC,1,exact_name_coord
+1102,0,"1. Chargecore AC-22",01.POSO.00.3173.040,"AC Type 2",22,AC,1,exact_name_coord
+1102,1,"2. Chargecore AC-22",01.POSO.00.3173.039,"AC Type 2",22,AC,1,exact_name_coord
+1102,2,"3. Chargecore AC-22",01.POSO.00.3173.038,"AC Type 2",22,AC,1,exact_name_coord
+1103,0,"CS AC Charger",01.POSO.00.6472.008,"AC Type 2",22,AC,1,exact_name_coord
+1104,0,"CS AC Charger",01.POSO.00.6407.001,"AC Type 2",22,AC,1,exact_name_coord
+1105,0,"CS AC Charger",01.POSO.00.6402.006,"AC Type 2",22,AC,1,exact_name_coord
+1106,0,"CS AC Charger",01.POSO.00.6409.011,"AC Type 2",22,AC,1,exact_name_coord
+1107,0,"CS DC Charger",01.POSO.00.1403.005,CCS2,30,DC,1,exact_name_coord
+1108,0,"Chargecore AC-22",01.POSO.00.3326.004,"AC Type 2",22,AC,1,core_name_geo
+1109,0,"Teison 22 KW",01.POSO.00.3320.003,"AC Type 2",22,AC,1,exact_name_prov
+1110,0,"Chargecore AC-22",01.POSO.00.3325.007,"AC Type 2",22,AC,1,exact_name_prov
+1111,0,"CS DC Charger",01.POSO.00.1403.004,CCS2,30,DC,1,exact_name_coord
+1112,0,"Teison 22 KW",01.POSO.00.3325.008,"AC Type 2",22,AC,1,exact_name_prov
+1113,0,"CS AC Charger",01.POSO.00.6474.006,"AC Type 2",22,AC,1,exact_name_coord
+1114,0,"CS AC Charger",01.POSO.00.6401.003,"AC Type 2",22,AC,1,exact_name_coord
+1115,0,"Teison 22 KW",01.POSO.00.1902.008,"AC Type 2",22,AC,1,exact_name_coord
+1116,0,"CS DC Charger",01.POSO.00.6472.009,CCS2,25,DC,1,exact_name_coord
+1117,0,"CS AC Charger",01.POSO.00.6472.010,"AC Type 2",22,AC,1,exact_name_coord
+1118,0,"CS AC Charger",01.POSO.00.6474.007,"AC Type 2",22,AC,1,exact_name_coord
+1119,0,"CS AC Charger",01.POSO.00.5271.019,"AC Type 2",22,AC,1,exact_name_coord
+1120,0,"Chargecore AC-22",01.POSO.00.7371.017,"AC Type 2",22,AC,1,exact_name_coord
+1121,0,"Chargecore AC-22",01.POSO.00.7317.001,"AC Type 2",22,AC,1,exact_name_coord
+1123,0,"CS DC Charger",01.POSO.00.1402.006,CCS2,30,DC,1,exact_name_coord
+1124,0,"Chargecore DC-120",01.POSO.00.3204.012,CCS2,120,DC,2,exact_name_coord
+1125,0,"Teison 22 KW",01.POSO.00.3673.013,"AC Type 2",22,AC,1,exact_name_coord
+1126,0,"Teison 22 KW",01.POSO.00.3217.007,"AC Type 2",22,AC,1,exact_name_coord
+1127,0,"CS AC Charger",01.POSO.00.6408.004,"AC Type 2",22,AC,1,exact_name_coord
+1128,0,"Chargecore AC-22",01.POSO.00.7307.001,"AC Type 2",22,AC,1,exact_name_coord
+1129,0,"Chargecore AC-22",01.POSO.00.3308.003,"AC Type 2",22,AC,1,exact_name_prov
+1130,0,"CS AC Charger",01.POSO.00.3175.054,"AC Type 2",22,AC,1,exact_name_coord
+1130,1,"Teison 22 KW",01.POSO.00.3175.055,"AC Type 2",22,AC,1,exact_name_coord
+1132,0,"Teison 22 KW",01.POSO.00.1871.016,"AC Type 2",22,AC,1,exact_name_coord
+1133,0,"Chargecore AC-22",01.POSO.00.7314.001,"AC Type 2",22,AC,1,exact_name_coord
+1134,0,"Chargecore AC-22",01.POSO.00.7315.003,"AC Type 2",22,AC,1,exact_name_coord
+1135,0,"Chargecore AC-22",01.POSO.00.7318.001,"AC Type 2",22,AC,1,exact_name_coord
+1136,0,"CS AC Charger",01.POSO.00.6101.003,"AC Type 2",22,AC,1,exact_name_coord
+1137,0,"Chargecore AC-22",01.POSO.00.3573.011,"AC Type 2",22,AC,1,exact_name_coord
+1137,1,"Chargecore AC-22",01.POSO.00.3573.010,"AC Type 2",22,AC,1,exact_name_coord
+1138,0,"Teison 22 KW",01.POSO.00.3171.066,"AC Type 2",22,AC,1,exact_name_coord
+1139,0,"Chargecore AC-22",01.POSO.00.3308.004,"AC Type 2",22,AC,1,exact_name_prov
+1140,0,"Chargecore AC-22",01.POSO.00.3323.004,"AC Type 2",22,AC,1,exact_name_prov
+1141,0,"Chargecore AC-22",01.POSO.00.3173.041,"AC Type 2",22,AC,1,exact_name_coord
+1142,0,"1. CS AC Charger",01.POSO.00.3404.007,"AC Type 2",22,AC,1,exact_name_prov
+1142,1,"2. CS AC Charger",01.POSO.00.3404.008,"AC Type 2",22,AC,1,exact_name_prov
+1143,0,"1. Chargecore AC-22",01.POSO.00.3507.006,"AC Type 2",22,AC,1,exact_name_coord
+1143,1,"2. Chargecore AC-22",01.POSO.00.3507.005,"AC Type 2",22,AC,1,exact_name_coord
+1144,0,"Teison 22 KW",01.POSO.00.3327.005,"AC Type 2",22,AC,1,exact_name_prov
+1145,0,"Free Standing DC Fast Charger",01.POSO.00.1173.002,CCS2,100,DC,2,exact_name_coord
+1146,0,"Teison 22 KW",01.POSO.00.1110.001,"AC Type 2",22,AC,1,exact_name_coord
+1147,0,"Teison 22 KW",01.POSO.00.1214.001,"AC Type 2",22,AC,1,exact_name_coord
+1148,0,"Teison 22 KW",01.POSO.00.3327.006,"AC Type 2",22,AC,1,exact_name_prov
+1149,0,"CS AC Charger",01.POSO.00.5271.015,"AC Type 2",22,AC,1,exact_name_coord
+1150,0,"CS AC Charger",01.POSO.00.9103.001,"AC Type 2",22,AC,1,exact_name_coord
+1151,0,"Teison 22 KW",01.POSO.00.1278.001,"AC Type 2",22,AC,1,exact_name_coord
+1152,0,"Delta DC City Charger",01.POSO.00.1301.003,"AC Type 2",22,AC,1,exact_name_coord
+1152,0,"Delta DC City Charger",01.POSO.00.1301.003,CCS2,50,DC,1,exact_name_coord
+1152,0,"Delta DC City Charger",01.POSO.00.1301.003,CHAdeMO,50,DC,1,exact_name_coord
+1153,0,"Teison 22 KW",01.POSO.00.3321.004,"AC Type 2",22,AC,1,exact_name_prov
+1154,0,"Teison 22 KW",01.POSO.00.1312.002,"AC Type 2",22,AC,1,exact_name_coord
+1155,0,"Chargecore AC-22",01.POSO.00.3216.023,"AC Type 2",22,AC,1,exact_name_coord
+1155,1,"Chargecore AC-22",01.POSO.00.3216.022,"AC Type 2",22,AC,1,exact_name_coord
+1156,0,"1. Chargecore AC-22",01.POSO.00.3216.024,"AC Type 2",22,AC,1,spatial_100m_token
+1156,1,"2. Chargecore AC-22",01.POSO.00.3216.025,"AC Type 2",22,AC,1,spatial_100m_token
+1157,0,"Teison 22 KW",01.POSO.00.3328.014,"AC Type 2",22,AC,1,exact_name_prov
+1157,1,"Teison 22 KW",01.POSO.00.3328.015,"AC Type 2",22,AC,1,exact_name_prov
+1158,0,"CS DC Charger",01.POSO.00.3515.006,CCS2,25,DC,1,exact_name_coord
+1158,1,"Zerova 22 KW",01.POSO.00.3515.007,"AC Type 2",22,AC,1,exact_name_coord
+1160,0,"Chargecore AC-22",01.POSO.00.7408.001,"AC Type 2",22,AC,1,exact_name_coord
+1161,0,"Teison 22 KW",01.POSO.00.3514.021,"AC Type 2",22,AC,1,exact_name_coord
+1162,0,"Teison 22 KW",01.POSO.00.1312.003,"AC Type 2",22,AC,1,exact_name_coord
+1163,0,"CS DC Charger",01.POSO.00.1408.003,CCS2,30,DC,1,exact_name_coord
+1164,0,"Teison 22 KW",01.POSO.00.3315.003,"AC Type 2",22,AC,1,exact_name_prov
+1165,0,"CS DC Charger",01.POSO.00.1471.020,CCS2,30,DC,1,exact_name_coord
+1166,0,"Teison 22 KW",01.POSO.00.1871.009,"AC Type 2",22,AC,1,exact_name_coord
+1166,1,"Teison 22 KW",01.POSO.00.1871.008,"AC Type 2",22,AC,1,exact_name_coord
+1167,1,"Chargecore AC-22",01.POSO.00.3273.034,"AC Type 2",22,AC,1,exact_name_coord
+1168,0,"Chargecore AC-22",01.POSO.00.8272.003,"AC Type 2",22,AC,1,exact_name_coord
+1169,0,"Chargecore AC-22",01.POSO.00.8203.002,"AC Type 2",22,AC,1,exact_name_coord
+1171,0,"Teison 22 KW",01.POSO.00.1302.003,"AC Type 2",22,AC,1,exact_name_coord
+1172,0,"Teison 22 KW",01.POSO.00.3603.049,"AC Type 2",22,AC,1,exact_name_coord
+1172,1,"Teison 22 KW",01.POSO.00.3603.048,"AC Type 2",22,AC,1,exact_name_coord
+1173,0,"Chargecore AC-22",01.POSO.00.3308.005,"AC Type 2",22,AC,1,exact_name_prov
+1174,0,"Chargecore AC-22",01.POSO.00.7313.001,"AC Type 2",22,AC,1,exact_name_coord
+1175,0,"Zerova 22 KW",01.POSO.00.3578.031,"AC Type 2",22,AC,1,exact_name_coord
+1177,0,"Teison 22 KW",01.POSO.00.3315.005,"AC Type 2",22,AC,1,exact_name_prov
+1178,0,"Chargecore AC-22",01.POSO.00.3175.056,"AC Type 2",22,AC,1,exact_name_coord
+1179,0,"1. Chargecore AC-22",01.POSO.00.3276.014,"AC Type 2",22,AC,1,exact_name_coord
+1179,1,"2. Chargecore AC-22",01.POSO.00.3276.015,"AC Type 2",22,AC,1,exact_name_coord
+1181,0,"Teison 22 KW",01.POSO.00.1312.004,"AC Type 2",22,AC,1,exact_name_coord
+1182,0,"Teison 22 KW",01.POSO.00.1372.004,"AC Type 2",22,AC,1,exact_name_coord
+1183,0,"CS DC Charger",01.POSO.00.1408.004,CCS2,30,DC,1,exact_name_coord
+1186,0,"Chargecore AC-22",01.POSO.00.3215.026,"AC Type 2",22,AC,1,exact_name_coord
+1186,1,"Chargecore AC-22",01.POSO.00.3215.025,"AC Type 2",22,AC,1,exact_name_coord
+1187,0,"Chargecore AC-22",01.POSO.00.3215.024,"AC Type 2",22,AC,1,exact_name_coord
+1187,1,"Delta DC Wallbox",01.POSO.00.3215.023,CCS2,25,DC,1,exact_name_coord
+1189,0,"Teison 22 KW",01.POSO.00.3329.007,"AC Type 2",22,AC,1,exact_name_prov
+1190,0,"Teison 22 KW",01.POSO.00.3525.016,"AC Type 2",22,AC,1,exact_name_coord
+1191,0,"Chargecore AC-22",01.POSO.00.3175.057,"AC Type 2",22,AC,1,exact_name_coord
+1191,1,"Chargecore AC-22",01.POSO.00.3175.058,"AC Type 2",22,AC,1,exact_name_coord
+1192,0,"Chargecore AC-22",01.POSO.00.3175.059,"AC Type 2",22,AC,1,exact_name_coord
+1193,0,"Chargecore AC-22",01.POSO.00.3174.086,"AC Type 2",22,AC,1,exact_name_coord
+1194,0,"1. CS AC Charger",01.POSO.00.3275.030,"AC Type 2",22,AC,1,exact_name_coord
+1195,0,"Teison 22 KW",01.POSO.00.3673.015,"AC Type 2",22,AC,1,exact_name_coord
+1195,1,"Teison 22 KW",01.POSO.00.3673.014,"AC Type 2",22,AC,1,exact_name_coord
+1196,0,"Teison 22 KW",01.POSO.00.1371.011,"AC Type 2",22,AC,1,exact_name_coord
+1197,0,"AC Mini Plus",01.POSO.00.5301.002,"AC Type 2",7,AC,1,exact_name_prov
+1201,0,"Teison 22 KW",01.POSO.00.1871.012,"AC Type 2",22,AC,1,exact_name_coord
+1202,0,"1. Teison 22 KW",01.POSO.00.1871.006,"AC Type 2",22,AC,1,exact_name_coord
+1202,1,"2. Teison 22 KW",01.POSO.00.1871.007,"AC Type 2",22,AC,1,exact_name_coord
+1204,0,"1. Teison 22 KW",01.POSO.00.1809.002,"AC Type 2",22,AC,1,exact_name_coord
+1204,1,"2. Teison 22 KW",01.POSO.00.1809.001,"AC Type 2",22,AC,1,exact_name_coord
+1205,0,"CS DC Charger",01.POSO.00.3603.050,CCS2,100,DC,2,exact_name_coord
+1205,1,"1. Teison 22 KW",01.POSO.00.3603.053,"AC Type 2",22,AC,1,exact_name_coord
+1205,2,"2. Teison 22 KW",01.POSO.00.3603.052,"AC Type 2",22,AC,1,exact_name_coord
+1205,3,"3. Teison 22 KW",01.POSO.00.3603.051,"AC Type 2",22,AC,1,exact_name_coord
+1206,0,"1. Chargecore AC-22",01.POSO.00.3310.004,"AC Type 2",22,AC,1,exact_name_prov
+1206,1,"2. Chargecore AC-22",01.POSO.00.3310.005,"AC Type 2",22,AC,1,exact_name_prov
+1207,0,"1. Delta DC 100 kW City Charger",01.PPOO.00.3174.089,CCS2,100,DC,2,exact_name_coord
+1207,1,"2. Delta DC 100 kW City Charger",01.PPOO.00.3174.087,CCS2,100,DC,2,exact_name_coord
+1207,2,"3. Delta DC 100 kW City Charger",01.PPOO.00.3174.088,CCS2,100,DC,2,exact_name_coord
+1208,0,"Chargecore AC-22",01.POSO.00.3308.006,"AC Type 2",22,AC,1,exact_name_prov
+1209,0,"Chargecore AC-22",01.POSO.00.3310.006,"AC Type 2",22,AC,1,exact_name_prov
+1210,1,"1. Teison 22 KW",01.POSO.00.3174.091,"AC Type 2",22,AC,1,exact_name_coord
+1210,2,"2. Teison 22 KW",01.POSO.00.3174.092,"AC Type 2",22,AC,1,exact_name_coord
+1210,3,"3. Teison 22 KW",01.POSO.00.3174.093,"AC Type 2",22,AC,1,exact_name_coord
+1212,0,"Chargecore AC-22",01.POSO.00.3310.007,"AC Type 2",22,AC,1,exact_name_prov
+1214,0,"CS AC Charger",01.POSO.00.5108.009,"AC Type 2",22,AC,1,exact_name_coord
+1215,0,"1. Chargecore AC-22",01.POSO.00.3524.001,"AC Type 2",22,AC,1,exact_name_coord
+1215,1,"2. Chargecore AC-22",01.POSO.00.3524.002,"AC Type 2",22,AC,1,exact_name_coord
+1217,0,"Chargecore AC-22",01.POSO.00.3175.060,"AC Type 2",22,AC,1,exact_name_coord
+1218,0,"CS AC Charger",01.POSO.00.6104.004,"AC Type 2",22,AC,1,exact_name_coord
+1219,0,"Teison 22 KW",01.POSO.00.1376.004,"AC Type 2",22,AC,1,exact_name_coord
+1220,0,"CS AC Charger",01.POSO.00.6108.001,"AC Type 2",22,AC,1,exact_name_coord
+1221,0,"CS AC Charger",01.POSO.00.6108.002,"AC Type 2",22,AC,1,exact_name_coord
+1222,0,"Chargecore AC-22",01.POSO.00.7601.002,"AC Type 2",22,AC,1,exact_name_coord
+1223,0,"Teison 22 KW",01.POSO.00.1307.004,"AC Type 2",22,AC,1,exact_name_coord
+1224,0,"CS AC Charger",01.POSO.00.6101.004,"AC Type 2",22,AC,1,exact_name_coord
+1225,0,"1. Chargecore AC-22",01.POSO.00.7371.021,"AC Type 2",22,AC,1,exact_name_coord
+1225,1,"2. Chargecore AC-22",01.POSO.00.7371.020,"AC Type 2",22,AC,1,exact_name_coord
+1225,2,"Chargecore DC-50",01.POSO.00.7371.022,CCS2,50,DC,2,exact_name_coord
+1226,0,"Chargecore DC-100",01.POSO.00.7371.015,CCS2,100,DC,2,exact_name_coord
+1227,0,"Teison 22 KW",01.POSO.00.3171.067,"AC Type 2",22,AC,1,exact_name_coord
+1228,0,"Teison 22 KW",01.POSO.00.1376.003,"AC Type 2",22,AC,1,exact_name_coord
+1229,0,"Teison 22 KW",01.POSO.00.1376.005,"AC Type 2",22,AC,1,exact_name_coord
+1230,0,"Teison 22 KW",01.POSO.00.1376.006,"AC Type 2",22,AC,1,exact_name_coord
+1232,0,"Chargecore AC-22",01.POSO.00.5107.006,"AC Type 2",22,AC,1,exact_name_coord
+1233,0,"Delta AC Max",01.POSO.00.3218.005,"AC Type 2",22,AC,1,exact_name_coord
+1234,0,"Teison 22 KW",01.POSO.00.3275.031,"AC Type 2",22,AC,1,exact_name_coord
+1234,1,"Teison 22 KW",01.POSO.00.3275.032,"AC Type 2",22,AC,1,exact_name_coord
+1235,0,"Free Standing DC Fast Charger",01.POSO.00.1207.008,CCS2,25,DC,1,exact_name_coord
+1240,0,"Teison 22 KW",01.POSO.00.3504.004,"AC Type 2",22,AC,1,exact_name_coord
+1240,1,"Wall Mount AC Charger",01.POSO.00.3504.005,"AC Type 2",22,AC,1,exact_name_coord
+1241,0,"CS AC Charger",01.POSO.00.5103.043,"AC Type 2",22,AC,1,exact_name_coord
+1242,0,"Chargecore DC-100",01.POSO.00.3175.061,CCS2,100,DC,2,exact_name_coord
+1243,0,"CS AC Charger",01.POSO.00.3175.062,"AC Type 2",22,AC,1,exact_name_coord
+1245,0,"Teison 22 KW",01.POSO.00.1303.003,"AC Type 2",22,AC,1,exact_name_coord
+1246,0,"Delta AC Max",01.POSO.00.9271.003,"AC Type 2",22,AC,1,exact_name_coord
+1246,1,"Delta DC Wallbox",01.POSO.00.9271.004,CCS2,25,DC,1,exact_name_coord
+1247,0,"CS AC Charger",01.POSO.00.3171.068,"AC Type 2",22,AC,1,exact_name_coord
+1247,1,"Teison 22 KW",01.POSO.00.3171.069,"AC Type 2",22,AC,1,exact_name_coord
+1251,1,"Teison 22 KW",01.POSO.00.1303.001,"AC Type 2",22,AC,1,exact_name_coord
+1252,0,"1. Teison 22 KW",01.POSO.00.1971.006,"AC Type 2",22,AC,1,exact_name_coord
+1252,1,"2. Teison 22 KW",01.POSO.00.1971.007,"AC Type 2",22,AC,1,exact_name_coord
+1253,0,"Proteksindo AC EVAX-22",01.POSO.00.7601.001,"AC Type 2",22,AC,1,exact_name_coord
+1254,0,"Chargecore DC-25",01.POSO.00.7203.001,CCS2,25,DC,1,exact_name_coord
+1255,0,"Chargecore AC-22",01.POSO.00.7271.004,"AC Type 2",22,AC,1,exact_name_coord
+1257,0,"Chargecore AC-22",01.POSO.00.3276.016,"AC Type 2",22,AC,1,exact_name_coord
+1259,0,"Chargecore AC-22",01.POSO.00.3174.097,"AC Type 2",22,AC,1,spatial_100m_token
+1259,1,"Chargecore AC-22",01.POSO.00.3174.096,"AC Type 2",22,AC,1,spatial_100m_token
+1260,0,"Chargecore AC-22",01.POSO.00.3175.065,"AC Type 2",22,AC,1,exact_name_coord
+1261,0,"Teison 22 KW",01.POSO.00.3508.003,"AC Type 2",22,AC,1,exact_name_coord
+1262,0,"Teison 22 KW",01.POSO.00.3509.005,"AC Type 2",22,AC,1,exact_name_coord
+1263,0,"Teison 22 KW",01.POSO.00.1109.001,"AC Type 2",22,AC,1,exact_name_coord
+1264,0,"Teison 22 KW",01.POSO.00.1305.003,"AC Type 2",22,AC,1,exact_name_coord
+1265,0,"1. Teison 22 KW",01.POSO.00.3509.006,"AC Type 2",22,AC,1,exact_name_coord
+1265,1,"2. Teison 22 KW",01.POSO.00.3509.007,"AC Type 2",22,AC,1,exact_name_coord
+1267,0,"Zerova 22 KW",01.POSO.00.3509.009,"AC Type 2",22,AC,1,exact_name_coord
+1268,0,"Chargecore AC-22",01.POSO.00.7202.002,"AC Type 2",22,AC,1,exact_name_prov
+1271,0,"CS AC Charger",01.POSO.00.3304.003,"AC Type 2",22,AC,1,exact_name_prov
+1272,0,"CS AC Charger",01.POSO.00.3307.003,"AC Type 2",22,AC,1,exact_name_prov
+1274,0,"CS DC Charger",01.POSO.00.1404.001,CCS2,30,DC,1,exact_name_coord
+1275,0,"Teison 22 KW",01.POSO.00.1613.001,"AC Type 2",22,AC,1,exact_name_coord
+1277,0,"1. Teison 22 KW",01.POSO.00.3172.029,"AC Type 2",22,AC,1,spatial_100m_token
+1277,1,"2. Teison 22 KW",01.POSO.00.3172.030,"AC Type 2",22,AC,1,spatial_100m_token
+1278,0,"Chargecore DC-25",01.POSO.00.8102.001,CCS2,25,DC,1,exact_name_coord
+1279,0,"Teison 22 KW",01.POSO.00.1672.001,"AC Type 2",22,AC,1,exact_name_coord
+1280,0,"Teison 22 KW",01.POSO.00.1604.002,"AC Type 2",22,AC,1,exact_name_coord
+1281,0,"Chargecore AC-22",01.POSO.00.3174.103,"AC Type 2",22,AC,1,exact_name_coord
+1281,1,"Chargecore AC-22",01.POSO.00.3174.100,"AC Type 2",22,AC,1,exact_name_coord
+1281,2,"Chargecore DC-50",01.POSO.00.3174.102,CCS2,50,DC,2,exact_name_coord
+1281,3,"Chargecore AC-22",01.POSO.00.3174.101,"AC Type 2",22,AC,1,exact_name_coord
+1281,4,"Chargecore DC-50",01.POSO.00.3174.104,CCS2,50,DC,2,exact_name_coord
+1282,0,"1. Teison 22 KW",01.POSO.00.3172.031,"AC Type 2",22,AC,1,core_name_geo
+1282,1,"2. Teison 22 KW",01.POSO.00.3172.033,"AC Type 2",22,AC,1,core_name_geo
+1282,2,"3. Teison 22 KW",01.POSO.00.3172.032,"AC Type 2",22,AC,1,core_name_geo
+1283,0,"CS AC Charger",01.POSO.00.3175.066,"AC Type 2",22,AC,1,exact_name_coord
+1284,0,"1. Teison 22 KW",01.POSO.00.3579.005,"AC Type 2",22,AC,1,exact_name_coord
+1284,1,"2. Teison 22 KW",01.POSO.00.3579.004,"AC Type 2",22,AC,1,exact_name_coord
+1284,2,"3. Teison 22 KW",01.POSO.00.3579.003,"AC Type 2",22,AC,1,exact_name_coord
+1286,0,"1. CS AC Charger",01.POSO.00.3579.007,"AC Type 2",22,AC,1,exact_name_coord
+1286,1,"2. CS AC Charger",01.POSO.00.3579.008,"AC Type 2",22,AC,1,exact_name_coord
+1286,2,"3. CS AC Charger",01.POSO.00.3579.009,"AC Type 2",22,AC,1,exact_name_coord
+1286,3,"4. CS AC Charger",01.POSO.00.3579.006,"AC Type 2",22,AC,1,exact_name_coord
+1287,0,"CS AC Charger",01.POSO.00.6408.005,"AC Type 2",22,AC,1,exact_name_coord
+1288,0,"IoCharge AC Wallbox",01.POSO.00.7271.005,"AC Type 2",7,AC,1,exact_name_coord
+1289,0,"Chargecore AC-22",01.POSO.00.3203.015,"AC Type 2",22,AC,1,exact_name_coord
+1290,0,"Chargecore AC-22",01.POSO.00.3203.016,"AC Type 2",22,AC,1,exact_name_coord
+1291,1,"Chargecore AC-22",01.POSO.00.3211.007,"AC Type 2",22,AC,1,exact_name_coord
+1292,0,"1. Chargecore AC-22",01.POSO.00.3173.043,"AC Type 2",22,AC,1,exact_name_coord
+1292,1,"2. Chargecore AC-22",01.POSO.00.3173.042,"AC Type 2",22,AC,1,exact_name_coord
+1293,0,"1. Proteksindo AC-22",01.POSO.00.3174.105,"AC Type 2",22,AC,1,exact_name_coord
+1293,1,"2. Proteksindo AC-22",01.POSO.00.3174.106,"AC Type 2",22,AC,1,exact_name_coord
+1295,0,"CS AC Charger",01.POSO.00.3507.007,"AC Type 2",22,AC,1,exact_name_coord
+1295,1,"Teison 22 KW",01.POSO.00.3507.008,"AC Type 2",22,AC,1,exact_name_coord
+1296,0,"CS AC Charger",01.POSO.00.3573.012,"AC Type 2",22,AC,1,exact_name_coord
+1301,0,"1. Chargecore AC-22",01.POSO.00.3507.011,"AC Type 2",22,AC,1,exact_name_coord
+1301,1,"2. Chargecore AC-22",01.POSO.00.3507.012,"AC Type 2",22,AC,1,exact_name_coord
+1302,0,"Teison 22 KW",01.POSO.00.1611.001,"AC Type 2",22,AC,1,exact_name_coord
+1305,0,"CS AC Charger",01.POSO.00.9201.001,"AC Type 2",22,AC,1,exact_name_coord
+1308,0,"Chargecore AC-22",01.POSO.00.3172.034,"AC Type 2",22,AC,1,exact_name_coord
+1313,0,"Chargecore AC-22",01.POSO.00.7403.001,"AC Type 2",22,AC,1,exact_name_coord
+1315,0,"1. Chargecore AC-22",01.POSO.00.3173.046,"AC Type 2",22,AC,1,core_name_geo
+1315,1,"2. Chargecore AC-22",01.POSO.00.3173.047,"AC Type 2",22,AC,1,core_name_geo
+1316,0,"Teison 22 KW",01.POSO.00.1906.002,"AC Type 2",22,AC,1,exact_name_coord
+1317,0,"CS DC Charger",01.POSO.00.1401.005,CCS2,50,DC,2,exact_name_coord
+1319,0,"Chargecore DC-25",01.POSO.00.7501.001,CCS2,25,DC,1,core_name_geo
+1322,0,"1. Chargecore DC-50",01.POSO.00.3276.018,CCS2,50,DC,2,exact_name_coord
+1322,1,"2. Chargecore DC-50",01.POSO.00.3276.019,CCS2,50,DC,2,exact_name_coord
+1322,2,"1. Chargecore AC-22",01.POSO.00.3276.020,"AC Type 2",22,AC,1,exact_name_coord
+1322,3,"2. Chargecore AC-22",01.POSO.00.3276.021,"AC Type 2",22,AC,1,exact_name_coord
+1322,4,"3. Chargecore AC-22",01.POSO.00.3276.022,"AC Type 2",22,AC,1,exact_name_coord
+1323,0,"CS DC Charger",01.POSO.00.6105.001,CCS2,50,DC,2,exact_name_coord
+1324,0,"Chargecore AC-22",01.POSO.00.7501.002,"AC Type 2",22,AC,1,exact_name_coord
+1325,0,"Teison 22 KW",01.POSO.00.1311.002,"AC Type 2",22,AC,1,exact_name_coord
+1326,0,"Chargecore AC-22",01.POSO.00.3211.006,"AC Type 2",22,AC,1,exact_name_coord
+1327,0,"1. Teison 22 KW",01.POSO.00.3604.006,"AC Type 2",22,AC,1,exact_name_coord
+1327,1,"2. Teison 22 KW",01.POSO.00.3604.007,"AC Type 2",22,AC,1,exact_name_coord
+1329,0,"Free Standing DC Fast Charger",01.POSO.00.1901.003,CCS2,25,DC,1,exact_name_coord
+1330,0,"CS AC Charger",01.POSO.00.3175.068,"AC Type 2",22,AC,1,exact_name_coord
+1332,0,"CS AC Charger",01.POSO.00.1410.001,"AC Type 2",22,AC,1,exact_name_coord
+1333,0,"Chargecore AC-22",01.POSO.00.3275.033,"AC Type 2",22,AC,1,exact_name_coord
+1333,1,"Chargecore AC-22",01.POSO.00.3275.034,"AC Type 2",22,AC,1,exact_name_coord
+1334,0,"CS DC Charger",01.POSO.00.1402.005,CCS2,30,DC,1,exact_name_coord
+1337,0,"Chargecore AC-22",01.POSO.00.7105.002,"AC Type 2",22,AC,1,exact_name_coord
+1338,0,"Chargecore AC-22",01.POSO.00.3208.007,"AC Type 2",22,AC,1,exact_name_coord
+1339,0,"1. Teison 22 KW",01.POSO.00.3274.002,"AC Type 2",22,AC,1,exact_name_coord
+1339,1,"2. Teison 22 KW",01.POSO.00.3274.003,"AC Type 2",22,AC,1,exact_name_coord
+1340,0,"Chargecore AC-22",01.POSO.00.3578.033,"AC Type 2",22,AC,1,exact_name_coord
+1341,0,"Teison 22 KW",01.POSO.00.3174.109,"AC Type 2",22,AC,1,exact_name_coord
+1342,0,"Teison 22 KW",01.POSO.00.3674.035,"AC Type 2",22,AC,1,exact_name_coord
+1342,1,"Teison 22 KW",01.POSO.00.3674.034,"AC Type 2",22,AC,1,exact_name_coord
+1343,0,"Teison 22 KW",01.POSO.00.1371.013,"AC Type 2",22,AC,1,exact_name_coord
+1347,0,"CS AC Charger",01.POSO.00.5103.045,"AC Type 2",22,AC,1,exact_name_coord
+1348,0,"CS AC Charger",01.POSO.00.5103.046,"AC Type 2",22,AC,1,exact_name_coord
+1349,0,"Teison 22 KW",01.POSO.00.3204.014,"AC Type 2",22,AC,1,exact_name_coord
+1351,0,"Teison 22 KW",01.POSO.00.3174.110,"AC Type 2",22,AC,1,exact_name_coord
+1352,0,"CS AC Charger",01.POSO.00.3507.013,"AC Type 2",22,AC,1,exact_name_coord
+1353,0,"Chargecore AC-22",01.POSO.00.3201.022,"AC Type 2",22,AC,1,exact_name_coord
+1354,0,"Teison 22 KW",01.POSO.00.3202.010,"AC Type 2",22,AC,1,exact_name_coord
+1356,0,"Chargecore AC-22",01.POSO.00.3201.021,"AC Type 2",22,AC,1,exact_name_coord
+1357,0,"Chargecore AC-22",01.POSO.00.3201.023,"AC Type 2",22,AC,1,exact_name_coord
+1358,0,"1. CS AC Charger",01.POSO.00.3603.057,"AC Type 2",22,AC,1,exact_name_coord
+1358,1,"2. CS AC Charger",01.POSO.00.3603.058,"AC Type 2",22,AC,1,exact_name_coord
+1359,0,"Teison 22 KW",01.POSO.00.1905.005,"AC Type 2",22,AC,1,exact_name_coord
+1360,0,"CS AC Charger",01.POSO.00.3507.014,"AC Type 2",22,AC,1,exact_name_coord
+1361,0,"CS AC Charger",01.POSO.00.3507.015,"AC Type 2",22,AC,1,exact_name_coord
+1362,0,"Chargecore AC-22",01.POSO.00.3578.034,"AC Type 2",22,AC,1,exact_name_coord
+1364,0,"CS AC Charger",01.POSO.00.3573.013,"AC Type 2",22,AC,1,exact_name_coord
+1364,1,"Teison 22 KW",01.POSO.00.3573.014,"AC Type 2",22,AC,1,exact_name_coord
+1365,0,"CS AC Charger",01.POSO.00.3603.059,"AC Type 2",22,AC,1,exact_name_coord
+1366,0,"AC Mini Plus",01.POSO.00.7212.001,"AC Type 2",7,AC,1,exact_name_coord
+1367,0,"Chargecore DC-25",01.POSO.00.3603.060,CCS2,25,DC,1,exact_name_coord
+1368,0,"1. Teison 22 KW",01.POSO.00.3573.015,"AC Type 2",22,AC,1,exact_name_coord
+1368,1,"2. Teison 22 KW",01.POSO.00.3573.016,"AC Type 2",22,AC,1,exact_name_coord
+1369,0,"Teison 22 KW",01.POSO.00.1902.009,"AC Type 2",22,AC,1,exact_name_coord
+1370,0,"Zerova 22 KW",01.POSO.00.3573.017,"AC Type 2",22,AC,1,exact_name_coord
+1371,0,"1. Chargecore AC-22",01.POSO.00.3673.016,"AC Type 2",22,AC,1,exact_name_coord
+1371,1,"2. Chargecore AC-22",01.POSO.00.3673.017,"AC Type 2",22,AC,1,exact_name_coord
+1372,0,"Chargecore AC-22",01.POSO.00.3603.061,"AC Type 2",22,AC,1,exact_name_coord
+1373,0,"Zerova 22 KW",01.POSO.00.3515.009,"AC Type 2",22,AC,1,exact_name_prov
+1374,0,"Chargecore AC-22",01.POSO.00.3507.017,"AC Type 2",22,AC,1,exact_name_coord
+1375,0,"Chargecore AC-22",01.POSO.00.3579.010,"AC Type 2",22,AC,1,exact_name_coord
+1375,1,"CS AC Charger",01.POSO.00.3579.011,"AC Type 2",22,AC,1,exact_name_coord
+1663,0,"Teison DC 200 kW",01.POSO.00.3671.026,CCS2,200,DC,1,core_name_geo
+1663,0,"Teison DC 200 kW",01.POSO.00.3671.026,"DC Connector",200,DC,1,core_name_geo
+1676,0,"1. CS AC Charger",04.ROSO.00.3171.012,"AC Type 2",22,AC,2,spatial_100m_token
+1766,0,"Altro AC Charger",01.POSO.00.1372.002,"AC Type 2",7,AC,1,core_name_geo
+1928,0,"Delta AC Max",01.POSO.00.1116.001,"AC Type 2",22,AC,1,core_name_geo
+1947,0,"1. Teison DC 100 kW",01.POSO.00.3603.009,CCS2,100,DC,2,core_name_geo
+2006,0,"Altro AC Charger",01.POSO.00.3203.006,"AC Type 2",7,AC,1,exact_name_prov
+2197,0,"Voltron AC 7 kW",04.ROSO.00.3175.003,"AC Type 2",7,AC,1,spatial_100m_token
+2197,1,"1. Voltron",04.ROSO.00.3175.004,"AC Type 2",7,AC,1,spatial_100m_token
+2199,1,"Voltron AC 22 kW",04.ROSO.00.3171.011,"AC Type 2",22,AC,1,core_name_geo
+2199,3,"2. Voltron",04.ROSO.00.3171.010,"AC Type 2",22,AC,1,core_name_geo
+2220,1,"Voltron AC 22 kW",04.ROSO.00.3171.013,"AC Type 2",22,AC,1,spatial_100m_token
+2223,1,"Voltron AC 22 kW",04.ROSO.00.3174.026,"AC Type 2",22,AC,2,spatial_100m_token
+2225,1,"Voltron AC 22 kW",04.ROSO.00.3171.012,"AC Type 2",22,AC,2,core_name_geo
+2226,0,"Voltron AC 7 kW",04.ROSO.00.3173.005,"AC Type 2",7,AC,2,core_name_geo
+2226,1,"Voltron AC 22 kW",04.ROSO.00.3173.006,"AC Type 2",22,AC,1,core_name_geo
+2227,0,"Voltron AC 7 kW",04.ROSO.00.3578.008,"AC Type 2",7,AC,1,core_name_geo
+2227,1,"Voltron AC 22 kW",04.ROSO.00.3578.009,"AC Type 2",22,AC,1,core_name_geo
+2235,0,"Voltron AC 7 kW",04.ROSO.00.3174.023,"AC Type 2",7,AC,1,core_name_geo
+2235,1,"Voltron AC 22 kW",04.ROSO.00.3174.022,"AC Type 2",22,AC,1,core_name_geo
+2236,1,"Voltron AC 22 kW",04.ROSO.00.3174.021,"AC Type 2",22,AC,1,core_name_geo
+2378,0,"01. Aurora 22 AC",05.ROSO.00.3171.051,"AC Type 2",22,AC,1,spatial_100m_token
+2378,1,"02. Aurora 22 AC",05.ROSO.00.3171.050,"AC Type 2",22,AC,1,spatial_100m_token
+2378,2,"03. Aurora 22 AC",05.ROSO.00.3171.052,"AC Type 2",22,AC,1,spatial_100m_token
+2378,3,"04. Aurora 22 AC",05.ROSO.00.3171.049,"AC Type 2",22,AC,1,spatial_100m_token
+2378,4,"05. Aurora 22 AC",05.ROSO.00.3171.048,"AC Type 2",22,AC,1,spatial_100m_token
+2378,5,"06. Aurora 22 AC",05.ROSO.00.3171.044,"AC Type 2",22,AC,1,spatial_100m_token
+2378,6,"05. Aurora 11 - AC",05.ROSO.00.3171.047,"AC Type 2",11,AC,1,spatial_100m_token
+2378,7,"06. Aurora 11 - AC",05.ROSO.00.3171.045,"AC Type 2",11,AC,1,spatial_100m_token
+2378,8,"07. Aurora 11 - AC",05.ROSO.00.3171.046,"AC Type 2",11,AC,1,spatial_100m_token
+2378,9,"08. Aurora 11 - AC",05.ROSO.00.3171.053,"AC Type 2",11,AC,2,spatial_100m_token
+2384,0,"01. Marvel 72 - AC",05.ROSO.00.5171.009,"AC Type 2",7,AC,2,exact_name_prov
+2386,0,"Exicom 22 kW EV AC Charger",09.ROSO.00.3672.001,"AC Type 2",22,AC,1,spatial_100m_token
+2557,0,"VOLTRON - DC 100 kW",01.PPOO.00.3174.060,CCS2,100,DC,2,spatial_100m_token
+2698,1,"2. Voltron",04.ROSO.00.3171.013,"AC Type 2",22,AC,1,spatial_100m_token
+2701,1,"2. Voltron",04.ROSO.00.3174.026,"AC Type 2",22,AC,2,spatial_100m_token
+2704,0,"1. Voltron",04.ROSO.00.3173.005,"AC Type 2",7,AC,2,core_name_geo
+2704,1,"2. Voltron",04.ROSO.00.3173.006,"AC Type 2",22,AC,1,core_name_geo
+2712,1,"2. Voltron",04.ROSO.00.3174.021,"AC Type 2",22,AC,1,core_name_geo
+2758,0,"1. Voltron",01.POSO.00.3215.001,"AC Type 2",22,AC,1,spatial_100m_token
+2936,0,"01. Marvel 72 AC",05.ROSO.00.3216.017,"AC Type 2",22,AC,2,exact_name_coord
+2936,1,"02. Marvel 72 AC",05.ROSO.00.3216.019,"AC Type 2",22,AC,2,exact_name_coord
+2936,2,"01. DC Turbo",05.ROSO.00.3216.020,CCS2,120,DC,2,exact_name_coord
+2936,3,"02. DC Turbo",05.ROSO.00.3216.018,CCS2,120,DC,2,exact_name_coord
+2940,0,"Turbo 600",05.ROSO.00.3578.021,CCS2,120,DC,2,spatial_100m_token
+2948,0,"Delta AC",05.ROSO.00.5103.042,"AC Type 2",5.5,AC,1,exact_name_coord
+2949,0,"DC Turbo",05.ROSO.00.5103.040,CCS2,120,DC,2,spatial_100m_token
+2949,0,"DC Turbo",05.ROSO.00.5103.040,"DC Connector",120,DC,2,spatial_100m_token
+3018,0,"Aurora 11",05.ROSO.00.3174.062,"AC Type 2",11,AC,1,spatial_100m_token
+3018,1,"Aurora 22",05.ROSO.00.3174.063,"AC Type 2",22,AC,1,spatial_100m_token
+3018,2,"Aurora 22",05.ROSO.00.3174.064,"AC Type 2",22,AC,1,spatial_100m_token
