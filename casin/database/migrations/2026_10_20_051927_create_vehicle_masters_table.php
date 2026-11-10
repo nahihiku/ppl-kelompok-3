@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('brand');
             $table->string('model');
             $table->string('default_connector_type');
-            $table->decimal('battery_capacity_kwh', 8, 2)->nullable();
+            $table->decimal('battery_capacity_kwh', 8, 2);
             $table->timestamps();
         });
     }

@@ -40,7 +40,7 @@ class AuthApiTest extends TestCase
             ]);
 
         $this->assertDatabaseHas('users', [
-            'name' => 'Budi Santoso',
+            'nama' => 'Budi Santoso',
             'email' => 'budi@example.com',
             'phone' => '+628123456789',
         ]);

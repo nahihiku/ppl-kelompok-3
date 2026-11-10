@@ -105,7 +105,7 @@ class Station extends Model
 
     public function connectors()
     {
-        return $this->hasMany(StationConnector::class, 'station_id', 'id_stations');
+        return $this->hasMany(StationConnector::class, 'id_stations', 'id_stations');
     }
 
     public function reports()

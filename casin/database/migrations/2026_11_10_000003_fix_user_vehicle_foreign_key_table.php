@@ -13,13 +13,17 @@ return new class extends Migration
             return;
         }
 
+        $hasAlignedColumns = Schema::hasColumn('user_vehicle', 'id_user')
+            && Schema::hasColumn('user_vehicle', 'id_vehicle_masters');
+
         if (DB::getDriverName() === 'sqlite') {
             $tableSql = DB::table('sqlite_master')
                 ->where('type', 'table')
                 ->where('name', 'user_vehicle')
                 ->value('sql');
 
-            if (! is_string($tableSql) || ! preg_match('/references\s+"?vehicle_master"?\s*\(/i', $tableSql)) {
+            $hasBrokenVehicleFk = is_string($tableSql) && preg_match('/references\s+"?vehicle_master"?\s*\(/i', $tableSql);
+            if ($hasAlignedColumns && ! $hasBrokenVehicleFk) {
                 return;
             }
 
@@ -28,24 +32,33 @@ return new class extends Migration
             Schema::disableForeignKeyConstraints();
             Schema::drop('user_vehicle');
             Schema::create('user_vehicle', function (Blueprint $table) {
-                $table->id();
-                $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-                $table->foreignId('vehicle_id')->constrained('vehicle_masters', 'id_vehicle_masters')->onDelete('cascade');
-                $table->string('license_plate')->nullable();
-                $table->string('color')->nullable();
+                $table->id('id_user_vehicle');
+                $table->foreignId('id_user')->constrained('users', 'id_user')->onDelete('cascade');
+                $table->foreignId('id_vehicle_masters')->constrained('vehicle_masters', 'id_vehicle_masters')->onDelete('cascade');
+                $table->boolean('is_active')->default(true);
                 $table->timestamps();
             });
 
             if (! empty($existingRows)) {
-                $validUserIds = DB::table('users')->pluck('id')->all();
+                $userPk = Schema::hasColumn('users', 'id_user') ? 'id_user' : 'id';
+                $validUserIds = DB::table('users')->pluck($userPk)->all();
                 $validVehicleIds = DB::table('vehicle_masters')->pluck('id_vehicle_masters')->all();
-                $filtered = array_values(array_filter(
-                    $existingRows,
-                    fn (array $row) => in_array($row['user_id'] ?? null, $validUserIds, true)
-                        && in_array($row['vehicle_id'] ?? null, $validVehicleIds, true)
-                ));
-                if (! empty($filtered)) {
-                    DB::table('user_vehicle')->insert($filtered);
+                $mapped = [];
+                foreach ($existingRows as $row) {
+                    $uId = $row['id_user'] ?? $row['user_id'] ?? null;
+                    $vId = $row['id_vehicle_masters'] ?? $row['vehicle_id'] ?? null;
+                    if (in_array($uId, $validUserIds, true) && in_array($vId, $validVehicleIds, true)) {
+                        $mapped[] = [
+                            'id_user' => $uId,
+                            'id_vehicle_masters' => $vId,
+                            'is_active' => $row['is_active'] ?? true,
+                            'created_at' => $row['created_at'] ?? now(),
+                            'updated_at' => $row['updated_at'] ?? now(),
+                        ];
+                    }
+                }
+                if (! empty($mapped)) {
+                    DB::table('user_vehicle')->insert($mapped);
                 }
             }
 
@@ -55,7 +68,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        // Tidak perlu mengembalikan foreign key ke nama tabel yang keliru.
+        // Tidak perlu mengembalikan foreign key ke nama tabel/kolom yang keliru.
     }
 };
-

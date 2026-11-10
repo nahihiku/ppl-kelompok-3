@@ -180,7 +180,7 @@ class StationImportService
                     }
                     // Hindari duplikasi baris jika stasiun sudah punya tipe yang sama pada daya yang sama.
                     $existingExact = $model->connectors->first(
-                        fn ($other) => $other->id_station_connectors !== $conn->id_station_connectors
+                        fn ($other) => $other->id_station_connector !== $conn->id_station_connector
                             && $other->connector_type === $candidates[0]
                             && abs((float) $other->power_kw - (float) $conn->power_kw) < 0.01
                             && strtoupper((string) $other->current_type) === $cur
@@ -259,7 +259,7 @@ class StationImportService
 
                     foreach ($item['connectors'] as $c) {
                         $connectorRows[] = [
-                            'station_id' => $stationId,
+                            'id_stations' => $stationId,
                             'connector_type' => $c['connector_type'],
                             'power_kw' => (float) $c['power_kw'],
                             'charging_speed_category' => $c['charging_speed_category'],

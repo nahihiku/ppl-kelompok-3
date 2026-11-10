@@ -295,11 +295,11 @@ class Dashboard extends BaseDashboard
         // User Rows (always from real DB)
         $userRows = $hasUsersTable
             ? User::query()
-                ->orderBy('id')
+                ->orderBy('id_user')
                 ->get()
                 ->map(fn (User $u) => [
-                    'id' => $u->id,
-                    'name' => $u->name,
+                    'id' => $u->id_user,
+                    'name' => $u->nama,
                     'email' => $u->email,
                     'phone' => $u->phone ?? '-',
                     'role' => $u->role ?? 'user',
@@ -310,7 +310,7 @@ class Dashboard extends BaseDashboard
 
         // Connector Rows (always from real DB)
         if ($hasConnectorsTable) {
-            $connectorQuery = StationConnector::with('station')->orderBy('id_station_connectors');
+            $connectorQuery = StationConnector::with('station')->orderBy('id_station_connector');
             if ($connectorsUseRemotePagination) {
                 $connectorQuery->take(10);
             }
@@ -474,8 +474,8 @@ class Dashboard extends BaseDashboard
             'reportRows' => $reportRows,
             'reviewRows' => $reviewRows,
             'stationOptions' => $stationOptions,
-            'adminId' => $currentUser?->id,
-            'adminName' => $currentUser?->name ?? 'Admin CasIn.id',
+            'adminId' => $currentUser?->id_user,
+            'adminName' => $currentUser?->nama ?? 'Admin CasIn.id',
             'adminEmail' => $currentUser?->email ?? 'admin@casin.id',
             'adminPhone' => $currentUser?->phone ?? '',
         ];

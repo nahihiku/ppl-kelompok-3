@@ -35,7 +35,7 @@ class AuthController extends Controller
         ]);
 
         $user = User::create([
-            'name' => $validated['name'],
+            'nama' => $validated['name'],
             'email' => Str::lower($validated['email']),
             'phone' => $validated['phone'] ?? null,
             'role' => 'user',

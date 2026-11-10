@@ -23,7 +23,7 @@ class GoogleAuthService
         if ($user) {
             $user->forceFill([
                 'google_id' => $googleId,
-                'name' => $user->name ?: ($googleUser->getName() ?? Str::before($email, '@')),
+                'nama' => $user->nama ?: ($googleUser->getName() ?? Str::before($email, '@')),
                 'email_verified_at' => $user->email_verified_at ?? now(),
             ])->save();
 
@@ -31,7 +31,7 @@ class GoogleAuthService
         }
 
         return User::create([
-            'name' => $googleUser->getName() ?? Str::before($email, '@'),
+            'nama' => $googleUser->getName() ?? Str::before($email, '@'),
             'email' => $email,
             'role' => 'user',
             'google_id' => $googleId,

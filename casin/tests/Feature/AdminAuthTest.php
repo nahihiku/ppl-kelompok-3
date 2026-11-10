@@ -276,7 +276,7 @@ class AdminAuthTest extends TestCase
             'current_status' => 'normal',
         ]);
         $this->assertDatabaseHas('station_connectors', [
-            'station_id' => $stationId,
+            'id_stations' => $stationId,
             'connector_type' => 'CCS2',
             'charging_speed_category' => 'ultra',
             'available_connectors' => 2,
@@ -383,11 +383,11 @@ class AdminAuthTest extends TestCase
         ]);
 
         $createResponse->assertStatus(201);
-        $connectorId = $createResponse->json('data.id_station_connectors');
+        $connectorId = $createResponse->json('data.id_station_connector');
 
         $this->assertDatabaseHas('station_connectors', [
-            'id_station_connectors' => $connectorId,
-            'station_id' => $station->id_stations,
+            'id_station_connector' => $connectorId,
+            'id_stations' => $station->id_stations,
             'connector_type' => 'CHAdeMO',
             'available_connectors' => 1,
             'total_connectors' => 2,
@@ -405,7 +405,7 @@ class AdminAuthTest extends TestCase
 
         $updateResponse->assertStatus(200);
         $this->assertDatabaseHas('station_connectors', [
-            'id_station_connectors' => $connectorId,
+            'id_station_connector' => $connectorId,
             'connector_type' => 'AC Type 2',
             'available_connectors' => 4,
             'total_connectors' => 4,
@@ -414,7 +414,7 @@ class AdminAuthTest extends TestCase
         $deleteResponse = $this->actingAs($admin)->deleteJson("/admin/api/connectors/{$connectorId}");
         $deleteResponse->assertStatus(200);
         $this->assertDatabaseMissing('station_connectors', [
-            'id_station_connectors' => $connectorId,
+            'id_station_connector' => $connectorId,
         ]);
     }
 
@@ -446,7 +446,7 @@ class AdminAuthTest extends TestCase
             ->assertJsonPath('data.role', 'admin');
 
         $this->assertDatabaseHas('users', [
-            'id' => $otherUser->id,
+            'id_user' => $otherUser->id_user,
             'role' => 'admin',
         ]);
 
@@ -513,19 +513,20 @@ class AdminAuthTest extends TestCase
             'battery_capacity_kwh' => 72.6,
         ]);
         \Illuminate\Support\Facades\DB::table('user_vehicle')->insert([
-            'user_id' => $otherUser->id,
-            'vehicle_id' => $otherVehicle->id_vehicle_masters,
+            'id_user' => $otherUser->id_user,
+            'id_vehicle_masters' => $otherVehicle->id_vehicle_masters,
+            'is_active' => true,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
         $otherUser->createToken('temp_user_token');
 
         $this->actingAs($admin)
-            ->deleteJson("/admin/api/users/{$otherUser->id}")
+            ->deleteJson("/admin/api/users/{$otherUser->id_user}")
             ->assertStatus(200);
-        $this->assertDatabaseMissing('users', ['id' => $otherUser->id]);
-        $this->assertDatabaseMissing('user_vehicle', ['user_id' => $otherUser->id]);
-        $this->assertDatabaseMissing('personal_access_tokens', ['tokenable_id' => $otherUser->id]);
+        $this->assertDatabaseMissing('users', ['id_user' => $otherUser->id_user]);
+        $this->assertDatabaseMissing('user_vehicle', ['id_user' => $otherUser->id_user]);
+        $this->assertDatabaseMissing('personal_access_tokens', ['tokenable_id' => $otherUser->id_user]);
 
         // Update admin profile
         $this->actingAs($admin)

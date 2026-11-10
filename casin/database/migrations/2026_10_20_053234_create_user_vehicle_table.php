@@ -12,11 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('user_vehicle', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('vehicle_id')->constrained('vehicle_masters', 'id_vehicle_masters')->onDelete('cascade');
-            $table->string('license_plate')->nullable();
-            $table->string('color')->nullable();
+            $table->id('id_user_vehicle');
+            $table->foreignId('id_user')->constrained('users', 'id_user')->onDelete('cascade');
+            $table->foreignId('id_vehicle_masters')->constrained('vehicle_masters', 'id_vehicle_masters')->onDelete('cascade');
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }

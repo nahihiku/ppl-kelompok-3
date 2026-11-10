@@ -75,7 +75,7 @@ class AuthenticatedSessionController extends Controller
         ]);
 
         $user = User::create([
-            'name' => $validated['name'],
+            'nama' => $validated['name'],
             'email' => $validated['email'],
             'phone' => $validated['phone'] ?? null,
             'role' => 'user',

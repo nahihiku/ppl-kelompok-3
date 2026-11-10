@@ -11,6 +11,7 @@ use App\Models\User;
 use App\Models\VehicleMaster;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
@@ -26,14 +27,14 @@ class DatabaseSeeder extends Seeder
         User::updateOrCreate(
             ['email' => 'admin@casin.id'],
             [
-                'name' => 'Admin CasIn.id',
+                'nama' => 'Admin CasIn.id',
                 'role' => 'admin',
                 'password' => 'password',
             ]
         );
 
         $naufalAccount = User::firstOrNew(['email' => 'naufalrabbani146@gmail.com']);
-        $naufalAccount->name = 'Naufal';
+        $naufalAccount->nama = 'Naufal';
         $naufalAccount->role = 'admin';
         if (! $naufalAccount->exists || empty($naufalAccount->password)) {
             $naufalAccount->password = Str::random(32);
@@ -43,7 +44,7 @@ class DatabaseSeeder extends Seeder
         User::updateOrCreate(
             ['email' => 'test@example.com'],
             [
-                'name' => 'Test User',
+                'nama' => 'Test User',
                 'role' => 'user',
                 'password' => 'password',
             ]
@@ -712,30 +713,34 @@ class DatabaseSeeder extends Seeder
             $station->connectors()->createMany($connectors);
         }
 
-        // 4. Data Master Operator & Tipe Konektor
-        $operators = [
-            ['name' => 'PLN', 'official_app_name' => 'PLN Mobile', 'logo_url' => null],
-            ['name' => 'ION Mobility', 'official_app_name' => 'ION Mobility', 'logo_url' => null],
-            ['name' => 'Shell Recharge', 'official_app_name' => 'Shell Asia App', 'logo_url' => null],
-            ['name' => 'Charge+', 'official_app_name' => 'Charge+ App', 'logo_url' => null],
-            ['name' => 'Starvo', 'official_app_name' => 'Starvo App', 'logo_url' => null],
-            ['name' => 'Voltron', 'official_app_name' => 'Voltron App', 'logo_url' => null],
-            ['name' => 'Astra Otopower', 'official_app_name' => 'Astra Otoshop', 'logo_url' => null],
-            ['name' => 'Hyundai EV', 'official_app_name' => 'MyHyundai ID', 'logo_url' => null],
-        ];
+        // 4. Data Master Operator & Tipe Konektor (opsional jika tabel tersedia)
+        if (Schema::hasTable('operators')) {
+            $operators = [
+                ['name' => 'PLN', 'official_app_name' => 'PLN Mobile', 'logo_url' => null],
+                ['name' => 'ION Mobility', 'official_app_name' => 'ION Mobility', 'logo_url' => null],
+                ['name' => 'Shell Recharge', 'official_app_name' => 'Shell Asia App', 'logo_url' => null],
+                ['name' => 'Charge+', 'official_app_name' => 'Charge+ App', 'logo_url' => null],
+                ['name' => 'Starvo', 'official_app_name' => 'Starvo App', 'logo_url' => null],
+                ['name' => 'Voltron', 'official_app_name' => 'Voltron App', 'logo_url' => null],
+                ['name' => 'Astra Otopower', 'official_app_name' => 'Astra Otoshop', 'logo_url' => null],
+                ['name' => 'Hyundai EV', 'official_app_name' => 'MyHyundai ID', 'logo_url' => null],
+            ];
 
-        foreach ($operators as $op) {
-            Operator::updateOrCreate(['name' => $op['name']], $op);
+            foreach ($operators as $op) {
+                Operator::updateOrCreate(['name' => $op['name']], $op);
+            }
         }
 
-        $connectorTypes = [
-            ['name' => 'CCS2', 'current_type' => 'DC'],
-            ['name' => 'AC Type 2', 'current_type' => 'AC'],
-            ['name' => 'CHAdeMO', 'current_type' => 'DC'],
-        ];
+        if (Schema::hasTable('connector_types')) {
+            $connectorTypes = [
+                ['name' => 'CCS2', 'current_type' => 'DC'],
+                ['name' => 'AC Type 2', 'current_type' => 'AC'],
+                ['name' => 'CHAdeMO', 'current_type' => 'DC'],
+            ];
 
-        foreach ($connectorTypes as $ct) {
-            ConnectorType::updateOrCreate(['name' => $ct['name']], $ct);
+            foreach ($connectorTypes as $ct) {
+                ConnectorType::updateOrCreate(['name' => $ct['name']], $ct);
+            }
         }
 
         // 5. Data Laporan Kondisi Stasiun
@@ -856,7 +861,7 @@ class DatabaseSeeder extends Seeder
 
         foreach ($reviewsData as $revItem) {
             $stationId = $stationByName[$revItem['station_name']] ?? null;
-            $userId = $revItem['user']?->id;
+            $userId = $revItem['user']?->id_user;
             if ($stationId && $userId) {
                 StationReview::firstOrCreate(
                     [

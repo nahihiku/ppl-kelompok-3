@@ -63,8 +63,8 @@ class AdminDataController extends Controller
     public static function formatConnectorRow(StationConnector $c): array
     {
         return [
-            'id' => $c->id_station_connectors,
-            'station_id' => $c->station_id,
+            'id' => $c->id_station_connector,
+            'station_id' => $c->id_stations,
             'station_name' => $c->station?->name ?? '-',
             'connector_type' => $c->connector_type,
             'power_kw' => (float) $c->power_kw,
@@ -153,7 +153,7 @@ class AdminDataController extends Controller
         $search = trim((string) $request->query('search', ''));
         $connectorType = trim((string) $request->query('connector_type', ''));
 
-        $query = StationConnector::with('station')->orderBy('id_station_connectors');
+        $query = StationConnector::with('station')->orderBy('id_station_connector');
 
         if ($connectorType !== '') {
             $query->where('connector_type', $connectorType);
@@ -367,7 +367,7 @@ class AdminDataController extends Controller
         $available = min((int) $validated['available_connectors'], $total);
 
         $connector = StationConnector::create([
-            'station_id' => (int) $validated['station_id'],
+            'id_stations' => (int) $validated['station_id'],
             'connector_type' => $validated['connector_type'],
             'power_kw' => (float) $validated['power_kw'],
             'charging_speed_category' => $validated['charging_speed_category'],
@@ -401,7 +401,7 @@ class AdminDataController extends Controller
         $available = min((int) $validated['available_connectors'], $total);
 
         $connector->update([
-            'station_id' => (int) $validated['station_id'],
+            'id_stations' => (int) $validated['station_id'],
             'connector_type' => $validated['connector_type'],
             'power_kw' => (float) $validated['power_kw'],
             'charging_speed_category' => $validated['charging_speed_category'],
@@ -435,7 +435,7 @@ class AdminDataController extends Controller
             'role' => ['required', Rule::in(['admin', 'user'])],
         ]);
 
-        if ($user->id === Auth::id() && $validated['role'] !== 'admin') {
+        if ((int) $user->id_user === (int) Auth::id() && $validated['role'] !== 'admin') {
             return response()->json([
                 'success' => false,
                 'message' => 'Anda tidak dapat menurunkan hak akses akun Anda sendiri.',
@@ -452,8 +452,8 @@ class AdminDataController extends Controller
             'success' => true,
             'message' => 'Peran pengguna berhasil diperbarui.',
             'data' => [
-                'id' => $user->id,
-                'name' => $user->name,
+                'id' => $user->id_user,
+                'name' => $user->nama,
                 'email' => $user->email,
                 'role' => $user->role,
             ],
@@ -464,7 +464,7 @@ class AdminDataController extends Controller
     {
         $user = User::findOrFail($id);
 
-        if ($user->id === Auth::id()) {
+        if ((int) $user->id_user === (int) Auth::id()) {
             return response()->json([
                 'success' => false,
                 'message' => 'Anda tidak dapat menghapus akun yang sedang aktif digunakan.',
@@ -472,8 +472,17 @@ class AdminDataController extends Controller
         }
 
         $user->tokens()->delete();
+        if (Schema::hasTable('user_vehicle')) {
+            DB::table('user_vehicle')->where('id_user', $user->id_user)->delete();
+        }
+        if (Schema::hasTable('station_reviews')) {
+            DB::table('station_reviews')->where('id_user', $user->id_user)->delete();
+        }
+        if (Schema::hasTable('user_favorites')) {
+            DB::table('user_favorites')->where('id_user', $user->id_user)->delete();
+        }
         if (Schema::hasTable('sessions')) {
-            DB::table('sessions')->where('user_id', $user->id)->delete();
+            DB::table('sessions')->where('user_id', $user->id_user)->delete();
         }
 
         $user->delete();
@@ -546,7 +555,7 @@ class AdminDataController extends Controller
         ]);
 
         $updateData = [
-            'name' => $validated['name'],
+            'nama' => $validated['name'],
             'phone' => $validated['phone'] ?? null,
         ];
 
@@ -560,7 +569,7 @@ class AdminDataController extends Controller
             'success' => true,
             'message' => 'Profil admin berhasil diperbarui.',
             'data' => [
-                'name' => $user->name,
+                'name' => $user->nama,
                 'email' => $user->email,
                 'phone' => $user->phone,
             ],
