@@ -13,17 +13,20 @@ return new class extends Migration
     {
         Schema::create('vehicle_masters', function (Blueprint $table) {
             $table->id('id_vehicle_masters');
-            $table->string('brand', 50);
-            $table->string('model', 50);
-            $table->string('connector_type', 50);
+            $table->string('category');
+            $table->string('brand');
+            $table->string('model');
+            $table->string('default_connector_type');
+            $table->decimal('battery_capacity_kwh', 8, 2)->nullable();
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('user_vehicle');
+        Schema::dropIfExists('vehicle_masters');
     }
 };
