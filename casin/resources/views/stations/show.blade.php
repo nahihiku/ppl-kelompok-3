@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ $station['name'] }} - CasIn.id</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -13,9 +14,15 @@
         <div
             class="detail-map-wrapper"
             id="station-detail-map"
+            data-station-id="{{ $station['id'] }}"
             data-lat="{{ $station['latitude'] }}"
             data-lng="{{ $station['longitude'] }}"
+            data-valid-coords="{{ ($station['is_valid_coordinate'] ?? true) ? '1' : '0' }}"
             data-name="{{ $station['name'] }}"
+            data-address="{{ $station['address'] }}"
+            data-status="{{ $station['current_status'] }}"
+            data-status-label="{{ $station['status_label'] }}"
+            data-stations='@json($allStations->values())'
             aria-label="Peta lokasi {{ $station['name'] }}"
         >
             <div class="map-fallback-canvas" aria-hidden="true">
@@ -87,14 +94,28 @@
 
             <div class="detail-actions-row">
                 <div class="detail-actions-left">
-                    <a
-                        href="https://www.google.com/maps/dir/?api=1&amp;destination={{ $station['latitude'] }},{{ $station['longitude'] }}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-gradient-pill btn-navigate"
-                    >
-                        Navigate
-                    </a>
+                    @if (($station['is_valid_coordinate'] ?? true) && ! empty($station['direct_nav_url']))
+                        <a
+                            href="{{ $station['direct_nav_url'] }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-gradient-pill btn-navigate"
+                            data-navigate-link
+                        >
+                            Navigate
+                        </a>
+                    @else
+                        <button
+                            type="button"
+                            class="btn-gradient-pill btn-navigate is-disabled"
+                            disabled
+                            aria-disabled="true"
+                            data-nav-disabled
+                            title="Koordinat lokasi stasiun tidak valid"
+                        >
+                            Navigate
+                        </button>
+                    @endif
 
                     <button
                         type="button"

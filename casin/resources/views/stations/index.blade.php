@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Daftar Stasiun Terdekat - CasIn.id</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="stations-page">
@@ -21,6 +23,9 @@
             <nav class="nav-actions" aria-label="Navigasi akun">
                 @auth
                     <span class="welcome-user">Hai, {{ Auth::user()->name }}</span>
+                    @if (Auth::user()->isAdmin())
+                        <a class="nav-admin-btn" href="{{ url('/admin') }}" data-admin-dashboard-btn>Dashboard Admin</a>
+                    @endif
                     <form method="POST" action="{{ route('logout') }}" class="inline-logout-form">
                         @csrf
                         <button class="nav-login-pill" type="submit">Keluar</button>
@@ -50,6 +55,9 @@
             </button>
             @auth
                 <span class="drawer-user">Masuk sebagai {{ Auth::user()->name }}</span>
+                @if (Auth::user()->isAdmin())
+                    <a href="{{ url('/admin') }}" class="drawer-link drawer-admin-link">Dashboard Admin</a>
+                @endif
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button type="submit" class="drawer-link drawer-logout">Keluar</button>
@@ -69,5 +77,6 @@
     </main>
 
     @include('partials.vehicle-modal')
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
 </body>
 </html>

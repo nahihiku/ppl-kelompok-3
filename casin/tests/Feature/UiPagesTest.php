@@ -19,8 +19,12 @@ class UiPagesTest extends TestCase
             ->assertSee('Kendaraan Aktif')
             ->assertSee('Pilih Kendaraan')
             ->assertSee('Charging jadi lebih pasti.')
+            ->assertSee('Peta Sebaran Stasiun Pengisian Daya')
+            ->assertSee('id="stations-overview-map"', false)
+            ->assertSee('id="stations-leaflet-canvas"', false)
             ->assertSee('Stasiun Terdekat')
             ->assertSee('PLN SPKLU Substation Central')
+            ->assertSee('Lihat di Peta')
             ->assertSee('id="location-widget"', false);
     }
 
@@ -69,6 +73,8 @@ class UiPagesTest extends TestCase
         $response = $this->get(route('stations.show', '1'));
         $response->assertStatus(200)
             ->assertSee('PLN SPKLU Substation Central')
+            ->assertSee('id="station-detail-map"', false)
+            ->assertSee('https://www.google.com/maps/dir/?api=1&destination=-6.175392,106.790512')
             ->assertSee('Navigate')
             ->assertSee('Lapor')
             ->assertSee('Kotak Pengisian')

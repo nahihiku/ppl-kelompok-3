@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#eefbfc">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>CasIn.id - Temukan Stasiun Pengisian Daya Terdekat</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="landing-page">
@@ -21,6 +23,9 @@
             <nav class="nav-actions" aria-label="Navigasi akun">
                 @auth
                     <span class="welcome-user">Hai, {{ Auth::user()->name }}</span>
+                    @if (Auth::user()->isAdmin())
+                        <a class="nav-admin-btn" href="{{ url('/admin') }}" data-admin-dashboard-btn>Dashboard Admin</a>
+                    @endif
                     <a class="nav-stations-link" href="{{ route('stations.index') }}">Daftar Stasiun</a>
                     <form method="POST" action="{{ route('logout') }}" class="inline-logout-form">
                         @csrf
@@ -51,6 +56,9 @@
             <a href="{{ route('stations.index') }}" class="drawer-link">Daftar Stasiun</a>
             @auth
                 <span class="drawer-user">Masuk sebagai {{ Auth::user()->name }}</span>
+                @if (Auth::user()->isAdmin())
+                    <a href="{{ url('/admin') }}" class="drawer-link drawer-admin-link">Dashboard Admin</a>
+                @endif
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button type="submit" class="drawer-link drawer-logout">Keluar</button>
@@ -153,5 +161,6 @@
     </main>
 
     @include('partials.vehicle-modal')
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
 </body>
 </html>

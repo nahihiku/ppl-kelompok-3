@@ -1,6 +1,6 @@
 <a class="brand {{ $class ?? '' }}" href="{{ route('home') }}" aria-label="CasIn.id, halaman utama">
     <span class="brand-logo-circle" aria-hidden="true">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="brand-logo-svg">
+        <svg viewBox="0 0 40 40" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg" class="brand-logo-svg">
             <rect x="9" y="8" width="15" height="24" rx="2.5" fill="#1E3278"/>
             <rect x="12" y="11" width="9" height="5" rx="1" fill="#FFFFFF"/>
             <path d="M17.2 18.5L13.5 23.5H16.5L15.8 27.5L19.5 22.5H16.5L17.2 18.5Z" fill="#FFFFFF"/>
