@@ -38,6 +38,7 @@ class AuthController extends Controller
             'name' => $validated['name'],
             'email' => Str::lower($validated['email']),
             'phone' => $validated['phone'] ?? null,
+            'role' => 'user',
             'password' => $validated['password'],
         ]);
 
@@ -53,6 +54,8 @@ class AuthController extends Controller
                     'name' => $user->name,
                     'email' => $user->email,
                     'phone' => $user->phone,
+                    'role' => $user->role ?? 'user',
+                    'is_admin' => $user->isAdmin(),
                     'created_at' => $user->created_at,
                     'updated_at' => $user->updated_at,
                 ],
@@ -99,6 +102,8 @@ class AuthController extends Controller
                     'name' => $user->name,
                     'email' => $user->email,
                     'phone' => $user->phone,
+                    'role' => $user->role ?? 'user',
+                    'is_admin' => $user->isAdmin(),
                     'created_at' => $user->created_at,
                     'updated_at' => $user->updated_at,
                 ],

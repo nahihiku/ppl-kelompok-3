@@ -33,6 +33,7 @@ class GoogleAuthService
         return User::create([
             'name' => $googleUser->getName() ?? Str::before($email, '@'),
             'email' => $email,
+            'role' => 'user',
             'google_id' => $googleId,
             'email_verified_at' => now(),
             'password' => Str::random(64),
