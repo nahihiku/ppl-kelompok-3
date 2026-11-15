@@ -171,6 +171,7 @@ export function initStationsOverviewMap(onPositionUpdated) {
         markerLayer: null,
         canvasRenderer: null,
         activeStations: [],
+        stationsSet: false,
         markersById: new Map(),
         focusedStationId: null,
     };
@@ -331,6 +332,7 @@ export function initStationsOverviewMap(onPositionUpdated) {
     };
 
     const setStations = (stations, shouldFitBounds = false) => {
+        state.stationsSet = true;
         state.activeStations = stations
             .filter((item) => item && item.id && item.validCoords);
 
@@ -456,7 +458,7 @@ export function initStationsOverviewMap(onPositionUpdated) {
         });
 
         renderUserMarker(initialPos);
-        if (state.activeStations.length === 0) {
+        if (!state.stationsSet) {
             state.activeStations = readStationsFromCatalogOrDom();
         }
         setStations(state.activeStations, state.activeStations.length <= 150);
