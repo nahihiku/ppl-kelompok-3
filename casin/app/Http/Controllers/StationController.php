@@ -49,7 +49,16 @@ class StationController extends Controller
         $centerLat = $hasValidUserCoords ? (float) $lat : self::DEFAULT_LATITUDE;
         $centerLng = $hasValidUserCoords ? (float) $lng : self::DEFAULT_LONGITUDE;
 
-        $stations = $this->filterStations($this->getStationsCatalog(), $request);
+        $stations = $this->filterStations($this->getStationsCatalog(), $request)
+            ->map(function (array $station) use ($centerLat, $centerLng): array {
+                $station['distance_km'] = ($station['is_valid_coordinate'] ?? false)
+                    ? Station::haversineDistanceKm($centerLat, $centerLng, (float) $station['latitude'], (float) $station['longitude'])
+                    : null;
+
+                return $station;
+            })
+            ->sortBy(fn (array $station) => $station['distance_km'] ?? PHP_FLOAT_MAX)
+            ->values();
 
         return response()->json([
             'success' => true,
@@ -182,6 +191,7 @@ class StationController extends Controller
     {
         $search = trim((string) $request->query('q', ''));
         $connector = trim((string) $request->query('connector', ''));
+        $vehicleConnector = strtolower(trim((string) $request->query('vehicle_connector', '')));
         $operator = trim((string) $request->query('operator', ''));
         $status = trim((string) $request->query('status', ''));
         $lat = $request->query('lat');
@@ -190,7 +200,7 @@ class StationController extends Controller
         $searchLower = strtolower($search);
         $connectorLower = strtolower($connector);
 
-        $filtered = $stations->filter(function (array $station) use ($searchLower, $connectorLower, $operator, $status) {
+        $filtered = $stations->filter(function (array $station) use ($searchLower, $connectorLower, $vehicleConnector, $operator, $status) {
             if ($searchLower !== '') {
                 $haystack = strtolower($station['name'].' '.$station['address'].' '.$station['operator_badge']);
                 if (! str_contains($haystack, $searchLower)) {
@@ -199,6 +209,10 @@ class StationController extends Controller
             }
 
             if ($connectorLower !== '' && ! $this->matchesConnectorFilter($station, $connectorLower)) {
+                return false;
+            }
+
+            if ($vehicleConnector !== '' && ! $this->matchesConnectorFilter($station, $vehicleConnector)) {
                 return false;
             }
 
