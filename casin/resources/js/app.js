@@ -1,4 +1,5 @@
 import './bootstrap';
+import { createStationSearch } from './station-search';
 import { DEFAULT_POSITION, initLocationWidget, readStoredPosition } from './geolocation';
 import {
     calculateHaversineKm,
@@ -10,6 +11,9 @@ const ACTIVE_VEHICLE_KEY = 'casin.active_vehicle';
 const FAVORITES_KEY = 'casin.favorite_stations';
 const STATION_PAGE_SIZE = 30;
 let overviewMapInstance = null;
+let stationSearch = null;
+let currentSearchPosition = readStoredPosition() || DEFAULT_POSITION;
+let searchTimer = null;
 
 const catalogState = {
     initialized: false,
@@ -126,7 +130,8 @@ function buildStationCardHtml(station) {
     const detailUrl = escapeHtml(station.url || `/stasiun/${station.id}`);
     const navUrl = escapeHtml(station.nav || '');
     const validCoords = station.vc ? '1' : '0';
-    const distanceKm = Number.isFinite(Number(station.d)) ? Number(station.d).toFixed(1) : '0.0';
+    const distanceText = station.vc && Number.isFinite(Number(station.d))
+        ? `${Number(station.d).toFixed(1)} km` : 'Jarak belum diketahui';
     const searchName = escapeHtml(`${station.n || ''} ${station.a || ''} ${station.op || ''}`.toLowerCase());
     const priceAttr = price > 0 ? `Rp ${Math.round(price)}/kWh` : 'Tarif belum diketahui';
 
@@ -166,8 +171,8 @@ function buildStationCardHtml(station) {
                     </span>
                 </div>
                 <div class="station-distance-box">
-                    <strong data-station-distance>${distanceKm} km</strong>
-                    <span>dari lokasimu</span>
+                    <strong data-station-distance>${distanceText}</strong>
+                    <span>${currentSearchPosition.source === 'device' ? 'dari lokasimu' : 'dari pusat Jakarta'}</span>
                 </div>
             </div>
 
@@ -233,7 +238,7 @@ function renderFilteredStationCards() {
         listEl.innerHTML = `
             <div class="empty-station-state">
                 <p>Tidak ada stasiun pengisian daya yang sesuai dengan kriteria pencarian Anda.</p>
-                <a href="${escapeHtml(catalogState.resetUrl)}" class="btn-gradient-pill">Tampilkan Semua Stasiun</a>
+                <a href="${escapeHtml(catalogState.resetUrl)}" class="btn-gradient-pill" data-station-reset>Tampilkan Semua Stasiun</a>
             </div>
         `;
         if (loadMoreWrap) {
@@ -250,71 +255,71 @@ function renderFilteredStationCards() {
     }
 }
 
-function matchesConnectorToken(station, connectorLower) {
-    if (!connectorLower) {
-        return true;
-    }
-    const primary = String(station.c || '').toLowerCase();
-    const tokens = String(station.cs || '').toLowerCase();
-    return primary === connectorLower || tokens.includes(connectorLower);
+function syncStationMap(shouldFitMap = false) {
+    if (!overviewMapInstance?.normalizeCatalogItem) return;
+    const stations = catalogState.filtered
+        .map(overviewMapInstance.normalizeCatalogItem)
+        .filter((station) => station.id && station.validCoords);
+    overviewMapInstance.setStations(stations, shouldFitMap);
 }
 
-function applyClientStationFilters(shouldFitMap = false, resetPagination = true) {
-    if (!initStationsCatalogState() || catalogState.all.length === 0) {
-        return;
-    }
+function requestStationSearch(shouldFitMap = false, resetPagination = true) {
+    // Filtering belongs to the API; never filter an already narrowed result locally.
+    if (!stationSearch) return;
+    window.clearTimeout(searchTimer);
+    if (resetPagination) catalogState.visibleLimit = STATION_PAGE_SIZE;
+    const form = document.querySelector('[data-station-search-form]');
+    const params = Object.fromEntries(new FormData(form));
+    params.vehicle_connector = readActiveVehicle()?.connector || '';
+    params.lat = currentSearchPosition.latitude;
+    params.lng = currentSearchPosition.longitude;
+    catalogState.fitMap = shouldFitMap;
+    stationSearch.search(params);
+}
 
-    if (resetPagination) {
-        catalogState.visibleLimit = STATION_PAGE_SIZE;
-    }
+function initStationSearch() {
+    const root = document.querySelector('[data-station-catalog]');
+    if (!root) return;
+    const list = root.querySelector('[data-station-list]');
+    const feedback = root.querySelector('[data-station-feedback]');
+    const message = root.querySelector('[data-station-message]');
+    const retry = root.querySelector('[data-station-retry]');
+    const loadMore = root.querySelector('[data-load-more-stations]');
+    const setBusy = (busy) => {
+        list.setAttribute('aria-busy', String(busy));
+        if (loadMore) loadMore.disabled = busy;
+    };
 
-    const searchInput = document.querySelector('[data-station-search-input]');
-    const connectorSelect = document.querySelector('[data-filter-connector]');
-    const operatorSelect = document.querySelector('[data-filter-operator]');
-    const statusSelect = document.querySelector('[data-filter-status]');
-
-    const query = (searchInput?.value || '').trim().toLowerCase();
-    const selectConnector = (connectorSelect?.value || '').trim().toLowerCase();
-    const selectOperator = (operatorSelect?.value || '').trim().toLowerCase();
-    const selectStatus = (statusSelect?.value || '').trim().toLowerCase();
-    const activeVehicle = readActiveVehicle();
-    const vehicleConnector = (activeVehicle?.connector || '').trim().toLowerCase();
-
-    catalogState.filtered = catalogState.all.filter((station) => {
-        if (query !== '') {
-            const haystack = `${station.n || ''} ${station.a || ''} ${station.op || ''}`.toLowerCase();
-            if (!haystack.includes(query)) {
-                return false;
-            }
-        }
-
-        if (vehicleConnector !== '' && !matchesConnectorToken(station, vehicleConnector)) {
-            return false;
-        }
-
-        if (selectConnector !== '' && !matchesConnectorToken(station, selectConnector)) {
-            return false;
-        }
-
-        if (selectOperator !== '' && String(station.op || '').toLowerCase() !== selectOperator) {
-            return false;
-        }
-
-        if (selectStatus !== '' && String(station.st || '').toLowerCase() !== selectStatus) {
-            return false;
-        }
-
-        return true;
+    stationSearch = createStationSearch({
+        endpoint: root.dataset.apiUrl,
+        onLoading: () => {
+            setBusy(true);
+            feedback.hidden = false;
+            retry.hidden = true;
+            message.textContent = 'Mencari stasiun terdekat…';
+        },
+        onSuccess: (stations) => {
+            catalogState.all = stations;
+            catalogState.filtered = stations;
+            renderFilteredStationCards();
+            syncStationMap(catalogState.fitMap);
+            setBusy(false);
+            feedback.hidden = false;
+            retry.hidden = true;
+            message.textContent = `${stations.length} stasiun ditemukan.`;
+            root.querySelector('.nearest-subtitle').textContent = currentSearchPosition.source === 'device'
+                ? 'Diurutkan berdasarkan jarak dari lokasi Anda'
+                : 'Diurutkan berdasarkan jarak dari pusat Jakarta. Aktifkan lokasi untuk mencari di sekitar Anda.';
+        },
+        onError: () => {
+            setBusy(false);
+            feedback.hidden = false;
+            retry.hidden = false;
+            message.textContent = 'Pencarian gagal. Daftar sebelumnya tetap ditampilkan. Periksa koneksi lalu coba lagi.';
+        },
     });
-
-    renderFilteredStationCards();
-
-    if (overviewMapInstance && typeof overviewMapInstance.normalizeCatalogItem === 'function') {
-        const normalized = catalogState.filtered
-            .map((item) => overviewMapInstance.normalizeCatalogItem(item))
-            .filter((item) => item.id && item.validCoords);
-        overviewMapInstance.setStations(normalized, shouldFitMap);
-    }
+    retry.addEventListener('click', () => requestStationSearch());
+    requestStationSearch();
 }
 
 function updateStationDistances(position) {
@@ -322,19 +327,8 @@ function updateStationDistances(position) {
         return;
     }
 
-    if (initStationsCatalogState() && catalogState.all.length > 0) {
-        catalogState.all.forEach((station) => {
-            const lat = Number(station.lat);
-            const lng = Number(station.lng);
-            if (Number.isFinite(lat) && Number.isFinite(lng) && station.vc !== 0) {
-                const km = calculateHaversineKm(position.latitude, position.longitude, lat, lng);
-                station.d = Number(km.toFixed(2));
-            }
-        });
-
-        catalogState.all.sort((a, b) => Number(a.d ?? 99999) - Number(b.d ?? 99999));
-        applyClientStationFilters(false, false);
-    }
+    currentSearchPosition = position;
+    requestStationSearch(false, true);
 
     const detailDist = document.querySelector('[data-detail-distance]');
     if (detailDist) {
@@ -697,20 +691,32 @@ function initFilterAndSearch() {
     const statusSelect = document.querySelector('[data-filter-status]');
     const loadMoreBtn = document.querySelector('[data-load-more-stations]');
 
-    let searchTimer = null;
-    if (searchInput && catalogState.all.length > 0) {
+    if (searchInput) {
         searchInput.addEventListener('input', () => {
             window.clearTimeout(searchTimer);
+            stationSearch?.cancel();
             searchTimer = window.setTimeout(() => {
-                applyClientStationFilters(true, true);
-            }, 80);
+                requestStationSearch(true, true);
+            }, 300);
         });
     }
 
     [connectorSelect, operatorSelect, statusSelect].forEach((selectEl) => {
         selectEl?.addEventListener('change', () => {
-            applyClientStationFilters(true, true);
+            requestStationSearch(true, true);
         });
+    });
+
+    const form = document.querySelector('[data-station-search-form]');
+    form?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        requestStationSearch(true, true);
+    });
+    document.querySelector('[data-station-catalog]')?.addEventListener('click', (event) => {
+        if (!event.target.closest('[data-station-reset]')) return;
+        event.preventDefault();
+        form.querySelectorAll('input[name], select[name]').forEach((input) => { input.value = ''; });
+        requestStationSearch(true, true);
     });
 
     loadMoreBtn?.addEventListener('click', () => {
@@ -740,7 +746,7 @@ function initVehicleSelector() {
             opt.classList.toggle('is-selected', Boolean(vehicle && opt.dataset.vehicleBrand === vehicle.brand));
         });
 
-        applyClientStationFilters(shouldFitMap);
+        requestStationSearch(shouldFitMap);
     };
 
     const saved = readActiveVehicle();
@@ -918,9 +924,7 @@ initGoogleAuth();
 initClientAuthState();
 initAdminNavigation();
 checkLoginAutoRedirect();
-overviewMapInstance = initStationsOverviewMap((newPos) => {
-    updateStationDistances(newPos);
-});
+overviewMapInstance = initStationsOverviewMap();
 const storedPos = readStoredPosition();
 if (storedPos) {
     updateStationDistances(storedPos);
@@ -929,22 +933,13 @@ initFilterAndSearch();
 initVehicleSelector();
 initMobileMenu();
 initDetailInteractions();
+initStationSearch();
 
-const locBtn = document.querySelector('[data-location-button]');
-if (locBtn) {
-    locBtn.addEventListener('click', () => {
-        setTimeout(() => {
-            const latest = readStoredPosition();
-            if (latest) {
-                overviewMapInstance?.showWarning('');
-                overviewMapInstance?.renderUserMarker(latest);
-                updateStationDistances(latest);
-            } else {
-                overviewMapInstance?.renderUserMarker(DEFAULT_POSITION);
-            }
-        }, 1200);
-    });
-}
+window.addEventListener('casin:position-updated', (event) => {
+    overviewMapInstance?.showWarning('');
+    overviewMapInstance?.renderUserMarker(event.detail);
+    updateStationDistances(event.detail);
+});
 
 if (typeof window !== 'undefined') {
     window.CasIn = {

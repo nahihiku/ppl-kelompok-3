@@ -25,7 +25,7 @@
     ])->values();
 @endphp
 
-<div class="catalog-container" id="cari-stasiun">
+<div class="catalog-container" id="cari-stasiun" data-station-catalog data-api-url="{{ route('api.stations.index') }}">
     @if ($showIntro ?? false)
         <div class="catalog-intro">
             <h2 class="catalog-intro-title">Charging jadi lebih pasti.</h2>
@@ -87,11 +87,12 @@
                         <option value="">Semua Status</option>
                         <option value="normal" @selected(request('status') === 'normal')>Tersedia</option>
                         <option value="busy" @selected(request('status') === 'busy')>Antrean Padat</option>
+                        <option value="technical_issue" @selected(request('status') === 'technical_issue')>Kendala Teknis</option>
                     </select>
                 </div>
             </div>
             <div class="filter-actions">
-                <a href="{{ $formAction ?? route('stations.index') }}" class="filter-reset-link">Reset Filter</a>
+                <a href="{{ $formAction ?? route('stations.index') }}" class="filter-reset-link" data-station-reset>Reset Filter</a>
                 <button type="submit" class="btn-gradient-pill">Terapkan Filter</button>
             </div>
         </div>
@@ -169,7 +170,12 @@
         <span class="found-badge" data-stations-count>{{ $stations->count() }} Ditemukan</span>
     </div>
 
-    <div class="station-cards-list" data-station-list>
+    <div class="notice" role="status" aria-live="polite" hidden data-station-feedback>
+        <span data-station-message></span>
+        <button type="button" class="btn-outline-pill" hidden data-station-retry>Coba lagi</button>
+    </div>
+
+    <div class="station-cards-list" data-station-list aria-busy="false">
         @forelse ($initialStations as $station)
             <article
                 class="station-card"
@@ -202,8 +208,8 @@
                         </span>
                     </div>
                     <div class="station-distance-box">
-                        <strong data-station-distance>{{ number_format($station['distance_km'], 1, '.', '') }} km</strong>
-                        <span>dari lokasimu</span>
+                        <strong data-station-distance>{{ ($station['is_valid_coordinate'] ?? true) ? number_format($station['distance_km'], 1, '.', '').' km' : 'Jarak belum diketahui' }}</strong>
+                        <span>dari pusat pencarian</span>
                     </div>
                 </div>
 
@@ -259,7 +265,7 @@
         @empty
             <div class="empty-station-state">
                 <p>Tidak ada stasiun pengisian daya yang sesuai dengan kriteria pencarian Anda.</p>
-                <a href="{{ route('stations.index') }}" class="btn-gradient-pill">Tampilkan Semua Stasiun</a>
+                <a href="{{ route('stations.index') }}" class="btn-gradient-pill" data-station-reset>Tampilkan Semua Stasiun</a>
             </div>
         @endforelse
     </div>
