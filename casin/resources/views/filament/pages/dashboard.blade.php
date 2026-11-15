@@ -1,4 +1,6 @@
 <x-filament-panels::page>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
@@ -2388,6 +2390,14 @@
                     </div>
                 </div>
 
+                <div class="casin-modal-field" style="margin-top: 6px;">
+                    <label style="display:flex; justify-content:space-between; align-items:center;">
+                        <span>Pilih Titik di Peta (Map Picker)</span>
+                        <span style="font-size: 11px; color: #64748b; font-weight: normal;">Klik peta untuk pasang pin koordinat</span>
+                    </label>
+                    <div id="casin-admin-map-picker" style="height: 190px; width: 100%; border-radius: 10px; border: 1px solid #cbd5e1; margin-top: 4px; z-index: 1;"></div>
+                </div>
+
                 <div class="casin-modal-row-4">
                     <div class="casin-modal-field">
                         <label for="st-price">Harga/kwh (Rp)</label>
@@ -3144,6 +3154,66 @@
             const stationError = stationModal?.querySelector('[data-station-modal-error]');
             const stationConnFields = stationModal?.querySelector('[data-station-initial-connector-fields]');
             let editingStationId = null;
+            let adminPickerMap = null;
+            let adminPickerMarker = null;
+
+            function syncAdminMapPicker(latVal, lngVal) {
+                const numLat = parseFloat(latVal) || -6.2088;
+                const numLng = parseFloat(lngVal) || 106.8456;
+                const container = document.getElementById('casin-admin-map-picker');
+                if (!container || typeof L === 'undefined') return;
+
+                if (!adminPickerMap) {
+                    adminPickerMap = L.map('casin-admin-map-picker').setView([numLat, numLng], 13);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 19,
+                        attribution: '&copy; OpenStreetMap'
+                    }).addTo(adminPickerMap);
+
+                    adminPickerMarker = L.marker([numLat, numLng], { draggable: true }).addTo(adminPickerMap);
+
+                    adminPickerMap.on('click', (e) => {
+                        const newLat = e.latlng.lat.toFixed(6);
+                        const newLng = e.latlng.lng.toFixed(6);
+                        adminPickerMarker.setLatLng([newLat, newLng]);
+                        if (stationForm?.elements.latitude) stationForm.elements.latitude.value = newLat;
+                        if (stationForm?.elements.longitude) stationForm.elements.longitude.value = newLng;
+                    });
+
+                    adminPickerMarker.on('dragend', () => {
+                        const pos = adminPickerMarker.getLatLng();
+                        const newLat = pos.lat.toFixed(6);
+                        const newLng = pos.lng.toFixed(6);
+                        if (stationForm?.elements.latitude) stationForm.elements.latitude.value = newLat;
+                        if (stationForm?.elements.longitude) stationForm.elements.longitude.value = newLng;
+                    });
+
+                    stationForm?.elements.latitude?.addEventListener('input', () => {
+                        const curLat = parseFloat(stationForm.elements.latitude.value);
+                        const curLng = parseFloat(stationForm.elements.longitude.value);
+                        if (!isNaN(curLat) && !isNaN(curLng) && adminPickerMarker && adminPickerMap) {
+                            adminPickerMarker.setLatLng([curLat, curLng]);
+                            adminPickerMap.panTo([curLat, curLng]);
+                        }
+                    });
+
+                    stationForm?.elements.longitude?.addEventListener('input', () => {
+                        const curLat = parseFloat(stationForm.elements.latitude.value);
+                        const curLng = parseFloat(stationForm.elements.longitude.value);
+                        if (!isNaN(curLat) && !isNaN(curLng) && adminPickerMarker && adminPickerMap) {
+                            adminPickerMarker.setLatLng([curLat, curLng]);
+                            adminPickerMap.panTo([curLat, curLng]);
+                        }
+                    });
+                } else {
+                    adminPickerMap.setView([numLat, numLng], 13);
+                    adminPickerMarker.setLatLng([numLat, numLng]);
+                }
+
+                setTimeout(() => {
+                    adminPickerMap?.invalidateSize();
+                }, 200);
+            }
 
             function setStationModalError(msg) {
                 if (!stationError) return;
@@ -3163,6 +3233,7 @@
                 if (stationSubmit) stationSubmit.textContent = 'Tambah Data';
                 stationConnFields?.removeAttribute('hidden');
                 stationModal?.removeAttribute('hidden');
+                syncAdminMapPicker(-6.2088, 106.8456);
             });
 
             stationModal?.querySelector('[data-close-station-modal]')?.addEventListener('click', () => {
@@ -3194,6 +3265,7 @@
                     stationForm.elements.app_name.value = row.dataset.rowApp || 'PLN Mobile';
                     stationForm.elements.current_status.value = row.dataset.rowCurrentStatus || 'normal';
                     stationModal?.removeAttribute('hidden');
+                    syncAdminMapPicker(row.dataset.rowLat, row.dataset.rowLng);
                     return;
                 }
 
