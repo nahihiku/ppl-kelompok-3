@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('station_connectors', function (Blueprint $table) {
             $table->id('id_station_connector');
             $table->foreignId('id_stations')->constrained('stations', 'id_stations')->onDelete('cascade');
-            $table->string('connector_type');
+            $table->foreignId('id_connector')->constrained('connectors', 'id_connector')->onDelete('cascade');
             $table->decimal('power_kw', 8, 2);
             $table->string('charging_speed_category');
             $table->timestamps();

@@ -16,11 +16,11 @@ return new class extends Migration
         $table->string('category');
         $table->string('brand');
         $table->string('model');
-        $table->string('default_connector_type');
+        $table->foreignId('id_connector')->constrained('connectors', 'id_connector')->onDelete('cascade');
         $table->decimal('battery_capacity_kwh', 8, 2);
         $table->timestamps();
     });
-    
+
     }
     /**
      * Reverse the migrations.

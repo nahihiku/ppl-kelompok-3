@@ -14,10 +14,11 @@ return new class extends Migration
     Schema::create('station_reports', function (Blueprint $table) {
       $table->id('id_station_report');
         $table->foreignId('id_stations')->constrained('stations', 'id_stations')->onDelete('cascade');
-        $table->string('connector_type');
-        $table->decimal('power_kw', 8, 2);
-        $table->string('charging_speed_category');
-        $table->timestamps();
+        $table->foreignId('id_connector')->constrained('connectors', 'id_connector')->onDelete('cascade');
+        $table->string('report_category');
+        $table->text('description');
+        $table->string('photo_evidence')->nullable();
+        $table->enum('status', ['pending', 'reviewed', 'resolved', 'rejected'])->default('pending');
     });
 }
 
