@@ -1,0 +1,3 @@
+name,address,latitude,longitude,operator_type,operating_hours,price_per_kwh,require_app_name,connector_type,power_kw,current_type,total_connectors,external_id
+Contoh SPKLU PLN (hapus baris ini),"Jl. Contoh No. 1, Kota Contoh",-6.200000,106.800000,government,24 Jam,2466,PLN Mobile,CCS2,50,DC,2,
+Contoh SPKLU PLN (hapus baris ini),"Jl. Contoh No. 1, Kota Contoh",-6.200000,106.800000,government,24 Jam,2466,PLN Mobile,AC Type 2,22,AC,1,

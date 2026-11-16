@@ -11,10 +11,10 @@ class StationConnector extends Model
 
     protected $table = 'station_connectors';
 
-    protected $primaryKey = 'id_station_connectors';
+    protected $primaryKey = 'id_station_connector';
 
     protected $fillable = [
-        'station_id',
+        'id_stations',
         'connector_type',
         'power_kw',
         'charging_speed_category',
@@ -34,6 +34,6 @@ class StationConnector extends Model
 
     public function station()
     {
-        return $this->belongsTo(Station::class, 'station_id', 'id_stations');
+        return $this->belongsTo(Station::class, 'id_stations', 'id_stations');
     }
 }

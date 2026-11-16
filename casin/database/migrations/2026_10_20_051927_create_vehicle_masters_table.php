@@ -22,11 +22,12 @@ return new class extends Migration
     });
 
     }
+
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('user_vehicle');
+        Schema::dropIfExists('vehicle_masters');
     }
 };

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\GoogleAuthController;
+use App\Http\Controllers\StationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 | [BE-03] Integrasi Google OAuth (Laravel Socialite)
 |
 */
+
+// [KF-U05 & KT-04] Public Interactive Map Stations Directory Endpoint
+Route::get('/stations', [StationController::class, 'apiIndex'])
+    ->name('api.stations.index');
 
 // [BE-02] Public Authentication Routes
 Route::post('/register', [AuthController::class, 'register'])

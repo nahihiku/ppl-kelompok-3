@@ -25,3 +25,8 @@ Route::middleware('guest')->group(function () {
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
     ->middleware('auth')->name('logout');
 
+Route::post('/auth/session-sync', [AuthenticatedSessionController::class, 'syncSession'])
+    ->name('auth.session-sync');
+
+Route::redirect('/admin/login', '/login')->name('filament.admin.auth.login');
+

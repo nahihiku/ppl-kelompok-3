@@ -1,19 +1,325 @@
 import './bootstrap';
-import { initLocationWidget, readStoredPosition } from './geolocation';
+import { createStationSearch } from './station-search';
+import { DEFAULT_POSITION, initLocationWidget, readStoredPosition } from './geolocation';
+import {
+    calculateHaversineKm,
+    initStationDetailMap,
+    initStationsOverviewMap,
+} from './map';
 
 const ACTIVE_VEHICLE_KEY = 'casin.active_vehicle';
 const FAVORITES_KEY = 'casin.favorite_stations';
+const STATION_PAGE_SIZE = 30;
+let overviewMapInstance = null;
+let stationSearch = null;
+let currentSearchPosition = readStoredPosition() || DEFAULT_POSITION;
+let searchTimer = null;
 
-function calculateHaversineKm(lat1, lon1, lat2, lon2) {
-    const toRad = (deg) => (deg * Math.PI) / 180;
-    const R = 6371;
-    const dLat = toRad(lat2 - lat1);
-    const dLon = toRad(lon2 - lon1);
-    const a =
-        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-        Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
-        Math.sin(dLon / 2) * Math.sin(dLon / 2);
-    return R * (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
+const catalogState = {
+    initialized: false,
+    all: [],
+    filtered: [],
+    visibleLimit: STATION_PAGE_SIZE,
+    resetUrl: '/stasiun',
+};
+
+function escapeHtml(value) {
+    return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+function readActiveVehicle() {
+    try {
+        const parsed = JSON.parse(localStorage.getItem(ACTIVE_VEHICLE_KEY) || 'null');
+        if (parsed && parsed.brand && parsed.connector) {
+            return parsed;
+        }
+    } catch {
+        // Abaikan jika penyimpanan lokal tidak tersedia
+    }
+    return null;
+}
+
+function initStationsCatalogState() {
+    if (catalogState.initialized) {
+        return catalogState.all.length > 0;
+    }
+
+    const searchForm = document.querySelector('[data-station-search-form]');
+    if (searchForm?.getAttribute('action')) {
+        catalogState.resetUrl = searchForm.getAttribute('action');
+    }
+
+    const catalogEl = document.getElementById('casin-stations-catalog');
+    if (catalogEl) {
+        try {
+            const parsed = JSON.parse(catalogEl.textContent || '[]');
+            if (Array.isArray(parsed) && parsed.length > 0) {
+                catalogState.all = parsed;
+                catalogState.filtered = [...parsed];
+                catalogState.initialized = true;
+                return true;
+            }
+        } catch {
+            // Fallback ke pembacaan kartu DOM jika JSON katalog gagal diparsing
+        }
+    }
+
+    const domCards = Array.from(document.querySelectorAll('[data-station-card]'));
+    if (domCards.length > 0) {
+        catalogState.all = domCards.map((card) => {
+            const distText = card.querySelector('[data-station-distance]')?.textContent || '0';
+            const powerText = card.dataset.power || '0 kW (-)';
+            const powerMatch = powerText.match(/^([\d.]+)\s*kW\s*\(([^)]+)\)/i);
+            const chargerText = card.dataset.chargers || '0/0 Konektor';
+            const chargerMatch = chargerText.match(/(\d+)\s*\/\s*(\d+)/);
+            const priceText = card.dataset.price || '';
+            const priceMatch = priceText.match(/Rp\s*([\d.]+)/i);
+
+            return {
+                id: String(card.dataset.stationId || ''),
+                n: card.dataset.title || '',
+                op: card.dataset.operator || 'PLN',
+                st: card.dataset.status || 'normal',
+                stl: card.dataset.statusLabel || 'Tersedia',
+                a: card.dataset.address || '',
+                lat: Number(card.dataset.lat),
+                lng: Number(card.dataset.lng),
+                d: parseFloat(distText) || 0,
+                c: card.dataset.connector || 'Belum diketahui',
+                csum: card.dataset.connectorSummary || card.dataset.connector || 'Belum diketahui',
+                cs: card.dataset.connectors || (card.dataset.connector || '').toLowerCase(),
+                p: powerMatch ? Number(powerMatch[1]) : 0,
+                cu: powerMatch ? powerMatch[2] : '-',
+                pr: priceMatch ? Number(priceMatch[1].replace(/\./g, '')) : 0,
+                av: chargerMatch ? Number(chargerMatch[1]) : 0,
+                tot: chargerMatch ? Number(chargerMatch[2]) : 0,
+                url: card.dataset.detailUrl || '#',
+                nav: card.dataset.navUrl || '',
+                vc: card.dataset.validCoords === '0' ? 0 : 1,
+            };
+        });
+        catalogState.filtered = [...catalogState.all];
+        catalogState.initialized = true;
+        return true;
+    }
+
+    catalogState.initialized = true;
+    return false;
+}
+
+function buildStationCardHtml(station) {
+    const id = escapeHtml(station.id);
+    const name = escapeHtml(station.n);
+    const address = escapeHtml(station.a);
+    const operator = escapeHtml(station.op);
+    const status = escapeHtml(station.st);
+    const statusLabel = escapeHtml(station.stl);
+    const connector = escapeHtml(station.c);
+    const connectorSummary = escapeHtml(station.csum || station.c);
+    const connectorTokens = escapeHtml(station.cs || String(station.c || '').toLowerCase());
+    const powerKw = Number(station.p ?? 0);
+    const currentType = escapeHtml(station.cu || '-');
+    const price = Number(station.pr ?? 0);
+    const available = Number(station.av ?? 0);
+    const total = Number(station.tot ?? 0);
+    const detailUrl = escapeHtml(station.url || `/stasiun/${station.id}`);
+    const navUrl = escapeHtml(station.nav || '');
+    const validCoords = station.vc ? '1' : '0';
+    const distanceText = station.vc && Number.isFinite(Number(station.d))
+        ? `${Number(station.d).toFixed(1)} km` : 'Jarak belum diketahui';
+    const searchName = escapeHtml(`${station.n || ''} ${station.a || ''} ${station.op || ''}`.toLowerCase());
+    const priceAttr = price > 0 ? `Rp ${Math.round(price)}/kWh` : 'Tarif belum diketahui';
+
+    const tariffHtml = price > 0
+        ? `<strong>Rp ${Math.round(price)}</strong><span>/kWh</span>`
+        : '<strong>Belum diketahui</strong>';
+
+    return `
+        <article
+            class="station-card"
+            data-station-card
+            data-station-id="${id}"
+            data-title="${name}"
+            data-address="${address}"
+            data-name="${searchName}"
+            data-connector="${connector}"
+            data-connector-summary="${connectorSummary}"
+            data-connectors="${connectorTokens}"
+            data-operator="${operator}"
+            data-status="${status}"
+            data-status-label="${statusLabel}"
+            data-power="${powerKw} kW (${currentType})"
+            data-price="${escapeHtml(priceAttr)}"
+            data-chargers="${available}/${total} Konektor"
+            data-detail-url="${detailUrl}"
+            data-nav-url="${navUrl}"
+            data-valid-coords="${validCoords}"
+            data-lat="${escapeHtml(station.lat)}"
+            data-lng="${escapeHtml(station.lng)}"
+        >
+            <div class="station-card-top">
+                <div class="station-badges">
+                    <span class="badge-operator">${operator}</span>
+                    <span class="badge-status badge-status-${status}">
+                        <span class="badge-status-dot" aria-hidden="true"></span>
+                        ${statusLabel}
+                    </span>
+                </div>
+                <div class="station-distance-box">
+                    <strong data-station-distance>${distanceText}</strong>
+                    <span>${currentSearchPosition.source === 'device' ? 'dari lokasimu' : 'dari pusat Jakarta'}</span>
+                </div>
+            </div>
+
+            <h3 class="station-card-title">${name}</h3>
+
+            <p class="station-card-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path d="M12 21C16 16.8 19 13.4 19 9.5C19 5.63401 15.866 2.5 12 2.5C8.13401 2.5 5 5.63401 5 9.5C5 13.4 8 16.8 12 21Z"></path>
+                    <circle cx="12" cy="9.5" r="2.5"></circle>
+                </svg>
+                <span>${address}</span>
+            </p>
+
+            <hr class="station-card-divider">
+
+            <div class="station-specs-row">
+                <div class="spec-col">
+                    <span class="spec-label">Konektor</span>
+                    <div class="spec-connector-val">
+                        <span class="spec-connector-name">${connectorSummary}</span>
+                        <span class="spec-connector-dot" aria-hidden="true"></span>
+                        <span class="spec-connector-power">
+                            ${powerKw} kW<br>${currentType}
+                        </span>
+                    </div>
+                </div>
+                <div class="spec-col spec-col-right">
+                    <span class="spec-label">Tarif</span>
+                    <div class="spec-tariff-val">${tariffHtml}</div>
+                </div>
+            </div>
+
+            <div class="station-card-footer">
+                <div class="charger-avail-info">
+                    <span class="charger-avail-label">Charger Tersedia</span>
+                    <span class="charger-avail-count">${available} dari ${total}</span>
+                </div>
+                <div class="station-card-cta-group">
+                    <button type="button" class="btn-outline-pill" data-focus-station-map="${id}">
+                        Lihat di Peta
+                    </button>
+                    <a href="${detailUrl}" class="btn-gradient-pill">Lihat Detail</a>
+                </div>
+            </div>
+        </article>
+    `;
+}
+
+function renderFilteredStationCards() {
+    const listEl = document.querySelector('[data-station-list]');
+    const countBadge = document.querySelector('[data-stations-count]');
+    const loadMoreWrap = document.querySelector('[data-load-more-wrap]');
+    if (!listEl) {
+        return;
+    }
+
+    const totalMatches = catalogState.filtered.length;
+    if (countBadge) {
+        countBadge.textContent = `${totalMatches} Ditemukan`;
+    }
+
+    if (totalMatches === 0) {
+        listEl.innerHTML = `
+            <div class="empty-station-state">
+                <p>Tidak ada stasiun pengisian daya yang sesuai dengan kriteria pencarian Anda.</p>
+                <a href="${escapeHtml(catalogState.resetUrl)}" class="btn-gradient-pill" data-station-reset>Tampilkan Semua Stasiun</a>
+            </div>
+        `;
+        if (loadMoreWrap) {
+            loadMoreWrap.hidden = true;
+        }
+        return;
+    }
+
+    const visibleSlice = catalogState.filtered.slice(0, catalogState.visibleLimit);
+    listEl.innerHTML = visibleSlice.map(buildStationCardHtml).join('');
+
+    if (loadMoreWrap) {
+        loadMoreWrap.hidden = totalMatches <= catalogState.visibleLimit;
+    }
+}
+
+function syncStationMap(shouldFitMap = false) {
+    if (!overviewMapInstance?.normalizeCatalogItem) return;
+    const stations = catalogState.filtered
+        .map(overviewMapInstance.normalizeCatalogItem)
+        .filter((station) => station.id && station.validCoords);
+    overviewMapInstance.setStations(stations, shouldFitMap);
+}
+
+function requestStationSearch(shouldFitMap = false, resetPagination = true) {
+    // Filtering belongs to the API; never filter an already narrowed result locally.
+    if (!stationSearch) return;
+    window.clearTimeout(searchTimer);
+    if (resetPagination) catalogState.visibleLimit = STATION_PAGE_SIZE;
+    const form = document.querySelector('[data-station-search-form]');
+    const params = Object.fromEntries(new FormData(form));
+    params.vehicle_connector = readActiveVehicle()?.connector || '';
+    params.lat = currentSearchPosition.latitude;
+    params.lng = currentSearchPosition.longitude;
+    catalogState.fitMap = shouldFitMap;
+    stationSearch.search(params);
+}
+
+function initStationSearch() {
+    const root = document.querySelector('[data-station-catalog]');
+    if (!root) return;
+    const list = root.querySelector('[data-station-list]');
+    const feedback = root.querySelector('[data-station-feedback]');
+    const message = root.querySelector('[data-station-message]');
+    const retry = root.querySelector('[data-station-retry]');
+    const loadMore = root.querySelector('[data-load-more-stations]');
+    const setBusy = (busy) => {
+        list.setAttribute('aria-busy', String(busy));
+        if (loadMore) loadMore.disabled = busy;
+    };
+
+    stationSearch = createStationSearch({
+        endpoint: root.dataset.apiUrl,
+        onLoading: () => {
+            setBusy(true);
+            feedback.hidden = false;
+            retry.hidden = true;
+            message.textContent = 'Mencari stasiun terdekat…';
+        },
+        onSuccess: (stations) => {
+            catalogState.all = stations;
+            catalogState.filtered = stations;
+            renderFilteredStationCards();
+            syncStationMap(catalogState.fitMap);
+            setBusy(false);
+            feedback.hidden = false;
+            retry.hidden = true;
+            message.textContent = `${stations.length} stasiun ditemukan.`;
+            root.querySelector('.nearest-subtitle').textContent = currentSearchPosition.source === 'device'
+                ? 'Diurutkan berdasarkan jarak dari lokasi Anda'
+                : 'Diurutkan berdasarkan jarak dari pusat Jakarta. Aktifkan lokasi untuk mencari di sekitar Anda.';
+        },
+        onError: () => {
+            setBusy(false);
+            feedback.hidden = false;
+            retry.hidden = false;
+            message.textContent = 'Pencarian gagal. Daftar sebelumnya tetap ditampilkan. Periksa koneksi lalu coba lagi.';
+        },
+    });
+    retry.addEventListener('click', () => requestStationSearch());
+    requestStationSearch();
 }
 
 function updateStationDistances(position) {
@@ -21,27 +327,8 @@ function updateStationDistances(position) {
         return;
     }
 
-    const listEl = document.querySelector('[data-station-list]');
-    const cards = Array.from(document.querySelectorAll('[data-station-card]'));
-
-    cards.forEach((card) => {
-        const lat = Number(card.dataset.lat);
-        const lng = Number(card.dataset.lng);
-        if (Number.isFinite(lat) && Number.isFinite(lng)) {
-            const km = calculateHaversineKm(position.latitude, position.longitude, lat, lng);
-            card.dataset.distanceKm = km.toFixed(2);
-            const distLabel = card.querySelector('[data-station-distance]');
-            if (distLabel) {
-                distLabel.textContent = `${km.toFixed(1)} km`;
-            }
-        }
-    });
-
-    if (listEl && cards.length > 1) {
-        cards
-            .sort((a, b) => Number(a.dataset.distanceKm ?? 9999) - Number(b.dataset.distanceKm ?? 9999))
-            .forEach((card) => listEl.appendChild(card));
-    }
+    currentSearchPosition = position;
+    requestStationSearch(false, true);
 
     const detailDist = document.querySelector('[data-detail-distance]');
     if (detailDist) {
@@ -103,6 +390,46 @@ function clearAuthErrors(form) {
     if (general) general.hidden = true;
 }
 
+function applyFreshCsrfToken(csrfToken) {
+    if (!csrfToken) return;
+    const meta = document.querySelector('meta[name="csrf-token"]');
+    if (meta) {
+        meta.setAttribute('content', csrfToken);
+    }
+    document.querySelectorAll('input[name="_token"]').forEach((input) => {
+        input.value = csrfToken;
+    });
+}
+
+async function syncWebSession(token) {
+    if (!token) return null;
+    try {
+        const response = await fetch('/auth/session-sync', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`,
+            },
+            body: JSON.stringify({ token }),
+            credentials: 'same-origin',
+        });
+        if (response.ok) {
+            const result = await response.json();
+            if (result?.data?.csrf_token) {
+                applyFreshCsrfToken(result.data.csrf_token);
+            }
+            if (result?.data?.user) {
+                localStorage.setItem(AUTH_USER_KEY, JSON.stringify(result.data.user));
+                return result.data.user;
+            }
+        }
+    } catch {
+        // Abaikan kesalahan jaringan sementara
+    }
+    return null;
+}
+
 async function postAuthForm(form) {
     clearAuthErrors(form);
     const button = form.querySelector('button[type="submit"]');
@@ -128,6 +455,7 @@ async function postAuthForm(form) {
 
         localStorage.setItem(AUTH_TOKEN_KEY, result.data.token);
         localStorage.setItem(AUTH_USER_KEY, JSON.stringify(result.data.user));
+        await syncWebSession(result.data.token);
         window.location.assign(form.dataset.authForm === 'register' ? '/' : '/');
     } catch {
         showAuthErrors(form, null, 'Koneksi gagal. Periksa internetmu lalu coba lagi.');
@@ -150,7 +478,7 @@ function initApiAuthForms() {
 
 function initGoogleAuth() {
     document.querySelectorAll('[data-google-auth]').forEach((button) => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (event) => {
             const clientId = button.dataset.googleClientId;
             const authCard = button.closest('.auth-card');
             const showError = (message) => {
@@ -159,13 +487,18 @@ function initGoogleAuth() {
             };
 
             if (!clientId) {
-                showError('Login Google belum dikonfigurasi. Silakan gunakan email dan kata sandi.');
                 return;
             }
 
+            if (!window.google?.accounts?.oauth2) {
+                return;
+            }
+
+            event.preventDefault();
+
             const start = () => {
                 if (!window.google?.accounts?.oauth2) {
-                    showError('Layanan Google belum siap. Coba lagi beberapa saat.');
+                    window.location.assign('/auth/google/redirect');
                     return;
                 }
 
@@ -185,6 +518,7 @@ function initGoogleAuth() {
                             if (!response.ok) throw new Error(result.message || 'Autentikasi Google gagal.');
                             localStorage.setItem(AUTH_TOKEN_KEY, result.data.token);
                             localStorage.setItem(AUTH_USER_KEY, JSON.stringify(result.data.user));
+                            await syncWebSession(result.data.token);
                             window.location.assign('/');
                         } catch (error) {
                             showError(error.message);
@@ -210,7 +544,66 @@ function initGoogleAuth() {
     });
 }
 
+function updateHeaderAuth(user, token) {
+    const actions = document.querySelector('.site-header .nav-actions');
+    if (!actions) return;
+
+    const isAdmin = Boolean(user.is_admin || user.role === 'admin');
+    const adminButtonHtml = isAdmin
+        ? '<a class="nav-admin-btn" href="/admin" data-admin-dashboard-btn>Dashboard Admin</a>'
+        : '';
+
+    const existingWelcome = actions.querySelector('.welcome-user');
+    if (existingWelcome && !actions.querySelector('.nav-join')) {
+        if (isAdmin && !actions.querySelector('[data-admin-dashboard-btn]')) {
+            existingWelcome.insertAdjacentHTML('afterend', adminButtonHtml);
+        }
+        return;
+    }
+
+    actions.innerHTML = `
+        <span class="welcome-user">Hai, ${user.name || user.email}</span>
+        ${adminButtonHtml}
+        <a class="nav-stations-link" href="/stasiun">Daftar Stasiun</a>
+        <button class="nav-login-pill" type="button" data-client-logout>Keluar</button>
+    `;
+
+    actions.querySelector('[data-client-logout]')?.addEventListener('click', async () => {
+        try {
+            await fetch('/api/logout', {
+                method: 'POST',
+                headers: { Accept: 'application/json', Authorization: `Bearer ${token}` },
+            });
+            await fetch('/logout', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || '',
+                },
+                credentials: 'same-origin',
+            });
+        } finally {
+            localStorage.removeItem(AUTH_TOKEN_KEY);
+            localStorage.removeItem(AUTH_USER_KEY);
+            window.location.assign('/login');
+        }
+    });
+}
+
 function initClientAuthState() {
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            window.location.reload();
+        }
+    });
+
+    document.querySelectorAll('form[action$="/logout"], .inline-logout-form, .mobile-drawer form').forEach((logoutForm) => {
+        logoutForm.addEventListener('submit', () => {
+            localStorage.removeItem(AUTH_TOKEN_KEY);
+            localStorage.removeItem(AUTH_USER_KEY);
+        });
+    });
+
     const token = localStorage.getItem(AUTH_TOKEN_KEY);
     let user = null;
     try {
@@ -218,26 +611,59 @@ function initClientAuthState() {
     } catch {
         localStorage.removeItem(AUTH_USER_KEY);
     }
-    const actions = document.querySelector('.landing-page .nav-actions');
-    if (!token || !user || !actions || !actions.querySelector('.nav-join')) return;
 
-    actions.innerHTML = `
-        <span class="welcome-user">Hai, ${user.name || user.email}</span>
-        <a class="nav-stations-link" href="/stasiun">Daftar Stasiun</a>
-        <button class="nav-login-pill" type="button" data-client-logout>Keluar</button>
-    `;
-    actions.querySelector('[data-client-logout]')?.addEventListener('click', async () => {
-        try {
-            await fetch('/api/logout', {
-                method: 'POST',
-                headers: { Accept: 'application/json', Authorization: `Bearer ${token}` },
-            });
-        } finally {
-            localStorage.removeItem(AUTH_TOKEN_KEY);
-            localStorage.removeItem(AUTH_USER_KEY);
-            window.location.reload();
-        }
+    const actions = document.querySelector('.site-header .nav-actions');
+    const isServerGuest = Boolean(actions?.querySelector('.nav-join'));
+
+    if (token && isServerGuest) {
+        syncWebSession(token).then((freshUser) => {
+            if (freshUser) {
+                user = freshUser;
+                updateHeaderAuth(user, token);
+            }
+        });
+    }
+
+    if (!token || !user || !actions || !isServerGuest) return;
+
+    updateHeaderAuth(user, token);
+}
+
+function initAdminNavigation() {
+    document.addEventListener('click', async (event) => {
+        const adminBtn = event.target.closest('[data-admin-dashboard-btn], .nav-admin-btn, .drawer-admin-link');
+        if (!adminBtn) return;
+
+        const token = localStorage.getItem(AUTH_TOKEN_KEY);
+        if (!token) return;
+
+        event.preventDefault();
+        const targetUrl = adminBtn.getAttribute('href') || '/admin';
+
+        await syncWebSession(token);
+        window.location.assign(targetUrl);
     });
+}
+
+function checkLoginAutoRedirect() {
+    const loginCard = document.querySelector('[data-auth-form="login"]');
+    if (!loginCard) return;
+
+    const token = localStorage.getItem(AUTH_TOKEN_KEY);
+    if (!token) return;
+
+    let user = null;
+    try {
+        user = JSON.parse(localStorage.getItem(AUTH_USER_KEY) || 'null');
+    } catch {
+        return;
+    }
+
+    if (user && (user.is_admin || user.role === 'admin')) {
+        syncWebSession(token).then(() => {
+            window.location.assign('/admin');
+        });
+    }
 }
 
 function initFilterAndSearch() {
@@ -257,29 +683,46 @@ function initFilterAndSearch() {
         });
     }
 
+    initStationsCatalogState();
+
     const searchInput = document.querySelector('[data-station-search-input]');
-    const cards = Array.from(document.querySelectorAll('[data-station-card]'));
-    const countBadge = document.querySelector('[data-stations-count]');
+    const connectorSelect = document.querySelector('[data-filter-connector]');
+    const operatorSelect = document.querySelector('[data-filter-operator]');
+    const statusSelect = document.querySelector('[data-filter-status]');
+    const loadMoreBtn = document.querySelector('[data-load-more-stations]');
 
-    if (searchInput && cards.length > 0) {
+    if (searchInput) {
         searchInput.addEventListener('input', () => {
-            const query = searchInput.value.trim().toLowerCase();
-            let visibleCount = 0;
-
-            cards.forEach((card) => {
-                const name = (card.dataset.name || '').toLowerCase();
-                const matches = query === '' || name.includes(query);
-                card.style.display = matches ? '' : 'none';
-                if (matches) {
-                    visibleCount += 1;
-                }
-            });
-
-            if (countBadge) {
-                countBadge.textContent = `${visibleCount} Ditemukan`;
-            }
+            window.clearTimeout(searchTimer);
+            stationSearch?.cancel();
+            searchTimer = window.setTimeout(() => {
+                requestStationSearch(true, true);
+            }, 300);
         });
     }
+
+    [connectorSelect, operatorSelect, statusSelect].forEach((selectEl) => {
+        selectEl?.addEventListener('change', () => {
+            requestStationSearch(true, true);
+        });
+    });
+
+    const form = document.querySelector('[data-station-search-form]');
+    form?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        requestStationSearch(true, true);
+    });
+    document.querySelector('[data-station-catalog]')?.addEventListener('click', (event) => {
+        if (!event.target.closest('[data-station-reset]')) return;
+        event.preventDefault();
+        form.querySelectorAll('input[name], select[name]').forEach((input) => { input.value = ''; });
+        requestStationSearch(true, true);
+    });
+
+    loadMoreBtn?.addEventListener('click', () => {
+        catalogState.visibleLimit += STATION_PAGE_SIZE;
+        renderFilteredStationCards();
+    });
 }
 
 function initVehicleSelector() {
@@ -291,7 +734,7 @@ function initVehicleSelector() {
     const brandEls = document.querySelectorAll('[data-active-vehicle-brand]');
     const connectorEls = document.querySelectorAll('[data-active-vehicle-connector]');
 
-    const applyVehicle = (vehicle) => {
+    const applyVehicle = (vehicle, shouldFitMap = false) => {
         brandEls.forEach((el) => {
             el.textContent = vehicle ? vehicle.brand : 'Merek Kendaraan';
         });
@@ -302,15 +745,13 @@ function initVehicleSelector() {
         options.forEach((opt) => {
             opt.classList.toggle('is-selected', Boolean(vehicle && opt.dataset.vehicleBrand === vehicle.brand));
         });
+
+        requestStationSearch(shouldFitMap);
     };
 
-    try {
-        const saved = JSON.parse(localStorage.getItem(ACTIVE_VEHICLE_KEY) || 'null');
-        if (saved && saved.brand) {
-            applyVehicle(saved);
-        }
-    } catch {
-        // Abaikan jika penyimpanan lokal tidak tersedia
+    const saved = readActiveVehicle();
+    if (saved) {
+        applyVehicle(saved, false);
     }
 
     if (!modal) {
@@ -344,7 +785,7 @@ function initVehicleSelector() {
             } catch {
                 // Abaikan jika gagal menyimpan
             }
-            applyVehicle(selected);
+            applyVehicle(selected, true);
             modal.setAttribute('hidden', '');
         });
     });
@@ -355,7 +796,7 @@ function initVehicleSelector() {
         } catch {
             // Abaikan
         }
-        applyVehicle(null);
+        applyVehicle(null, true);
         modal.setAttribute('hidden', '');
     });
 }
@@ -472,61 +913,41 @@ function initDetailInteractions() {
         });
     }
 
-    const mapContainer = document.getElementById('station-detail-map');
-    if (mapContainer && window.L) {
-        const lat = Number(mapContainer.dataset.lat);
-        const lng = Number(mapContainer.dataset.lng);
-        const name = mapContainer.dataset.name || 'SPKLU';
-        if (Number.isFinite(lat) && Number.isFinite(lng)) {
-            const fallback = mapContainer.querySelector('.map-fallback-canvas');
-            const mapDiv = document.createElement('div');
-            mapDiv.style.width = '100%';
-            mapDiv.style.height = '100%';
-            mapContainer.insertBefore(mapDiv, fallback);
-            if (fallback) {
-                fallback.style.display = 'none';
-            }
-
-            const map = window.L.map(mapDiv, { zoomControl: false }).setView([lat, lng], 15);
-            window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; OpenStreetMap',
-            }).addTo(map);
-
-            const pinIcon = window.L.divIcon({
-                className: 'custom-leaflet-pin',
-                html: '<svg viewBox="0 0 44 56" width="40" height="52" fill="none"><path d="M22 0C9.85 0 0 9.85 0 22C0 37.4 22 56 22 56C22 56 44 37.4 44 22C44 9.85 34.15 0 22 0Z" fill="#EF4444"/><circle cx="22" cy="21" r="8.5" fill="#FFFFFF"/></svg>',
-                iconSize: [40, 52],
-                iconAnchor: [20, 52],
-            });
-
-            window.L.marker([lat, lng], { icon: pinIcon }).addTo(map).bindPopup(name);
-        }
-    }
+    initStationDetailMap();
 }
 
+initStationsCatalogState();
 initLocationWidget();
 initPasswordToggles();
 initApiAuthForms();
 initGoogleAuth();
 initClientAuthState();
-initFilterAndSearch();
-initVehicleSelector();
-initMobileMenu();
-initDetailInteractions();
-
+initAdminNavigation();
+checkLoginAutoRedirect();
+overviewMapInstance = initStationsOverviewMap();
 const storedPos = readStoredPosition();
 if (storedPos) {
     updateStationDistances(storedPos);
 }
+initFilterAndSearch();
+initVehicleSelector();
+initMobileMenu();
+initDetailInteractions();
+initStationSearch();
 
-const locBtn = document.querySelector('[data-location-button]');
-if (locBtn) {
-    locBtn.addEventListener('click', () => {
-        setTimeout(() => {
-            const latest = readStoredPosition();
-            if (latest) {
-                updateStationDistances(latest);
-            }
-        }, 1200);
-    });
+window.addEventListener('casin:position-updated', (event) => {
+    overviewMapInstance?.showWarning('');
+    overviewMapInstance?.renderUserMarker(event.detail);
+    updateStationDistances(event.detail);
+});
+
+if (typeof window !== 'undefined') {
+    window.CasIn = {
+        ...(window.CasIn ?? {}),
+        map: {
+            calculateHaversineKm,
+            initStationsOverviewMap,
+            initStationDetailMap,
+        },
+    };
 }

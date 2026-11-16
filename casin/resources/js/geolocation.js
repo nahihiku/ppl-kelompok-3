@@ -142,6 +142,7 @@ export function requestDevicePosition() {
                 }
 
                 storePosition(devicePosition);
+                window.dispatchEvent(new CustomEvent('casin:position-updated', { detail: devicePosition }));
                 resolve(devicePosition);
             },
             (error) => {
