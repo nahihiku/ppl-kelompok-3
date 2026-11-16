@@ -11,15 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('vehicle_masters', function (Blueprint $table) {
-            $table->id('id_vehicle_masters');
-            $table->string('category');
-            $table->string('brand');
-            $table->string('model');
-            $table->string('default_connector_type');
-            $table->decimal('battery_capacity_kwh', 8, 2);
-            $table->timestamps();
-        });
+       Schema::create('vehicle_masters', function (Blueprint $table) {
+        $table->id('id_vehicle_masters');
+        $table->string('category');
+        $table->string('brand');
+        $table->string('model');
+        $table->foreignId('id_connector')->constrained('connectors', 'id_connector')->onDelete('cascade');
+        $table->decimal('battery_capacity_kwh', 8, 2);
+        $table->timestamps();
+    });
+
     }
 
     /**

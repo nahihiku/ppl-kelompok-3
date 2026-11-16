@@ -14,14 +14,15 @@ return new class extends Migration
         Schema::create('stations', function (Blueprint $table) {
             $table->id('id_stations');
             $table->string('name');
-            $table->string('operator_type'); 
+            $table->string('operator_type');
             $table->string('address');
             $table->decimal('latitude', 10, 7);
             $table->decimal('longitude', 10, 7);
             $table->string('operating_hours');
             $table->decimal('price_per_kwh', 8, 2)->nullable();
             $table->string('require_app_name')->nullable();
-            $table->string('current_status')->default('normal'); // normal | technical_issue | busy
+            $table->string('facilities')->nullable();
+            $table->string('current_status')->default('normal');
             $table->timestamps();
 
             $table->index(['operator_type', 'current_status']);

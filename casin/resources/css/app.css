@@ -31,7 +31,7 @@
 
 body {
     margin: 0;
-    min-width: 320px;
+    min-width: 220px;
     background: #ffffff;
     color: #0f172a;
 }
@@ -115,7 +115,7 @@ textarea {
     justify-content: space-between;
     width: min(1140px, calc(100% - 40px));
     margin: 0 auto;
-    padding: 18px 0;
+    padding: 5px 0;
     background: #ffffff;
 }
 
