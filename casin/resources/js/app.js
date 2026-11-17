@@ -1,5 +1,6 @@
 import './bootstrap';
 import { createStationSearch } from './station-search';
+import { initVehicleSelector } from './vehicle-selector';
 import { DEFAULT_POSITION, initLocationWidget, readStoredPosition } from './geolocation';
 import {
     calculateHaversineKm,
@@ -725,82 +726,6 @@ function initFilterAndSearch() {
     });
 }
 
-function initVehicleSelector() {
-    const modal = document.querySelector('[data-vehicle-modal]');
-    const openBtns = document.querySelectorAll('[data-vehicle-modal-open]');
-    const closeBtn = document.querySelector('[data-vehicle-modal-close]');
-    const resetBtn = document.querySelector('[data-vehicle-reset]');
-    const options = document.querySelectorAll('[data-vehicle-option]');
-    const brandEls = document.querySelectorAll('[data-active-vehicle-brand]');
-    const connectorEls = document.querySelectorAll('[data-active-vehicle-connector]');
-
-    const applyVehicle = (vehicle, shouldFitMap = false) => {
-        brandEls.forEach((el) => {
-            el.textContent = vehicle ? vehicle.brand : 'Merek Kendaraan';
-        });
-        connectorEls.forEach((el) => {
-            el.textContent = vehicle ? `Konektor ${vehicle.connector}` : 'Jenis Konektor';
-        });
-
-        options.forEach((opt) => {
-            opt.classList.toggle('is-selected', Boolean(vehicle && opt.dataset.vehicleBrand === vehicle.brand));
-        });
-
-        requestStationSearch(shouldFitMap);
-    };
-
-    const saved = readActiveVehicle();
-    if (saved) {
-        applyVehicle(saved, false);
-    }
-
-    if (!modal) {
-        return;
-    }
-
-    openBtns.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            modal.removeAttribute('hidden');
-        });
-    });
-
-    closeBtn?.addEventListener('click', () => {
-        modal.setAttribute('hidden', '');
-    });
-
-    modal.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.setAttribute('hidden', '');
-        }
-    });
-
-    options.forEach((opt) => {
-        opt.addEventListener('click', () => {
-            const selected = {
-                brand: opt.dataset.vehicleBrand,
-                connector: opt.dataset.vehicleConnector,
-            };
-            try {
-                localStorage.setItem(ACTIVE_VEHICLE_KEY, JSON.stringify(selected));
-            } catch {
-                // Abaikan jika gagal menyimpan
-            }
-            applyVehicle(selected, true);
-            modal.setAttribute('hidden', '');
-        });
-    });
-
-    resetBtn?.addEventListener('click', () => {
-        try {
-            localStorage.removeItem(ACTIVE_VEHICLE_KEY);
-        } catch {
-            // Abaikan
-        }
-        applyVehicle(null, true);
-        modal.setAttribute('hidden', '');
-    });
-}
-
 function initMobileMenu() {
     const toggle = document.querySelector('[data-menu-toggle]');
     const drawer = document.querySelector('[data-mobile-drawer]');
@@ -930,7 +855,11 @@ if (storedPos) {
     updateStationDistances(storedPos);
 }
 initFilterAndSearch();
-initVehicleSelector();
+initVehicleSelector({
+    readVehicle: readActiveVehicle,
+    storageKey: ACTIVE_VEHICLE_KEY,
+    onChange: () => requestStationSearch(true),
+});
 initMobileMenu();
 initDetailInteractions();
 initStationSearch();
